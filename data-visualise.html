@@ -1,0 +1,1435 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Visualisation &#8212; Python for Data Science</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Workflow: Basics" href="workflow-basics.html" />
+    <link rel="prev" title="Getting Started with Python" href="introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Getting Started with Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get Started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow: Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-transform.html">
+   Data Transformation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-style.html">
+   Workflow: Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-import.html">
+   Data Import
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean-data.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numbers.html">
+   Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings and Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="zreferences.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/data-visualise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdata-visualise.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/data-visualise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/data-visualise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-steps">
+   First Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mpg-data-frame">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpg
+      </span>
+     </code>
+     data frame
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-plot">
+     Creating a Plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-graphing-template">
+     A graphing template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aesthetic-mappings">
+   Aesthetic mappings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#facets">
+   Facets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometric-objects">
+   Geometric objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-transformations">
+   Statistical Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-more-information-to-plots">
+   Adding More Information to Plots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overplotting-via-move">
+     Overplotting via Move
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#co-ordinates-and-scales">
+   Co-ordinates and Scales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#co-ordinates">
+     Co-ordinates
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scales">
+     Scales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summing-up">
+   Summing Up
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Visualisation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-steps">
+   First Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mpg-data-frame">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpg
+      </span>
+     </code>
+     data frame
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-plot">
+     Creating a Plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-graphing-template">
+     A graphing template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aesthetic-mappings">
+   Aesthetic mappings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#facets">
+   Facets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometric-objects">
+   Geometric objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-transformations">
+   Statistical Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-more-information-to-plots">
+   Adding More Information to Plots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overplotting-via-move">
+     Overplotting via Move
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#co-ordinates-and-scales">
+   Co-ordinates and Scales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#co-ordinates">
+     Co-ordinates
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scales">
+     Scales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summing-up">
+   Summing Up
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-visualisation">
+<span id="data-visualise"></span><h1>Data Visualisation<a class="headerlink" href="#data-visualisation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>“The simple graph has brought more information to the data analyst’s mind than any other device.” — John Tukey</p>
+</div></blockquote>
+<p>This chapter will teach you how to visualise your data using the <strong>seaborn</strong> package.</p>
+<p>There are a plethora of other options (and packages) for data visualisation using code. There are broadly two categories of approach to using code to create data visualisations: imperative, where you build what you want, and declarative, where you say what you want. Choosing which to use involves a trade-off: imperative libraries offer you flexibility but at the cost of some verbosity; declarative libraries offer you a quick way to plot your data, but only if it’s in the right format to begin with, and customisation may be more difficult.</p>
+<p><strong>seaborn</strong> is a declarative visualisation package, and these can be easier to get started with. But it’s built on top of an imperative package, the incredibly powerful <strong>matplotlib</strong>, so you can always dig further and tweak details if you need to. However, in this chapter, we’ll focus on using <strong>seaborn</strong> declaratively.</p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>You will need to install the <strong>seaborn</strong> package for this chapter. This chapter uses the next generation version of <strong>seaborn</strong>, which can be installed by running the following on the command line (aka in the terminal):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --pre seaborn
+</pre></div>
+</div>
+<p>Once you’ve done this, you’ll need to import the <strong>seaborn</strong> library into your session using</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The second import brings in the plotting part of <strong>seaborn</strong>.</p>
+</div>
+</div>
+<div class="section" id="first-steps">
+<h2>First Steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">¶</a></h2>
+<p>Let’s use our first graph to answer a question: Do cars with big engines use more fuel than cars with small engines? You probably already have an answer, but try to make your answer precise. What does the relationship between engine size and fuel efficiency look like? Is it positive? Negative? Linear? Non-linear?</p>
+<div class="section" id="the-mpg-data-frame">
+<h3>The <code class="docutils literal notranslate"><span class="pre">mpg</span></code> data frame<a class="headerlink" href="#the-mpg-data-frame" title="Permalink to this headline">¶</a></h3>
+<p>You can test your answer with the <code class="docutils literal notranslate"><span class="pre">mpg</span></code> data frame found in <strong>seaborn</strong> and obtained from the internet using the <strong>pandas</strong> package.</p>
+<p>A data frame is a rectangular collection of variables (in the columns) and observations (in the rows). <code class="docutils literal notranslate"><span class="pre">mpg</span></code> contains observations collected by the US Environmental Protection Agency on 38 car models.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/ggplot2/mpg.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+<span class="n">mpg</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>manufacturer</th>
+      <th>model</th>
+      <th>displ</th>
+      <th>year</th>
+      <th>cyl</th>
+      <th>trans</th>
+      <th>drv</th>
+      <th>cty</th>
+      <th>hwy</th>
+      <th>fl</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>1.8</td>
+      <td>1999</td>
+      <td>4</td>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>29</td>
+      <td>p</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>1.8</td>
+      <td>1999</td>
+      <td>4</td>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>p</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>2.0</td>
+      <td>2008</td>
+      <td>4</td>
+      <td>manual(m6)</td>
+      <td>f</td>
+      <td>20</td>
+      <td>31</td>
+      <td>p</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>2.0</td>
+      <td>2008</td>
+      <td>4</td>
+      <td>auto(av)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>30</td>
+      <td>p</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>audi</td>
+      <td>a4</td>
+      <td>2.8</td>
+      <td>1999</td>
+      <td>6</td>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>16</td>
+      <td>26</td>
+      <td>p</td>
+      <td>compact</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+      <td>2.0</td>
+      <td>2008</td>
+      <td>4</td>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>19</td>
+      <td>28</td>
+      <td>p</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+      <td>2.0</td>
+      <td>2008</td>
+      <td>4</td>
+      <td>manual(m6)</td>
+      <td>f</td>
+      <td>21</td>
+      <td>29</td>
+      <td>p</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+      <td>2.8</td>
+      <td>1999</td>
+      <td>6</td>
+      <td>auto(l5)</td>
+      <td>f</td>
+      <td>16</td>
+      <td>26</td>
+      <td>p</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+      <td>2.8</td>
+      <td>1999</td>
+      <td>6</td>
+      <td>manual(m5)</td>
+      <td>f</td>
+      <td>18</td>
+      <td>26</td>
+      <td>p</td>
+      <td>midsize</td>
+    </tr>
+    <tr>
+      <th>234</th>
+      <td>volkswagen</td>
+      <td>passat</td>
+      <td>3.6</td>
+      <td>2008</td>
+      <td>6</td>
+      <td>auto(s6)</td>
+      <td>f</td>
+      <td>17</td>
+      <td>26</td>
+      <td>p</td>
+      <td>midsize</td>
+    </tr>
+  </tbody>
+</table>
+<p>234 rows × 11 columns</p>
+</div></div></div>
+</div>
+<p>Among the variables in <code class="docutils literal notranslate"><span class="pre">mpg</span></code> are:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">displ</span></code>, a car’s engine size, in litres.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hwy</span></code>, a car’s fuel efficiency on the highway, in miles per gallon (mpg). A car with a low fuel efficiency consumes more fuel than a car with a high fuel efficiency when they travel the same distance.</p></li>
+</ol>
+</div>
+<div class="section" id="creating-a-plot">
+<h3>Creating a Plot<a class="headerlink" href="#creating-a-plot" title="Permalink to this headline">¶</a></h3>
+<p>To plot <code class="docutils literal notranslate"><span class="pre">mpg</span></code>, run this code to put <code class="docutils literal notranslate"><span class="pre">displ</span></code> on the x-axis and <code class="docutils literal notranslate"><span class="pre">hwy</span></code> on the y-axis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_8_0.png" src="_images/data-visualise_8_0.png" />
+</div>
+</div>
+<p>The plot shows a negative relationship between engine size (<code class="docutils literal notranslate"><span class="pre">displacement</span></code>) and fuel efficiency (<code class="docutils literal notranslate"><span class="pre">mpg</span></code>). In other words, cars with smaller engine sizes have higher fuel efficiency and, in general, as engine size increases, fuel efficiency decreases. Does this confirm or refute your hypothesis about fuel efficiency and engine size?</p>
+<p>With <strong>seaborn</strong>, you begin a plot with the function <code class="docutils literal notranslate"><span class="pre">so.Plot()</span></code>. <strong>seaborn</strong> creates a coordinate system that you can add layers to. The first argument of <code class="docutils literal notranslate"><span class="pre">so.Plot()</span></code> is the dataset to use in the graph. So <code class="docutils literal notranslate"><span class="pre">so.Plot(mpg)</span></code> creates an empty graph, but it’s not very interesting so I’m not going to show it here.</p>
+<p>You complete your graph by adding one or more layers to the plot. The function <code class="docutils literal notranslate"><span class="pre">.add(so.Scatter())</span></code> adds a layer of points to your plot, creating a scatterplot. You can choose between telling <code class="docutils literal notranslate"><span class="pre">so.Plot</span></code> what the x and y axis variables are or passing it directly to <code class="docutils literal notranslate"><span class="pre">.add</span></code>.</p>
+<p><strong>seaborn</strong> comes with many functions that each add a different type of layer to a plot. You’ll learn a whole bunch of them throughout this chapter.</p>
+</div>
+<div class="section" id="a-graphing-template">
+<h3>A graphing template<a class="headerlink" href="#a-graphing-template" title="Permalink to this headline">¶</a></h3>
+<p>Let’s turn this code into a reusable template for making graphs with <strong>seaborn</strong>. To make a graph, replace the bracketed sections in the code below with a dataset, a geom function, or a collection of mappings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">x</span><span class="o">=&lt;</span><span class="n">X</span> <span class="n">VARIABLE</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">y</span><span class="o">=&lt;</span><span class="n">Y</span> <span class="n">VARIABLE</span><span class="o">&gt;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.&lt;</span><span class="n">PLOT</span> <span class="n">STYLE</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The rest of this chapter will show you how to complete and extend this template to make different types of graphs.</p>
+</div>
+<div class="section" id="exercises">
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">so.Plot(mpg)</span></code>.
+What do you see?</p></li>
+<li><p>How many rows are in <code class="docutils literal notranslate"><span class="pre">mpg</span></code> (the data frame)?
+How many columns?</p></li>
+<li><p>Make a scatterplot of <code class="docutils literal notranslate"><span class="pre">mpg</span></code> vs <code class="docutils literal notranslate"><span class="pre">cylinders</span></code>.</p></li>
+<li><p>What happens if you make a scatterplot of <code class="docutils literal notranslate"><span class="pre">class</span></code> vs <code class="docutils literal notranslate"><span class="pre">drv</span></code>? Why is the plot not useful?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="aesthetic-mappings">
+<h2>Aesthetic mappings<a class="headerlink" href="#aesthetic-mappings" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>“The greatest value of a picture is when it forces us to notice what we never expected to see.” — John Tukey</p>
+</div></blockquote>
+<p>In the plot below, one group of points (highlighted in red) seems to fall outside of the linear trend. These cars have a higher mileage than you might expect. How can you explain these cars?</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_13_0.png" src="_images/data-visualise_13_0.png" />
+</div>
+</div>
+<p>Let’s hypothesize that the cars are hybrids. One way to test this hypothesis is to look at the <code class="docutils literal notranslate"><span class="pre">class</span></code> value for each car.
+The <code class="docutils literal notranslate"><span class="pre">class</span></code> variable of the <code class="docutils literal notranslate"><span class="pre">mpg</span></code> dataset classifies cars into groups such as compact, midsize, and SUV. If the outlying points are hybrids, they should be classified as compact cars or, perhaps, subcompact cars (keep in mind that this data was collected before hybrid trucks and SUVs became popular).</p>
+<p>You can add a third variable, like <code class="docutils literal notranslate"><span class="pre">class</span></code>, to a two dimensional scatterplot by mapping it to another dimension of the plot. These could be things like the size, the shape, or the colour of your points.</p>
+<p>For example, you can map the colours of your points to the <code class="docutils literal notranslate"><span class="pre">class</span></code> variable to reveal the class of each car.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_15_0.png" src="_images/data-visualise_15_0.png" />
+</div>
+</div>
+<p>To map another dimension in the plot to a variable, assign that dimension to the variable, for example <code class="docutils literal notranslate"><span class="pre">color=&quot;class&quot;</span></code> within <code class="docutils literal notranslate"><span class="pre">so.Plot</span></code> or within <code class="docutils literal notranslate"><span class="pre">.add</span></code>. <strong>seaborn</strong> will automatically assign a unique level of the dimension (here a unique colour) to each unique value of the variable, a process known as scaling. <strong>seaborn</strong> will also add a legend that explains which levels correspond to which values.</p>
+<p>The colours reveal that many of the unusual points (with engine size greater than 5 litres and highway fuel efficiency greater than 20 miles per gallon) are two-seater cars. These cars don’t seem like hybrids, and are, in fact, sports cars! Sports cars have large engines like SUVs and pickup trucks, but small bodies like midsize and compact cars, which improves their gas mileage. In hindsight, these cars were unlikely to be hybrids since they have large engines.</p>
+<p>In the above example, we mapped <code class="docutils literal notranslate"><span class="pre">class</span></code> to colour, but we could have mapped <code class="docutils literal notranslate"><span class="pre">class</span></code> to the size of points in the same way. In this case, the exact size of each point would reveal its class affiliation. Big warning here though: mapping an unordered variable (<code class="docutils literal notranslate"><span class="pre">class</span></code>) to an ordered variable (<code class="docutils literal notranslate"><span class="pre">size</span></code>) is generally not a good idea.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">pointsize</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_18_0.png" src="_images/data-visualise_18_0.png" />
+</div>
+</div>
+<p>Similarly, we could have mapped <code class="docutils literal notranslate"><span class="pre">class</span></code> to <em>alpha</em> level, which controls the transparency of the points, or to the <em>marker</em> variable, which controls the shape of the points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_20_0.png" src="_images/data-visualise_20_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_21_0.png" src="_images/data-visualise_21_0.png" />
+</div>
+</div>
+<p>Once you map variables to dimensions, <strong>seaborn</strong> takes care of the rest. It selects a reasonable scale to use with the dimension, and it constructs a legend that explains the mapping between levels and values.</p>
+<p>You can also <em>set</em> a dimension property in your plot directly. For example, we can make all of the points in our plot purple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_23_0.png" src="_images/data-visualise_23_0.png" />
+</div>
+</div>
+<p>Here, the colour doesn’t convey information about a variable, but only changes the appearance of the plot.
+To set a dimension manually like this, put it within the specific layer it applies to (eg <code class="docutils literal notranslate"><span class="pre">.add(so.Scatter(color=&quot;purple&quot;))</span></code>) rather than in the part that maps variables to dimensions (eg not in <code class="docutils literal notranslate"><span class="pre">so.Plot(mpg,</span> <span class="pre">x=&quot;displ&quot;,</span> <span class="pre">y=&quot;hwy&quot;)</span></code>).</p>
+<p>When assigning values to dimensions, you’ll need to pick values that makes sense, for example:</p>
+<ul class="simple">
+<li><p>The name of a colour as a string, eg <code class="docutils literal notranslate"><span class="pre">color=&quot;purple&quot;</span></code></p></li>
+<li><p>The size of a point in mm</p></li>
+<li><p>The shape of a marker as a string, eg <code class="docutils literal notranslate"><span class="pre">marker=&quot;*&quot;</span></code> for a star</p></li>
+</ul>
+<p>You can find more information on markers in the <a class="reference external" href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/marker_reference.html"><strong>matplotlib</strong> documentation</a></p>
+</div>
+<div class="section" id="facets">
+<h2>Facets<a class="headerlink" href="#facets" title="Permalink to this headline">¶</a></h2>
+<p>One way to add additional variables to a plot is by mapping them to a dimension. Another way, which is particularly useful for categorical variables, is to split your plot into <strong>facets</strong>, subplots that each display one subset of the data.</p>
+<p>To facet your plot by a single variable, use <code class="docutils literal notranslate"><span class="pre">.facet(&lt;VARIABLE&gt;)</span></code>; this should be a discrete variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span>
+        <span class="n">mpg</span><span class="p">,</span>
+        <span class="s2">&quot;displ&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hwy&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">&quot;cyl&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_28_0.png" src="_images/data-visualise_28_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="geometric-objects">
+<h2>Geometric objects<a class="headerlink" href="#geometric-objects" title="Permalink to this headline">¶</a></h2>
+<p>How are these two plots similar?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_30_0.png" src="_images/data-visualise_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Agg</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_31_0.png" src="_images/data-visualise_31_0.png" />
+</div>
+</div>
+<p>Both plots contain the same x variable, the same y variable, and both show the same data (to some extent). But the plots are not identical. Each plot uses a different visual object to represent the data. In <strong>seaborn</strong> language, these are represented by different <em>marks</em>: one is a scatter and the other a (mean) line (which introduces an aggregation).</p>
+<p>A mark is a geometrical object that shows where data occur in x, y, and any other dimension-space you care to use. For example, the plot below is a line plot but we’ve added a discrete dimension of colour so that—instead of a single aggregate line—we get one for each distinct value of <code class="docutils literal notranslate"><span class="pre">&quot;drv&quot;</span></code>. One line describes all of the points that have a <code class="docutils literal notranslate"><span class="pre">4</span></code> value, one line describes all of the points that have an <code class="docutils literal notranslate"><span class="pre">f</span></code> value, and one line describes all of the points that have an <code class="docutils literal notranslate"><span class="pre">r</span></code> value. Here, <code class="docutils literal notranslate"><span class="pre">4</span></code> stands for four-wheel drive, <code class="docutils literal notranslate"><span class="pre">f</span></code> for front-wheel drive, and <code class="docutils literal notranslate"><span class="pre">r</span></code> for rear-wheel drive.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;drv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Agg</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_33_0.png" src="_images/data-visualise_33_0.png" />
+</div>
+</div>
+<p>You can achieve the same effect without distinguishing by colour too using <code class="docutils literal notranslate"><span class="pre">group</span></code> keyword. The <code class="docutils literal notranslate"><span class="pre">group</span></code> keyword uses a categorical variable to draw multiple objects; <strong>seaborn</strong> will draw a separate object for each unique value of the grouping variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Agg</span><span class="p">(),</span> <span class="n">group</span><span class="o">=</span><span class="s2">&quot;drv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_35_0.png" src="_images/data-visualise_35_0.png" />
+</div>
+</div>
+<p><strong>seaborn</strong> will allow you to add multiple layers to the base plot. In the below, we show both the points (using <code class="docutils literal notranslate"><span class="pre">.add(so.Scatter())</span></code>) and an aggregate line per value of <code class="docutils literal notranslate"><span class="pre">&quot;drv&quot;</span></code>. Because we passed colour into <code class="docutils literal notranslate"><span class="pre">.Plot</span></code> both of these layers are distinguished by different colours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;drv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Agg</span><span class="p">())</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_37_0.png" src="_images/data-visualise_37_0.png" />
+</div>
+</div>
+<p>If you map variables to the dimensions in <code class="docutils literal notranslate"><span class="pre">.Plot</span></code>, <strong>seaborn</strong> will use them for all subsequent layers. But if you specify a different approach for a specific layer, you will get info just for that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Agg</span><span class="p">())</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_39_0.png" src="_images/data-visualise_39_0.png" />
+</div>
+</div>
+<p>Each layer can have its own cut of the data too. Here, our line displays just a subset of the <code class="docutils literal notranslate"><span class="pre">mpg</span></code> dataset, the subcompact cars. We get this by explicitly adding a <code class="docutils literal notranslate"><span class="pre">data=</span></code> keyword argument to the same <code class="docutils literal notranslate"><span class="pre">.add</span></code> command as a line. The scatter plot has all points, the line just those for subcompact cars as specified by the filter we applied to the <strong>pandas</strong> data frame (try running <code class="docutils literal notranslate"><span class="pre">mpg.loc[mpg[&quot;class&quot;]</span> <span class="pre">==</span> <span class="pre">&quot;subcompact&quot;]</span></code> to see the data that make up the line).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">),</span> <span class="n">so</span><span class="o">.</span><span class="n">Agg</span><span class="p">(),</span> <span class="n">data</span><span class="o">=</span><span class="n">mpg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mpg</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;subcompact&quot;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_41_0.png" src="_images/data-visualise_41_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="statistical-transformations">
+<h2>Statistical Transformations<a class="headerlink" href="#statistical-transformations" title="Permalink to this headline">¶</a></h2>
+<p>We’ve already seen <code class="docutils literal notranslate"><span class="pre">so.Agg()</span></code> for aggregating multiple points into a single, mean line. Now let’s take a look at another statistical transform: the bar chart. We’ll use the diamonds dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">diamonds</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;diamonds&quot;</span><span class="p">)</span>
+<span class="n">diamonds</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>Ideal</td>
+      <td>E</td>
+      <td>SI2</td>
+      <td>61.5</td>
+      <td>55.0</td>
+      <td>326</td>
+      <td>3.95</td>
+      <td>3.98</td>
+      <td>2.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>Premium</td>
+      <td>E</td>
+      <td>SI1</td>
+      <td>59.8</td>
+      <td>61.0</td>
+      <td>326</td>
+      <td>3.89</td>
+      <td>3.84</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>Good</td>
+      <td>E</td>
+      <td>VS1</td>
+      <td>56.9</td>
+      <td>65.0</td>
+      <td>327</td>
+      <td>4.05</td>
+      <td>4.07</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.29</td>
+      <td>Premium</td>
+      <td>I</td>
+      <td>VS2</td>
+      <td>62.4</td>
+      <td>58.0</td>
+      <td>334</td>
+      <td>4.20</td>
+      <td>4.23</td>
+      <td>2.63</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.31</td>
+      <td>Good</td>
+      <td>J</td>
+      <td>SI2</td>
+      <td>63.3</td>
+      <td>58.0</td>
+      <td>335</td>
+      <td>4.34</td>
+      <td>4.35</td>
+      <td>2.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s now create a bar chart of counts, aka a histogram, of the numbers of diamonds of different cuts. This only requires one dimension, <code class="docutils literal notranslate"><span class="pre">&quot;cut&quot;</span></code>, and then an instruction to use <code class="docutils literal notranslate"><span class="pre">so.Hist()</span></code> alongside <code class="docutils literal notranslate"><span class="pre">so.Bar()</span></code> in the (single) layer on top of the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">diamonds</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Bar</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Hist</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_45_0.png" src="_images/data-visualise_45_0.png" />
+</div>
+</div>
+<p>On the x-axis, the chart displays cut, a variable from diamonds. On the y-axis, it displays count, but count is not a variable in diamonds! Where does count come from? Many graphs, like scatterplots, plot the raw values of your dataset. Other graphs, like bar charts, calculate new values to plot:</p>
+<ul class="simple">
+<li><p>bar charts, histograms, and frequency polygons bin your data and then plot bin counts, the number of points that fall in each bin</p></li>
+<li><p>aggregations fit a mean line to your data</p></li>
+<li><p>boxplots compute a summary of the distribution and display it as a box</p></li>
+</ul>
+<p>The algorithm used to calculate new values for a graph is called a Stat, short for statistical transformation.</p>
+</div>
+<div class="section" id="adding-more-information-to-plots">
+<h2>Adding More Information to Plots<a class="headerlink" href="#adding-more-information-to-plots" title="Permalink to this headline">¶</a></h2>
+<p>There’s one more piece of magic associated with bar charts. You can colour a bar chart using the <code class="docutils literal notranslate"><span class="pre">color=</span></code> keyword argument within the <code class="docutils literal notranslate"><span class="pre">.add</span></code> layer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">diamonds</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Bar</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Hist</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cut&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_48_0.png" src="_images/data-visualise_48_0.png" />
+</div>
+</div>
+<p>But you can also choose another variable and thereby add extra info to your chart, for example here by adding information on clarity:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">diamonds</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Bar</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Hist</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;clarity&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_50_0.png" src="_images/data-visualise_50_0.png" />
+</div>
+</div>
+<div class="section" id="overplotting-via-move">
+<h3>Overplotting via Move<a class="headerlink" href="#overplotting-via-move" title="Permalink to this headline">¶</a></h3>
+<p><strong>Seaborn</strong> functions have parameters that allow adjustments for overplotting, ie putting multiple dimensions next to each other on the same chart. These include <code class="docutils literal notranslate"><span class="pre">dodge=</span></code> in several categorical functions, <code class="docutils literal notranslate"><span class="pre">jitter=</span></code> in several functions based on scatterplots, and the <code class="docutils literal notranslate"><span class="pre">multiple=</span></code> paramter in distribution functions. These adjustments are abstracted away from the particular visual representation into the concept of a Move:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">diamonds</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;clarity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Bar</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Hist</span><span class="p">(),</span> <span class="n">move</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Dodge</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_52_0.png" src="_images/data-visualise_52_0.png" />
+</div>
+</div>
+<p>This can also accept parameters to separate out the information in a particular way</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">diamonds</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;clarity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">so</span><span class="o">.</span><span class="n">Bar</span><span class="p">(),</span> <span class="n">so</span><span class="o">.</span><span class="n">Hist</span><span class="p">(),</span> <span class="n">move</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Dodge</span><span class="p">(</span><span class="n">empty</span><span class="o">=</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_54_0.png" src="_images/data-visualise_54_0.png" />
+</div>
+</div>
+<p>There’s another type of adjustment that’s not useful for bar charts, but can be very useful for scatterplots. Recall our first scatterplot. Did you notice that the plot displays only 126 points, even though there are 234 observations in the dataset? And that some points appear darker than others?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_56_0.png" src="_images/data-visualise_56_0.png" />
+</div>
+</div>
+<p>The underlying values of <code class="docutils literal notranslate"><span class="pre">hwy</span></code> and <code class="docutils literal notranslate"><span class="pre">displ</span></code> are rounded so the points appear on a grid and many points overlap each other. This problem is known as <strong>overplotting</strong>. This arrangement makes it difficult to see the distribution of the data. Because scatterplot points are, by default, plotted with some transparency you can get a sense of which parts of the grid have multiple points on them, but you may wish to use a different technique.</p>
+<p>Another way to show the overlap is to use the “jitter” option. Passing the keyword argument <code class="docutils literal notranslate"><span class="pre">move=so.Jitter()</span></code> adds a small amount of random noise to each point. Dpeending on the numerical option you use, this spreads the points out because no two points are likely to receive the same amount of random noise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(),</span> <span class="n">move</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Jitter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_58_0.png" src="_images/data-visualise_58_0.png" />
+</div>
+</div>
+<p>Adding randomness seems like a strange way to improve your plot, but while it makes your graph less accurate at small scales, it makes your graph <em>more</em> revealing at large scales.</p>
+</div>
+</div>
+<div class="section" id="co-ordinates-and-scales">
+<h2>Co-ordinates and Scales<a class="headerlink" href="#co-ordinates-and-scales" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="co-ordinates">
+<h3>Co-ordinates<a class="headerlink" href="#co-ordinates" title="Permalink to this headline">¶</a></h3>
+<p>The co-ordinates of a plot are the system that determines which data is attached to which axis of, typically, the horizontal, or x-axis, and the vertical, or y-axis. This is set by arguments to the call to <code class="docutils literal notranslate"><span class="pre">so.Plot</span></code>, so to reverse the plot from before we simply reverse the arguments:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="s2">&quot;displ&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_61_0.png" src="_images/data-visualise_61_0.png" />
+</div>
+</div>
+<p>You can also do this explicitly by setting <code class="docutils literal notranslate"><span class="pre">x=&quot;hwy&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">y=&quot;displ&quot;</span></code>, and there’s a lot to be said for being explicit (when you read your code back later, it’s very helpful indeed).</p>
+</div>
+<div class="section" id="scales">
+<h3>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h3>
+<p>Let’s say you create a chart but the data vary on a scale that isn’t shown well by the default axes. If you find yourself in this situation, you may wish to change the <em>scale</em> of one or both of the axes. This is controlled by the <code class="docutils literal notranslate"><span class="pre">Scale</span></code> property in <strong>seaborn</strong>.</p>
+<p>The notion of scaling will probably not be unfamiliar; it means that a mathematical transformation, such as log, is made to the coordinate (or axes) variables.</p>
+<p>We’ll show this using the <code class="docutils literal notranslate"><span class="pre">planets</span></code> dataset, which has lots of variation in it!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;planets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;distance &lt; 1000&quot;</span><span class="p">)</span>
+<span class="n">planets</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>method</th>
+      <th>number</th>
+      <th>orbital_period</th>
+      <th>mass</th>
+      <th>distance</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>269.300</td>
+      <td>7.10</td>
+      <td>77.40</td>
+      <td>2006</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>874.774</td>
+      <td>2.21</td>
+      <td>56.95</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>763.000</td>
+      <td>2.60</td>
+      <td>19.84</td>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>326.030</td>
+      <td>19.40</td>
+      <td>110.62</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>516.220</td>
+      <td>10.50</td>
+      <td>119.47</td>
+      <td>2009</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">planets</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;mass&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;distance&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_65_0.png" src="_images/data-visualise_65_0.png" />
+</div>
+</div>
+<p>Here we used a log scale for both the x- and y-axes because both mass and distance vary over many orders of magnitude.</p>
+<p>But the scale property can apply to other dimensions that we are visualising in our plots too; here’s an example where we’re using colour (in the below, plasma is the name of a built-in continuous colourmap, a way of representing a continuous number line with colour gradients):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">planets</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;mass&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;distance&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orbital_period&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">(</span><span class="s2">&quot;plasma&quot;</span><span class="p">,</span> <span class="n">trans</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_67_0.png" src="_images/data-visualise_67_0.png" />
+</div>
+</div>
+<p>Sometimes you <em>don’t</em> want to apply the transform to everything, and that’s okay too. Here’s an example where the log scale <em>doesn’t</em> apply to the mass variable (even though it’s shown).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">planets</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;distance&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;orbital_period&quot;</span><span class="p">,</span> <span class="n">pointsize</span><span class="o">=</span><span class="s2">&quot;mass&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">pointsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data-visualise_69_0.png" src="_images/data-visualise_69_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summing-up">
+<h2>Summing Up<a class="headerlink" href="#summing-up" title="Permalink to this headline">¶</a></h2>
+<p>In the above, you’ve got to grips with some of the basics of visualisation with <strong>seaborn</strong>. You can find much more information in the documentation for that project. But let’s recap the grammar of a <strong>seaborn</strong> plot. The typical call will look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="o">&lt;</span><span class="n">DATA</span> <span class="n">FRAME</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">x</span><span class="o">=&lt;</span><span class="n">X</span> <span class="n">STRING</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">y</span><span class="o">=&lt;</span><span class="n">Y</span> <span class="n">STRING</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">OTHER</span> <span class="n">KEYWORD</span> <span class="n">ARGUMENTS</span> <span class="n">EG</span> <span class="n">POINTSIZE</span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">x</span><span class="o">=&lt;</span><span class="n">SCALE</span> <span class="n">STRING</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">OTHER</span> <span class="n">DIMENSION</span> <span class="n">KEYWORD</span> <span class="n">ARGUMENTS</span> <span class="n">AND</span> <span class="n">SCALE</span> <span class="n">STRINGS</span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">&lt;</span><span class="n">TYPE</span> <span class="n">OF</span> <span class="n">CHART</span> <span class="n">EG</span> <span class="n">SCATTER</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">KEYWORD</span> <span class="n">ARGUMENTS</span> <span class="n">FOR</span> <span class="n">THIS</span> <span class="n">LAYER</span> <span class="n">EG</span> <span class="n">MOVE</span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">&lt;</span><span class="n">FURTHER</span> <span class="n">LAYERS</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Getting Started with Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="workflow-basics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Workflow: Basics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Py4DS Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
