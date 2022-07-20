@@ -136,6 +136,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="data-tidy.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="workflow-style.html">
    Workflow: Style
   </a>
@@ -212,6 +217,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="webscraping-and-apis.html">
    Webscraping and APIs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rectangling.html">
+   Rectangling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programme
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
   </a>
  </li>
 </ul>
@@ -619,7 +641,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-07-17 10:29:37.895774
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-07-20 18:47:40.120642
 </pre></div>
 </div>
 </div>
@@ -709,7 +731,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Sunday, 07, 2022&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Wednesday, 07, 2022&#39;
 </pre></div>
 </div>
 </div>
@@ -875,7 +897,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>928 days, 10:29:37.895774
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>931 days, 18:47:40.120642
 </pre></div>
 </div>
 </div>
@@ -1120,12 +1142,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 252 entries, 0 to 251
+RangeIndex: 253 entries, 0 to 252
 Data columns (total 2 columns):
  #   Column                      Non-Null Count  Dtype 
 ---  ------                      --------------  ----- 
- 0   date                        252 non-null    object
- 1   Vacancies (ICT), thousands  252 non-null    int64 
+ 0   date                        253 non-null    object
+ 1   Vacancies (ICT), thousands  253 non-null    int64 
 dtypes: int64(1), object(1)
 memory usage: 4.1+ KB
 </pre></div>
@@ -1581,11 +1603,11 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2021-12-31</th>
-      <td>56.000000</td>
+      <td>55.916667</td>
     </tr>
     <tr>
       <th>2022-12-31</th>
-      <td>77.750000</td>
+      <td>78.000000</td>
     </tr>
   </tbody>
 </table>
@@ -1657,8 +1679,8 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2021-12-31</th>
-      <td>43.450000</td>
-      <td>11.899900</td>
+      <td>43.433333</td>
+      <td>11.894119</td>
     </tr>
   </tbody>
 </table>
@@ -1723,28 +1745,28 @@ Name: date, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-04-26</th>
+      <th>2022-05-27</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-04-27</th>
+      <th>2022-05-28</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-04-28</th>
+      <th>2022-05-29</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-04-29</th>
+      <th>2022-05-30</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-04-30</th>
+      <th>2022-05-31</th>
       <td>79.0</td>
     </tr>
   </tbody>
 </table>
-<p>7640 rows × 1 columns</p>
+<p>7671 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Options to fill in missing time series data include using <code class="docutils literal notranslate"><span class="pre">bfill</span></code> or <code class="docutils literal notranslate"><span class="pre">ffill</span></code> to fill in the blanks based on the next or last available value, respectively, or <code class="docutils literal notranslate"><span class="pre">interpolate</span></code> (note how only the first 3 NaNs are replaced using the <code class="docutils literal notranslate"><span class="pre">limit</span></code> keyword argument):</p>
@@ -1910,10 +1932,6 @@ y_t = f(\{x_{t-i} \}_{i=0}^{i=R-1})
       <td>...</td>
     </tr>
     <tr>
-      <th>2021-12-31</th>
-      <td>72.5</td>
-    </tr>
-    <tr>
       <th>2022-01-31</th>
       <td>76.5</td>
     </tr>
@@ -1929,9 +1947,13 @@ y_t = f(\{x_{t-i} \}_{i=0}^{i=R-1})
       <th>2022-04-30</th>
       <td>79.0</td>
     </tr>
+    <tr>
+      <th>2022-05-31</th>
+      <td>79.0</td>
+    </tr>
   </tbody>
 </table>
-<p>252 rows × 1 columns</p>
+<p>253 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ewm</span></code> includes the class of functions where data point <span class="math notranslate nohighlight">\(x_{t-i}\)</span> has a weight <span class="math notranslate nohighlight">\(w_i = (1-\alpha)^i\)</span>. As <span class="math notranslate nohighlight">\(0 &lt; \alpha &lt; 1\)</span>, points further back in time are given less weight. For example, an exponentially moving average is given by</p>
@@ -2000,28 +2022,28 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
       <td>...</td>
     </tr>
     <tr>
-      <th>2021-12-31</th>
-      <td>61.948986</td>
-    </tr>
-    <tr>
       <th>2022-01-31</th>
-      <td>64.959189</td>
+      <td>64.925635</td>
     </tr>
     <tr>
       <th>2022-02-28</th>
-      <td>67.167351</td>
+      <td>67.140508</td>
     </tr>
     <tr>
       <th>2022-03-31</th>
-      <td>69.533881</td>
+      <td>69.512406</td>
     </tr>
     <tr>
       <th>2022-04-30</th>
-      <td>71.427105</td>
+      <td>71.409925</td>
+    </tr>
+    <tr>
+      <th>2022-05-31</th>
+      <td>72.927940</td>
     </tr>
   </tbody>
 </table>
-<p>252 rows × 1 columns</p>
+<p>253 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Let’s see these methods together on the stock market data.</p>

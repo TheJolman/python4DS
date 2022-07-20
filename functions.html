@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions &#8212; Python for Data Science</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="zreferences.html" />
+    <link rel="prev" title="Rectangling" href="rectangling.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Getting Started with Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get Started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-visualise.html">
+   Data Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow: Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-transform.html">
+   Data Transformation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-tidy.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-style.html">
+   Workflow: Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-import.html">
+   Data Import
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean-data.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numbers.html">
+   Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings and Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="categorical-data.html">
+   Categorical Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dates-and-times.html">
+   Dates and Times
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="missing-values.html">
+   Missing Values
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working with Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraping-and-apis.html">
+   Webscraping and APIs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rectangling.html">
+   Rectangling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programme
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="zreferences.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Ffunctions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/functions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-should-you-write-a-function">
+   When should you write a function?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-are-for-humans-and-computers">
+   Functions are for humans and computers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#function-scope">
+   Function Scope
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Functions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-should-you-write-a-function">
+   When should you write a function?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-are-for-humans-and-computers">
+   Functions are for humans and computers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#function-scope">
+   Function Scope
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="functions">
+<span id="id1"></span><h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>One of the best ways to improve your reach as a data scientist is to write functions.
+Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.
+Writing a function has three big advantages over using copy-and-paste:</p>
+<ol class="simple">
+<li><p>You can give a function an evocative name that makes your code easier to understand.</p></li>
+<li><p>As requirements change, you only need to update code in one place, instead of many.</p></li>
+<li><p>You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another).</p></li>
+</ol>
+<p>Writing good functions is a lifetime journey.
+Even after using Python for many years you can still learn new techniques and better ways of approaching old problems.
+The goal of this chapter is not to teach you every esoteric detail of functions but to get you started with some pragmatic advice that you can apply immediately.</p>
+<p>As well as practical advice for writing functions, this chapter also gives you some suggestions for how to style your code.
+Good code style is like correct punctuation.
+Youcanmanagewithoutit, but it sure makes things easier to read!
+As with styles of punctuation, there are many possible variations.
+Here we present the style we use in our code, but the most important thing is to be consistent.</p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>You will need the <strong>pandas</strong> and <strong>numpy</strong> packages for this chapter.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>A function has inputs, it performs its function, and it returns any outputs. Functions begin with a def keyword for ‘define a function’. It then has a name, followed by brackets, (), which may contain function arguments and function keyword arguments. This is followed by a colon. The body of the function is then indented relative to the left-most text. Function arguments are defined in brackets following the name, with different inputs separated by commas. Any outputs are given with the return keyword, again with different variables separated by commas.</p>
+<p>Let’s see a very simple example of a function with a single <em>argument</em> (or arg):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">welcome_message</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, and welcome!&quot;</span>
+
+
+<span class="c1"># Without indentation, this code is not part of function</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ada&quot;</span>
+<span class="n">output_string</span> <span class="o">=</span> <span class="n">welcome_message</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Ada, and welcome!
+</pre></div>
+</div>
+</div>
+</div>
+<p>One powerful feature of functions is that we can define defaults for the input arguments. These are called <em>keyword arguments</em> (or kwargs). Let’s see that in action by defining a default value for <code class="docutils literal notranslate"><span class="pre">name</span></code>, along with multiple outputs–a hello message and a score.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">score_message</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;student&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is a doc-string, a string describing a function.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        score (float): Raw score</span>
+<span class="sd">        name (str): Name of student</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        str: A hello message.</span>
+<span class="sd">        float: A normalised score.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">norm_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">score</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">norm_score</span>
+
+
+<span class="c1"># Without indentation, this code is not part of function</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ada&quot;</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">98</span>
+<span class="c1"># No name entered</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">score_message</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+<span class="c1"># Name entered</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">score_message</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Hello student&#39;, 4.8)
+(&#39;Hello Ada&#39;, 4.8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Arguments and keyword arguments</p>
+<p><em>arguments</em> are the variables that functions <em>always</em> need, so <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">add(a,</span> <span class="pre">b):</span> <span class="pre">return</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>. The function won’t work without them! Function arguments are sometimes referred to as <em>args</em>.</p>
+<p><em>Keyword arguments</em> are the variables that are optional for functions, so <code class="docutils literal notranslate"><span class="pre">c</span></code> in <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">add(a,</span> <span class="pre">b,</span> <span class="pre">c=5):</span> <span class="pre">return</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">-</span> <span class="pre">c</span></code>. If you do not provide a value for <code class="docutils literal notranslate"><span class="pre">c</span></code> when calling the function, it will automatically revert to <code class="docutils literal notranslate"><span class="pre">c=5</span></code>. Keyword arguments are sometimes referred to as <em>kwargs</em>.</p>
+</div>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>What is the return type of a function with multiple return values separated by commas following the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement?</p>
+</div>
+<p>In that last example, you’ll notice that we added some text to the function. This is a doc-string, or documentation string. It’s there to help users (and, most likely, future you) to understand what the function does. Let’s see how this works in action by calling <code class="docutils literal notranslate"><span class="pre">help</span></code> on the <code class="docutils literal notranslate"><span class="pre">score_message</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">score_message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function score_message in module __main__:
+
+score_message(score, name=&#39;student&#39;)
+    This is a doc-string, a string describing a function.
+    Args:
+        score (float): Raw score
+        name (str): Name of student
+    Returns:
+        str: A hello message.
+        float: A normalised score.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Write a function that returns a high five unicode character if the input is equal to “coding for economists” and a sad face, “:-/” otherwise.</p>
+<p>Add a second argument that takes a default argument of an empty string but, if used, is added (concatenated) to the return message. Use it to create the return output, “:-/ here is my message.”</p>
+<p>Write a doc-string for your function and call <code class="docutils literal notranslate"><span class="pre">help</span></code> on it.</p>
+</div>
+<p>To learn more about args and kwargs, check out these <a class="reference external" href="https://calmcode.io/args-kwargs/introduction.html">short video tutorials</a>.</p>
+</div>
+<div class="section" id="when-should-you-write-a-function">
+<h2>When should you write a function?<a class="headerlink" href="#when-should-you-write-a-function" title="Permalink to this headline">¶</a></h2>
+<p>You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code).
+For example, take a look at this code.
+What does it do?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">])</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You might be able to puzzle out that this rescales each column to have a range from 0 to 1.
+But did you spot the mistake? There was an error when copying-and-pasting the code for <code class="docutils literal notranslate"><span class="pre">df[&quot;b&quot;]</span></code>: someone forgot to change an <code class="docutils literal notranslate"><span class="pre">a</span></code> to a <code class="docutils literal notranslate"><span class="pre">b</span></code>.
+Extracting repeated code out into a function is a good idea because it prevents you from making this type of mistake.</p>
+<p>To write a function you need to first analyse the code.
+How many inputs does it have?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>This code only has one input: <code class="docutils literal notranslate"><span class="pre">df[&quot;a&quot;]</span></code>. To make the inputs more clear, it’s a good idea to rewrite the code using temporary variables with general names. Here this code only requires a single numeric vector, so we’ll call it <code class="docutils literal notranslate"><span class="pre">x</span></code> and put it into a function.</p>
+<p>Functions begin with a def keyword for ‘define a function’. It then has a name, followed by brackets, (), which may contain function arguments and function keyword arguments. This is followed by a colon. The body of the function is then indented relative to the left-most text. Function arguments are defined in brackets following the name, with different inputs separated by commas. Any outputs are given with the return keyword, again with different variables separated by commas.</p>
+<p>So, in Python, functions have the form:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name_of_function</span><span class="p">(</span><span class="o">&lt;</span><span class="n">inputs</span><span class="o">&gt;</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">code</span> <span class="n">to</span> <span class="n">carry</span> <span class="n">out</span> <span class="n">on</span> <span class="n">inputs</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="k">return</span> <span class="n">statement</span><span class="p">,</span> <span class="k">if</span> <span class="n">appropriate</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>So here it would be:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is still some duplication in this code. We’re computing the minimum of the data twice, so it makes sense to do it in once:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">minimum</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">minimum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pulling out intermediate calculations into named variables is a good practice because it makes it more clear what the code is doing.</p>
+<p>There are three key steps to creating a new function:</p>
+<ol class="simple">
+<li><p>You need to pick a <em>name</em> for the function. Here we’ve used <code class="docutils literal notranslate"><span class="pre">rescale</span></code> because this function rescales a vector to lie between 0 and 1.</p></li>
+<li><p>You list the inputs, or <em>arguments</em>, to the function inside <code class="docutils literal notranslate"><span class="pre">function</span></code>.
+Here we have just one argument.
+If we had more the call would look like <code class="docutils literal notranslate"><span class="pre">function(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>. (We might also have a named <em>keyword argument</em> such as <code class="docutils literal notranslate"><span class="pre">data=</span></code> following the <em>arguments</em>.)</p></li>
+<li><p>You place the code you have developed in the <em>body</em> of the function, a block that immediately follows <code class="docutils literal notranslate"><span class="pre">function(...):</span></code>.</p></li>
+</ol>
+<p>Note the overall process: we only made the function after we’d figured out how to make it work with a simple input. It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.</p>
+<p>At this point it’s a good idea to check your function with a few different inputs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rescale</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.0
+1    0.5
+2    1.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rescale</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.00
+1    0.25
+2    0.50
+3     NaN
+4    1.00
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you write more and more functions you’ll eventually want to convert these informal, interactive tests into formal, automated tests.
+That process is called unit testing. Unfortunately, it’s beyond the scope of this book.</p>
+<p>We can simplify the original example now that we have a function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rescale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rescale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rescale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rescale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Compared to the original, this code is easier to understand and we’ve eliminated one class of copy-and-paste errors. There is still quite a bit of duplication since we’re doing the same thing to multiple columns; we can actually remove this too, but we’ll cover how to do that later in the book.</p>
+<p>Another advantage of functions is that if our requirements change, we only need to make the change in one place.
+For example, we might discover that some of our variables include infinite values, and <code class="docutils literal notranslate"><span class="pre">rescale</span></code> (effectively) fails:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rescale</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.0
+1    0.0
+2    0.0
+3    NaN
+4    0.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because we’ve extracted the code into a function, we only need to make the fix in one place:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rescale</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">minimum</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">minimum</span><span class="p">)</span>
+
+
+<span class="n">rescale</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.00
+1    0.25
+2    0.50
+3     NaN
+4    1.00
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is an important part of the “do not repeat yourself” (or DRY) principle.
+The more repetition you have in your code, the more places you need to remember to update when things change (and they always do!), and the more likely you are to create bugs over time.</p>
+</div>
+<div class="section" id="functions-are-for-humans-and-computers">
+<h2>Functions are for humans and computers<a class="headerlink" href="#functions-are-for-humans-and-computers" title="Permalink to this headline">¶</a></h2>
+<p>It’s important to remember that functions are not just for the computer, but are also for humans. For the most part, Python doesn’t care what your function is called, or what comments it contains, but these are important for human readers. This section discusses some things that you should bear in mind when writing functions that humans can understand.</p>
+<p>The name of a function is important. Ideally, the name of your function will be short, but clearly evoke what the function does. That’s hard! But it’s better to be clear than short, as Visual Studio Code’s autocomplete makes it easy to type long names.</p>
+<p>Generally, function names should be verbs, and arguments should be nouns. There are some exceptions: nouns are ok if the function computes a very well known noun (i.e. <code class="docutils literal notranslate"><span class="pre">mean</span></code> is better than <code class="docutils literal notranslate"><span class="pre">compute_mean</span></code>), or accessing some property of an object (i.e. <code class="docutils literal notranslate"><span class="pre">coef</span></code> is better than <code class="docutils literal notranslate"><span class="pre">get_coefficients</span></code>). A good sign that a noun might be a better choice is if you’re using a very broad verb like “get”, “compute”, “calculate”, or “determine”.
+Use your best judgement and don’t be afraid to rename a function if you figure out a better name later.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Not a verb, or descriptive</span>
+<span class="n">my_awesome_function</span><span class="p">()</span>
+<span class="c1"># Long, but clear</span>
+<span class="n">impute_missing</span><span class="p">()</span>
+<span class="n">collapse_years</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If your function name is composed of multiple words, use “snake_case”, where each lowercase word is separated by an underscore. If you have a family of functions that do similar things, make sure they have consistent names and arguments. Use a common prefix to indicate that they are connected. That’s better than a common suffix because autocomplete allows you to type the prefix and see all the members of the family.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Good</span>
+<span class="n">input_select</span><span class="p">()</span>
+<span class="n">input_checkbox</span><span class="p">()</span>
+<span class="n">input_text</span><span class="p">()</span>
+<span class="c1"># Not so good</span>
+<span class="n">select_input</span><span class="p">()</span>
+<span class="n">checkbox_input</span><span class="p">()</span>
+<span class="n">text_input</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>A good example of this design is the <strong>pandas</strong> package: if you don’t remember exactly which function you need to read in data, you can type <code class="docutils literal notranslate"><span class="pre">pd.read_</span></code> and jog your memory as the autocomplete brings up the options.</p>
+</div>
+<div class="section" id="function-scope">
+<h2>Function Scope<a class="headerlink" href="#function-scope" title="Permalink to this headline">¶</a></h2>
+<p>Scope refers to what parts of your code can see what other parts. There are three different scopes to bear in mind: local, global, and non-local.</p>
+<p><strong>Local</strong></p>
+<p>If you define a variable inside a function, the rest of your code won’t be able to ‘see’ it or use it. For example, here’s a function that creates a variable and then an example of calling that variable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">var_func</span><span class="p">():</span>
+    <span class="n">str_variable</span> <span class="o">=</span> <span class="s1">&#39;Hello World!&#39;</span>
+
+<span class="n">var_func</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_variable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This would raise an error, because as far as your general code is concerned <code class="docutils literal notranslate"><span class="pre">str_variable</span></code> doesn’t exist outside of the function. This is an example of a <em>local</em> variable, one that only exists within a function.</p>
+<p>If you want to create variables inside a function and have them persist, you need to explicitly pass them out using, for example <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">str_variable</span></code> like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">var_func</span><span class="p">():</span>
+    <span class="n">str_variable</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+    <span class="k">return</span> <span class="n">str_variable</span>
+
+
+<span class="n">returned_var</span> <span class="o">=</span> <span class="n">var_func</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">returned_var</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Global</strong></p>
+<p>A variable declared outside of a function is known as a global variable because it is accessible everywhere:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a global variable&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">print_y</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y is inside a function:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+
+<span class="n">print_y</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y is outside a function:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y is inside a function: I&#39;m a global variable
+y is outside a function: I&#39;m a global variable
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="rectangling.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Rectangling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="zreferences.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Py4DS Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
