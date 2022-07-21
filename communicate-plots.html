@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphics for Communication &#8212; Python for Data Science</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="zreferences.html" />
+    <link rel="prev" title="Quarto and Markdown" href="quarto-and-markdown.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Getting Started with Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Get Started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-visualise.html">
+   Data Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-basics.html">
+   Workflow: Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-transform.html">
+   Data Transformation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-style.html">
+   Workflow: Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-tidy.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-writing-code.html">
+   Workflow: Writing Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-import.html">
+   Data Import
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="joins.html">
+   Joins
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="boolean-data.html">
+   Boolean Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numbers.html">
+   Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings and Text
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regex.html">
+   Regular Expressions, aka regex
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="categorical-data.html">
+   Categorical Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dates-and-times.html">
+   Dates and Times
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="missing-values.html">
+   Missing Values
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working with Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="spreadsheets.html">
+   Spreadsheets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="webscraping-and-apis.html">
+   Webscraping and APIs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rectangling.html">
+   Rectangling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programme
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Communicate
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quarto-and-markdown.html">
+   Quarto and Markdown
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Graphics for Communication
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="zreferences.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/communicate-plots.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fcommunicate-plots.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/communicate-plots.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/communicate-plots.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labels-and-titles">
+   Labels and Titles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations">
+   Annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scales">
+   Scales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-ticks-and-legend-keys">
+     Axis Ticks and Legend Keys
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-layout">
+     Legend Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-aka-zooming">
+     Limits, aka ‘zooming’
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-plots">
+   Saving Plots
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Graphics for Communication</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites">
+     Prerequisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labels-and-titles">
+   Labels and Titles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annotations">
+   Annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scales">
+   Scales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-ticks-and-legend-keys">
+     Axis Ticks and Legend Keys
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-layout">
+     Legend Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-aka-zooming">
+     Limits, aka ‘zooming’
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-plots">
+   Saving Plots
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="graphics-for-communication">
+<span id="communicate-plots"></span><h1>Graphics for Communication<a class="headerlink" href="#graphics-for-communication" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>In this chapter, you’ll learn about using visualisation to communicate.</p>
+<p>There are a plethora of options (and packages) for data visualisation using code. First, though a note about the different philosophies of data visualisation. There are broadly two categories of approach to using code to create data visualisations: imperative, where you build what you want, and declarative, where you say what you want. Choosing which to use involves a trade-off: imperative libraries offer you flexibility but at the cost of some verbosity; declarative libraries offer you a quick way to plot your data, but only if it’s in the right format to begin with, and customisation may be more difficult.</p>
+<p>There are also different purposes of data visualisation. It can be useful to bear in mind the three broad categories of visualisation that are out there:</p>
+<ul class="simple">
+<li><p>exploratory</p></li>
+<li><p>scientific</p></li>
+<li><p>narrative</p></li>
+</ul>
+<p>Python has packages that cover all three of these.</p>
+<p>In <a class="reference internal" href="exploratory-data-analysis.html#exploratory-data-analysis"><span class="std std-ref">Exploratory Data Analysis</span></a>, you learned how to use plots as tools for <em>exploration</em>.
+When you make exploratory plots, you know—even before looking—which variables the plot will display.
+You made each plot for a purpose, could quickly look at it, and then move on to the next plot.
+In the course of most analyses, you’ll produce tens or hundreds of plots, most of which are immediately thrown away. Exploratory visualisation is usually quick and dirty, and flexible too.</p>
+<p>The second kind, <em>scientific visualisation</em>, is the prime cut of your exploratory visualisation. It’s the kind of plot you might include in a more technical paper, the picture that says a thousand words. The first image of a black hole <span id="id1">[<a class="reference internal" href="zreferences.html#id6" title="Kazunori Akiyama, Antxon Alberdi, Walter Alef, Keiichi Asada, Rebecca Azulay, Anne-Kathrin Baczko, David Ball, Mislav Baloković, John Barrett, Dan Bintley, and others. First m87 event horizon telescope results. iv. imaging the central supermassive black hole. The Astrophysical Journal Letters, 875(1):L4, 2019.">AAA+19</a>]</span> is a prime example of this. You can get away with having a high density of information in a scientific plot because it’s designed for specialists. Ensuring that important values can be accurately read from the plot is especially important in these kinds of charts. But they can also be the kind of plot that presents the killer results in a study; they might not be exciting to people who don’t look at charts for a living, but they might be exciting and, just as importantly, understandable by your peers.</p>
+<p>The third and final kind is <em>narrative visualisation</em>, and it is the focus of this chapter—though we’ll only scratch the surface. This is the one that requires the most thought in the step where you go from the first view to the end product because your audience will likely not share your background knowledge and will not be deeply invested in the data. It’s a visualisation that doesn’t just show a picture, but gives an insight. These are the kind of visualisations that you might see in the Financial Times, The Economist, or on the BBC News website. They come with aids that help the viewer focus on the aspects that the creator wanted them to (you can think of these aids or focuses as doing for visualisation what bold font does for text). They’re well worth using in your work, especially if you’re trying to communicate a particular narrative, and especially if the people you’re communicating with don’t have deep knowledge of the topic. You might use them in a paper that you hope will have a wide readership, in a blog post summarising your work, or in a report intended for a policymaker.</p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>As well as <strong>pandas</strong>, you will need to install the declarative visualisation package <strong>seaborn</strong> for this chapter. This chapter uses the next generation version of <strong>seaborn</strong>, which can be installed by running the following on the command line (aka in the terminal):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --pre seaborn
+</pre></div>
+</div>
+<p>Although it will get installed when you install <strong>seaborn</strong>, we’ll also be using the powerful imperative visualisation library that <strong>seaborn</strong> builds on, <strong>matplotlib</strong>.</p>
+<p>You’ll need to import the <strong>seaborn</strong> and <strong>pandas</strong> libraries into your session using</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="labels-and-titles">
+<h2>Labels and Titles<a class="headerlink" href="#labels-and-titles" title="Permalink to this headline">¶</a></h2>
+<p>The easiest place to start when turning an exploratory graphic into an expository graphic is with good labels. This example plot axis labels:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the data</span>
+<span class="n">mpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/ggplot2/mpg.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s do the plot with a title</p>
+<p>[TODO]</p>
+<p>The purpose of a plot title is to summarise the main finding. Avoid titles that just describe what the plot is, e.g. “A scatterplot of engine displacement vs. fuel economy”.</p>
+<p>If you need to add more text, there are two other useful labels that you can use:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subtitle</span></code> adds additional detail in a smaller font beneath the title.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caption</span></code> adds text at the bottom right of the plot, often used to describe the source of the data.</p></li>
+</ul>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">.label</span></code> to replace the axis and legend titles. It’s usually a good idea to replace short variable names with more detailed descriptions, and to include the units.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Engine displacement (L)&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Highway fuel economy (mpg)&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_9_0.png" src="_images/communicate-plots_9_0.png" />
+</div>
+</div>
+<p>It’s possible to use mathematical equations and functions instead of text strings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$x^{y-z}$&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_11_0.png" src="_images/communicate-plots_11_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="annotations">
+<h2>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">¶</a></h2>
+<p>[TODO]</p>
+</div>
+<div class="section" id="scales">
+<h2>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h2>
+<p>The third way you can make your plot better for communication is to adjust the scales.
+Scales control the mapping from data values to things that you can perceive.
+Normally, <strong>seaborn</strong> automatically adds scales for you.
+For example, when you type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_14_0.png" src="_images/communicate-plots_14_0.png" />
+</div>
+</div>
+<p><strong>seaborn</strong> automatically adds default scales behind the scenes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">scale</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">(),</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">(),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Nominal</span><span class="p">(),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_16_0.png" src="_images/communicate-plots_16_0.png" />
+</div>
+</div>
+<p>Note the naming scheme for scales: <code class="docutils literal notranslate"><span class="pre">.scale</span></code> followed by the name of the dimension, then <code class="docutils literal notranslate"><span class="pre">=so.</span></code>, then the name of the scale.
+The default scales are named according to the type of variable they align with: continuous, nominal, and so on.</p>
+<p>The default scales have been carefully chosen to do a good job for a wide range of inputs.
+Nevertheless, you might want to override the defaults for two reasons:</p>
+<ul class="simple">
+<li><p>You might want to tweak some of the parameters of the default scale.
+This allows you to do things like change the breaks on the axes, or the key labels on the legend.</p></li>
+<li><p>You might want to replace the scale altogether, and use a completely different algorithm.
+Often you can do better than the default because you know more about the data.</p></li>
+</ul>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Try a plot with a scale setting of <code class="docutils literal notranslate"><span class="pre">x=&quot;log&quot;</span></code>.</p>
+</div>
+<div class="section" id="axis-ticks-and-legend-keys">
+<h3>Axis Ticks and Legend Keys<a class="headerlink" href="#axis-ticks-and-legend-keys" title="Permalink to this headline">¶</a></h3>
+<p>[TODO]</p>
+</div>
+<div class="section" id="legend-layout">
+<h3>Legend Layout<a class="headerlink" href="#legend-layout" title="Permalink to this headline">¶</a></h3>
+<p>[TODO]</p>
+</div>
+<div class="section" id="limits-aka-zooming">
+<h3>Limits, aka ‘zooming’<a class="headerlink" href="#limits-aka-zooming" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to control the plot limits:</p>
+<ol class="simple">
+<li><p>Adjusting what data are plotted</p></li>
+<li><p>Setting the limits in each scale</p></li>
+</ol>
+<p>Here is the same plot done according to 1 and 2 respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_21_0.png" src="_images/communicate-plots_21_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span>
+        <span class="n">mpg</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;displ &gt;= 5 &amp; displ &lt;= 7 &amp; hwy &gt;= 10 &amp; hwy &lt;= 30&quot;</span><span class="p">),</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_22_0.png" src="_images/communicate-plots_22_0.png" />
+</div>
+</div>
+<p>While they convey the same information, the former looks better.</p>
+<p>## Themes</p>
+<p>Seaborn comes with several built-in themes that you can switch between by using</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_25_0.png" src="_images/communicate-plots_25_0.png" />
+</div>
+</div>
+<p>Note that you can also create your own themes using <strong>matplotlib</strong>, the library that sits under <strong>seaborn</strong> (this book uses a custom theme).</p>
+</div>
+</div>
+<div class="section" id="saving-plots">
+<h2>Saving Plots<a class="headerlink" href="#saving-plots" title="Permalink to this headline">¶</a></h2>
+<p>[TODO]</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="quarto-and-markdown.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Quarto and Markdown</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="zreferences.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Py4DS Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
