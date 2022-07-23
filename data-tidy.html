@@ -114,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Get Started
+  Getting Started
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -154,19 +154,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="exploratory-data-analysis.html">
    Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
+  <a class="reference internal" href="workflow-packages-and-environments.html">
+   Packages and Environments
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transform
+  Data Types
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -213,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Working with Data
+  Transforming Data
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -232,10 +237,15 @@ const thebe_selector_output = ".output, .cell_output"
    Rectangling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Databases
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programme
+  Programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -249,16 +259,26 @@ const thebe_selector_output = ".output, .cell_output"
    Iteration
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command-line.html">
+   The Command Line
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicate
+  Communicating
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="quarto-and-markdown.html">
-   Quarto and Markdown
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quarto.html">
+   Quarto
   </a>
  </li>
  <li class="toctree-l1">
@@ -694,7 +714,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>d</td>
       <td>2.5</td>
       <td>3.2</td>
-      <td>-1.553577</td>
+      <td>-0.063451</td>
       <td>0</td>
     </tr>
     <tr>
@@ -703,7 +723,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>e</td>
       <td>1.2</td>
       <td>1.3</td>
-      <td>-0.069813</td>
+      <td>0.839006</td>
       <td>1</td>
     </tr>
     <tr>
@@ -712,7 +732,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>f</td>
       <td>0.7</td>
       <td>0.1</td>
-      <td>0.518515</td>
+      <td>0.228820</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -762,42 +782,42 @@ If you have a consistent data structure, it’s easier to learn the tools that w
     <tr>
       <th>0</th>
       <th>1970</th>
-      <td>-1.553577</td>
+      <td>-0.063451</td>
       <td>a</td>
       <td>2.5</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1970</th>
-      <td>-0.069813</td>
+      <td>0.839006</td>
       <td>b</td>
       <td>1.2</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1970</th>
-      <td>0.518515</td>
+      <td>0.228820</td>
       <td>c</td>
       <td>0.7</td>
     </tr>
     <tr>
       <th>0</th>
       <th>1980</th>
-      <td>-1.553577</td>
+      <td>-0.063451</td>
       <td>d</td>
       <td>3.2</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1980</th>
-      <td>-0.069813</td>
+      <td>0.839006</td>
       <td>e</td>
       <td>1.3</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1980</th>
-      <td>0.518515</td>
+      <td>0.228820</td>
       <td>f</td>
       <td>0.1</td>
     </tr>
@@ -863,46 +883,46 @@ If you have a consistent data structure, it’s easier to learn the tools that w
     <tr>
       <th rowspan="2" valign="top">bar</th>
       <th>one</th>
-      <td>0.463225</td>
-      <td>-0.419761</td>
+      <td>0.626828</td>
+      <td>-0.395543</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>0.883370</td>
-      <td>-1.353256</td>
+      <td>0.523441</td>
+      <td>-0.087183</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">baz</th>
       <th>one</th>
-      <td>1.214806</td>
-      <td>-0.175600</td>
+      <td>0.040796</td>
+      <td>-0.778073</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>2.135088</td>
-      <td>1.622239</td>
+      <td>1.380990</td>
+      <td>-1.196120</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">foo</th>
       <th>one</th>
-      <td>1.017174</td>
-      <td>0.463745</td>
+      <td>-0.421271</td>
+      <td>0.470845</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>0.999530</td>
-      <td>-1.761918</td>
+      <td>0.512252</td>
+      <td>1.845158</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">qux</th>
       <th>one</th>
-      <td>-0.235614</td>
-      <td>2.691941</td>
+      <td>-1.132998</td>
+      <td>0.319833</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-0.086768</td>
-      <td>0.587558</td>
+      <td>2.857514</td>
+      <td>-2.091960</td>
     </tr>
   </tbody>
 </table>
@@ -918,22 +938,22 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first  second   
-bar    one     A    0.463225
-               B   -0.419761
-       two     A    0.883370
-               B   -1.353256
-baz    one     A    1.214806
-               B   -0.175600
-       two     A    2.135088
-               B    1.622239
-foo    one     A    1.017174
-               B    0.463745
-       two     A    0.999530
-               B   -1.761918
-qux    one     A   -0.235614
-               B    2.691941
-       two     A   -0.086768
-               B    0.587558
+bar    one     A    0.626828
+               B   -0.395543
+       two     A    0.523441
+               B   -0.087183
+baz    one     A    0.040796
+               B   -0.778073
+       two     A    1.380990
+               B   -1.196120
+foo    one     A   -0.421271
+               B    0.470845
+       two     A    0.512252
+               B    1.845158
+qux    one     A   -1.132998
+               B    0.319833
+       two     A    2.857514
+               B   -2.091960
 dtype: float64
 </pre></div>
 </div>
@@ -987,32 +1007,32 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">one</th>
       <th>A</th>
-      <td>0.463225</td>
-      <td>1.214806</td>
-      <td>1.017174</td>
-      <td>-0.235614</td>
+      <td>0.626828</td>
+      <td>0.040796</td>
+      <td>-0.421271</td>
+      <td>-1.132998</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-0.419761</td>
-      <td>-0.175600</td>
-      <td>0.463745</td>
-      <td>2.691941</td>
+      <td>-0.395543</td>
+      <td>-0.778073</td>
+      <td>0.470845</td>
+      <td>0.319833</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">two</th>
       <th>A</th>
-      <td>0.883370</td>
-      <td>2.135088</td>
-      <td>0.999530</td>
-      <td>-0.086768</td>
+      <td>0.523441</td>
+      <td>1.380990</td>
+      <td>0.512252</td>
+      <td>2.857514</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-1.353256</td>
-      <td>1.622239</td>
-      <td>-1.761918</td>
-      <td>0.587558</td>
+      <td>-0.087183</td>
+      <td>-1.196120</td>
+      <td>1.845158</td>
+      <td>-2.091960</td>
     </tr>
   </tbody>
 </table>
@@ -1073,39 +1093,39 @@ dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>18</th>
-      <td>2000-09-30</td>
-      <td>B</td>
-      <td>type1</td>
-      <td>0.237489</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2000-02-29</td>
-      <td>B</td>
-      <td>type4</td>
-      <td>0.246105</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2000-06-30</td>
-      <td>B</td>
-      <td>type4</td>
-      <td>-1.011822</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2000-02-29</td>
+      <th>3</th>
+      <td>2000-04-30</td>
       <td>A</td>
-      <td>type2</td>
-      <td>0.440841</td>
+      <td>type1</td>
+      <td>-0.850292</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>2000-07-31</td>
+      <th>17</th>
+      <td>2000-08-31</td>
       <td>B</td>
+      <td>type4</td>
+      <td>-1.014766</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2000-10-31</td>
+      <td>A</td>
+      <td>type4</td>
+      <td>-0.618710</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2000-01-31</td>
+      <td>B</td>
+      <td>type2</td>
+      <td>1.037996</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2000-08-31</td>
+      <td>A</td>
       <td>type1</td>
-      <td>0.297130</td>
+      <td>1.453039</td>
     </tr>
   </tbody>
 </table>
@@ -1154,48 +1174,48 @@ dtype: float64
     </tr>
     <tr>
       <th>2000-02-29</th>
-      <td>0.424505</td>
-      <td>-0.061004</td>
+      <td>0.799083</td>
+      <td>1.037996</td>
     </tr>
     <tr>
       <th>2000-03-31</th>
-      <td>0.440841</td>
-      <td>0.246105</td>
+      <td>1.089181</td>
+      <td>0.875923</td>
     </tr>
     <tr>
       <th>2000-04-30</th>
-      <td>-0.130743</td>
-      <td>0.164669</td>
+      <td>-0.309666</td>
+      <td>0.987739</td>
     </tr>
     <tr>
       <th>2000-05-31</th>
-      <td>0.441259</td>
-      <td>0.022231</td>
+      <td>-0.850292</td>
+      <td>-0.460108</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>-2.126589</td>
-      <td>-0.934900</td>
+      <td>-0.109378</td>
+      <td>-0.320110</td>
     </tr>
     <tr>
       <th>2000-07-31</th>
-      <td>1.351448</td>
-      <td>-1.011822</td>
+      <td>-0.072849</td>
+      <td>0.473774</td>
     </tr>
     <tr>
       <th>2000-08-31</th>
-      <td>-0.623307</td>
-      <td>0.297130</td>
+      <td>-0.097925</td>
+      <td>1.864287</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>-1.117703</td>
-      <td>0.519539</td>
+      <td>1.453039</td>
+      <td>-1.014766</td>
     </tr>
     <tr>
       <th>2000-10-31</th>
-      <td>-2.845972</td>
-      <td>0.237489</td>
+      <td>-0.660389</td>
+      <td>-0.795586</td>
     </tr>
   </tbody>
 </table>

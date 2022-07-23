@@ -114,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Get Started
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -154,19 +154,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="exploratory-data-analysis.html">
    Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
+  <a class="reference internal" href="workflow-packages-and-environments.html">
+   Packages and Environments
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transform
+  Data Types
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -213,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Working with Data
+  Transforming Data
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -232,10 +237,15 @@ const thebe_selector_output = ".output, .cell_output"
    Rectangling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Databases
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programme
+  Programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -249,16 +259,26 @@ const thebe_selector_output = ".output, .cell_output"
    Iteration
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command-line.html">
+   The Command Line
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicate
+  Communicating
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="quarto-and-markdown.html">
-   Quarto and Markdown
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quarto.html">
+   Quarto
   </a>
  </li>
  <li class="toctree-l1">
@@ -1227,144 +1247,144 @@ Name: bool_col, dtype: bool
   </thead>
   <tbody>
     <tr>
-      <th>29166</th>
-      <td>0.38</td>
-      <td>Good</td>
-      <td>E</td>
+      <th>46320</th>
+      <td>0.58</td>
+      <td>Ideal</td>
+      <td>H</td>
       <td>VS2</td>
-      <td>63.2</td>
-      <td>57.0</td>
-      <td>693</td>
-      <td>4.59</td>
-      <td>4.62</td>
-      <td>2.91</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>44866</th>
-      <td>0.73</td>
-      <td>Good</td>
-      <td>E</td>
-      <td>I1</td>
-      <td>56.9</td>
-      <td>60.0</td>
-      <td>1628</td>
-      <td>5.98</td>
-      <td>5.93</td>
-      <td>3.39</td>
+      <td>61.2</td>
+      <td>56.0</td>
+      <td>1755</td>
+      <td>5.41</td>
+      <td>5.39</td>
+      <td>3.30</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>42296</th>
-      <td>0.36</td>
-      <td>Ideal</td>
-      <td>H</td>
-      <td>SI1</td>
-      <td>61.5</td>
-      <td>57.0</td>
-      <td>505</td>
-      <td>4.57</td>
-      <td>4.60</td>
-      <td>2.82</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>10841</th>
-      <td>1.16</td>
+      <th>47446</th>
+      <td>0.53</td>
       <td>Premium</td>
-      <td>H</td>
-      <td>SI2</td>
-      <td>61.8</td>
+      <td>D</td>
+      <td>VS2</td>
+      <td>60.4</td>
       <td>58.0</td>
-      <td>4872</td>
-      <td>6.81</td>
-      <td>6.75</td>
-      <td>4.19</td>
+      <td>1857</td>
+      <td>5.23</td>
+      <td>5.26</td>
+      <td>3.17</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>27589</th>
-      <td>1.72</td>
+      <th>15828</th>
+      <td>1.04</td>
+      <td>Very Good</td>
+      <td>G</td>
+      <td>VS2</td>
+      <td>61.1</td>
+      <td>56.0</td>
+      <td>6334</td>
+      <td>6.54</td>
+      <td>6.56</td>
+      <td>4.01</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>47323</th>
+      <td>0.23</td>
+      <td>Very Good</td>
+      <td>D</td>
+      <td>VVS2</td>
+      <td>62.5</td>
+      <td>58.0</td>
+      <td>530</td>
+      <td>3.92</td>
+      <td>3.95</td>
+      <td>2.46</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>40454</th>
+      <td>0.32</td>
       <td>Ideal</td>
+      <td>E</td>
+      <td>VVS1</td>
+      <td>61.5</td>
+      <td>56.0</td>
+      <td>1140</td>
+      <td>4.43</td>
+      <td>4.45</td>
+      <td>2.73</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>30746</th>
+      <td>0.34</td>
+      <td>Very Good</td>
       <td>G</td>
       <td>VVS2</td>
-      <td>62.0</td>
-      <td>57.0</td>
-      <td>18431</td>
-      <td>7.63</td>
-      <td>7.72</td>
-      <td>4.76</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>27843</th>
-      <td>0.31</td>
-      <td>Very Good</td>
-      <td>G</td>
-      <td>VS2</td>
-      <td>63.2</td>
-      <td>58.0</td>
-      <td>651</td>
-      <td>4.30</td>
-      <td>4.28</td>
-      <td>2.71</td>
+      <td>62.3</td>
+      <td>59.0</td>
+      <td>740</td>
+      <td>4.45</td>
+      <td>4.48</td>
+      <td>2.78</td>
       <td>False</td>
     </tr>
     <tr>
-      <th>44479</th>
-      <td>0.55</td>
-      <td>Ideal</td>
-      <td>E</td>
-      <td>VS2</td>
-      <td>62.0</td>
-      <td>55.0</td>
-      <td>1596</td>
-      <td>5.24</td>
-      <td>5.28</td>
-      <td>3.26</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>23956</th>
-      <td>1.44</td>
+      <th>19184</th>
+      <td>1.50</td>
       <td>Ideal</td>
       <td>G</td>
-      <td>VS1</td>
-      <td>62.6</td>
-      <td>57.0</td>
-      <td>12093</td>
-      <td>7.21</td>
-      <td>7.19</td>
-      <td>4.51</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>13196</th>
-      <td>1.03</td>
-      <td>Very Good</td>
-      <td>I</td>
-      <td>VS1</td>
-      <td>62.9</td>
-      <td>53.0</td>
-      <td>5455</td>
-      <td>6.45</td>
-      <td>6.50</td>
-      <td>4.07</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>3795</th>
-      <td>0.90</td>
-      <td>Very Good</td>
-      <td>I</td>
       <td>SI2</td>
-      <td>60.5</td>
-      <td>56.0</td>
-      <td>3464</td>
-      <td>6.22</td>
-      <td>6.24</td>
-      <td>3.77</td>
+      <td>61.5</td>
+      <td>57.0</td>
+      <td>7936</td>
+      <td>7.33</td>
+      <td>7.39</td>
+      <td>4.53</td>
       <td>True</td>
+    </tr>
+    <tr>
+      <th>19848</th>
+      <td>2.04</td>
+      <td>Premium</td>
+      <td>I</td>
+      <td>I1</td>
+      <td>59.3</td>
+      <td>61.0</td>
+      <td>8408</td>
+      <td>8.30</td>
+      <td>8.25</td>
+      <td>4.91</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>48977</th>
+      <td>0.36</td>
+      <td>Premium</td>
+      <td>D</td>
+      <td>SI2</td>
+      <td>60.0</td>
+      <td>58.0</td>
+      <td>537</td>
+      <td>4.58</td>
+      <td>4.62</td>
+      <td>2.76</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>32679</th>
+      <td>0.31</td>
+      <td>Premium</td>
+      <td>G</td>
+      <td>VS1</td>
+      <td>62.1</td>
+      <td>58.0</td>
+      <td>802</td>
+      <td>4.35</td>
+      <td>4.31</td>
+      <td>2.69</td>
+      <td>False</td>
     </tr>
   </tbody>
 </table>

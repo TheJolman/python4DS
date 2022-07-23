@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Data Visualisation" href="data-visualise.html" />
@@ -114,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Get Started
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -154,19 +152,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="exploratory-data-analysis.html">
    Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
+  <a class="reference internal" href="workflow-packages-and-environments.html">
+   Workflow: Packages and Environments
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transform
+  Data Types
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -213,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Working with Data
+  Transforming Data
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -232,10 +235,15 @@ const thebe_selector_output = ".output, .cell_output"
    Rectangling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Databases
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programme
+  Programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -249,16 +257,26 @@ const thebe_selector_output = ".output, .cell_output"
    Iteration
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command-line.html">
+   The Command Line
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicate
+  Communicating
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="quarto-and-markdown.html">
-   Quarto and Markdown
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quarto.html">
+   Quarto
   </a>
  </li>
  <li class="toctree-l1">
@@ -663,7 +681,7 @@ That’s a bad place to start learning a new subject! Instead, we’ll start wit
 <h3>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h3>
 <p>You’ll also need to install some Python packages. A Python <strong>package</strong> is a collection of functions, data, and documentation that extends the capabilities of an installed version of Python. Using packages is key to most data science.</p>
 <p>The Anaconda distribution actually comes with a host of the most useful packages for data science, including <strong>pandas</strong> for data manipulation and <strong>matplotlib</strong> for data visualisation.</p>
-<p>You can install additional packages from the Visual Studio Code command line (labelled as number 4 in the figure above). To install an extra package, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">**packagename**</span></code> in the command line. You could try installing the visualisation package <strong>plotnine</strong> this way, by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">plotnine</span></code>.</p>
+<p>You can install additional packages from the Visual Studio Code command line (labelled as number 4 in the figure above). To install an extra package, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">**packagename**</span></code> in the command line. You could try installing the exploratory data analysis package <strong>skimpy</strong> this way, by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">skimpy</span></code>. There’ll be more on installing and using packages in <a class="reference internal" href="workflow-packages-and-environments.html#workflow-packages-and-environments"><span class="std std-ref">Workflow: Packages and Environments</span></a>.</p>
 <p>If you have problems installing, make sure that you are connected to the internet, and that <a class="reference external" href="https://pypi.org/">PyPI</a> (the Python package index) isn’t blocked by your firewall or proxy.</p>
 </div>
 </div>

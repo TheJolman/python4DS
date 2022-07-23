@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Quarto and Markdown" href="quarto-and-markdown.html" />
+    <link rel="next" title="The Command Line" href="command-line.html" />
     <link rel="prev" title="Functions" href="functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -114,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Get Started
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -154,19 +154,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="exploratory-data-analysis.html">
    Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
+  <a class="reference internal" href="workflow-packages-and-environments.html">
+   Packages and Environments
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transform
+  Data Types
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -213,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Working with Data
+  Transforming Data
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -232,10 +237,15 @@ const thebe_selector_output = ".output, .cell_output"
    Rectangling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Databases
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programme
+  Programming
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -249,16 +259,26 @@ const thebe_selector_output = ".output, .cell_output"
    Iteration
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command-line.html">
+   The Command Line
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicate
+  Communicating
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="quarto-and-markdown.html">
-   Quarto and Markdown
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quarto.html">
+   Quarto
   </a>
  </li>
  <li class="toctree-l1">
@@ -921,45 +941,45 @@ execution complete
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.272327</td>
-      <td>0.228015</td>
-      <td>-0.655390</td>
-      <td>-1.568561</td>
+      <td>-0.343653</td>
+      <td>1.123718</td>
+      <td>-0.674377</td>
+      <td>1.651299</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.250006</td>
-      <td>-0.473611</td>
-      <td>0.714825</td>
-      <td>0.430905</td>
+      <td>0.916364</td>
+      <td>0.918764</td>
+      <td>1.670953</td>
+      <td>-0.684028</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.578335</td>
-      <td>-1.384637</td>
-      <td>0.793843</td>
-      <td>-0.011055</td>
+      <td>0.936791</td>
+      <td>0.572809</td>
+      <td>0.969325</td>
+      <td>0.947908</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.145658</td>
-      <td>0.069666</td>
-      <td>0.702138</td>
-      <td>2.535766</td>
+      <td>-1.593275</td>
+      <td>-0.527675</td>
+      <td>0.567218</td>
+      <td>0.035067</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.132012</td>
-      <td>-0.454620</td>
-      <td>1.713823</td>
-      <td>-2.585435</td>
+      <td>-0.443311</td>
+      <td>0.189374</td>
+      <td>0.295061</td>
+      <td>0.621585</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.994090</td>
-      <td>-0.473378</td>
-      <td>-0.506613</td>
-      <td>-1.028216</td>
+      <td>-0.318885</td>
+      <td>1.948554</td>
+      <td>-0.794781</td>
+      <td>-0.262487</td>
     </tr>
   </tbody>
 </table>
@@ -973,10 +993,10 @@ execution complete
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a   -0.006823
-b   -0.463999
-c    0.708481
-d   -0.519636
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a   -0.331269
+b    0.745787
+c    0.431139
+d    0.328326
 dtype: float64
 </pre></div>
 </div>
@@ -989,12 +1009,12 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -0.213688
-1    0.090449
-2   -0.294695
-3    0.385902
-4   -0.161304
-5   -0.489996
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.390033
+1    0.917564
+2    0.942350
+3   -0.246304
+4    0.242217
+5   -0.290686
 dtype: float64
 </pre></div>
 </div>
@@ -1017,7 +1037,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.66 ms ± 42.8 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.61 ms ± 133 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1030,7 +1050,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45.1 µs ± 2.46 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>43.2 µs ± 951 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1056,12 +1076,12 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -4.116463
-1   -6.188589
-2   -7.178791
-3   -5.632546
-4   -7.168742
-5   -4.966761
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -3.201749
+1   -5.752282
+2   -5.396568
+3   -6.094999
+4   -5.105698
+5   -2.256480
 dtype: float64
 </pre></div>
 </div>
@@ -1109,51 +1129,51 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.162584</td>
-      <td>-0.881729</td>
-      <td>-1.765134</td>
-      <td>-2.678305</td>
-      <td>5.162584</td>
+      <td>-1.626320</td>
+      <td>-0.158949</td>
+      <td>-1.957044</td>
+      <td>0.368632</td>
+      <td>3.373680</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.284427</td>
-      <td>-1.508032</td>
-      <td>-0.319596</td>
-      <td>-0.603516</td>
-      <td>3.715573</td>
+      <td>-0.831320</td>
+      <td>-0.828919</td>
+      <td>-0.076730</td>
+      <td>-2.431711</td>
+      <td>4.168680</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-1.226631</td>
-      <td>-2.032933</td>
-      <td>0.145546</td>
-      <td>-0.659352</td>
-      <td>3.773369</td>
+      <td>-0.935934</td>
+      <td>-1.299916</td>
+      <td>-0.903400</td>
+      <td>-0.924817</td>
+      <td>4.064066</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-1.748909</td>
-      <td>-1.533585</td>
-      <td>-0.901113</td>
-      <td>0.932515</td>
-      <td>3.251091</td>
+      <td>-1.970887</td>
+      <td>-0.905287</td>
+      <td>0.189606</td>
+      <td>-0.342545</td>
+      <td>3.029113</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.655546</td>
-      <td>-1.242178</td>
-      <td>0.926264</td>
-      <td>-3.372993</td>
-      <td>4.344454</td>
+      <td>-1.487190</td>
+      <td>-0.854506</td>
+      <td>-0.748819</td>
+      <td>-0.422294</td>
+      <td>3.512810</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-0.001904</td>
-      <td>-1.469373</td>
-      <td>-1.502607</td>
-      <td>-2.024211</td>
-      <td>4.998096</td>
+      <td>-1.369588</td>
+      <td>0.897851</td>
+      <td>-1.845484</td>
+      <td>-1.313190</td>
+      <td>3.630412</td>
     </tr>
   </tbody>
 </table>
@@ -1200,57 +1220,57 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.162584</td>
-      <td>-0.881729</td>
-      <td>-1.765134</td>
-      <td>-2.678305</td>
-      <td>5.162584</td>
-      <td>0.031493</td>
+      <td>-1.626320</td>
+      <td>-0.158949</td>
+      <td>-1.957044</td>
+      <td>0.368632</td>
+      <td>3.373680</td>
+      <td>-0.482061</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.284427</td>
-      <td>-1.508032</td>
-      <td>-0.319596</td>
-      <td>-0.603516</td>
-      <td>3.715573</td>
-      <td>-0.345688</td>
+      <td>-0.831320</td>
+      <td>-0.828919</td>
+      <td>-0.076730</td>
+      <td>-2.431711</td>
+      <td>4.168680</td>
+      <td>-0.199420</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-1.226631</td>
-      <td>-2.032933</td>
-      <td>0.145546</td>
-      <td>-0.659352</td>
-      <td>3.773369</td>
-      <td>-0.325076</td>
+      <td>-0.935934</td>
+      <td>-1.299916</td>
+      <td>-0.903400</td>
+      <td>-0.924817</td>
+      <td>4.064066</td>
+      <td>-0.230295</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-1.748909</td>
-      <td>-1.533585</td>
-      <td>-0.901113</td>
-      <td>0.932515</td>
-      <td>3.251091</td>
-      <td>-0.537945</td>
+      <td>-1.970887</td>
+      <td>-0.905287</td>
+      <td>0.189606</td>
+      <td>-0.342545</td>
+      <td>3.029113</td>
+      <td>-0.650648</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.655546</td>
-      <td>-1.242178</td>
-      <td>0.926264</td>
-      <td>-3.372993</td>
-      <td>4.344454</td>
-      <td>-0.150893</td>
+      <td>-1.487190</td>
+      <td>-0.854506</td>
+      <td>-0.748819</td>
+      <td>-0.422294</td>
+      <td>3.512810</td>
+      <td>-0.423362</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-0.001904</td>
-      <td>-1.469373</td>
-      <td>-1.502607</td>
-      <td>-2.024211</td>
-      <td>4.998096</td>
-      <td>-0.000381</td>
+      <td>-1.369588</td>
+      <td>0.897851</td>
+      <td>-1.845484</td>
+      <td>-1.313190</td>
+      <td>3.630412</td>
+      <td>-0.377254</td>
     </tr>
   </tbody>
 </table>
@@ -1293,10 +1313,10 @@ dtype: float64
             <p class="prev-next-title">Functions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="quarto-and-markdown.html" title="next page">
+    <a class='right-next' id="next-link" href="command-line.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quarto and Markdown</p>
+        <p class="prev-next-title">The Command Line</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

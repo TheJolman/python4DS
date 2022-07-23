@@ -53,8 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Data Import" href="data-import.html" />
@@ -116,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Get Started
+  Getting Started
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -156,19 +154,24 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   Workflow: Getting Help
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="exploratory-data-analysis.html">
    Exploratory Data Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
+  <a class="reference internal" href="workflow-packages-and-environments.html">
+   Packages and Environments
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transform
+  Data Types
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -215,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Working with Data
+  Transforming Data
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -234,10 +237,15 @@ const thebe_selector_output = ".output, .cell_output"
    Rectangling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="databases.html">
+   Databases
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programme
+  Programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -251,16 +259,26 @@ const thebe_selector_output = ".output, .cell_output"
    Iteration
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command-line.html">
+   The Command Line
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicate
+  Communicating
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="quarto-and-markdown.html">
-   Quarto and Markdown
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quarto.html">
+   Quarto
   </a>
  </li>
  <li class="toctree-l1">
@@ -407,11 +425,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-with-executable-code-chunks-using-quarto">
-   Markdown with Executable Code Chunks using
-   <strong>
-    quarto
-   </strong>
+  <a class="reference internal nav-link" href="#markdown-with-executable-code-chunks">
+   Markdown with Executable Code Chunks
   </a>
  </li>
 </ul>
@@ -452,11 +467,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-with-executable-code-chunks-using-quarto">
-   Markdown with Executable Code Chunks using
-   <strong>
-    quarto
-   </strong>
+  <a class="reference internal nav-link" href="#markdown-with-executable-code-chunks">
+   Markdown with Executable Code Chunks
   </a>
  </li>
 </ul>
@@ -504,10 +516,10 @@ const thebe_selector_output = ".output, .cell_output"
 <tr class="row-odd"><td><p>Jupyter Notebook, eg <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code></p></td>
 <td><p>Open the file with Visual Studio Code.</p></td>
 <td><p>Use Visual Studio Code and the VS Code Jupyter extension.</p></td>
-<td><p>Code and text can alternate in the same document. Rich outputs of code can be integrated into document. Can export to PDF, HTML, and more, with control over whether code inputs/outputs are shown, and either exported directly or via <strong>quarto</strong>. Can be run all-in-one or step-by-step as needed.</p></td>
+<td><p>Code and text can alternate in the same document. Rich outputs of code can be integrated into document. Can export to PDF, HTML, and more, with control over whether code inputs/outputs are shown, and either exported directly or via <strong>Quarto</strong>. Can be run all-in-one or step-by-step as needed.</p></td>
 <td><p>Fussy to use with version control. Code and text cannot be mixed in same ‘cell’. Not easy to import in other code files.</p></td>
 </tr>
-<tr class="row-even"><td><p>Markdown with executable code chunks using <a class="reference external" href="https://quarto.org/"><strong>quarto</strong></a>, eg <code class="docutils literal notranslate"><span class="pre">markdown_script.qmd</span></code></p></td>
+<tr class="row-even"><td><p>Markdown with executable code chunks using <a class="reference external" href="https://quarto.org/"><strong>Quarto</strong></a>, eg <code class="docutils literal notranslate"><span class="pre">markdown_script.qmd</span></code></p></td>
 <td><p>To produce output, write in a mix of markdown and code blocks and then export with commands like <code class="docutils literal notranslate"><span class="pre">quarto</span> <span class="pre">render</span> <span class="pre">markdown_script.qmd</span> <span class="pre">--to</span> <span class="pre">html</span></code> on the command line or using the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Visual Studio Code extension</a>. Other output types available.</p></td>
 <td><p>Installations of Python and Quarto, plus their dependencies.</p></td>
 <td><p>Allows for true mixing of text and code. Can export to wide variety of other formats, such as PDF and HTML, with control over whether code inputs/outputs are shown. Version control friendly.</p></td>
@@ -538,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Jupyter Notebooks are for experimentation, tinkering, and keeping text and code together. They are the lab books of the coding world. This book is mostly written in Jupyter Notebooks! The name, ‘Jupyter’, is a reference to the three original languages supported by Jupyter, which are Julia, Python, and R, and to Galileo’s notebooks recording the discovery of the moons of Jupiter. Jupyter notebooks now support a vast number of languages beyond the original three, including Ruby, Haskell, Go, Scala, Octave, Java, and <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">more</a>.</p>
 <p>To get started with Jupyter Notebooks, you’ll need to have a Python installation and to run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyterlab</span></code> on the command line.</p>
 <p>If you get stuck with this tutorial, there’s a more in-depth VS Code and Jupyter tutorial available <a class="reference external" href="https://code.visualstudio.com/docs/python/jupyter-support">here</a>.</p>
-<p>Create a new file in Visual Studio Code and save it as <code class="docutils literal notranslate"><span class="pre">hello_world.ipynb</span></code>. Close the file and re-open it. The notebook interface should automatically load and you’ll see options to create cells with plus signs labelled ‘Code’ and ‘Markdown’. A cell is an independent chunk of either code or text. Text cells have markdown in them. Create a markdown cell containing the following:</p>
+<p>Create a new file in Visual Studio Code and save it as <code class="docutils literal notranslate"><span class="pre">hello_world.ipynb</span></code>. Close the file and re-open it. The notebook interface should automatically load and you’ll see options to create cells with plus signs labelled ‘Code’ and ‘Markdown’. A cell is an independent chunk of either code or text. Text cells have markdown in them, a lightweight language for creating text outputs that you will find out more about in <a class="reference internal" href="markdown.html#markdown"><span class="std std-ref">Markdown</span></a>. For now, create a markdown cell containing the following:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># This is a title</span>
 
 <span class="gu">## This is a subtitle</span>
@@ -552,7 +564,7 @@ This notebook demonstrates printing &#39;hello world!&#39; to screen.
 </div>
 <p>To run the notebook, you can choose to run all cells (usually a double play button at the top of the notebook page) or just each cell at a time (a play button beside a cell). ‘Running’ a markdown cell will render the markdown in display mode; running a code cell will execute it and insert the output below. When you play the code cell, you should see the ‘hello world!’ message appear.</p>
 <p>Jupyter Notebooks are versatile and popular for early exploration of ideas, especially in fields like data science. This entire book is written in a combination of Jupyter Notebooks and executable markdown (more on that in a moment). Jupyter Notebooks can easily be run in the cloud using a browser too (via Binder or Google Colab) without any prior installation. Although it’s not got very much code in, the page you’re reading now can be loaded into Google Colab as a Jupyter Notebook by clicking ‘Colab’ under the rocket icon at the top of the page.</p>
-<p>One really nice feature of Jupyter Notebooks is that you can use them as the input files for <strong>quarto</strong> instead of using <code class="docutils literal notranslate"><span class="pre">.qmd</span></code> files, and this opens up many export options and possibilities (like hiding some code inputs). You can find more information <a class="reference external" href="https://quarto.org/docs/computations/python.html">here</a> (look for the guidance on Jupyter Notebooks aka <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files).</p>
+<p>One really nice feature of Jupyter Notebooks is that you can use them as the input files for <strong>Quarto</strong> instead of using <code class="docutils literal notranslate"><span class="pre">.qmd</span></code> files, and this opens up many export options and possibilities (like hiding some code inputs). You can find more information <a class="reference external" href="https://quarto.org/docs/computations/python.html">here</a> (look for the guidance on Jupyter Notebooks aka <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) or look ahead to the chapters on <a class="reference internal" href="markdown.html#markdown"><span class="std std-ref">Markdown</span></a> and <a class="reference internal" href="quarto.html#quarto"><span class="std std-ref">Quarto</span></a>.</p>
 <p>You can try a Jupyter Notebook without installing anything online at <a class="reference external" href="https://jupyter.org/try">https://jupyter.org/try</a>. Click on Try Classic Notebook for a tutorial.</p>
 <div class="section" id="tips-when-using-jupyter-notebooks">
 <h3>Tips when using Jupyter Notebooks<a class="headerlink" href="#tips-when-using-jupyter-notebooks" title="Permalink to this headline">¶</a></h3>
@@ -566,91 +578,11 @@ This notebook demonstrates printing &#39;hello world!&#39; to screen.
 </ul>
 </div>
 </div>
-<div class="section" id="markdown-with-executable-code-chunks-using-quarto">
-<h2>Markdown with Executable Code Chunks using <strong>quarto</strong><a class="headerlink" href="#markdown-with-executable-code-chunks-using-quarto" title="Permalink to this headline">¶</a></h2>
-<p>Note that you can also use Jupyter Notebooks with <strong>quarto</strong>.</p>
+<div class="section" id="markdown-with-executable-code-chunks">
+<h2>Markdown with Executable Code Chunks<a class="headerlink" href="#markdown-with-executable-code-chunks" title="Permalink to this headline">¶</a></h2>
 <p>This is by far the least common way of coding, though it has gained popularity in recent years and it’s great if you’re going to ultimately export to other formats like slides, documents, or even a website!</p>
-<p>When you have much more text and code, even using Jupyter Notebooks can feel a bit onerous and, historically, editing the text in a notebook was a bit tedious - especially if you wanted to move cells around a lot. Markdown makes for a much more pleasant writing experience.</p>
-<p><em>Markdown</em> is, like HTML, a mark-up language: a way of specifying rich text (such as links, including an image, displaying bullets, italics) using simple text commands. What this means is that by using a few extra symbols, Markdown creates a document with rich features. For example, here is the markdown syntax for showing different text styles:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="ge">*this is displayed in italics*</span>
-<span class="gs">**this is displayed in bold**</span>
-</pre></div>
-</div>
-<p>Markdown supports LaTeX equations too:</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>$$u&#39;(c_{t})=\beta(1+r_{t+1})u&#39;(c_{t+1})$$
-</pre></div>
-</div>
-<p>produces</p>
-<div class="math notranslate nohighlight">
-\[u'(c_{t})=\beta(1+r_{t+1})u'(c_{t+1})\]</div>
-<p>Because all you need to write markdown is a simple text editor, it has found huge popularity in the coding and academic communities. Sites like github use it. Viewing markdown is less easy, but the <strong>markdown-all-in-one</strong> extension of VS Code can show a preview of how it will look. If you open a markdown file in VS Code, just right click and select preview.</p>
-<p>Regular code chunks (ones that are <em>not</em> executed) are written with three backticks, followed by the name of the language in curly brackets, followed by the code, followed by another three backticks. So to express a non-executable Python code chunk (ie a chunk that is displayed only) it’s</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
-import pandas as pd
-```
-</pre></div>
-</div>
-<p>for example. And this gets rendered as</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-</div>
-<p>Adding <em>executable code chunks</em> to markdown allows you to include code chunks <em>and</em> the outputs they create when they are run <em>or</em> just the outputs (with the code hidden). This is useful when you want to write something that just has a little bit of code in but is mostly text. Or when you want to create documents or slides that update automatically by displaying the outputs of code run on updating inputs. Markdown with executable code chunks allows you to do all of these.</p>
-<p>The magic package that weaves together code and markdown is called <a class="reference external" href="https://quarto.org/"><strong>quarto</strong></a>. You can find full instructions on how to use the package on its documentation. <strong>quarto</strong> can take markdown documents, execute any code in them, and incorporate the outputs of that code in a final version of the document. It has built-in code execution that currently supports Python R, Julia, and Observable JS. It can mix and match languages within the same document too.</p>
-<p>Let’s now try an example with an <em>executable code chunk</em>. For this, you will need to have installed <strong>quarto</strong> and its dependencies.</p>
-<p>Create a new markdown file called ‘hello_quarto.qmd’ and add this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>---
-title: &quot;quarto demo&quot;
-format:
-  html:
-    code-fold: true
-jupyter: python3
----
-
-# This is a title
-
-## This is a subtitle
-
-For a demonstration of a line plot on a polar axis, see @fig-polar.
-
-```{python}
-#| label: fig-polar
-#| fig-cap: &quot;A line plot on a polar axis&quot;
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {&#39;projection&#39;: &#39;polar&#39;} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-
-Now we can have more text afterwards, and a code chunk that hides its own input code.
-
-```{python}
-#| echo: false
-print(&quot;Hello World! But don&#39;t show the code.&quot;)
-```
-
-</pre></div>
-</div>
-<p>In the ‘raw’ input quarto markdown file, <code class="docutils literal notranslate"><span class="pre">{python}</span></code> tells <strong>quarto</strong> that a code chunk is in Python and should be executed, and <code class="docutils literal notranslate"><span class="pre">jupyter:</span> <span class="pre">python3</span></code> tells <strong>quarto</strong> what installation of Jupyter Notebooks to use. If you’re unsure what your installation of Jupyter is called, you can see a list by running <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">kernelspec</span> <span class="pre">list</span></code> on the command line.</p>
-<p>Once you have saved the file, using the command line, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>quarto render hello_quarto.qmd
-</pre></div>
-</div>
-<p>to output a HTML file.</p>
-<p>The code chunks in the markdown have been executed and the relevant text has appeared in the <em>output</em> file.</p>
-<p>The powerful combination of markdown and <strong>quarto</strong> doesn’t just allow you to write markdown and output executed markdown: you can output a wide range of formats, including Word documents, PDFs (papers and beamer presentations), Powerpoint presentations, HTML slides, HTML pages. To switch to a different output format, the general syntax is <code class="docutils literal notranslate"><span class="pre">quarto</span> <span class="pre">render</span> <span class="pre">document.qmd</span> <span class="pre">--to</span> <span class="pre">docx</span></code> and so on.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Try outputting to PDF format.</p>
-</div>
+<p>When you have much more text combined code, even using Jupyter Notebooks can feel a bit onerous and, historically, editing the text in a notebook was a bit tedious - especially if you wanted to move cells around a lot. Markdown makes for a much more pleasant writing experience. But markdown on its own cannot execute code—but imagine you want to combine reproducibility, text, and code + code outputs: however, there is a tool called <strong>Quarto</strong> that allows you to do this by adding executable code chunks to markdown.</p>
+<p>As this is a bit more of an advanced topic, and as much about communication as it is about writing code, we’ll come back to how to do it in <a class="reference internal" href="quarto.html#quarto"><span class="std std-ref">Quarto</span></a>.</p>
 </div>
 </div>
 
