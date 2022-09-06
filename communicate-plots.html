@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-packages-and-environments.html">
-   Packages and Environments
+   Workflow: Packages and Environments
   </a>
  </li>
 </ul>
@@ -435,8 +435,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axis-ticks-and-legend-keys">
-     Axis Ticks and Legend Keys
+    <a class="reference internal nav-link" href="#axis-ticks">
+     Axis Ticks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-keys">
+     Legend Keys
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -450,6 +455,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#themes">
+   Themes
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#saving-plots">
@@ -504,8 +514,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#axis-ticks-and-legend-keys">
-     Axis Ticks and Legend Keys
+    <a class="reference internal nav-link" href="#axis-ticks">
+     Axis Ticks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-keys">
+     Legend Keys
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -519,6 +534,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#themes">
+   Themes
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#saving-plots">
@@ -584,8 +604,21 @@ In the course of most analyses, you’ll produce tens or hundreds of plots, most
 </div>
 </div>
 </div>
-<p>Now let’s do the plot with a title</p>
-<p>[TODO]</p>
+<p>Now let’s do the plot with a title by passing the <code class="docutils literal notranslate"><span class="pre">title=</span></code> keyword argument into the <code class="docutils literal notranslate"><span class="pre">label</span></code> property.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Fuel efficiency generally decreases with engine size&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_7_0.png" src="_images/communicate-plots_7_0.png" />
+</div>
+</div>
 <p>The purpose of a plot title is to summarise the main finding. Avoid titles that just describe what the plot is, e.g. “A scatterplot of engine displacement vs. fuel economy”.</p>
 <p>If you need to add more text, there are two other useful labels that you can use:</p>
 <ul class="simple">
@@ -597,29 +630,25 @@ In the course of most analyses, you’ll produce tens or hundreds of plots, most
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
     <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
     <span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Engine displacement (L)&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Highway fuel economy (mpg)&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/communicate-plots_9_0.png" src="_images/communicate-plots_9_0.png" />
+<img alt="_images/communicate-plots_10_0.png" src="_images/communicate-plots_10_0.png" />
 </div>
 </div>
 <p>It’s possible to use mathematical equations and functions instead of text strings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
-    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
-    <span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$x^{y-z}$&quot;</span><span class="p">)</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$x^{y-z}$&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/communicate-plots_11_0.png" src="_images/communicate-plots_11_0.png" />
+<img alt="_images/communicate-plots_12_0.png" src="_images/communicate-plots_12_0.png" />
 </div>
 </div>
 </div>
@@ -635,12 +664,12 @@ Normally, <strong>seaborn</strong> automatically adds scales for you.
 For example, when you type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">()))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">()))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/communicate-plots_14_0.png" src="_images/communicate-plots_14_0.png" />
+<img alt="_images/communicate-plots_15_0.png" src="_images/communicate-plots_15_0.png" />
 </div>
 </div>
 <p><strong>seaborn</strong> automatically adds default scales behind the scenes:</p>
@@ -648,7 +677,7 @@ For example, when you type:</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
     <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
     <span class="o">.</span><span class="n">scale</span><span class="p">(</span>
         <span class="n">x</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">(),</span>
         <span class="n">y</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">(),</span>
@@ -659,7 +688,7 @@ For example, when you type:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/communicate-plots_16_0.png" src="_images/communicate-plots_16_0.png" />
+<img alt="_images/communicate-plots_17_0.png" src="_images/communicate-plots_17_0.png" />
 </div>
 </div>
 <p>Note the naming scheme for scales: <code class="docutils literal notranslate"><span class="pre">.scale</span></code> followed by the name of the dimension, then <code class="docutils literal notranslate"><span class="pre">=so.</span></code>, then the name of the scale.
@@ -676,9 +705,30 @@ Often you can do better than the default because you know more about the data.</
 <p class="admonition-title">Exercise</p>
 <p>Try a plot with a scale setting of <code class="docutils literal notranslate"><span class="pre">x=&quot;log&quot;</span></code>.</p>
 </div>
-<div class="section" id="axis-ticks-and-legend-keys">
-<h3>Axis Ticks and Legend Keys<a class="headerlink" href="#axis-ticks-and-legend-keys" title="Permalink to this headline">¶</a></h3>
-<p>[TODO]</p>
+<div class="section" id="axis-ticks">
+<h3>Axis Ticks<a class="headerlink" href="#axis-ticks" title="Permalink to this headline">¶</a></h3>
+<p>You can specify axis ticks directly using the <code class="docutils literal notranslate"><span class="pre">tick</span></code> property on the <code class="docutils literal notranslate"><span class="pre">Scale</span></code> parameter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">scale</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">(),</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Continuous</span><span class="p">()</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="n">at</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">so</span><span class="o">.</span><span class="n">Nominal</span><span class="p">(),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_20_0.png" src="_images/communicate-plots_20_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="legend-keys">
+<h3>Legend Keys<a class="headerlink" href="#legend-keys" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="legend-layout">
 <h3>Legend Layout<a class="headerlink" href="#legend-layout" title="Permalink to this headline">¶</a></h3>
@@ -696,14 +746,14 @@ Often you can do better than the default because you know more about the data.</
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
     <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
     <span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/communicate-plots_21_0.png" src="_images/communicate-plots_21_0.png" />
+<img alt="_images/communicate-plots_24_0.png" src="_images/communicate-plots_24_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -714,25 +764,8 @@ Often you can do better than the default because you know more about the data.</
         <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span>
         <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span>
         <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">,</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">())</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span>
 <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/communicate-plots_22_0.png" src="_images/communicate-plots_22_0.png" />
-</div>
-</div>
-<p>While they convey the same information, the former looks better.</p>
-<p>## Themes</p>
-<p>Seaborn comes with several built-in themes that you can switch between by using</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
-
-<span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Scatter</span><span class="p">()))</span>
 </pre></div>
 </div>
 </div>
@@ -740,12 +773,55 @@ Often you can do better than the default because you know more about the data.</
 <img alt="_images/communicate-plots_25_0.png" src="_images/communicate-plots_25_0.png" />
 </div>
 </div>
-<p>Note that you can also create your own themes using <strong>matplotlib</strong>, the library that sits under <strong>seaborn</strong> (this book uses a custom theme).</p>
+<p>While they convey the same information, the former looks better.</p>
 </div>
+</div>
+<div class="section" id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
+<p>Seaborn comes with several built-in themes that you can switch between by using</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_28_0.png" src="_images/communicate-plots_28_0.png" />
+</div>
+</div>
+<p>Note that you can also create your own themes using <strong>matplotlib</strong>, the library that sits under <strong>seaborn</strong> (this book uses a custom theme).</p>
 </div>
 <div class="section" id="saving-plots">
 <h2>Saving Plots<a class="headerlink" href="#saving-plots" title="Permalink to this headline">¶</a></h2>
-<p>[TODO]</p>
+<p>There are lots of output options to choose from to save your file to. Remember that, for graphics, <em>vector formats</em> are generally better than <em>raster formats</em>. In practice, this means savibng plots in svg or pdf formats over jpg or png file formats. The svg format works in a lot of contexts (including Microsoft Word) and is a good default. To choose between formats, just supply the file extension and the file type will change automatically, eg “chart.svg” for svg or “chart.png” for png (thought note that raster formats often have extra options, like how many dots per inch to use).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;displ&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hwy&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Dot</span><span class="p">())</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;output_chart.svg&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/communicate-plots_31_0.png" src="_images/communicate-plots_31_0.png" />
+</div>
+</div>
+<p>To double check this works, let’s use the terminal. We’ll try the command <code class="docutils literal notranslate"><span class="pre">ls</span></code>, which lists everything in directory, and <code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">*.svg</span></code> to pull out any files that end in <code class="docutils literal notranslate"><span class="pre">.svg</span></code> from what is returned by <code class="docutils literal notranslate"><span class="pre">ls</span></code>. These are strung together as commands by a <code class="docutils literal notranslate"><span class="pre">|</span></code>. (Note that the leading exclamation mark below just tells the software that builds this book to use the terminal.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls <span class="p">|</span> grep *.svg
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>output_chart.svg
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great! It looks like our file saved successfully.</p>
 </div>
 </div>
 

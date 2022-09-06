@@ -46,7 +46,7 @@
 <!-- Visualise -->
 <g id="node3" class="node">
 <title>Visualise</title>
-<ellipse fill="white" stroke="white" cx="129.1" cy="-178" rx="43.59" ry="18"/>
+<ellipse fill="white" stroke="white" cx="129.1" cy="-178" rx="42.79" ry="18"/>
 <text text-anchor="middle" x="129.1" y="-174.3" font-family="Times,serif" font-size="14.00">Visualise</text>
 </g>
 <!-- Visualise&#45;&gt;Analyse -->

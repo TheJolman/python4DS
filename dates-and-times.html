@@ -167,7 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-packages-and-environments.html">
-   Packages and Environments
+   Workflow: Packages and Environments
   </a>
  </li>
 </ul>
@@ -693,7 +693,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-07-23 11:35:14.565249
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-09-06 12:55:28.094655
 </pre></div>
 </div>
 </div>
@@ -783,7 +783,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Saturday, 07, 2022&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Tuesday, 09, 2022&#39;
 </pre></div>
 </div>
 </div>
@@ -949,7 +949,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>934 days, 11:35:14.565249
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>979 days, 12:55:28.094655
 </pre></div>
 </div>
 </div>
@@ -1194,12 +1194,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 253 entries, 0 to 252
+RangeIndex: 254 entries, 0 to 253
 Data columns (total 2 columns):
  #   Column                      Non-Null Count  Dtype 
 ---  ------                      --------------  ----- 
- 0   date                        253 non-null    object
- 1   Vacancies (ICT), thousands  253 non-null    int64 
+ 0   date                        254 non-null    object
+ 1   Vacancies (ICT), thousands  254 non-null    int64 
 dtypes: int64(1), object(1)
 memory usage: 4.1+ KB
 </pre></div>
@@ -1659,7 +1659,7 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2022-12-31</th>
-      <td>78.000000</td>
+      <td>77.166667</td>
     </tr>
   </tbody>
 </table>
@@ -1797,28 +1797,28 @@ Name: date, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-05-27</th>
+      <th>2022-06-26</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-05-28</th>
+      <th>2022-06-27</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-05-29</th>
+      <th>2022-06-28</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-05-30</th>
+      <th>2022-06-29</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-05-31</th>
-      <td>79.0</td>
+      <th>2022-06-30</th>
+      <td>74.0</td>
     </tr>
   </tbody>
 </table>
-<p>7671 rows × 1 columns</p>
+<p>7701 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Options to fill in missing time series data include using <code class="docutils literal notranslate"><span class="pre">bfill</span></code> or <code class="docutils literal notranslate"><span class="pre">ffill</span></code> to fill in the blanks based on the next or last available value, respectively, or <code class="docutils literal notranslate"><span class="pre">interpolate</span></code> (note how only the first 3 NaNs are replaced using the <code class="docutils literal notranslate"><span class="pre">limit</span></code> keyword argument):</p>
@@ -1984,10 +1984,6 @@ y_t = f(\{x_{t-i} \}_{i=0}^{i=R-1})
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-01-31</th>
-      <td>76.5</td>
-    </tr>
-    <tr>
       <th>2022-02-28</th>
       <td>76.5</td>
     </tr>
@@ -2001,11 +1997,15 @@ y_t = f(\{x_{t-i} \}_{i=0}^{i=R-1})
     </tr>
     <tr>
       <th>2022-05-31</th>
-      <td>79.0</td>
+      <td>78.5</td>
+    </tr>
+    <tr>
+      <th>2022-06-30</th>
+      <td>76.0</td>
     </tr>
   </tbody>
 </table>
-<p>253 rows × 1 columns</p>
+<p>254 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ewm</span></code> includes the class of functions where data point <span class="math notranslate nohighlight">\(x_{t-i}\)</span> has a weight <span class="math notranslate nohighlight">\(w_i = (1-\alpha)^i\)</span>. As <span class="math notranslate nohighlight">\(0 &lt; \alpha &lt; 1\)</span>, points further back in time are given less weight. For example, an exponentially moving average is given by</p>
@@ -2074,10 +2074,6 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-01-31</th>
-      <td>64.925635</td>
-    </tr>
-    <tr>
       <th>2022-02-28</th>
       <td>67.140508</td>
     </tr>
@@ -2091,11 +2087,15 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
     </tr>
     <tr>
       <th>2022-05-31</th>
-      <td>72.927940</td>
+      <td>72.727940</td>
+    </tr>
+    <tr>
+      <th>2022-06-30</th>
+      <td>72.982352</td>
     </tr>
   </tbody>
 </table>
-<p>253 rows × 1 columns</p>
+<p>254 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Let’s see these methods together on the stock market data.</p>
