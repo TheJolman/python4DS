@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Rectangling" href="rectangling.html" />
@@ -882,238 +883,63 @@ const thebe_selector_output = ".output, .cell_output"
   warnings.warn(
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">timeout</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/connectionpool.py:449,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span>         <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span>             <span class="c1"># Remove the TypeError from the exception chain in</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span>             <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>             <span class="c1"># Otherwise it looks like a bug in the code.</span>
-<span class="ne">--&gt; </span><span class="mi">449</span>             <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">File &lt;string&gt;:3,</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/connectionpool.py:444,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">444</span>     <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span> <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span>     <span class="c1"># Remove the TypeError from the exception chain in</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span>     <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="c1"># Otherwise it looks like a bug in the code.</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/http/client.py:1377,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1377</span>     <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span> <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/http/client.py:320,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">320</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/http/client.py:281,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="k">def</span> <span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">281</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/socket.py:704,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">704</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/ssl.py:1241,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1238</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1239</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1240</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1241</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1242</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/ssl.py:1099,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span> <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1099</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1100</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">timeout</span>: The read operation timed out
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ReadTimeoutError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/requests/adapters.py:440,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">439</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">chunked</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">440</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">443</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">444</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">449</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">453</span> <span class="c1"># Send the request.</span>
-<span class="g g-Whitespace">    </span><span class="mi">454</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/connectionpool.py:785,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">783</span>     <span class="n">e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">&quot;Connection aborted.&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">785</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">787</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/util/retry.py:550,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
-<span class="g g-Whitespace">    </span><span class="mi">549</span> <span class="k">if</span> <span class="n">read</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_method_retryable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">550</span>     <span class="k">raise</span> <span class="n">six</span><span class="o">.</span><span class="n">reraise</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">551</span> <span class="k">elif</span> <span class="n">read</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/packages/six.py:770,</span> in <span class="ni">reraise</span><span class="nt">(tp, value, tb)</span>
-<span class="g g-Whitespace">    </span><span class="mi">769</span>         <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">770</span>     <span class="k">raise</span> <span class="n">value</span>
-<span class="g g-Whitespace">    </span><span class="mi">771</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/connectionpool.py:703,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Make the request on the httplib connection object.</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">711</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="c1"># If we&#39;re going to release the connection in ``finally:``, then</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span> <span class="c1"># the response doesn&#39;t need to know about the connection. Otherwise</span>
-<span class="g g-Whitespace">    </span><span class="mi">715</span> <span class="c1"># it will also try to release it and we&#39;ll have a double-release</span>
-<span class="g g-Whitespace">    </span><span class="mi">716</span> <span class="c1"># mess.</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/connectionpool.py:451,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">451</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">452</span>     <span class="k">raise</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/urllib3/connectionpool.py:340,</span> in <span class="ni">HTTPConnectionPool._raise_timeout</span><span class="nt">(self, err, url, timeout_value)</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">SocketTimeout</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">340</span>     <span class="k">raise</span> <span class="n">ReadTimeoutError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">341</span>         <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="s2">&quot;Read timed out. (read timeout=</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="n">timeout_value</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">344</span> <span class="c1"># See the above comment about EAGAIN in Python 3. In Python 2 we have</span>
-<span class="g g-Whitespace">    </span><span class="mi">345</span> <span class="c1"># to specifically catch it and throw the timeout error</span>
-
-<span class="ne">ReadTimeoutError</span>: HTTPSConnectionPool(host=&#39;api.worldbank.org&#39;, port=443): Read timed out. (read timeout=30)
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ReadTimeout</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 8&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># World Bank CO2 emissions (metric tons per capita)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># https://data.worldbank.org/indicator/EN.ATM.CO2E.PC</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># World Bank pop</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># https://data.worldbank.org/indicator/SP.POP.TOTL</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># country and region codes at http://api.worldbank.org/v2/country</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">pandas_datareader</span> <span class="kn">import</span> <span class="n">wb</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">df</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">indicator</span><span class="o">=</span><span class="s2">&quot;EN.ATM.CO2E.PC&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">country</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;CHN&quot;</span><span class="p">,</span> <span class="s2">&quot;IND&quot;</span><span class="p">,</span> <span class="s2">&quot;Z4&quot;</span><span class="p">,</span> <span class="s2">&quot;Z7&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">start</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">end</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1"># remove country as index for ease of plotting with seaborn</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/pandas_datareader/wb.py:861,</span> in <span class="ni">download</span><span class="nt">(country, indicator, start, end, freq, errors, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">816</span> <span class="k">def</span> <span class="nf">download</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span>     <span class="n">country</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span>     <span class="n">indicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">823</span>     <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">824</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">825</span>     <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">826</span><span class="sd">     Download data series from the World Bank&#39;s World Development Indicators</span>
-<span class="g g-Whitespace">    </span><span class="mi">827</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="sd">         DataFrame with columns country, year, indicator value</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">861</span>     <span class="k">return</span> <span class="n">WorldBankReader</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="n">symbols</span><span class="o">=</span><span class="n">indicator</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">863</span>         <span class="n">countries</span><span class="o">=</span><span class="n">country</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span>         <span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span>         <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span>         <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/pandas_datareader/wb.py:641,</span> in <span class="ni">WorldBankReader.read</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">639</span> <span class="sd">&quot;&quot;&quot;Read data&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">640</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">641</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="k">finally</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span>     <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/pandas_datareader/wb.py:650,</span> in <span class="ni">WorldBankReader._read</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="k">for</span> <span class="n">indicator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbols</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>     <span class="c1"># Build URL for api call</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">650</span>         <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_one_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="n">indicator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="s2">&quot;iso_code&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">indicator</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/pandas_datareader/base.py:110,</span> in <span class="ni">_BaseReader._read_one_data</span><span class="nt">(self, url, params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span>     <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_url_as_StringIO</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>     <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_response</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_format</span><span class="p">)</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/pandas_datareader/base.py:155,</span> in <span class="ni">_BaseReader._get_response</span><span class="nt">(self, url, params, headers)</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span> <span class="n">last_response_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">retry_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">155</span>     <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span>         <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="n">requests</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">159</span>         <span class="k">return</span> <span class="n">response</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/requests/sessions.py:542,</span> in <span class="ni">Session.get</span><span class="nt">(self, url, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">534</span> <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request. Returns :class:`Response` object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span><span class="sd"> :param url: URL for the new :class:`Request` object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span><span class="sd"> :param \*\*kwargs: Optional arguments that ``request`` takes.</span>
-<span class="g g-Whitespace">    </span><span class="mi">538</span><span class="sd"> :rtype: requests.Response</span>
-<span class="g g-Whitespace">    </span><span class="mi">539</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">541</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;allow_redirects&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">542</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/requests/sessions.py:529,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">524</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">525</span>     <span class="s1">&#39;timeout&#39;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="s1">&#39;allow_redirects&#39;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">527</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">528</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">529</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/requests/sessions.py:645,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">645</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File /opt/anaconda3/envs/python4DS/lib/python3.9/site-packages/requests/adapters.py:532,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>     <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">ReadTimeoutError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">532</span>     <span class="k">raise</span> <span class="n">ReadTimeout</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">_InvalidHeader</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">534</span>     <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="ne">ReadTimeout</span>: HTTPSConnectionPool(host=&#39;api.worldbank.org&#39;, port=443): Read timed out. (read timeout=30)
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>EN.ATM.CO2E.PC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>India</td>
+      <td>2017</td>
+      <td>1.733361</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>East Asia\n&amp; Pacific</td>
+      <td>2017</td>
+      <td>6.220750</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Europe &amp;\nCentral\nAsia</td>
+      <td>2017</td>
+      <td>6.754226</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>China</td>
+      <td>2017</td>
+      <td>7.230985</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>United\nStates</td>
+      <td>2017</td>
+      <td>14.823261</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1130,6 +956,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/webscraping-and-apis_12_0.svg" src="_images/webscraping-and-apis_12_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="the-oecd-api">
@@ -1233,6 +1061,11 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&lt;!DOCTYPE html&gt;\n&lt;html lang=&quot;en&quot;&gt;\n\n&lt;head&gt;\n&lt;script&gt;\n  (function(i,s,o,g,r,a,m){i[\&#39;GoogleAnalyticsObject\&#39;]=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(win&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Okay, what just happened? We asked requests to grab the HTML of the webpage and then printed the first 300 characters of the text that it found.</p>
 <p>Let’s now parse this into something humans can read (or can read more easily) using beautifulsoup:</p>
@@ -1240,6 +1073,21 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">()[</span><span class="mi">2000</span><span class="p">:</span><span class="mi">2500</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> src=&quot;https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+ &lt;/head&gt;
+ &lt;body id=&quot;page-top&quot;&gt;
+  &lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot; id=&quot;mainNav&quot;&gt;
+   &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+    &lt;div class=&quot;navbar-header&quot;&gt;
+     &lt;button class=&quot;navbar-toggle collapsed&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot; data-toggle=&quot;collapse&quot; type=&quot;button&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;
+       Toggle navi
 </pre></div>
 </div>
 </div>
@@ -1254,11 +1102,21 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;p&gt;A talk I gave on some of the amazing wonders that data science has and is bringing the world. Given at the 2022 Bristol Data &amp;amp; AI Showcase, hosted by the &lt;a href=&quot;http://www.bristol.ac.uk/golding/&quot;&gt;Jean Golding Institute&lt;/a&gt;.&lt;/p&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <p>To make this more readable, you can use the <code class="docutils literal notranslate"><span class="pre">.text</span></code> method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_paras</span><span class="p">[</span><span class="mi">52</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A talk I gave on some of the amazing wonders that data science has and is bringing the world. Given at the 2022 Bristol Data &amp; AI Showcase, hosted by the Jean Golding Institute.&#39;
 </pre></div>
 </div>
 </div>
@@ -1269,6 +1127,25 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projects</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;project-name&quot;</span><span class="p">)</span>
 <span class="n">projects</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">projects</span><span class="p">]</span>
 <span class="n">projects</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Temperature equilibration in degenerate plasmas&#39;,
+ &#39;Large-angle Coulomb collisions in plasmas&#39;,
+ &#39;Ultrafast collisional ion heating by electrostatic shocks&#39;,
+ &#39;Collisional energy transfer terms in plasmas&#39;,
+ &#39;Agent-based dynamics in corporate bond trading&#39;,
+ &#39;Making text count: economic forecasting using newspaper text&#39;,
+ &#39;Interdisciplinary approaches to macroeconomics&#39;,
+ &#39;Transforming naturally occurring text data into economic statistics&#39;,
+ &#39;Using machine learning to create bottom-up job classifications&#39;,
+ &#39;Pay Transparency and Cracks in the Glass Ceiling&#39;,
+ &#39;Solving Heterogeneous General Equilibrium Economic Models with Deep Reinforcement Learning&#39;,
+ &quot;Is the UK&#39;s productivity puzzle mostly driven by occupational mismatch? An analysis using big data on job vacancies&quot;,
+ &#39;Revolution in progress? The rise of remote work in the UK&#39;,
+ &#39;Coding for Economists&#39;,
+ &#39;Python 4 Data Science&#39;]
 </pre></div>
 </div>
 </div>
@@ -1298,6 +1175,94 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Host</th>
+      <th>Winner</th>
+      <th>Score</th>
+      <th>Runners-up</th>
+      <th>Third Place</th>
+      <th>Score.1</th>
+      <th>Fourth Place</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1930 Details</td>
+      <td>Uruguay</td>
+      <td>Uruguay</td>
+      <td>4 - 2</td>
+      <td>Argentina</td>
+      <td>United States</td>
+      <td>[note 1]</td>
+      <td>Yugoslavia</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1934 Details</td>
+      <td>Italy</td>
+      <td>Italy</td>
+      <td>2 - 1(a.e.t.)</td>
+      <td>Czechoslovakia</td>
+      <td>Germany</td>
+      <td>3 - 2</td>
+      <td>Austria</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1938 Details</td>
+      <td>France</td>
+      <td>Italy</td>
+      <td>4 - 2</td>
+      <td>Hungary</td>
+      <td>Brazil</td>
+      <td>4 - 2</td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1950 Details</td>
+      <td>Brazil</td>
+      <td>Uruguay</td>
+      <td>[note 2]</td>
+      <td>Brazil</td>
+      <td>Sweden</td>
+      <td>[note 2]</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1954 Details</td>
+      <td>Switzerland</td>
+      <td>West Germany</td>
+      <td>3 - 2</td>
+      <td>Hungary</td>
+      <td>Austria</td>
+      <td>3 - 1</td>
+      <td>Uruguay</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>This gives us the table neatly loaded into a <strong>pandas</strong> dataframe ready for further use.</p>
 </div>

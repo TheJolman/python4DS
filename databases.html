@@ -51,8 +51,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Functions" href="functions.html" />
@@ -459,6 +458,14 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">
+   Exploring SQL Databases with
+   <strong>
+    Datasette
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sql-with-pandas">
    SQL with
    <strong>
@@ -575,6 +582,14 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">
+   Exploring SQL Databases with
+   <strong>
+    Datasette
+   </strong>
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sql-with-pandas">
@@ -950,6 +965,46 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <p>We already snuck in one function: <code class="docutils literal notranslate"><span class="pre">AVG</span></code>. Others that you can apply to columns include <code class="docutils literal notranslate"><span class="pre">SUM</span></code>, <code class="docutils literal notranslate"><span class="pre">MIN</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX</span></code>, <code class="docutils literal notranslate"><span class="pre">FIRST</span></code>, <code class="docutils literal notranslate"><span class="pre">LAST</span></code> and <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> (the data scientist’s friend). You can find out more about SQL functions <a class="reference external" href="https://www.tutorialspoint.com/sql/sql-useful-functions.htm">here</a>.</p>
 </div>
 </div>
+<div class="section" id="exploring-sql-databases-with-datasette">
+<h2>Exploring SQL Databases with <strong>Datasette</strong><a class="headerlink" href="#exploring-sql-databases-with-datasette" title="Permalink to this headline">¶</a></h2>
+<p>SQL can be pretty intimidating at first, but there’s a great tool for getting to know it better called <a class="reference external" href="https://datasette.io/"><strong>Datasette</strong></a>. Datasette is a tool for exploring (and creating and sharing) databases. It’s author says that “Datasette is aimed at data journalists, museum curators, archivists, local governments, scientists, researchers and anyone else who has data that they wish to share with the world. It is part of a wider ecosystem of 40 tools and 99 plugins dedicated to making working with structured data as productive as possible.”</p>
+<p>In this context, <strong>Datasette</strong> is useful in two ways:</p>
+<ul class="simple">
+<li><p>to explore a database interactively, through pointing and clicking</p></li>
+<li><p>to see how a SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement is built up of filtering operations or vice versa</p></li>
+</ul>
+<p>Essentially, when <strong>Datasette</strong> is running, you’ll see a landing web page (yes, even if you’re running it on your own computer) that presents all of the tables in your dataset. You can click through to tables to explore them, re-order them, filter them, and more. You can also see the equivalent SQL query for any cut you make, or run a SQL query in the box to retrieve any cut you like. But note that <strong>Datasette</strong> only supports <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statements.</p>
+<p>A useful extra feature is that you can download the results of your SQL query as a CSV or JSON file from the web page run by <strong>Datasette</strong> once you have filtered to what you want.</p>
+<p>There are a few different ways to use <strong>Datasette</strong> to explore data:</p>
+<ul class="simple">
+<li><p>you can run it on your own computer</p></li>
+<li><p>you can try out an online version (which has been hosted already on the cloud), for example <a class="reference external" href="https://global-power-plants.datasettes.com/global-power-plants/global-power-plants">this database</a> of power stations</p></li>
+<li><p>you can use the online coding service glitch to run it. See an example <a class="reference external" href="https://glitch.com/~datasette-csvs">here</a>.</p></li>
+</ul>
+<p><strong>Datasette</strong> comes as a Python package that you can install on the command line by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">datasette</span></code>. Once you have it installed in a Python environment, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datasette path/to/database.db -o
+</pre></div>
+</div>
+<p>and you should find that your default browser opens straight away on a page showing the tables in the database (the page should have an address beginning <code class="docutils literal notranslate"><span class="pre">http://localhost:8001/</span></code>).</p>
+<p>Finally, there’s some training for SQL that uses <strong>Datasette</strong> available <a class="reference external" href="https://datasette.io/tutorials/learn-sql">here</a>.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>Using the Chinook database on your own computer, run the SQL query with the join from before, ie:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"></span>
+<span class="w">  </span><span class="n">albumid</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="k">AVG</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1</span><span class="n">e3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"></span>
+<span class="w">  </span><span class="n">track</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">  </span><span class="n">albumid</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
+<span class="w">  </span><span class="k">AVG</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="w"> </span><span class="k">ASC</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"></span>
+<span class="w">  </span><span class="mi">5</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="sql-with-pandas">
 <h2>SQL with <strong>pandas</strong><a class="headerlink" href="#sql-with-pandas" title="Permalink to this headline">¶</a></h2>
 <p><strong>pandas</strong> is well-equipped for working with SQL. We can simply push the query we just created straight through using its <code class="docutils literal notranslate"><span class="pre">read_sql</span></code> function—but bear in mind we need to pass in the connection we created to the database too:</p>
@@ -1265,7 +1320,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </table>
 </div></div></div>
 </div>
-<p>What about joins? Of course, you can be do these too. As an example, let’s join the genre and track tables on the shared variable, “GenreId”.</p>
+<p>What about joins? Of course, you can do these too. As an example, let’s join the genre and track tables on the shared variable, “GenreId”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">genre</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;genre&quot;</span><span class="p">)</span>

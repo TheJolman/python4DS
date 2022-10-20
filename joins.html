@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Boolean Data" href="boolean-data.html" />
@@ -423,13 +424,11 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#concatenate">
    Concatenate
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#merge">
-     Merge
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merge">
+   Merge
+  </a>
  </li>
 </ul>
 
@@ -467,13 +466,11 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#concatenate">
    Concatenate
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#merge">
-     Merge
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merge">
+   Merge
+  </a>
  </li>
 </ul>
 
@@ -600,8 +597,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</div>
 <div class="section" id="merge">
-<h3>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
+<h2>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h2>
 <p>There are so many options for merging dataframes using <code class="docutils literal notranslate"><span class="pre">pd.merge(left,</span> <span class="pre">right,</span> <span class="pre">on=...,</span> <span class="pre">how=...</span></code> that we won’t be able to cover them all here. The most important features are: the two dataframes to be merged, what variables (aka keys) to merge on (and these can be indexes) via <code class="docutils literal notranslate"><span class="pre">on=</span></code>, and <em>how</em> to do the merge (eg left, right, outer, inner) via <code class="docutils literal notranslate"><span class="pre">how=</span></code>. This diagram shows an example of a merge using keys from the left-hand dataframe:</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/08_merge_left.svg" /></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">how=</span></code> keyword works in the following ways:</p>
@@ -892,7 +890,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p>What do you notice about the position <code class="docutils literal notranslate"><span class="pre">.loc[1,</span> <span class="pre">&quot;c&quot;]</span></code> in the merged dataframe?</p>
 </div>
 <p>For more on the options for merging, see <strong>pandas</strong>’ comprehensive <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/merging.html#database-style-dataframe-or-named-series-joining-merging">merging documentation</a>.</p>
-</div>
 </div>
 </div>
 
