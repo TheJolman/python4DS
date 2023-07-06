@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dates and Times &#8212; Python for Data Science</title>
+    <title>19. Dates and Times &#8212; Python for Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,15 +51,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Missing Values" href="missing-values.html" />
-    <link rel="prev" title="Categorical Data" href="categorical-data.html" />
+    <link rel="next" title="20. Missing Values" href="missing-values.html" />
+    <link rel="prev" title="18. Categorical Data" href="categorical-data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
-   Getting Started with Python
+   First Steps
   </a>
  </li>
 </ul>
@@ -122,171 +120,183 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="whole-game.html">
+   1. Whole game
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="data-visualise.html">
-   Data Visualisation
+   2. Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-basics.html">
-   Workflow: Basics
+   3. Workflow: Basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-transform.html">
-   Data Transformation
+   4. Data Transformation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-style.html">
-   Workflow: Style
+   5. Workflow: Style
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-tidy.html">
-   Tidy Data
+   6. Tidy Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-writing-code.html">
-   Workflow: Writing Code
+   7. Workflow: Writing Code
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-import.html">
-   Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   Exploratory Data Analysis
+   8. Data Import
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-packages-and-environments.html">
-   Workflow: Packages and Environments
+   9. Workflow: Packages and Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   10. Postscript: Getting Further Help
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Data Types
+  Visualise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   11. Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="communicate-plots.html">
+   12. Graphics for Communication
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="joins.html">
-   Joins
+   13. Joins
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="boolean-data.html">
-   Boolean Data
+   14. Boolean Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="numbers.html">
-   Numbers
+   15. Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="strings.html">
-   Strings and Text
+   16. Strings and Text
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="regex.html">
-   Regular Expressions, aka regex
+   17. Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="categorical-data.html">
-   Categorical Data
+   18. Categorical Data
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Dates and Times
+   19. Dates and Times
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="missing-values.html">
-   Missing Values
+   20. Missing Values
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transforming Data
+  Import
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="spreadsheets.html">
-   Spreadsheets
+   21. Spreadsheets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="webscraping-and-apis.html">
-   Webscraping and APIs
+   22. Webscraping and APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rectangling.html">
-   Rectangling
+   23. Rectangling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="databases.html">
-   Databases
+   24. Databases
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programming
+  Programme
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   Functions
+   25. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="iteration.html">
-   Iteration
+   26. Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="command-line.html">
-   The Command Line
+   27. The Command Line
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicating
+  Communicate
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
-   Markdown
+   28. Markdown
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="quarto.html">
-   Quarto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   Graphics for Communication
+   29. Quarto
   </a>
  </li>
 </ul>
@@ -412,71 +422,71 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   19.1. Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
+     19.1.1. Prerequisites
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#time-in-python">
-   Time in Python
+   19.2. Time in Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-datetimes">
-   Creating Datetimes
+   19.3. Creating Datetimes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#from-individual-components">
-     From Individual Components
+     19.3.1. From Individual Components
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#from-a-string">
-     From a String
+     19.3.2. From a String
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-on-datetimes">
-   Operations on Datetimes
+   19.4. Operations on Datetimes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#timezones">
-   Timezones
+   19.5. Timezones
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vectorised-datetimes">
-   Vectorised Datetimes
+   19.6. Vectorised Datetimes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#working-with-datetimes-in-data-frames">
-   Working with Datetimes in Data Frames
+   19.7. Working with Datetimes in Data Frames
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-and-using-time-series">
-     Creating and Using Time Series
+     19.7.1. Creating and Using Time Series
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datetime-offsets">
-     Datetime Offsets
+     19.7.2. Datetime Offsets
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-dt-accessor">
-     The
+     19.7.3. The
      <code class="docutils literal notranslate">
       <span class="pre">
        .dt
@@ -487,34 +497,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-a-datetime-index-and-setting-the-frequency">
-     Creating a datetime Index and Setting the Frequency
+     19.7.4. Creating a datetime Index and Setting the Frequency
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#making-quick-time-series-plots">
-   Making Quick Time Series Plots
+   19.8. Making Quick Time Series Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resampling-rolling-and-shifting">
-   Resampling, Rolling, and Shifting
+   19.9. Resampling, Rolling, and Shifting
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#resampling">
-     Resampling
+     19.9.1. Resampling
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rolling-window-functions">
-     Rolling Window Functions
+     19.9.2. Rolling Window Functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#shifting">
-     Shifting
+     19.9.3. Shifting
     </a>
    </li>
   </ul>
@@ -541,71 +551,71 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   19.1. Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
+     19.1.1. Prerequisites
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#time-in-python">
-   Time in Python
+   19.2. Time in Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-datetimes">
-   Creating Datetimes
+   19.3. Creating Datetimes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#from-individual-components">
-     From Individual Components
+     19.3.1. From Individual Components
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#from-a-string">
-     From a String
+     19.3.2. From a String
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-on-datetimes">
-   Operations on Datetimes
+   19.4. Operations on Datetimes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#timezones">
-   Timezones
+   19.5. Timezones
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vectorised-datetimes">
-   Vectorised Datetimes
+   19.6. Vectorised Datetimes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#working-with-datetimes-in-data-frames">
-   Working with Datetimes in Data Frames
+   19.7. Working with Datetimes in Data Frames
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-and-using-time-series">
-     Creating and Using Time Series
+     19.7.1. Creating and Using Time Series
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datetime-offsets">
-     Datetime Offsets
+     19.7.2. Datetime Offsets
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-dt-accessor">
-     The
+     19.7.3. The
      <code class="docutils literal notranslate">
       <span class="pre">
        .dt
@@ -616,34 +626,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-a-datetime-index-and-setting-the-frequency">
-     Creating a datetime Index and Setting the Frequency
+     19.7.4. Creating a datetime Index and Setting the Frequency
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#making-quick-time-series-plots">
-   Making Quick Time Series Plots
+   19.8. Making Quick Time Series Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resampling-rolling-and-shifting">
-   Resampling, Rolling, and Shifting
+   19.9. Resampling, Rolling, and Shifting
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#resampling">
-     Resampling
+     19.9.1. Resampling
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rolling-window-functions">
-     Rolling Window Functions
+     19.9.2. Rolling Window Functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#shifting">
-     Shifting
+     19.9.3. Shifting
     </a>
    </li>
   </ul>
@@ -658,9 +668,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="dates-and-times">
-<span id="id1"></span><h1>Dates and Times<a class="headerlink" href="#dates-and-times" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">19. </span>Dates and Times<a class="headerlink" href="#dates-and-times" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This chapter will show you how to work with dates and times in Python. At first glance, dates and times seem simple. You use them all the time in your regular life, and they don’t seem to cause much confusion. However, the more you learn about dates and times, the more complicated they seem to get. To warm up, try these three seemingly simple questions:</p>
 <ul class="simple">
 <li><p>Does every year have 365 days?</p></li>
@@ -672,7 +682,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Dates and times are hard because they have to reconcile two physical phenomena (the rotation of the Earth and its orbit around the sun) with a whole raft of geopolitical phenomena including months, time zones, and DST.</p>
 <p>This chapter won’t teach you every last detail about dates and times, but it will give you a solid grounding of practical skills that will help you with common data analysis challenges. In particular, one code task related to time that we won’t cover here includes how to run scripts or functions at a given frequency, ie how to schedule jobs.</p>
 <div class="section" id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <p>You will need to install the <strong>seaborn</strong> package for this chapter. This chapter uses the next generation version of <strong>seaborn</strong>, which can be installed by running the following on the command line (aka in the terminal):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --pre seaborn
 </pre></div>
@@ -681,7 +691,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="time-in-python">
-<h2>Time in Python<a class="headerlink" href="#time-in-python" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.2. </span>Time in Python<a class="headerlink" href="#time-in-python" title="Permalink to this headline">¶</a></h2>
 <p>A point in time as represented in data science is composed of a clock time and a date. These two elements are brought together as a <em>datetime</em>.</p>
 <p>The datetime object is the fundamental time object in Python. It’s useful to know about these before moving on to datetime operations using <strong>pandas</strong> (which you’re far more likely to use in practice). Python’s <em>datetime</em> objects capture the year, month, day, hour, second, and microsecond. Let’s import the class that deals with datetimes (whose objects are of type datetime.datetime) and take a look at it.</p>
 <div class="cell docutils container">
@@ -694,7 +704,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-10-20 15:58:47.870432
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-07-06 23:27:09.684944
 </pre></div>
 </div>
 </div>
@@ -708,9 +718,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Note that, once created, <code class="docutils literal notranslate"><span class="pre">now</span></code> does not refresh itself: it’s frozen at the time that it was made.</p>
 </div>
 <div class="section" id="creating-datetimes">
-<h2>Creating Datetimes<a class="headerlink" href="#creating-datetimes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.3. </span>Creating Datetimes<a class="headerlink" href="#creating-datetimes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="from-individual-components">
-<h3>From Individual Components<a class="headerlink" href="#from-individual-components" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.3.1. </span>From Individual Components<a class="headerlink" href="#from-individual-components" title="Permalink to this headline">¶</a></h3>
 <p>To create a datetime using given numerical information the command is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -728,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>To make clearer and more readable code, you can also call this using keyword arguments: <code class="docutils literal notranslate"><span class="pre">datetime(year=2019,</span> <span class="pre">month=11,</span> <span class="pre">day=28)</span></code>.</p>
 </div>
 <div class="section" id="from-a-string">
-<h3>From a String<a class="headerlink" href="#from-a-string" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.3.2. </span>From a String<a class="headerlink" href="#from-a-string" title="Permalink to this headline">¶</a></h3>
 <p>One of the most common transformations you’re likely to need to do when it comes to times is the one from a string, like “4 July 2002”, to a datetime. You can do this using <code class="docutils literal notranslate"><span class="pre">datetime.strptime</span></code>. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -784,7 +794,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Thursday, 10, 2022&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Thursday, 07, 2023&#39;
 </pre></div>
 </div>
 </div>
@@ -927,7 +937,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="operations-on-datetimes">
-<h2>Operations on Datetimes<a class="headerlink" href="#operations-on-datetimes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.4. </span>Operations on Datetimes<a class="headerlink" href="#operations-on-datetimes" title="Permalink to this headline">¶</a></h2>
 <p>Many of the operations you’d expect to just work with datetimes, do for example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -950,7 +960,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1023 days, 15:58:47.870432
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1282 days, 23:27:09.684944
 </pre></div>
 </div>
 </div>
@@ -971,14 +981,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This is of type <code class="docutils literal notranslate"><span class="pre">datetime.timedelta</span></code>.</p>
 </div>
 <div class="section" id="timezones">
-<h2>Timezones<a class="headerlink" href="#timezones" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.5. </span>Timezones<a class="headerlink" href="#timezones" title="Permalink to this headline">¶</a></h2>
 <p>Date and time objects may be categorized as aware or naive depending on whether or not they include timezone information; an aware object can locate itself relative to other aware objects, but a naive object does not contain enough information to unambiguously locate itself relative to other date/time objects. So far we’ve been working with naive datetime objects.</p>
 <p>The <a class="reference external" href="https://pypi.org/project/pytz/"><strong>pytz</strong></a> package can help you work with time zones. It has two main use cases: i) localise timezone-naive datetimes so that they become aware, ie have a timezone and ii) convert a datetimne in one timezone to another timezone.</p>
 <p>The default timezone for coding is UTC. ‘UTC’ is Coordinated Universal Time. It is a successor to, but distinct from, Greenwich Mean Time (GMT) and the various definitions of Universal Time. UTC is now the worldwide standard for regulating clocks and time measurement.</p>
 <p>All other timezones are defined relative to UTC, and include offsets like UTC+0800 - hours to add or subtract from UTC to derive the local time. No daylight saving time occurs in UTC, making it a useful timezone to perform date arithmetic without worrying about the confusion and ambiguities caused by daylight saving time transitions, your country changing its timezone, or mobile computers that roam through multiple timezones.</p>
 </div>
 <div class="section" id="vectorised-datetimes">
-<h2>Vectorised Datetimes<a class="headerlink" href="#vectorised-datetimes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.6. </span>Vectorised Datetimes<a class="headerlink" href="#vectorised-datetimes" title="Permalink to this headline">¶</a></h2>
 <p>Now we come to vectorised operations on datetimes using the powerful <strong>numpy</strong> packages (and this is what is used by <strong>pandas</strong>). <strong>numpy</strong> has its own version of datetime, called <code class="docutils literal notranslate"><span class="pre">np.datetime64</span></code>, and it’s very efficient at scale. Let’s see it in action:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1033,7 +1043,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>One word of warning with <strong>numpy</strong> and datetimes though: the more precise you go, and you can go down to femtoseconds (<span class="math notranslate nohighlight">\(10^{-15}\)</span> seconds), the more precise you go the smaller the range of dates you can hit. A popular choice of precision is <code class="docutils literal notranslate"><span class="pre">datetime64[ns]</span></code>, which can encode times from 1678 AD to 2262 AD. Working with seconds gets you 2.9<span class="math notranslate nohighlight">\(\times 10^9\)</span> BC to 2.9<span class="math notranslate nohighlight">\(\times 10^9\)</span> AD.</p>
 </div>
 <div class="section" id="working-with-datetimes-in-data-frames">
-<h2>Working with Datetimes in Data Frames<a class="headerlink" href="#working-with-datetimes-in-data-frames" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.7. </span>Working with Datetimes in Data Frames<a class="headerlink" href="#working-with-datetimes-in-data-frames" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a> is the workhorse of time series analysis in Python. The basic object is a <em>timestamp</em>. The <code class="docutils literal notranslate"><span class="pre">pd.to_datetime</span></code> function creates timestamps from strings that could reasonably represent datetimes. Let’s see an example of using <code class="docutils literal notranslate"><span class="pre">pd.to_datetime</span></code> to create a timestamp and then take a look at it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1052,7 +1062,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>This is of type <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> and you can see that it has many of the same properties as the built-in Python <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> class from the previous chapter. As with that, the default setting for <code class="docutils literal notranslate"><span class="pre">tz</span></code> (timezone) and <code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>. There are some extra properties, though, such as <code class="docutils literal notranslate"><span class="pre">freq</span></code> for frequency, which will be very useful when it comes to manipulating time <em>series</em> as opposed to just one or two datetimes.</p>
 <div class="section" id="creating-and-using-time-series">
-<h3>Creating and Using Time Series<a class="headerlink" href="#creating-and-using-time-series" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.7.1. </span>Creating and Using Time Series<a class="headerlink" href="#creating-and-using-time-series" title="Permalink to this headline">¶</a></h3>
 <p>There are two main scenarios in which you might be creating time series using <strong>pandas</strong>: i) creating one from scratch or ii) reading in data from a file. Let’s look at a few ways to do i) first.</p>
 <p>You can create a time series with <strong>pandas</strong> by taking a date as created above and extending it using <strong>pandas</strong> timedelta function:</p>
 <div class="cell docutils container">
@@ -1195,14 +1205,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 256 entries, 0 to 255
+RangeIndex: 264 entries, 0 to 263
 Data columns (total 2 columns):
  #   Column                      Non-Null Count  Dtype 
 ---  ------                      --------------  ----- 
- 0   date                        256 non-null    object
- 1   Vacancies (ICT), thousands  256 non-null    int64 
+ 0   date                        264 non-null    object
+ 1   Vacancies (ICT), thousands  264 non-null    int64 
 dtypes: int64(1), object(1)
-memory usage: 4.1+ KB
+memory usage: 4.2+ KB
 </pre></div>
 </div>
 </div>
@@ -1260,7 +1270,7 @@ Name: date, dtype: datetime64[ns]
 </div>
 </div>
 <div class="section" id="datetime-offsets">
-<h3>Datetime Offsets<a class="headerlink" href="#datetime-offsets" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.7.2. </span>Datetime Offsets<a class="headerlink" href="#datetime-offsets" title="Permalink to this headline">¶</a></h3>
 <p>Our data, currently held in <code class="docutils literal notranslate"><span class="pre">df</span></code>, were read in as if they were from the <em>start</em> of the month but these data refer to the month that has passed and so should be for the <em>end</em> of the month. Fortunately, we can change this using a time offset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1325,7 +1335,7 @@ Name: date, dtype: datetime64[ns]
 <p>While we used the <code class="docutils literal notranslate"><span class="pre">MonthEnd</span></code> offset here, there are many different offsets available. You can find a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects">full table of date offsets here</a>.</p>
 </div>
 <div class="section" id="the-dt-accessor">
-<h3>The <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor<a class="headerlink" href="#the-dt-accessor" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.7.3. </span>The <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor<a class="headerlink" href="#the-dt-accessor" title="Permalink to this headline">¶</a></h3>
 <p>When you have a datetime column, you can use the <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor to grab lots of useful information from it such as the <code class="docutils literal notranslate"><span class="pre">minute</span></code>, <code class="docutils literal notranslate"><span class="pre">month</span></code>, and so on. Some that are functions, rather than just accessors of underlying properties, are followed by brackets, <code class="docutils literal notranslate"><span class="pre">()</span></code>, because they are functions. Here are a few useful examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1366,7 +1376,7 @@ Name: date, dtype: int64
 </div>
 </div>
 <div class="section" id="creating-a-datetime-index-and-setting-the-frequency">
-<h3>Creating a datetime Index and Setting the Frequency<a class="headerlink" href="#creating-a-datetime-index-and-setting-the-frequency" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.7.4. </span>Creating a datetime Index and Setting the Frequency<a class="headerlink" href="#creating-a-datetime-index-and-setting-the-frequency" title="Permalink to this headline">¶</a></h3>
 <p>For the subsequent parts, we’ll set the datetime column to be the index of the dataframe. <em>This is the standard setup you will likely want to use when dealing with time series.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1523,7 +1533,7 @@ Name: date, dtype: int64
 </div>
 </div>
 <div class="section" id="making-quick-time-series-plots">
-<h2>Making Quick Time Series Plots<a class="headerlink" href="#making-quick-time-series-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.8. </span>Making Quick Time Series Plots<a class="headerlink" href="#making-quick-time-series-plots" title="Permalink to this headline">¶</a></h2>
 <p>Having managed to put your time series into a dataframe, perhaps converting a column of type string into a colume of type datetime in the process, you often just want to see the thing! We can achieve this using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> command, as long as we have a datetime index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1536,10 +1546,10 @@ Name: date, dtype: int64
 </div>
 </div>
 <div class="section" id="resampling-rolling-and-shifting">
-<h2>Resampling, Rolling, and Shifting<a class="headerlink" href="#resampling-rolling-and-shifting" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.9. </span>Resampling, Rolling, and Shifting<a class="headerlink" href="#resampling-rolling-and-shifting" title="Permalink to this headline">¶</a></h2>
 <p>Now our data have a <em>datetime index</em>, some common time series operations are made very easy for us.</p>
 <div class="section" id="resampling">
-<h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.9.1. </span>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">¶</a></h3>
 <p>Quite frequently, there is a situation in which one would like to change the frequency of a given time series. A time index-based dataframe makes this easy via the <code class="docutils literal notranslate"><span class="pre">resample</span></code> function. <code class="docutils literal notranslate"><span class="pre">resample</span></code> must be told <em>how</em> you’d like to resample the data, for example via the mean or median. Here’s an example resampling the monthly data to annual and taking the mean:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1588,7 +1598,7 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2004-12-31</th>
-      <td>44.833333</td>
+      <td>44.750000</td>
     </tr>
     <tr>
       <th>2005-12-31</th>
@@ -1604,11 +1614,11 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2008-12-31</th>
-      <td>35.000000</td>
+      <td>35.083333</td>
     </tr>
     <tr>
       <th>2009-12-31</th>
-      <td>24.250000</td>
+      <td>24.333333</td>
     </tr>
     <tr>
       <th>2010-12-31</th>
@@ -1628,7 +1638,7 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2014-12-31</th>
-      <td>32.833333</td>
+      <td>32.750000</td>
     </tr>
     <tr>
       <th>2015-12-31</th>
@@ -1640,7 +1650,7 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2017-12-31</th>
-      <td>41.750000</td>
+      <td>41.583333</td>
     </tr>
     <tr>
       <th>2018-12-31</th>
@@ -1648,19 +1658,23 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2019-12-31</th>
-      <td>44.250000</td>
+      <td>44.333333</td>
     </tr>
     <tr>
       <th>2020-12-31</th>
-      <td>27.500000</td>
+      <td>27.583333</td>
     </tr>
     <tr>
       <th>2021-12-31</th>
-      <td>56.000000</td>
+      <td>55.916667</td>
     </tr>
     <tr>
       <th>2022-12-31</th>
-      <td>73.750000</td>
+      <td>68.333333</td>
+    </tr>
+    <tr>
+      <th>2023-12-31</th>
+      <td>50.500000</td>
     </tr>
   </tbody>
 </table>
@@ -1717,23 +1731,23 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2006-12-31</th>
-      <td>41.616667</td>
-      <td>2.511611</td>
+      <td>41.600000</td>
+      <td>2.457779</td>
     </tr>
     <tr>
       <th>2011-12-31</th>
-      <td>32.300000</td>
-      <td>6.832872</td>
+      <td>32.333333</td>
+      <td>6.803954</td>
     </tr>
     <tr>
       <th>2016-12-31</th>
-      <td>34.366667</td>
-      <td>4.957332</td>
+      <td>34.350000</td>
+      <td>5.001102</td>
     </tr>
     <tr>
       <th>2021-12-31</th>
-      <td>43.450000</td>
-      <td>11.915557</td>
+      <td>43.433333</td>
+      <td>11.847000</td>
     </tr>
   </tbody>
 </table>
@@ -1798,28 +1812,28 @@ Name: date, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-08-27</th>
+      <th>2023-04-26</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-08-28</th>
+      <th>2023-04-27</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-08-29</th>
+      <th>2023-04-28</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-08-30</th>
+      <th>2023-04-29</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2022-08-31</th>
-      <td>66.0</td>
+      <th>2023-04-30</th>
+      <td>49.0</td>
     </tr>
   </tbody>
 </table>
-<p>7763 rows × 1 columns</p>
+<p>8005 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Options to fill in missing time series data include using <code class="docutils literal notranslate"><span class="pre">bfill</span></code> or <code class="docutils literal notranslate"><span class="pre">ffill</span></code> to fill in the blanks based on the next or last available value, respectively, or <code class="docutils literal notranslate"><span class="pre">interpolate</span></code> (note how only the first 3 NaNs are replaced using the <code class="docutils literal notranslate"><span class="pre">limit</span></code> keyword argument):</p>
@@ -1919,7 +1933,7 @@ Name: date, dtype: int64
 </div>
 </div>
 <div class="section" id="rolling-window-functions">
-<h3>Rolling Window Functions<a class="headerlink" href="#rolling-window-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.9.2. </span>Rolling Window Functions<a class="headerlink" href="#rolling-window-functions" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">rolling</span></code> and <code class="docutils literal notranslate"><span class="pre">ewm</span></code> methods are both rolling window functions. The first includes functions of the sequence</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1985,28 +1999,28 @@ y_t = f(\{x_{t-i} \}_{i=0}^{i=R-1})
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-04-30</th>
-      <td>78.0</td>
+      <th>2022-12-31</th>
+      <td>54.5</td>
     </tr>
     <tr>
-      <th>2022-05-31</th>
-      <td>78.0</td>
+      <th>2023-01-31</th>
+      <td>52.5</td>
     </tr>
     <tr>
-      <th>2022-06-30</th>
-      <td>74.5</td>
+      <th>2023-02-28</th>
+      <td>51.5</td>
     </tr>
     <tr>
-      <th>2022-07-31</th>
-      <td>68.0</td>
+      <th>2023-03-31</th>
+      <td>51.0</td>
     </tr>
     <tr>
-      <th>2022-08-31</th>
-      <td>66.0</td>
+      <th>2023-04-30</th>
+      <td>49.5</td>
     </tr>
   </tbody>
 </table>
-<p>256 rows × 1 columns</p>
+<p>264 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ewm</span></code> includes the class of functions where data point <span class="math notranslate nohighlight">\(x_{t-i}\)</span> has a weight <span class="math notranslate nohighlight">\(w_i = (1-\alpha)^i\)</span>. As <span class="math notranslate nohighlight">\(0 &lt; \alpha &lt; 1\)</span>, points further back in time are given less weight. For example, an exponentially moving average is given by</p>
@@ -2075,28 +2089,28 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-04-30</th>
-      <td>71.036769</td>
+      <th>2022-12-31</th>
+      <td>61.987655</td>
     </tr>
     <tr>
-      <th>2022-05-31</th>
-      <td>72.629415</td>
+      <th>2023-01-31</th>
+      <td>59.790124</td>
     </tr>
     <tr>
-      <th>2022-06-30</th>
-      <td>72.103532</td>
+      <th>2023-02-28</th>
+      <td>58.232099</td>
     </tr>
     <tr>
-      <th>2022-07-31</th>
-      <td>70.882825</td>
+      <th>2023-03-31</th>
+      <td>56.585679</td>
     </tr>
     <tr>
-      <th>2022-08-31</th>
-      <td>69.906260</td>
+      <th>2023-04-30</th>
+      <td>55.068544</td>
     </tr>
   </tbody>
 </table>
-<p>256 rows × 1 columns</p>
+<p>264 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Let’s see these methods together on the stock market data.</p>
@@ -2138,7 +2152,7 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
 </div>
 </div>
 <div class="section" id="shifting">
-<h3>Shifting<a class="headerlink" href="#shifting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">19.9.3. </span>Shifting<a class="headerlink" href="#shifting" title="Permalink to this headline">¶</a></h3>
 <p>Shifting can move series around in time; it’s what we need to create leads and lags of time series. Let’s create a lead and a lag in the data. Remember that a lead is going to shift the pattern in the data to the left (ie earlier in time), while the lag is going to shift patterns later in time (ie to the right).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2258,13 +2272,13 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Categorical Data</p>
+            <p class="prev-next-title"><span class="section-number">18. </span>Categorical Data</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="missing-values.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Missing Values</p>
+        <p class="prev-next-title"><span class="section-number">20. </span>Missing Values</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

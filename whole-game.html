@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Postscript: Getting Further Help &#8212; Python for Data Science</title>
+    <title>1. Whole Game &#8212; Python for Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11. Exploratory Data Analysis" href="exploratory-data-analysis.html" />
-    <link rel="prev" title="9. Workflow: Packages and Environments" href="workflow-packages-and-environments.html" />
+    <link rel="next" title="2. Data Visualisation" href="data-visualise.html" />
+    <link rel="prev" title="First Steps" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,9 +117,9 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Whole Game
   </a>
  </li>
  <li class="toctree-l1">
@@ -162,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
    9. Workflow: Packages and Environments
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
    10. Postscript: Getting Further Help
   </a>
  </li>
@@ -348,14 +348,11 @@ const thebe_selector_output = ".output, .cell_output"
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="_sources/workflow-help.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+        
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/workflow-help.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/whole-game.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -373,7 +370,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fworkflow-help.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fwhole-game.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -394,13 +391,18 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/workflow-help.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/whole-game.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/whole-game.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -411,29 +413,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#google-is-your-friend">
-   10.1. Google is your friend
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#making-a-reprex-reproducible-example">
-   10.2. Making a reprex (reproducible example)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#investing-in-yourself">
-   10.3. Investing in yourself
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -441,216 +420,37 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Postscript: Getting Further Help</h1>
+                <h1>Whole Game</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#google-is-your-friend">
-   10.1. Google is your friend
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#making-a-reprex-reproducible-example">
-   10.2. Making a reprex (reproducible example)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#investing-in-yourself">
-   10.3. Investing in yourself
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="postscript-getting-further-help">
-<span id="workflow-help"></span><h1><span class="section-number">10. </span>Postscript: Getting Further Help<a class="headerlink" href="#postscript-getting-further-help" title="Permalink to this headline">¶</a></h1>
-<p>This book is not an island; there is no single resource that will allow you to master Python for Data Science. As you begin to apply the techniques described in this book to your own data, you will soon find questions that we do not answer. This section describes a few tips on how to get help, and to help you keep learning.</p>
-<div class="section" id="google-is-your-friend">
-<h2><span class="section-number">10.1. </span>Google is your friend<a class="headerlink" href="#google-is-your-friend" title="Permalink to this headline">¶</a></h2>
-<p>If you get stuck, start with Google. Typically adding “Python” or “Python Data Science” (as the Python ecosystem goes <em>well</em> beyond data science) to a query is enough to restrict it to relevant results. Google is particularly useful for error messages. If you get an error message and you have no idea what it means, try googling it! Chances are that someone else has been confused by it in the past, and there will be help somewhere on the web.</p>
-<p>If Google doesn’t help, try <a class="reference external" href="http://stackoverflow.com">Stack Overflow</a>. Start by spending a little time searching for an existing answer, including <code class="docutils literal notranslate"><span class="pre">[Python]</span></code> to restrict your search to questions and answers that use Python.</p>
-</div>
-<div class="section" id="making-a-reprex-reproducible-example">
-<h2><span class="section-number">10.2. </span>Making a reprex (reproducible example)<a class="headerlink" href="#making-a-reprex-reproducible-example" title="Permalink to this headline">¶</a></h2>
-<p>If your googling doesn’t find anything useful, it’s a really good idea prepare a minimal reproducible example or <strong>reprex</strong>.
-A good reprex makes it easier for other people to help you, and often you’ll figure out the problem yourself in the course of making it. There are two parts to creating a reprex:</p>
-<ul class="simple">
-<li><p>First, you need to make your code reproducible. This means that you need to capture everything, i.e., include any packages you used and create all necessary objects. The easiest way to make sure you’ve done this is to use the <a class="reference external" href="https://github.com/rasbt/watermark"><strong>watermark</strong></a> package alongside whatever else you are doing:</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">watermark.watermark</span> <span class="k">as</span> <span class="nn">watermark</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">watermark</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">watermark</span><span class="p">(</span><span class="n">iversions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">globals_</span><span class="o">=</span><span class="nb">globals</span><span class="p">()))</span>
-</pre></div>
-</div>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="whole-game">
+<span id="id1"></span><h1><span class="section-number">1. </span>Whole Game<a class="headerlink" href="#whole-game" title="Permalink to this headline">¶</a></h1>
+<p>Our goal in this part of the book is to give you a rapid overview of the main tools of data science: importing, cleaning, transforming, and visualising data, as shown in the figure below. We want to show you the “whole game” of data science giving you just enough of all the major pieces so that you can tackle real, if simple, datasets. The later parts of the book will hit each of these topics in more depth, increasing the range of data science challenges that you can tackle.</p>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2023-07-06T23:28:15.185824+01:00
-
-Python implementation: CPython
-Python version       : 3.9.12
-IPython version      : 8.3.0
-
-Compiler    : Clang 12.0.1 
-OS          : Darwin
-Release     : 21.6.0
-Machine     : x86_64
-Processor   : i386
-CPU cores   : 10
-Architecture: 64bit
-
-pandas: 1.4.2
-numpy : 1.22.4
-</pre></div>
+<img alt="_images/whole-game_2_0.svg" src="_images/whole-game_2_0.svg" /></div>
 </div>
-</div>
-</div>
+<p>After this chapter, we have four main chapters that focus on the tools of data science:</p>
 <ul class="simple">
-<li><p>Second, you need to make it minimal. Strip away everything that is not directly related to your problem. This usually involves creating a much smaller and simpler Python object than the one you’re facing in real life or even using built-in data.</p></li>
+<li><p>Visualisation is a great place to start with Python programming because the pay-off is so clear: you get to make elegant and informative plots that help you understand data. In <a class="reference internal" href="data-visualise.html#data-visualise"><span class="std std-ref">Data Visualisation</span></a>, you’ll dive into visualisation, learning the basic structure of a plot, and powerful techniques for turning data into plots.</p></li>
+<li><p>Visualisation alone is typically not enough, so in <a class="reference internal" href="data-transform.html#data-transform"><span class="std std-ref">Data Transformation</span></a>, you’ll learn the key verbs that allow you to select important variables, filter out key observations, create new variables, and compute summaries.</p></li>
+<li><p>In <a class="reference internal" href="data-tidy.html#data-tidy"><span class="std std-ref">Tidy Data</span></a>, you’ll learn about cleaning data and specifically “tidy” data, a consistent way of storing tabular data that makes transformation, visualisation, and modelling easier. You’ll learn the underlying principles, and how to get your data into a “tidy” format.</p></li>
+<li><p>Before you can transform and visualise your data, you need to first get your data into a Python session. In <a class="reference internal" href="data-import.html#data-import"><span class="std std-ref">Data Import</span></a> you’ll learn the basics of getting .csv files into your Python session.</p></li>
 </ul>
-<p>That sounds like a lot of work! And it can be, but it has a great payoff:</p>
+<p>These are interspersed with four other chapters that focus on your Python workflow:</p>
 <ul class="simple">
-<li><p>80% of the time creating an excellent reprex reveals the source of your problem. It’s amazing how often the process of writing up a self-contained and minimal example allows you to answer your own question.</p></li>
-<li><p>The other 20% of time you will have captured the essence of your problem in a way that is easy for others to play with. This substantially improves your chances of getting help.</p></li>
+<li><p>In <a class="reference internal" href="workflow-basics.html#workflow-basics"><span class="std std-ref">Workflow: Basics</span></a>, <a class="reference internal" href="workflow-style.html#workflow-style"><span class="std std-ref">Workflow: Style</span></a>, and <a class="reference internal" href="workflow-writing-code.html#workflow-writing-code"><span class="std std-ref">Workflow: Writing Code</span></a>, you’ll learn good workflow practices for writing and organising your code.</p></li>
+<li><p>In <a class="reference internal" href="workflow-packages-and-environments.html#workflow-packages-and-environments"><span class="std std-ref">Workflow: Packages and Environments</span></a>, you’ll learn more about packages and isolating your projects in separate code environments.</p></li>
 </ul>
-<p>There are several things you need to include to make your example reproducible: Python environment, required packages, data, and code.</p>
-<ul class="simple">
-<li><p><strong>Python environment</strong>–really just the Python version. This is covered by the first call to the <strong>watermark</strong> package.</p></li>
-<li><p><strong>Packages</strong> and their versions. These should be loaded at the top of the script, so it’s easy to see which ones the example needs. By using <strong>watermark</strong> with the above configuration, you will also print the package versions. This is a good time to check that you’re using the latest version of each package; it’s possible you’ve discovered a bug that’s been fixed since you installed or last updated the package.</p></li>
-<li><p><strong>Data</strong>: as others won’t be able to easily download the data you’re working with, it’s often best to create a small amount of data from code that still have the same problem as you’re finding with your actual data. Between <strong>numpy</strong> and <strong>pandas</strong>, it’s quite easy to generate data from code; here’s an example:</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)),</span>
-    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">],</span>
-    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;col&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)],</span>
-    <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;random_normal&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">df</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>col0</th>
-      <th>col1</th>
-      <th>col2</th>
-      <th>col3</th>
-      <th>col4</th>
-      <th>col5</th>
-      <th>random_normal</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>-0.476965</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>6.0</td>
-      <td>7.0</td>
-      <td>8.0</td>
-      <td>9.0</td>
-      <td>10.0</td>
-      <td>11.0</td>
-      <td>0.435617</td>
-    </tr>
-    <tr>
-      <th>c</th>
-      <td>12.0</td>
-      <td>13.0</td>
-      <td>14.0</td>
-      <td>15.0</td>
-      <td>16.0</td>
-      <td>17.0</td>
-      <td>2.621638</td>
-    </tr>
-    <tr>
-      <th>d</th>
-      <td>18.0</td>
-      <td>19.0</td>
-      <td>20.0</td>
-      <td>21.0</td>
-      <td>22.0</td>
-      <td>23.0</td>
-      <td>0.249256</td>
-    </tr>
-    <tr>
-      <th>e</th>
-      <td>24.0</td>
-      <td>25.0</td>
-      <td>26.0</td>
-      <td>27.0</td>
-      <td>28.0</td>
-      <td>29.0</td>
-      <td>0.308558</td>
-    </tr>
-    <tr>
-      <th>f</th>
-      <td>30.0</td>
-      <td>31.0</td>
-      <td>32.0</td>
-      <td>33.0</td>
-      <td>34.0</td>
-      <td>35.0</td>
-      <td>-0.079588</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<ul class="simple">
-<li><p><strong>Code</strong>: copy and paste the minimal reproducible example code (including the packages, as noted above). Make sure you’ve used spaces and your variable names are concise, yet informative. Use comments to indicate where your problem lies. Do your best to remove everything that is not related to the problem. Finally, the shorter your code is, the easier it is to understand, and the easier it is to fix.</p></li>
-</ul>
-<p>Finish by checking that you have actually made a reproducible example by starting a fresh Python session and copying and pasting your reprex in.</p>
-</div>
-<div class="section" id="investing-in-yourself">
-<h2><span class="section-number">10.3. </span>Investing in yourself<a class="headerlink" href="#investing-in-yourself" title="Permalink to this headline">¶</a></h2>
-<p>You should also spend some time preparing yourself to solve problems before they occur. Investing a little time in learning Python each day will pay off in the long run!</p>
-</div>
+<p>Finally, <a class="reference internal" href="workflow-help.html#workflow-help"><span class="std std-ref">Postscript: Getting Further Help</span></a> contains some short advice on how to get help and keep learning.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -678,17 +478,17 @@ numpy : 1.22.4
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="workflow-packages-and-environments.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">9. </span>Workflow: Packages and Environments</p>
+            <p class="prev-next-title">First Steps</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="exploratory-data-analysis.html" title="next page">
+    <a class='right-next' id="next-link" href="data-visualise.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Exploratory Data Analysis</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Data Visualisation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

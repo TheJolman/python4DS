@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Regular Expressions, aka regex &#8212; Python for Data Science</title>
+    <title>17. Regular Expressions, aka regex &#8212; Python for Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,15 +51,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Categorical Data" href="categorical-data.html" />
-    <link rel="prev" title="Strings and Text" href="strings.html" />
+    <link rel="next" title="18. Categorical Data" href="categorical-data.html" />
+    <link rel="prev" title="16. Strings and Text" href="strings.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
-   Getting Started with Python
+   First Steps
   </a>
  </li>
 </ul>
@@ -122,171 +120,183 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="whole-game.html">
+   1. Whole game
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="data-visualise.html">
-   Data Visualisation
+   2. Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-basics.html">
-   Workflow: Basics
+   3. Workflow: Basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-transform.html">
-   Data Transformation
+   4. Data Transformation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-style.html">
-   Workflow: Style
+   5. Workflow: Style
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-tidy.html">
-   Tidy Data
+   6. Tidy Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-writing-code.html">
-   Workflow: Writing Code
+   7. Workflow: Writing Code
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-import.html">
-   Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   Exploratory Data Analysis
+   8. Data Import
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-packages-and-environments.html">
-   Workflow: Packages and Environments
+   9. Workflow: Packages and Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   10. Postscript: Getting Further Help
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Data Types
+  Visualise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   11. Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="communicate-plots.html">
+   12. Graphics for Communication
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="joins.html">
-   Joins
+   13. Joins
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="boolean-data.html">
-   Boolean Data
+   14. Boolean Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="numbers.html">
-   Numbers
+   15. Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="strings.html">
-   Strings and Text
+   16. Strings and Text
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Regular Expressions, aka regex
+   17. Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="categorical-data.html">
-   Categorical Data
+   18. Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dates-and-times.html">
-   Dates and Times
+   19. Dates and Times
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="missing-values.html">
-   Missing Values
+   20. Missing Values
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transforming Data
+  Import
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="spreadsheets.html">
-   Spreadsheets
+   21. Spreadsheets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="webscraping-and-apis.html">
-   Webscraping and APIs
+   22. Webscraping and APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rectangling.html">
-   Rectangling
+   23. Rectangling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="databases.html">
-   Databases
+   24. Databases
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programming
+  Programme
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   Functions
+   25. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="iteration.html">
-   Iteration
+   26. Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="command-line.html">
-   The Command Line
+   27. The Command Line
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicating
+  Communicate
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
-   Markdown
+   28. Markdown
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="quarto.html">
-   Quarto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   Graphics for Communication
+   29. Quarto
   </a>
  </li>
 </ul>
@@ -390,32 +400,32 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#special-characters">
-   Special Characters
+   17.1. Special Characters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantifiers">
-   Quantifiers
+   17.2. Quantifiers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#metacharacters">
-   Metacharacters
+   17.3. Metacharacters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ranges">
-   Ranges
+   17.4. Ranges
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#greedy-versus-lazy-regexes">
-   Greedy versus lazy regexes
+   17.5. Greedy versus lazy regexes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matches-versus-capture-groups">
-   Matches versus capture groups
+   17.6. Matches versus capture groups
   </a>
  </li>
 </ul>
@@ -440,32 +450,32 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#special-characters">
-   Special Characters
+   17.1. Special Characters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantifiers">
-   Quantifiers
+   17.2. Quantifiers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#metacharacters">
-   Metacharacters
+   17.3. Metacharacters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ranges">
-   Ranges
+   17.4. Ranges
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#greedy-versus-lazy-regexes">
-   Greedy versus lazy regexes
+   17.5. Greedy versus lazy regexes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matches-versus-capture-groups">
-   Matches versus capture groups
+   17.6. Matches versus capture groups
   </a>
  </li>
 </ul>
@@ -478,7 +488,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="regular-expressions-aka-regex">
-<span id="text-regex"></span><h1>Regular Expressions, aka regex<a class="headerlink" href="#regular-expressions-aka-regex" title="Permalink to this headline">¶</a></h1>
+<span id="text-regex"></span><h1><span class="section-number">17. </span>Regular Expressions, aka regex<a class="headerlink" href="#regular-expressions-aka-regex" title="Permalink to this headline">¶</a></h1>
 <p>This chapter covers how to regular expressions to perform processing of text.</p>
 <p>Regex, aka regular expressions, provide a way to both search and change text. Their advantages are that they are concise, they run very quickly, they can be ported across languages (they are definitely not just a Python thing!), and they are very powerful. The disadvantage is that they are confusing and take some getting used to!</p>
 <p><img alt="" src="https://imgs.xkcd.com/comics/regular_expressions.png" /></p>
@@ -548,7 +558,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="special-characters">
-<h2>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.1. </span>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h2>
 <p>So far, we’ve only seen a very simple application of regex involving a vanilla word, <code class="docutils literal notranslate"><span class="pre">string</span></code>, the code for another word <code class="docutils literal notranslate"><span class="pre">\w+</span></code> and the code for a whitespace <code class="docutils literal notranslate"><span class="pre">\s</span></code>. Let’s take a more comprehensive look at the regex special characters:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -613,7 +623,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Note that whitespace characters include newlines, <code class="docutils literal notranslate"><span class="pre">\n</span></code>, and tabs, <code class="docutils literal notranslate"><span class="pre">\t</span></code>.</p>
 </div>
 <div class="section" id="quantifiers">
-<h2>Quantifiers<a class="headerlink" href="#quantifiers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.2. </span>Quantifiers<a class="headerlink" href="#quantifiers" title="Permalink to this headline">¶</a></h2>
 <p>As well as these special characters, there are quantifiers which ask for more than one occurence of a character. For example, in the above, <code class="docutils literal notranslate"><span class="pre">\w\w</span></code> asked for two word characters, while <code class="docutils literal notranslate"><span class="pre">\d\d</span></code> asks for two digits. The next table shows all of the quantifiers.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -663,7 +673,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="metacharacters">
-<h2>Metacharacters<a class="headerlink" href="#metacharacters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.3. </span>Metacharacters<a class="headerlink" href="#metacharacters" title="Permalink to this headline">¶</a></h2>
 <p>Now, as well as special characters and quantifiers, we can have meta-character matches. These are not characters <em>per se</em>, but starts, ends, and other bits of words. For example, <code class="docutils literal notranslate"><span class="pre">\b</span></code> matches strings at a word (<code class="docutils literal notranslate"><span class="pre">\w+</span></code>) boundary, so if we took the text “Three letter words only are captured” and ran <code class="docutils literal notranslate"><span class="pre">\b\w\w\w\b</span></code> we would return “are”. <code class="docutils literal notranslate"><span class="pre">\B</span></code> matches strings not at word (<code class="docutils literal notranslate"><span class="pre">\w+</span></code>) boundaries so the text “Bricks” with <code class="docutils literal notranslate"><span class="pre">\B\w\w\B</span></code> applied would yield “ri”. The next table contains some useful metacharacters.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -703,7 +713,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="ranges">
-<h2>Ranges<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.4. </span>Ranges<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h2>
 <p>You probably think you’re done with regex, but not so fast! There are more metacharacters to come. This time, they will represent <em>ranges</em> of characters.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -739,7 +749,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Ranges have two more neat tricks. The first is that they can be concatenated. For example, <code class="docutils literal notranslate"><span class="pre">[a-c-1-5]</span></code> would match any of a, b, c, 1, 2, 3, 4, 5. They can also be modified with a quantifier, so <code class="docutils literal notranslate"><span class="pre">[a-c0-2]{2}</span></code> would match “a0” and “ab”.</p>
 </div>
 <div class="section" id="greedy-versus-lazy-regexes">
-<h2>Greedy versus lazy regexes<a class="headerlink" href="#greedy-versus-lazy-regexes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.5. </span>Greedy versus lazy regexes<a class="headerlink" href="#greedy-versus-lazy-regexes" title="Permalink to this headline">¶</a></h2>
 <p>Buckle up, because this one is a bit tricky to grasp. Adding a <code class="docutils literal notranslate"><span class="pre">?</span></code> after a regex will make it go from being ‘greedy’ to being ‘lazy’. Greedy means that you will match the longest possible string that hits the condition. Lazy will mean that you get the shortest possible string matching the condition. It’s easiest to demonstrate with an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -762,7 +772,7 @@ The lazy match is stacko
 <p>In the former (greedy) case, we get from an ‘s’ all the way to the last ‘o’ within the same word. In the latter (lazy) case we just get everything between the start and first occurrence of an ‘o’.</p>
 </div>
 <div class="section" id="matches-versus-capture-groups">
-<h2>Matches versus capture groups<a class="headerlink" href="#matches-versus-capture-groups" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">17.6. </span>Matches versus capture groups<a class="headerlink" href="#matches-versus-capture-groups" title="Permalink to this headline">¶</a></h2>
 <p>There is often a difference between what you might want to match and what you actually want to <em>grab</em> with your regex. Let’s say, for example, we’re parsing some text and we want any numbers that follow the format ‘$xx.xx’, where the ‘x’ are numbers but we don’t want the dollar sign. To do this, we can create a <em>capture group</em> using brackets. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -833,13 +843,13 @@ The lazy match is stacko
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Strings and Text</p>
+            <p class="prev-next-title"><span class="section-number">16. </span>Strings and Text</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="categorical-data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Categorical Data</p>
+        <p class="prev-next-title"><span class="section-number">18. </span>Categorical Data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

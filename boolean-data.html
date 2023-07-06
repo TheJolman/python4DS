@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boolean Data &#8212; Python for Data Science</title>
+    <title>14. Boolean Data &#8212; Python for Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,13 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Numbers" href="numbers.html" />
-    <link rel="prev" title="Joins" href="joins.html" />
+    <link rel="next" title="15. Numbers" href="numbers.html" />
+    <link rel="prev" title="13. Joins" href="joins.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
-   Getting Started with Python
+   First Steps
   </a>
  </li>
 </ul>
@@ -120,171 +118,183 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="whole-game.html">
+   1. Whole game
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="data-visualise.html">
-   Data Visualisation
+   2. Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-basics.html">
-   Workflow: Basics
+   3. Workflow: Basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-transform.html">
-   Data Transformation
+   4. Data Transformation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-style.html">
-   Workflow: Style
+   5. Workflow: Style
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-tidy.html">
-   Tidy Data
+   6. Tidy Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-writing-code.html">
-   Workflow: Writing Code
+   7. Workflow: Writing Code
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-import.html">
-   Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   Exploratory Data Analysis
+   8. Data Import
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-packages-and-environments.html">
-   Workflow: Packages and Environments
+   9. Workflow: Packages and Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   10. Postscript: Getting Further Help
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Data Types
+  Visualise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   11. Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="communicate-plots.html">
+   12. Graphics for Communication
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="joins.html">
-   Joins
+   13. Joins
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Boolean Data
+   14. Boolean Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="numbers.html">
-   Numbers
+   15. Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="strings.html">
-   Strings and Text
+   16. Strings and Text
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="regex.html">
-   Regular Expressions, aka regex
+   17. Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="categorical-data.html">
-   Categorical Data
+   18. Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dates-and-times.html">
-   Dates and Times
+   19. Dates and Times
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="missing-values.html">
-   Missing Values
+   20. Missing Values
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transforming Data
+  Import
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="spreadsheets.html">
-   Spreadsheets
+   21. Spreadsheets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="webscraping-and-apis.html">
-   Webscraping and APIs
+   22. Webscraping and APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rectangling.html">
-   Rectangling
+   23. Rectangling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="databases.html">
-   Databases
+   24. Databases
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programming
+  Programme
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   Functions
+   25. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="iteration.html">
-   Iteration
+   26. Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="command-line.html">
-   The Command Line
+   27. The Command Line
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicating
+  Communicate
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
-   Markdown
+   28. Markdown
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="quarto.html">
-   Quarto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   Graphics for Communication
+   29. Quarto
   </a>
  </li>
 </ul>
@@ -410,39 +420,39 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   14.1. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#booleans">
-   Booleans
+   14.2. Booleans
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#boolean-variables-and-conditions">
-     Boolean Variables and Conditions
+     14.2.1. Boolean Variables and Conditions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conditions-in-list-comprehensions">
-     Conditions in list comprehensions
+     14.2.2. Conditions in list comprehensions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#truthsy-and-falsy-values">
-     Truthsy and Falsy Values
+     14.2.3. Truthsy and Falsy Values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#any-and-all">
-     any() and all()
+     14.2.4. any() and all()
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#booleans-in-pandas-data-frames">
-   Booleans in
+   14.3. Booleans in
    <strong>
     pandas
    </strong>
@@ -451,22 +461,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#operations-on-booleans-in-data-frames">
-     Operations on booleans in data frames
+     14.3.1. Operations on booleans in data frames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-booleans-from-comparisons-using-columns">
-     Creating booleans from comparisons using columns
+     14.3.2. Creating booleans from comparisons using columns
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#any-and-all-in-data-frames">
-     any() and all() in data frames
+     14.3.3. any() and all() in data frames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#logical-subsetting">
-     Logical subsetting
+     14.3.4. Logical subsetting
     </a>
    </li>
   </ul>
@@ -493,39 +503,39 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   14.1. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#booleans">
-   Booleans
+   14.2. Booleans
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#boolean-variables-and-conditions">
-     Boolean Variables and Conditions
+     14.2.1. Boolean Variables and Conditions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conditions-in-list-comprehensions">
-     Conditions in list comprehensions
+     14.2.2. Conditions in list comprehensions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#truthsy-and-falsy-values">
-     Truthsy and Falsy Values
+     14.2.3. Truthsy and Falsy Values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#any-and-all">
-     any() and all()
+     14.2.4. any() and all()
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#booleans-in-pandas-data-frames">
-   Booleans in
+   14.3. Booleans in
    <strong>
     pandas
    </strong>
@@ -534,22 +544,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#operations-on-booleans-in-data-frames">
-     Operations on booleans in data frames
+     14.3.1. Operations on booleans in data frames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-booleans-from-comparisons-using-columns">
-     Creating booleans from comparisons using columns
+     14.3.2. Creating booleans from comparisons using columns
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#any-and-all-in-data-frames">
-     any() and all() in data frames
+     14.3.3. any() and all() in data frames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#logical-subsetting">
-     Logical subsetting
+     14.3.4. Logical subsetting
     </a>
    </li>
   </ul>
@@ -564,16 +574,16 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="boolean-data">
-<span id="id1"></span><h1>Boolean Data<a class="headerlink" href="#boolean-data" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">14. </span>Boolean Data<a class="headerlink" href="#boolean-data" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this chapter, we’ll introduce boolean data: data that can be <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (which can also be encoded as 1s or 0s). We’ll first look at the fundamental Python true and false boolean variables before seeing how true and false work in data frames.</p>
 </div>
 <div class="section" id="booleans">
-<h2>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.2. </span>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">¶</a></h2>
 <p>Some of the most important operations you will perform are with <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values, also known as boolean data types. These are fundamental Python variables, just as numbers such as <code class="docutils literal notranslate"><span class="pre">1</span></code> are.</p>
 <div class="section" id="boolean-variables-and-conditions">
-<h3>Boolean Variables and Conditions<a class="headerlink" href="#boolean-variables-and-conditions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.1. </span>Boolean Variables and Conditions<a class="headerlink" href="#boolean-variables-and-conditions" title="Permalink to this headline">¶</a></h3>
 <p>To assign the value <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> to a variable is the same as with any other assignment:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -786,7 +796,7 @@ False
 </div>
 </div>
 <div class="section" id="conditions-in-list-comprehensions">
-<h3>Conditions in list comprehensions<a class="headerlink" href="#conditions-in-list-comprehensions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.2. </span>Conditions in list comprehensions<a class="headerlink" href="#conditions-in-list-comprehensions" title="Permalink to this headline">¶</a></h3>
 <p>List comprehensions are an incredibly useful pattern in Python. Here’s a simple one that produces a list of the first 12 numbers starting from 0:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -839,7 +849,7 @@ False
 </div>
 </div>
 <div class="section" id="truthsy-and-falsy-values">
-<h3>Truthsy and Falsy Values<a class="headerlink" href="#truthsy-and-falsy-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.3. </span>Truthsy and Falsy Values<a class="headerlink" href="#truthsy-and-falsy-values" title="Permalink to this headline">¶</a></h3>
 <p>Python objects can be used in expressions that will return a boolean value, such as when a list, <code class="docutils literal notranslate"><span class="pre">listy</span></code>, is used with <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">listy</span></code>. Built-in Python objects that are empty are usually evaluated as <code class="docutils literal notranslate"><span class="pre">False</span></code>, and are said to be ‘Falsy’. In contrast, when these built-in objects are not empty, they evaluate as <code class="docutils literal notranslate"><span class="pre">True</span></code> and are said to be ‘truthy’.
 Let’s see some examples:</p>
 <div class="cell docutils container">
@@ -925,7 +935,7 @@ Let’s see some examples:</p>
 <p>Knowing what is truthy or falsy is useful in practice; imagine you’d like to default to a specific behaviour if a list called <code class="docutils literal notranslate"><span class="pre">list_vals</span></code> doesn’t have any values in. You now know you can do it simply with <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">list_vals</span></code>.</p>
 </div>
 <div class="section" id="any-and-all">
-<h3>any() and all()<a class="headerlink" href="#any-and-all" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.2.4. </span>any() and all()<a class="headerlink" href="#any-and-all" title="Permalink to this headline">¶</a></h3>
 <p>Of course, there is a big wide world of booleans out there; they don’t always occur on their own. That’s why the operators <code class="docutils literal notranslate"><span class="pre">any()</span></code> and <code class="docutils literal notranslate"><span class="pre">all()</span></code> exist. These apply to <em>iterables</em> of booleans, like a list of booleans.</p>
 <p><code class="docutils literal notranslate"><span class="pre">any()</span></code> takes a list of booleans with at least one true value and returns true:</p>
 <div class="cell docutils container">
@@ -969,9 +979,9 @@ Let’s see some examples:</p>
 </div>
 </div>
 <div class="section" id="booleans-in-pandas-data-frames">
-<h2>Booleans in <strong>pandas</strong> data frames<a class="headerlink" href="#booleans-in-pandas-data-frames" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.3. </span>Booleans in <strong>pandas</strong> data frames<a class="headerlink" href="#booleans-in-pandas-data-frames" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="operations-on-booleans-in-data-frames">
-<h3>Operations on booleans in data frames<a class="headerlink" href="#operations-on-booleans-in-data-frames" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.3.1. </span>Operations on booleans in data frames<a class="headerlink" href="#operations-on-booleans-in-data-frames" title="Permalink to this headline">¶</a></h3>
 <p>Quite often, you will run into a scenario where you’re working with data that have True or False values in a data frame. It is easy to create a column of booleans in a <strong>pandas</strong> data frame:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1094,7 +1104,7 @@ Name: bool_col, dtype: bool
 </div>
 </div>
 <div class="section" id="creating-booleans-from-comparisons-using-columns">
-<h3>Creating booleans from comparisons using columns<a class="headerlink" href="#creating-booleans-from-comparisons-using-columns" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.3.2. </span>Creating booleans from comparisons using columns<a class="headerlink" href="#creating-booleans-from-comparisons-using-columns" title="Permalink to this headline">¶</a></h3>
 <p>It’s also possible to create boolean columns from numerical (or some other) columns. Let’s use the diamonds dataset to demonstrate this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1248,143 +1258,143 @@ Name: bool_col, dtype: bool
   </thead>
   <tbody>
     <tr>
-      <th>27418</th>
-      <td>2.04</td>
-      <td>Good</td>
-      <td>H</td>
+      <th>31647</th>
+      <td>0.37</td>
+      <td>Ideal</td>
+      <td>J</td>
       <td>SI1</td>
-      <td>58.4</td>
-      <td>60.0</td>
-      <td>18026</td>
-      <td>8.31</td>
-      <td>8.36</td>
-      <td>4.87</td>
+      <td>62.2</td>
+      <td>53.0</td>
+      <td>451</td>
+      <td>4.63</td>
+      <td>4.67</td>
+      <td>2.89</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7718</th>
+      <td>0.26</td>
+      <td>Premium</td>
+      <td>F</td>
+      <td>VS1</td>
+      <td>59.5</td>
+      <td>58.0</td>
+      <td>580</td>
+      <td>4.22</td>
+      <td>4.18</td>
+      <td>2.50</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>46121</th>
+      <td>0.52</td>
+      <td>Premium</td>
+      <td>E</td>
+      <td>VS2</td>
+      <td>62.8</td>
+      <td>55.0</td>
+      <td>1743</td>
+      <td>5.15</td>
+      <td>5.11</td>
+      <td>3.22</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>12254</th>
-      <td>1.01</td>
+      <th>9346</th>
+      <td>1.02</td>
       <td>Premium</td>
       <td>D</td>
       <td>SI2</td>
       <td>59.3</td>
-      <td>59.0</td>
-      <td>5206</td>
-      <td>6.57</td>
-      <td>6.54</td>
-      <td>3.89</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>10531</th>
-      <td>1.01</td>
-      <td>Good</td>
-      <td>D</td>
-      <td>SI2</td>
-      <td>63.6</td>
-      <td>56.0</td>
-      <td>4805</td>
-      <td>6.38</td>
-      <td>6.33</td>
-      <td>4.04</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>52712</th>
-      <td>0.52</td>
-      <td>Premium</td>
-      <td>D</td>
-      <td>VVS1</td>
-      <td>58.8</td>
-      <td>61.0</td>
-      <td>2553</td>
-      <td>5.31</td>
-      <td>5.27</td>
-      <td>3.11</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>25825</th>
-      <td>1.51</td>
-      <td>Premium</td>
-      <td>E</td>
-      <td>VS2</td>
-      <td>62.6</td>
       <td>60.0</td>
-      <td>14844</td>
-      <td>7.28</td>
-      <td>7.22</td>
-      <td>4.54</td>
+      <td>4583</td>
+      <td>6.56</td>
+      <td>6.52</td>
+      <td>3.88</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>23574</th>
-      <td>1.32</td>
+      <th>51654</th>
+      <td>0.26</td>
       <td>Ideal</td>
-      <td>G</td>
-      <td>VS1</td>
-      <td>61.7</td>
-      <td>56.0</td>
-      <td>11584</td>
-      <td>7.04</td>
-      <td>7.07</td>
-      <td>4.35</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>37959</th>
-      <td>0.41</td>
-      <td>Ideal</td>
-      <td>G</td>
-      <td>VVS2</td>
-      <td>61.1</td>
+      <td>H</td>
+      <td>VVS1</td>
+      <td>62.2</td>
       <td>55.0</td>
-      <td>1007</td>
-      <td>4.80</td>
-      <td>4.83</td>
-      <td>2.94</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>22022</th>
-      <td>0.42</td>
-      <td>Ideal</td>
-      <td>J</td>
-      <td>VS2</td>
-      <td>62.0</td>
-      <td>55.0</td>
-      <td>628</td>
-      <td>4.81</td>
-      <td>4.87</td>
-      <td>3.00</td>
+      <td>545</td>
+      <td>4.09</td>
+      <td>4.11</td>
+      <td>2.55</td>
       <td>False</td>
     </tr>
     <tr>
-      <th>9249</th>
-      <td>1.07</td>
-      <td>Premium</td>
+      <th>6105</th>
+      <td>0.90</td>
+      <td>Very Good</td>
       <td>F</td>
       <td>SI2</td>
-      <td>61.8</td>
+      <td>62.0</td>
       <td>59.0</td>
-      <td>4560</td>
-      <td>6.53</td>
-      <td>6.57</td>
-      <td>4.05</td>
+      <td>3977</td>
+      <td>6.20</td>
+      <td>6.10</td>
+      <td>3.81</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>27936</th>
-      <td>0.25</td>
+      <th>6094</th>
+      <td>0.81</td>
       <td>Ideal</td>
-      <td>F</td>
-      <td>SI1</td>
+      <td>E</td>
+      <td>VS2</td>
       <td>61.5</td>
+      <td>57.0</td>
+      <td>3975</td>
+      <td>6.00</td>
+      <td>6.06</td>
+      <td>3.71</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>12451</th>
+      <td>1.21</td>
+      <td>Very Good</td>
+      <td>I</td>
+      <td>SI1</td>
+      <td>62.9</td>
       <td>56.0</td>
-      <td>430</td>
-      <td>4.06</td>
-      <td>4.09</td>
-      <td>2.50</td>
+      <td>5245</td>
+      <td>6.73</td>
+      <td>6.79</td>
+      <td>4.25</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>17825</th>
+      <td>1.50</td>
+      <td>Fair</td>
+      <td>H</td>
+      <td>SI2</td>
+      <td>65.5</td>
+      <td>53.0</td>
+      <td>7187</td>
+      <td>7.14</td>
+      <td>7.11</td>
+      <td>4.67</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>30286</th>
+      <td>0.34</td>
+      <td>Very Good</td>
+      <td>F</td>
+      <td>SI2</td>
+      <td>63.0</td>
+      <td>58.0</td>
+      <td>447</td>
+      <td>4.45</td>
+      <td>4.47</td>
+      <td>2.81</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -1521,7 +1531,7 @@ Name: bool_col, dtype: bool
 </div>
 </div>
 <div class="section" id="any-and-all-in-data-frames">
-<h3>any() and all() in data frames<a class="headerlink" href="#any-and-all-in-data-frames" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.3.3. </span>any() and all() in data frames<a class="headerlink" href="#any-and-all-in-data-frames" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>pandas</strong> column of booleans behaves a lot like a list of booleans, and we can apply the same logic to it via <strong>pandas</strong> built-in <code class="docutils literal notranslate"><span class="pre">.any</span></code> and <code class="docutils literal notranslate"><span class="pre">.all</span></code> methods. We expect some entries for <code class="docutils literal notranslate"><span class="pre">&quot;expensive&quot;</span></code> to be true, so <code class="docutils literal notranslate"><span class="pre">any</span></code> should return true:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1537,7 +1547,7 @@ Name: bool_col, dtype: bool
 </div>
 </div>
 <div class="section" id="logical-subsetting">
-<h3>Logical subsetting<a class="headerlink" href="#logical-subsetting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.3.4. </span>Logical subsetting<a class="headerlink" href="#logical-subsetting" title="Permalink to this headline">¶</a></h3>
 <p>Although we’ve been effectively using this all along, it’s useful to make it explicit: booleans can be used to logically subset a dataframe. Let’s say we only want the bits of a dataframe where <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1771,13 +1781,13 @@ Name: bool_col, dtype: bool
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Joins</p>
+            <p class="prev-next-title"><span class="section-number">13. </span>Joins</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="numbers.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numbers</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Numbers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

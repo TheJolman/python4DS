@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numbers &#8212; Python for Data Science</title>
+    <title>15. Numbers &#8212; Python for Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,13 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Strings and Text" href="strings.html" />
-    <link rel="prev" title="Boolean Data" href="boolean-data.html" />
+    <link rel="next" title="16. Strings and Text" href="strings.html" />
+    <link rel="prev" title="14. Boolean Data" href="boolean-data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
-   Getting Started with Python
+   First Steps
   </a>
  </li>
 </ul>
@@ -120,171 +118,183 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="whole-game.html">
+   1. Whole game
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="data-visualise.html">
-   Data Visualisation
+   2. Data Visualisation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-basics.html">
-   Workflow: Basics
+   3. Workflow: Basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-transform.html">
-   Data Transformation
+   4. Data Transformation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-style.html">
-   Workflow: Style
+   5. Workflow: Style
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-tidy.html">
-   Tidy Data
+   6. Tidy Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-writing-code.html">
-   Workflow: Writing Code
+   7. Workflow: Writing Code
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="data-import.html">
-   Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   Workflow: Getting Help
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   Exploratory Data Analysis
+   8. Data Import
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="workflow-packages-and-environments.html">
-   Workflow: Packages and Environments
+   9. Workflow: Packages and Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow-help.html">
+   10. Postscript: Getting Further Help
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Data Types
+  Visualise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploratory-data-analysis.html">
+   11. Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="communicate-plots.html">
+   12. Graphics for Communication
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transform
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="joins.html">
-   Joins
+   13. Joins
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="boolean-data.html">
-   Boolean Data
+   14. Boolean Data
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Numbers
+   15. Numbers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="strings.html">
-   Strings and Text
+   16. Strings and Text
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="regex.html">
-   Regular Expressions, aka regex
+   17. Regular Expressions, aka regex
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="categorical-data.html">
-   Categorical Data
+   18. Categorical Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dates-and-times.html">
-   Dates and Times
+   19. Dates and Times
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="missing-values.html">
-   Missing Values
+   20. Missing Values
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Transforming Data
+  Import
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="spreadsheets.html">
-   Spreadsheets
+   21. Spreadsheets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="webscraping-and-apis.html">
-   Webscraping and APIs
+   22. Webscraping and APIs
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="rectangling.html">
-   Rectangling
+   23. Rectangling
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="databases.html">
-   Databases
+   24. Databases
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Programming
+  Programme
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   Functions
+   25. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="iteration.html">
-   Iteration
+   26. Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="command-line.html">
-   The Command Line
+   27. The Command Line
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Communicating
+  Communicate
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
-   Markdown
+   28. Markdown
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="quarto.html">
-   Quarto
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   Graphics for Communication
+   29. Quarto
   </a>
  </li>
 </ul>
@@ -410,93 +420,93 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   15.1. Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
+     15.1.1. Prerequisites
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#counts">
-     Counts
+     15.1.2. Counts
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numeric-transformations">
-   Numeric Transformations
+   15.2. Numeric Transformations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#minimum-and-maximum">
-     Minimum and Maximum
+     15.2.1. Minimum and Maximum
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modular-arithmetic">
-     Modular arithmetic
+     15.2.2. Modular arithmetic
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#logarithms">
-     Logarithms
+     15.2.3. Logarithms
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rounding">
-     Rounding
+     15.2.4. Rounding
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cumulative-and-rolling-aggregates">
-     Cumulative and Rolling Aggregates
+     15.2.5. Cumulative and Rolling Aggregates
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-transformations">
-   General transformations
+   15.3. General transformations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ranking">
-     Ranking
+     15.3.1. Ranking
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#offsets-and-shifting">
-     Offsets and Shifting
+     15.3.2. Offsets and Shifting
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercises">
-     Exercises
+     15.3.3. Exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-useful-summary-statistics">
-   More Useful Summary Statistics
+   15.4. More Useful Summary Statistics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#spread">
-     Spread
+     15.4.1. Spread
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distributions">
-     Distributions
+     15.4.2. Distributions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Exercises
+     15.4.3. Exercises
     </a>
    </li>
   </ul>
@@ -523,93 +533,93 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   Introduction
+   15.1. Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
+     15.1.1. Prerequisites
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#counts">
-     Counts
+     15.1.2. Counts
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numeric-transformations">
-   Numeric Transformations
+   15.2. Numeric Transformations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#minimum-and-maximum">
-     Minimum and Maximum
+     15.2.1. Minimum and Maximum
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modular-arithmetic">
-     Modular arithmetic
+     15.2.2. Modular arithmetic
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#logarithms">
-     Logarithms
+     15.2.3. Logarithms
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rounding">
-     Rounding
+     15.2.4. Rounding
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cumulative-and-rolling-aggregates">
-     Cumulative and Rolling Aggregates
+     15.2.5. Cumulative and Rolling Aggregates
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-transformations">
-   General transformations
+   15.3. General transformations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ranking">
-     Ranking
+     15.3.1. Ranking
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#offsets-and-shifting">
-     Offsets and Shifting
+     15.3.2. Offsets and Shifting
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercises">
-     Exercises
+     15.3.3. Exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-useful-summary-statistics">
-   More Useful Summary Statistics
+   15.4. More Useful Summary Statistics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#spread">
-     Spread
+     15.4.1. Spread
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distributions">
-     Distributions
+     15.4.2. Distributions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Exercises
+     15.4.3. Exercises
     </a>
    </li>
   </ul>
@@ -624,12 +634,12 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="numbers">
-<span id="id1"></span><h1>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">15. </span>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this chapter, you’ll learn useful tools for creating and manipulating numeric vectors. We’ll start by going into a little more detail of <code class="docutils literal notranslate"><span class="pre">.count()</span></code> before diving into various numeric transformations. You’ll then learn about more general transformations that can be applied to other types of column, but are often used with numeric column. Then you’ll learn about a few more useful summaries.</p>
 <div class="section" id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <p>This chapter mostly uses functions from <strong>pandas</strong>, which you are likely to already have installed bu you can install using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> in the terminal. We’ll use real examples from nycflights13, as well as toy examples made with fake data.</p>
 <p>Let’s first load up the NYC flights data</p>
 <div class="cell docutils container">
@@ -644,7 +654,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="counts">
-<h3>Counts<a class="headerlink" href="#counts" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.1.2. </span>Counts<a class="headerlink" href="#counts" title="Permalink to this headline">¶</a></h3>
 <p>It’s surprising how much data science you can do with just counts and a little basic arithmetic, so <strong>pandas</strong> strives to make counting as easy as possible with <code class="docutils literal notranslate"><span class="pre">.count()</span></code> and <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code>. The former just provides a straight count of all the non NA items:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -954,7 +964,7 @@ Name: dest, Length: 105, dtype: int64
 </div>
 </div>
 <div class="section" id="numeric-transformations">
-<h2>Numeric Transformations<a class="headerlink" href="#numeric-transformations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.2. </span>Numeric Transformations<a class="headerlink" href="#numeric-transformations" title="Permalink to this headline">¶</a></h2>
 <p>Transformation functions have an output is the same length as the input. The vast majority of transformation functions are either built into Python or come with the numerical package <strong>numpy</strong>. It’s impractical to list all the possible numerical transformations so this section will show the most useful ones.</p>
 <p>Basic number arithmatic is achieved by <code class="docutils literal notranslate"><span class="pre">+</span></code> (addition), <code class="docutils literal notranslate"><span class="pre">-</span></code> (subtraction), <code class="docutils literal notranslate"><span class="pre">*</span></code> (multiplication), <code class="docutils literal notranslate"><span class="pre">/</span></code> (division), <code class="docutils literal notranslate"><span class="pre">**</span></code> (powers), <code class="docutils literal notranslate"><span class="pre">%</span></code> (modulo), and <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> (tensor product). Most of these functions don’t need a huge amount of explanation because you’ll be familiar with them already (and you can look up the others when you do need them).</p>
 <p>When you have two numeric columns of equal length and you add or subtract them, it’s pretty obvious what’s going to happen. But we do need to talk about what happens when there is a variable involved that is <em>not</em> as long as the column. This is important for operations like <code class="docutils literal notranslate"><span class="pre">flights.assign(air_time</span> <span class="pre">=</span> <span class="pre">air_time</span> <span class="pre">/</span> <span class="pre">60)</span></code> because there are 336,776 numbers on the left of <code class="docutils literal notranslate"><span class="pre">/</span></code> but only one on the right. In this case, <strong>pandas</strong> will understand that you’d like to divide <em>all</em> values of air time by 60. This is sometimes called ‘broadcasting’. Below is a digram that tries to explain what’s going on:</p>
@@ -962,7 +972,7 @@ Name: dest, Length: 105, dtype: int64
 <p>You can find out much more about <a class="reference external" href="https://numpy.org/doc/stable/user/basics.broadcasting.html">broadcasting on the <strong>numpy</strong> documentation</a>. <strong>pandas</strong> is built on top of <strong>numpy</strong> and inherits some of its functionality.</p>
 <p>When operating on two columns, <strong>pandas</strong> compares their shapes element-wise. Two columns are compatible when they are equal, or one of them is a scalar. If these conditions are not met, you will get an error.</p>
 <div class="section" id="minimum-and-maximum">
-<h3>Minimum and Maximum<a class="headerlink" href="#minimum-and-maximum" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.2.1. </span>Minimum and Maximum<a class="headerlink" href="#minimum-and-maximum" title="Permalink to this headline">¶</a></h3>
 <p>The arithmetic functions do what you’d expect.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1045,7 +1055,7 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="modular-arithmetic">
-<h3>Modular arithmetic<a class="headerlink" href="#modular-arithmetic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.2.2. </span>Modular arithmetic<a class="headerlink" href="#modular-arithmetic" title="Permalink to this headline">¶</a></h3>
 <p>Modular arithmetic is the technical name for the type of math you do on whole numbers, i.e. division that yields a whole number and a remainder. In Python, <code class="docutils literal notranslate"><span class="pre">//</span></code> does integer division and <code class="docutils literal notranslate"><span class="pre">%</span></code> computes the remainder:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1369,7 +1379,7 @@ divisions:
 </div>
 </div>
 <div class="section" id="logarithms">
-<h3>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.2.3. </span>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this headline">¶</a></h3>
 <p>Logarithms are an incredibly useful transformation for dealing with data that ranges across multiple orders of magnitude. They also convert exponential growth to linear growth. For example, take compounding interest — the amount of money you have at <code class="docutils literal notranslate"><span class="pre">year</span> <span class="pre">+</span> <span class="pre">1</span></code> is the amount of money you had at <code class="docutils literal notranslate"><span class="pre">year</span></code> multiplied by the interest rate. That gives a formula like <code class="docutils literal notranslate"><span class="pre">money</span> <span class="pre">=</span> <span class="pre">starting</span> <span class="pre">*</span> <span class="pre">interest</span> <span class="pre">**</span> <span class="pre">year</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1462,7 +1472,7 @@ divisions:
 <p>The inverse of <code class="docutils literal notranslate"><span class="pre">log()</span></code> is <code class="docutils literal notranslate"><span class="pre">np.exp()</span></code>; to compute the inverse of <code class="docutils literal notranslate"><span class="pre">np.log2()</span></code> or <code class="docutils literal notranslate"><span class="pre">np.log10()</span></code> you’ll need to use <code class="docutils literal notranslate"><span class="pre">2**</span></code> or <code class="docutils literal notranslate"><span class="pre">10**</span></code>.</p>
 </div>
 <div class="section" id="rounding">
-<h3>Rounding<a class="headerlink" href="#rounding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.2.4. </span>Rounding<a class="headerlink" href="#rounding" title="Permalink to this headline">¶</a></h3>
 <p>To round to a specific number of decimal places, use <code class="docutils literal notranslate"><span class="pre">.round(n)</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of decimal places that you wish to round to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1683,8 +1693,8 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([17.93107729, 29.63121013, 24.47506653, 29.4772024 , 98.14742799,
-       97.2183418 , 24.67988801, 38.0159678 , 70.63046476, 53.87721622])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([18.5572312 , 70.16631744, 66.84889008,  1.59654088, 25.75232287,
+       30.56868016, 60.96266173,  7.56370208,  4.73705074, 79.63566134])
 </pre></div>
 </div>
 </div>
@@ -1696,7 +1706,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([18., 30., 25., 30., 99., 98., 25., 39., 71., 54.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([19., 71., 67.,  2., 26., 31., 61.,  8.,  5., 80.])
 </pre></div>
 </div>
 </div>
@@ -1708,7 +1718,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([17., 29., 24., 29., 98., 97., 24., 38., 70., 53.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([18., 70., 66.,  1., 25., 30., 60.,  7.,  4., 79.])
 </pre></div>
 </div>
 </div>
@@ -1733,7 +1743,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="section" id="cumulative-and-rolling-aggregates">
-<h3>Cumulative and Rolling Aggregates<a class="headerlink" href="#cumulative-and-rolling-aggregates" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.2.5. </span>Cumulative and Rolling Aggregates<a class="headerlink" href="#cumulative-and-rolling-aggregates" title="Permalink to this headline">¶</a></h3>
 <p><strong>pandas</strong> has several cumulative functions, including <code class="docutils literal notranslate"><span class="pre">.cumsum</span></code>, <code class="docutils literal notranslate"><span class="pre">.cummax</span></code> and <code class="docutils literal notranslate"><span class="pre">.cummin</span></code>, and <code class="docutils literal notranslate"><span class="pre">.cumprod</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1756,10 +1766,10 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="section" id="general-transformations">
-<h2>General transformations<a class="headerlink" href="#general-transformations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.3. </span>General transformations<a class="headerlink" href="#general-transformations" title="Permalink to this headline">¶</a></h2>
 <p>The following sections describe some general transformations that are often used with numeric vectors, but which can be applied to all other column types.</p>
 <div class="section" id="ranking">
-<h3>Ranking<a class="headerlink" href="#ranking" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.3.1. </span>Ranking<a class="headerlink" href="#ranking" title="Permalink to this headline">¶</a></h3>
 <p><strong>pandas</strong>’ rank function is <code class="docutils literal notranslate"><span class="pre">.rank</span></code>. Let’s look back at the data we made earlier and rank it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1911,7 +1921,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="section" id="offsets-and-shifting">
-<h3>Offsets and Shifting<a class="headerlink" href="#offsets-and-shifting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.3.2. </span>Offsets and Shifting<a class="headerlink" href="#offsets-and-shifting" title="Permalink to this headline">¶</a></h3>
 <p>Offsets allow you to ‘roll’ columns up and down relative to their original position, ie to offset their location relative to the index. The function that does this is called <code class="docutils literal notranslate"><span class="pre">shift</span></code> and it produces leads or lags depending on whether you use positive or negative values respectively. Remember that a lead is going to shift the pattern in the data to the left when plotted against the index, while the lag is going to shift patterns to the right. Leads and lags are particularly useful for time series data (which we haven’t yet seen).</p>
 <p>Let’s see an example of offsets with the <code class="docutils literal notranslate"><span class="pre">money</span></code> data frame from earlier:</p>
 <div class="cell docutils container">
@@ -1927,7 +1937,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="section" id="exercises">
-<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.3.3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Find the 10 most delayed flights using a ranking function.</p></li>
 <li><p>Which plane (<code class="docutils literal notranslate"><span class="pre">&quot;tailnum&quot;</span></code>) has the worst on-time record?</p></li>
@@ -1940,7 +1950,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="section" id="more-useful-summary-statistics">
-<h2>More Useful Summary Statistics<a class="headerlink" href="#more-useful-summary-statistics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.4. </span>More Useful Summary Statistics<a class="headerlink" href="#more-useful-summary-statistics" title="Permalink to this headline">¶</a></h2>
 <p>We’ve seen how useful <code class="docutils literal notranslate"><span class="pre">.mean</span></code>, <code class="docutils literal notranslate"><span class="pre">.count</span></code>, and <code class="docutils literal notranslate"><span class="pre">.value_counts</span></code> can be for analysis. <strong>pandas</strong> has a great many more built-in summary statistics functions, however. These include <code class="docutils literal notranslate"><span class="pre">.median</span></code> (you may find it interesting to compare the mean vs the median when looking at the hourly departure delay in the flights data), <code class="docutils literal notranslate"><span class="pre">.mode</span></code>, <code class="docutils literal notranslate"><span class="pre">.min</span></code>, and <code class="docutils literal notranslate"><span class="pre">.max</span></code>.</p>
 <p>A class of useful summary statistics are provided by the <code class="docutils literal notranslate"><span class="pre">.quantile</span></code> function, which is the same as <code class="docutils literal notranslate"><span class="pre">median</span></code> for <code class="docutils literal notranslate"><span class="pre">.quantile(0.5)</span></code>. The quantile at x% is the value that x% of values are below. (Note that under this definition, <code class="docutils literal notranslate"><span class="pre">.quantile(1)</span></code> will be the same as <code class="docutils literal notranslate"><span class="pre">.max()</span></code>.) Let’s see an example with the 25th percentile.</p>
 <div class="cell docutils container">
@@ -1973,7 +1983,7 @@ Name: money, dtype: float64
 </div>
 </div>
 <div class="section" id="spread">
-<h3>Spread<a class="headerlink" href="#spread" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.4.1. </span>Spread<a class="headerlink" href="#spread" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes you’re not so interested in where the bulk of the data lies, but how it is spread out.
 Two commonly used summaries are the standard deviation, <code class="docutils literal notranslate"><span class="pre">.std()</span></code>, and the inter-quartile range, which you can compute from the relevant quantiles, ie it’s the quantile at 75% minus the quantile at 25% and gives you the range that contains the middle 50% of the data.</p>
 <p>We can use this to reveal a small oddity in the flights data. You might expect that the spread of the distance between origin and destination to be zero, since airports are always in the same place. But the code below makes it looks like one airport, <a class="reference external" href="https://en.wikipedia.org/wiki/Eagle_County_Regional_Airport">EGE</a>, might have moved.</p>
@@ -2039,7 +2049,7 @@ Two commonly used summaries are the standard deviation, <code class="docutils li
 </div>
 </div>
 <div class="section" id="distributions">
-<h3>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.4.2. </span>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h3>
 <p>It’s worth remembering that all of the summary statistics described above are a way of reducing the distribution down to a single number. This means that they’re fundamentally reductive, and if you pick the wrong summary, you can easily miss important differences between groups. That’s why it’s always a good idea to visualise the distribution of values as well as using aggregate statistics.</p>
 <p>The plot below shows the overall distribution of departure delays. The distribution is so skewed that we have to zoom in to see the bulk of the data. This suggests that the mean is unlikely to be a good summary and we might prefer the median instead.</p>
 <div class="cell docutils container">
@@ -2066,7 +2076,7 @@ Two commonly used summaries are the standard deviation, <code class="docutils li
 <p>Don’t be afraid to explore your own custom summaries specifically tailored for the data that you’re working with. In this case, that might mean separately summarising the flights that left early vs the flights that left late, or given that the values are so heavily skewed, you might try a log-transformation. Finally, don’t forget that it’s always a good idea to include the number of observations in each group when creating summaries.</p>
 </div>
 <div class="section" id="id2">
-<h3>Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.4.3. </span>Exercises<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ol>
 <li><p>Brainstorm at least 5 different ways to assess the typical delay characteristics of a group of flights.
 Consider the following scenarios:</p>
@@ -2115,13 +2125,13 @@ Can you find any evidence that the airport moved locations?</p></li>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Boolean Data</p>
+            <p class="prev-next-title"><span class="section-number">14. </span>Boolean Data</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="strings.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Strings and Text</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>Strings and Text</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
