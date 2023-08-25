@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>28. Markdown &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>31. Markdown &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,12 +47,20 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -53,536 +69,400 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="29. Quarto" href="quarto.html" />
-    <link rel="prev" title="27. The Command Line" href="command-line.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="32. Quarto" href="quarto.html" />
+    <link rel="prev" title="30. The Command Line" href="command-line.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
-      
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-packages-and-environments.html">
-   9. Workflow: Packages and Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   10. Postscript: Getting Further Help
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   11. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   12. Graphics for Communication
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   13. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   14. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   15. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   16. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   17. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   18. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   19. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   20. Missing Values
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   21. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   22. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   23. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   24. Databases
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   25. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   26. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   27. The Command Line
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   28. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   29. Quarto
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
-</ul>
 
-    </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/markdown.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   28.1. Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   28.2. Prerequisites
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction-to-markdown">
-     28.2.1. Introduction to Markdown
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-markdown-syntax">
-       28.2.1.1. The Markdown Syntax
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#headings">
-         28.2.1.1.1. Headings
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#phylum">
-     28.2.2. Phylum
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#class">
-       28.2.2.1. Class
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#order">
-         28.2.2.1.1. Order
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#family">
-           28.2.2.1.1.1. Family
-          </a>
-         </li>
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
         </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#in-line-syntax">
-     28.2.3. In-Line Syntax
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#text-block-syntax">
-     28.2.4. Text Block Syntax
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#other-markdown-resources">
-     28.2.5. Other Markdown Resources
-    </a>
-   </li>
-  </ul>
- </li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="joins.html">16. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">17. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">18. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">19. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">20. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">21. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">22. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">23. Missing Values</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">25. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Rectangling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">27. Databases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/markdown.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Markdown</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">31.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">31.2. Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-markdown">31.2.1. Introduction to Markdown</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-markdown-syntax">31.2.1.1. The Markdown Syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">31.2.1.1.1. Headings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phylum">31.2.2. Phylum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#class">31.2.2.1. Class</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#order">31.2.2.1.1. Order</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#family">31.2.2.1.1.1. Family</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-line-syntax">31.2.3. In-Line Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-block-syntax">31.2.4. Text Block Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-markdown-resources">31.2.5. Other Markdown Resources</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Markdown</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   28.1. Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   28.2. Prerequisites
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction-to-markdown">
-     28.2.1. Introduction to Markdown
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-markdown-syntax">
-       28.2.1.1. The Markdown Syntax
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#headings">
-         28.2.1.1.1. Headings
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#phylum">
-     28.2.2. Phylum
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#class">
-       28.2.2.1. Class
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#order">
-         28.2.2.1.1. Order
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#family">
-           28.2.2.1.1.1. Family
-          </a>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#in-line-syntax">
-     28.2.3. In-Line Syntax
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#text-block-syntax">
-     28.2.4. Text Block Syntax
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#other-markdown-resources">
-     28.2.5. Other Markdown Resources
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="markdown">
-<span id="id1"></span><h1><span class="section-number">28. </span>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><span class="section-number">28.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="markdown">
+<span id="id1"></span><h1><span class="section-number">31. </span>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">31.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, you’ll meet the lightweight markup language called <em>Markdown</em> that is very popular for lots of coding-related applications and in reproducible analysis. As an example of its many uses, this chapter is written in markdown!</p>
-</div>
-<div class="section" id="prerequisites">
-<h2><span class="section-number">28.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="prerequisites">
+<h2><span class="section-number">31.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <p>Although you can write markdown in any plain text editor, this book recommends <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> as a markdown editor. It can also render markdown files that are open so you can see what the finished, output product will look like; you’ll need to install the <strong>Markdown All in One</strong> and <strong>Markdown Preview Enhanced</strong> extensions and then either right-click within a markdown file (extension <code class="docutils literal notranslate"><span class="pre">.md</span></code>) and choose <em>Markdown Preview Enhanced: Open Preview to the Side</em>.</p>
 <p>If you’re not using Visual Studio Code, you can experiment with Markdown in the text cells of Jupyter Notebooks in JupyterLab, in the text cells of Google Colab notebooks, or online via <a class="reference external" href="https://dillinger.io/">Dillinger</a>, an online live-coding markdown environment.</p>
-<div class="section" id="introduction-to-markdown">
-<h3><span class="section-number">28.2.1. </span>Introduction to Markdown<a class="headerlink" href="#introduction-to-markdown" title="Permalink to this headline">¶</a></h3>
+<section id="introduction-to-markdown">
+<h3><span class="section-number">31.2.1. </span>Introduction to Markdown<a class="headerlink" href="#introduction-to-markdown" title="Permalink to this headline">#</a></h3>
 <p>Markdown is different from What-You-See-Is-What-You-Get document preparation software such as Microsoft Word because the <em>input</em> (a form of plain text) looks different from the rendered <em>output</em>. In Word, you click buttons to achieve the same formatting. When writing markdown, you specify the formatting elements of your documents with instructions that are, more or less, like code. If you’re familiar with how raw HTML and rendered HTML look, it’s a similar idea (and HTML is itself a markup language). Note, however, that vanilla markdown cannot execute Python code even if you can include code snippets in it just as you could write down some code in a Word document.</p>
 <p>Markdown was created to be as readable as possible, even when you are writing it. It’s also very simple, with few commands to remember: the idea is that you should focus on writing text rather than formatting.</p>
 <p>The standard extension for files that only contain markdown is <code class="docutils literal notranslate"><span class="pre">.md</span></code>, but you may also see <code class="docutils literal notranslate"><span class="pre">.qmd</span></code> in the context of markdown with executable code chunks. And you can find markdown in the cells of Jupyter notebooks (file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) too.</p>
@@ -602,10 +482,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Many websites support markdown syntax, eg Github (called Github-flavoured markdown) and Reddit</p></li>
 </ul>
 <p>The rest of this chapter will cover most of the markdown syntax.</p>
-<div class="section" id="the-markdown-syntax">
-<h4><span class="section-number">28.2.1.1. </span>The Markdown Syntax<a class="headerlink" href="#the-markdown-syntax" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="headings">
-<h5><span class="section-number">28.2.1.1.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h5>
+<section id="the-markdown-syntax">
+<h4><span class="section-number">31.2.1.1. </span>The Markdown Syntax<a class="headerlink" href="#the-markdown-syntax" title="Permalink to this headline">#</a></h4>
+<section id="headings">
+<h5><span class="section-number">31.2.1.1.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">#</a></h5>
 <p>Let’s run through the basics of markdown. For example, a single hash (<code class="docutils literal notranslate"><span class="pre">#</span></code>) denotes the title of a document, like so:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Heading</span>
 </pre></div>
@@ -625,24 +505,24 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>becomes</p>
-</div>
-</div>
-</div>
-<div class="section" id="phylum">
-<h3><span class="section-number">28.2.2. </span>Phylum<a class="headerlink" href="#phylum" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="class">
-<h4><span class="section-number">28.2.2.1. </span>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="order">
-<h5><span class="section-number">28.2.2.1.1. </span>Order<a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h5>
-<div class="section" id="family">
-<h6><span class="section-number">28.2.2.1.1.1. </span>Family<a class="headerlink" href="#family" title="Permalink to this headline">¶</a></h6>
+</section>
+</section>
+</section>
+<section id="phylum">
+<h3><span class="section-number">31.2.2. </span>Phylum<a class="headerlink" href="#phylum" title="Permalink to this headline">#</a></h3>
+<section id="class">
+<h4><span class="section-number">31.2.2.1. </span>Class<a class="headerlink" href="#class" title="Permalink to this headline">#</a></h4>
+<section id="order">
+<h5><span class="section-number">31.2.2.1.1. </span>Order<a class="headerlink" href="#order" title="Permalink to this headline">#</a></h5>
+<section id="family">
+<h6><span class="section-number">31.2.2.1.1.1. </span>Family<a class="headerlink" href="#family" title="Permalink to this headline">#</a></h6>
 <p>If you’re using Visual Studio Code, and you’re on the explorer panel, you can see the outline (the structure of headings and sub-headings) of your markdown document under the ‘outline’ drop down.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="in-line-syntax">
-<h3><span class="section-number">28.2.3. </span>In-Line Syntax<a class="headerlink" href="#in-line-syntax" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+</section>
+<section id="in-line-syntax">
+<h3><span class="section-number">31.2.3. </span>In-Line Syntax<a class="headerlink" href="#in-line-syntax" title="Permalink to this headline">#</a></h3>
 <p>Here are some other common syntax features that you’ll need:</p>
 <ul class="simple">
 <li><p>to create <em>italic</em> text, it’s <code class="docutils literal notranslate"><span class="pre">*one</span> <span class="pre">asterisk</span> <span class="pre">on</span> <span class="pre">either</span> <span class="pre">side</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">text*</span></code></p></li>
@@ -655,17 +535,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Maths is supported in-line via enclosing dollar signs, eg <code class="docutils literal notranslate"><span class="pre">${\displaystyle</span> <span class="pre">ds^{2}=\left(1-{\frac</span> <span class="pre">{r_{\mathrm</span> <span class="pre">{s}</span> <span class="pre">}}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi</span> <span class="pre">^{2}}$</span></code>, which renders as <span class="math notranslate nohighlight">\({\displaystyle ds^{2}=\left(1-{\frac {r_{\mathrm {s} }}{r}}\right)^{-1}\,dr^{2}+r^{2}\,d\varphi ^{2}}\)</span></p></li>
 <li><p>Unicode is supported, so you can write symbols like ∰, as are emoji; syntax like <code class="docutils literal notranslate"><span class="pre">:tada:</span></code> creates :tada:</p></li>
 </ul>
-</div>
-<div class="section" id="text-block-syntax">
-<h3><span class="section-number">28.2.4. </span>Text Block Syntax<a class="headerlink" href="#text-block-syntax" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="text-block-syntax">
+<h3><span class="section-number">31.2.4. </span>Text Block Syntax<a class="headerlink" href="#text-block-syntax" title="Permalink to this headline">#</a></h3>
 <p>Quotes can be achieved by adding an arrow, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, to every line:</p>
 <blockquote>
 <div><p>Here is a quote!</p>
 </div></blockquote>
 <p>Unordered lists can be produced with either <code class="docutils literal notranslate"><span class="pre">-</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> on separate lines so that</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> first item
-<span class="k">-</span> second item
-<span class="k">-</span> third item
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span><span class="w"> </span>first item
+<span class="k">-</span><span class="w"> </span>second item
+<span class="k">-</span><span class="w"> </span>third item
 </pre></div>
 </div>
 <p>becomes</p>
@@ -681,16 +561,16 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>becomes</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>first item</p></li>
 <li><p>second item</p></li>
 <li><p>third item</p></li>
 </ol>
 <p>Both types of list can be subsetted so that</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> first item
-  <span class="k">-</span> sub-item
-    <span class="k">-</span> sub-sub-item
-<span class="k">-</span> second item
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span><span class="w"> </span>first item
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>sub-item
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>sub-sub-item
+<span class="k">-</span><span class="w"> </span>second item
 </pre></div>
 </div>
 <p>becomes</p>
@@ -794,10 +674,10 @@ $$
 </pre></div>
 </div>
 <p>To produce this line-break:</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="other-markdown-resources">
-<h3><span class="section-number">28.2.5. </span>Other Markdown Resources<a class="headerlink" href="#other-markdown-resources" title="Permalink to this headline">¶</a></h3>
+<section id="other-markdown-resources">
+<h3><span class="section-number">31.2.5. </span>Other Markdown Resources<a class="headerlink" href="#other-markdown-resources" title="Permalink to this headline">#</a></h3>
 <p>There are plenty of good markdown resources out there:</p>
 <ul class="simple">
 <li><p>the <a class="reference external" href="https://www.reddit.com/wiki/markdown">Reddit markdown guide</a></p></li>
@@ -817,9 +697,9 @@ This allows you to have a footnote with multiple lines.</p>
 <dd><p>Named footnotes will still render with numbers instead of the text but allow easier identification and linking.</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -833,7 +713,7 @@ This allows you to have a footnote with multiple lines.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -841,44 +721,128 @@ This allows you to have a footnote with multiple lines.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="command-line.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">30. </span>The Command Line</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="quarto.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">32. </span>Quarto</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">31.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">31.2. Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-markdown">31.2.1. Introduction to Markdown</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-markdown-syntax">31.2.1.1. The Markdown Syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">31.2.1.1.1. Headings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phylum">31.2.2. Phylum</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#class">31.2.2.1. Class</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#order">31.2.2.1.1. Order</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#family">31.2.2.1.1.1. Family</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-line-syntax">31.2.3. In-Line Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-block-syntax">31.2.4. Text Block Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-markdown-resources">31.2.5. Other Markdown Resources</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="command-line.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">27. </span>The Command Line</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="quarto.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">29. </span>Quarto</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

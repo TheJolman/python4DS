@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>14. Boolean Data &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>16. Boolean Data &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,551 +47,459 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'boolean-data';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="15. Numbers" href="numbers.html" />
-    <link rel="prev" title="13. Joins" href="joins.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="17. Numbers" href="numbers.html" />
+    <link rel="prev" title="15. Graphics for Communication" href="communicate-plots.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-packages-and-environments.html">
-   9. Workflow: Packages and Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   10. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   11. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   12. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   13. Joins
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   14. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   15. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   16. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   17. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   18. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   19. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   20. Missing Values
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">16. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   21. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   22. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   23. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   24. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   25. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   26. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   27. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   28. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   29. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/boolean-data.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fboolean-data.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/boolean-data.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/boolean-data.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/boolean-data.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/boolean-data.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fboolean-data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/boolean-data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Boolean Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   14.1. Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans">
-   14.2. Booleans
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#boolean-variables-and-conditions">
-     14.2.1. Boolean Variables and Conditions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conditions-in-list-comprehensions">
-     14.2.2. Conditions in list comprehensions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#truthsy-and-falsy-values">
-     14.2.3. Truthsy and Falsy Values
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#any-and-all">
-     14.2.4. any() and all()
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans-in-pandas-data-frames">
-   14.3. Booleans in
-   <strong>
-    pandas
-   </strong>
-   data frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-on-booleans-in-data-frames">
-     14.3.1. Operations on booleans in data frames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-booleans-from-comparisons-using-columns">
-     14.3.2. Creating booleans from comparisons using columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#any-and-all-in-data-frames">
-     14.3.3. any() and all() in data frames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logical-subsetting">
-     14.3.4. Logical subsetting
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">16.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booleans">16.2. Booleans</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-variables-and-conditions">16.2.1. Boolean Variables and Conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-in-list-comprehensions">16.2.2. Conditions in list comprehensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#truthsy-and-falsy-values">16.2.3. Truthsy and Falsy Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-and-all">16.2.4. any() and all()</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booleans-in-pandas-data-frames">16.3. Booleans in <strong>pandas</strong> data frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-booleans-in-data-frames">16.3.1. Operations on booleans in data frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-booleans-from-comparisons-using-columns">16.3.2. Creating booleans from comparisons using columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-and-all-in-data-frames">16.3.3. any() and all() in data frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-subsetting">16.3.4. Logical subsetting</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Boolean Data</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   14.1. Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans">
-   14.2. Booleans
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#boolean-variables-and-conditions">
-     14.2.1. Boolean Variables and Conditions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conditions-in-list-comprehensions">
-     14.2.2. Conditions in list comprehensions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#truthsy-and-falsy-values">
-     14.2.3. Truthsy and Falsy Values
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#any-and-all">
-     14.2.4. any() and all()
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans-in-pandas-data-frames">
-   14.3. Booleans in
-   <strong>
-    pandas
-   </strong>
-   data frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-on-booleans-in-data-frames">
-     14.3.1. Operations on booleans in data frames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-booleans-from-comparisons-using-columns">
-     14.3.2. Creating booleans from comparisons using columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#any-and-all-in-data-frames">
-     14.3.3. any() and all() in data frames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logical-subsetting">
-     14.3.4. Logical subsetting
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="boolean-data">
-<span id="id1"></span><h1><span class="section-number">14. </span>Boolean Data<a class="headerlink" href="#boolean-data" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><span class="section-number">14.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="boolean-data">
+<span id="id1"></span><h1><span class="section-number">16. </span>Boolean Data<a class="headerlink" href="#boolean-data" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">16.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, we’ll introduce boolean data: data that can be <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> (which can also be encoded as 1s or 0s). We’ll first look at the fundamental Python true and false boolean variables before seeing how true and false work in data frames.</p>
-</div>
-<div class="section" id="booleans">
-<h2><span class="section-number">14.2. </span>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="booleans">
+<h2><span class="section-number">16.2. </span>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">#</a></h2>
 <p>Some of the most important operations you will perform are with <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values, also known as boolean data types. These are fundamental Python variables, just as numbers such as <code class="docutils literal notranslate"><span class="pre">1</span></code> are.</p>
-<div class="section" id="boolean-variables-and-conditions">
-<h3><span class="section-number">14.2.1. </span>Boolean Variables and Conditions<a class="headerlink" href="#boolean-variables-and-conditions" title="Permalink to this headline">¶</a></h3>
+<section id="boolean-variables-and-conditions">
+<h3><span class="section-number">16.2.1. </span>Boolean Variables and Conditions<a class="headerlink" href="#boolean-variables-and-conditions" title="Permalink to this headline">#</a></h3>
 <p>To assign the value <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> to a variable is the same as with any other assignment:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -602,19 +518,19 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Boolean operators that return booleans are as follows:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Operator</p></th>
-<th class="text-align:left head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-center head"><p>Operator</p></th>
+<th class="text-left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>are <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> both True?</p></td>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>are <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> both True?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is at least one of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> True?</p></td>
+<tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is at least one of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> True?</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> False?</p></td>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> False?</p></td>
 </tr>
 </tbody>
 </table>
@@ -636,31 +552,31 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Here’s a table of conditions that return booleans:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Operator</p></th>
-<th class="text-align:left head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-left head"><p>Operator</p></th>
+<th class="text-left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span> </code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span> </code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> not equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> not equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> greater than <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> greater than <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> greater than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> greater than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> less than <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> less than <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> less than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> less than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">y</span></code></p></td>
-<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> the same object as <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">y</span></code></p></td>
+<td class="text-left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> the same object as <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
 </tr>
 </tbody>
 </table>
@@ -794,9 +710,9 @@ False
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="conditions-in-list-comprehensions">
-<h3><span class="section-number">14.2.2. </span>Conditions in list comprehensions<a class="headerlink" href="#conditions-in-list-comprehensions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="conditions-in-list-comprehensions">
+<h3><span class="section-number">16.2.2. </span>Conditions in list comprehensions<a class="headerlink" href="#conditions-in-list-comprehensions" title="Permalink to this headline">#</a></h3>
 <p>List comprehensions are an incredibly useful pattern in Python. Here’s a simple one that produces a list of the first 12 numbers starting from 0:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -847,9 +763,9 @@ False
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="truthsy-and-falsy-values">
-<h3><span class="section-number">14.2.3. </span>Truthsy and Falsy Values<a class="headerlink" href="#truthsy-and-falsy-values" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="truthsy-and-falsy-values">
+<h3><span class="section-number">16.2.3. </span>Truthsy and Falsy Values<a class="headerlink" href="#truthsy-and-falsy-values" title="Permalink to this headline">#</a></h3>
 <p>Python objects can be used in expressions that will return a boolean value, such as when a list, <code class="docutils literal notranslate"><span class="pre">listy</span></code>, is used with <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">listy</span></code>. Built-in Python objects that are empty are usually evaluated as <code class="docutils literal notranslate"><span class="pre">False</span></code>, and are said to be ‘Falsy’. In contrast, when these built-in objects are not empty, they evaluate as <code class="docutils literal notranslate"><span class="pre">True</span></code> and are said to be ‘truthy’.
 Let’s see some examples:</p>
 <div class="cell docutils container">
@@ -933,9 +849,9 @@ Let’s see some examples:</p>
 </div>
 </div>
 <p>Knowing what is truthy or falsy is useful in practice; imagine you’d like to default to a specific behaviour if a list called <code class="docutils literal notranslate"><span class="pre">list_vals</span></code> doesn’t have any values in. You now know you can do it simply with <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">list_vals</span></code>.</p>
-</div>
-<div class="section" id="any-and-all">
-<h3><span class="section-number">14.2.4. </span>any() and all()<a class="headerlink" href="#any-and-all" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="any-and-all">
+<h3><span class="section-number">16.2.4. </span>any() and all()<a class="headerlink" href="#any-and-all" title="Permalink to this headline">#</a></h3>
 <p>Of course, there is a big wide world of booleans out there; they don’t always occur on their own. That’s why the operators <code class="docutils literal notranslate"><span class="pre">any()</span></code> and <code class="docutils literal notranslate"><span class="pre">all()</span></code> exist. These apply to <em>iterables</em> of booleans, like a list of booleans.</p>
 <p><code class="docutils literal notranslate"><span class="pre">any()</span></code> takes a list of booleans with at least one true value and returns true:</p>
 <div class="cell docutils container">
@@ -976,12 +892,12 @@ Let’s see some examples:</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="booleans-in-pandas-data-frames">
-<h2><span class="section-number">14.3. </span>Booleans in <strong>pandas</strong> data frames<a class="headerlink" href="#booleans-in-pandas-data-frames" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="operations-on-booleans-in-data-frames">
-<h3><span class="section-number">14.3.1. </span>Operations on booleans in data frames<a class="headerlink" href="#operations-on-booleans-in-data-frames" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="booleans-in-pandas-data-frames">
+<h2><span class="section-number">16.3. </span>Booleans in <strong>pandas</strong> data frames<a class="headerlink" href="#booleans-in-pandas-data-frames" title="Permalink to this headline">#</a></h2>
+<section id="operations-on-booleans-in-data-frames">
+<h3><span class="section-number">16.3.1. </span>Operations on booleans in data frames<a class="headerlink" href="#operations-on-booleans-in-data-frames" title="Permalink to this headline">#</a></h3>
 <p>Quite often, you will run into a scenario where you’re working with data that have True or False values in a data frame. It is easy to create a column of booleans in a <strong>pandas</strong> data frame:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1102,9 +1018,9 @@ Name: bool_col, dtype: bool
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-booleans-from-comparisons-using-columns">
-<h3><span class="section-number">14.3.2. </span>Creating booleans from comparisons using columns<a class="headerlink" href="#creating-booleans-from-comparisons-using-columns" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="creating-booleans-from-comparisons-using-columns">
+<h3><span class="section-number">16.3.2. </span>Creating booleans from comparisons using columns<a class="headerlink" href="#creating-booleans-from-comparisons-using-columns" title="Permalink to this headline">#</a></h3>
 <p>It’s also possible to create boolean columns from numerical (or some other) columns. Let’s use the diamonds dataset to demonstrate this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1258,144 +1174,144 @@ Name: bool_col, dtype: bool
   </thead>
   <tbody>
     <tr>
-      <th>31647</th>
-      <td>0.37</td>
+      <th>1919</th>
+      <td>0.60</td>
       <td>Ideal</td>
-      <td>J</td>
-      <td>SI1</td>
-      <td>62.2</td>
-      <td>53.0</td>
-      <td>451</td>
-      <td>4.63</td>
-      <td>4.67</td>
-      <td>2.89</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>7718</th>
-      <td>0.26</td>
-      <td>Premium</td>
-      <td>F</td>
-      <td>VS1</td>
-      <td>59.5</td>
-      <td>58.0</td>
-      <td>580</td>
-      <td>4.22</td>
-      <td>4.18</td>
-      <td>2.50</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>46121</th>
-      <td>0.52</td>
-      <td>Premium</td>
       <td>E</td>
-      <td>VS2</td>
-      <td>62.8</td>
-      <td>55.0</td>
-      <td>1743</td>
-      <td>5.15</td>
-      <td>5.11</td>
-      <td>3.22</td>
+      <td>VVS1</td>
+      <td>62.0</td>
+      <td>53.7</td>
+      <td>3082</td>
+      <td>5.40</td>
+      <td>5.44</td>
+      <td>3.36</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>9346</th>
-      <td>1.02</td>
-      <td>Premium</td>
-      <td>D</td>
-      <td>SI2</td>
-      <td>59.3</td>
-      <td>60.0</td>
-      <td>4583</td>
-      <td>6.56</td>
-      <td>6.52</td>
-      <td>3.88</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>51654</th>
-      <td>0.26</td>
+      <th>12439</th>
+      <td>1.20</td>
       <td>Ideal</td>
       <td>H</td>
-      <td>VVS1</td>
-      <td>62.2</td>
-      <td>55.0</td>
-      <td>545</td>
-      <td>4.09</td>
-      <td>4.11</td>
-      <td>2.55</td>
+      <td>VS1</td>
+      <td>61.9</td>
+      <td>57.0</td>
+      <td>5242</td>
+      <td>6.77</td>
+      <td>6.73</td>
+      <td>4.18</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>20915</th>
+      <td>1.52</td>
+      <td>Good</td>
+      <td>I</td>
+      <td>SI1</td>
+      <td>64.0</td>
+      <td>58.0</td>
+      <td>9129</td>
+      <td>7.20</td>
+      <td>7.27</td>
+      <td>4.63</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>31313</th>
+      <td>0.32</td>
+      <td>Ideal</td>
+      <td>D</td>
+      <td>VS2</td>
+      <td>62.1</td>
+      <td>54.0</td>
+      <td>758</td>
+      <td>4.40</td>
+      <td>4.46</td>
+      <td>2.75</td>
       <td>False</td>
     </tr>
     <tr>
-      <th>6105</th>
+      <th>34553</th>
+      <td>0.41</td>
+      <td>Ideal</td>
+      <td>F</td>
+      <td>SI1</td>
+      <td>61.1</td>
+      <td>56.0</td>
+      <td>870</td>
+      <td>4.79</td>
+      <td>4.83</td>
+      <td>2.94</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>18388</th>
+      <td>0.29</td>
+      <td>Very Good</td>
+      <td>E</td>
+      <td>VS1</td>
+      <td>59.2</td>
+      <td>58.0</td>
+      <td>619</td>
+      <td>4.36</td>
+      <td>4.39</td>
+      <td>2.59</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>49527</th>
+      <td>0.52</td>
+      <td>Ideal</td>
+      <td>F</td>
+      <td>VS1</td>
+      <td>61.3</td>
+      <td>56.0</td>
+      <td>2123</td>
+      <td>5.19</td>
+      <td>5.22</td>
+      <td>3.19</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>12949</th>
       <td>0.90</td>
       <td>Very Good</td>
-      <td>F</td>
-      <td>SI2</td>
-      <td>62.0</td>
-      <td>59.0</td>
-      <td>3977</td>
-      <td>6.20</td>
-      <td>6.10</td>
+      <td>E</td>
+      <td>SI1</td>
+      <td>61.4</td>
+      <td>56.0</td>
+      <td>5387</td>
+      <td>6.19</td>
+      <td>6.23</td>
       <td>3.81</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>6094</th>
-      <td>0.81</td>
-      <td>Ideal</td>
-      <td>E</td>
+      <th>31639</th>
+      <td>0.33</td>
+      <td>Premium</td>
+      <td>J</td>
       <td>VS2</td>
-      <td>61.5</td>
-      <td>57.0</td>
-      <td>3975</td>
-      <td>6.00</td>
-      <td>6.06</td>
-      <td>3.71</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>12451</th>
-      <td>1.21</td>
-      <td>Very Good</td>
-      <td>I</td>
-      <td>SI1</td>
-      <td>62.9</td>
-      <td>56.0</td>
-      <td>5245</td>
-      <td>6.73</td>
-      <td>6.79</td>
-      <td>4.25</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>17825</th>
-      <td>1.50</td>
-      <td>Fair</td>
-      <td>H</td>
-      <td>SI2</td>
-      <td>65.5</td>
-      <td>53.0</td>
-      <td>7187</td>
-      <td>7.14</td>
-      <td>7.11</td>
-      <td>4.67</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>30286</th>
-      <td>0.34</td>
-      <td>Very Good</td>
-      <td>F</td>
-      <td>SI2</td>
-      <td>63.0</td>
-      <td>58.0</td>
-      <td>447</td>
-      <td>4.45</td>
-      <td>4.47</td>
-      <td>2.81</td>
+      <td>59.6</td>
+      <td>61.0</td>
+      <td>450</td>
+      <td>4.53</td>
+      <td>4.49</td>
+      <td>2.69</td>
       <td>False</td>
+    </tr>
+    <tr>
+      <th>43004</th>
+      <td>0.52</td>
+      <td>Very Good</td>
+      <td>G</td>
+      <td>VS2</td>
+      <td>63.0</td>
+      <td>55.0</td>
+      <td>1369</td>
+      <td>5.13</td>
+      <td>5.16</td>
+      <td>3.24</td>
+      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -1529,9 +1445,9 @@ Name: bool_col, dtype: bool
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="any-and-all-in-data-frames">
-<h3><span class="section-number">14.3.3. </span>any() and all() in data frames<a class="headerlink" href="#any-and-all-in-data-frames" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="any-and-all-in-data-frames">
+<h3><span class="section-number">16.3.3. </span>any() and all() in data frames<a class="headerlink" href="#any-and-all-in-data-frames" title="Permalink to this headline">#</a></h3>
 <p>A <strong>pandas</strong> column of booleans behaves a lot like a list of booleans, and we can apply the same logic to it via <strong>pandas</strong> built-in <code class="docutils literal notranslate"><span class="pre">.any</span></code> and <code class="docutils literal notranslate"><span class="pre">.all</span></code> methods. We expect some entries for <code class="docutils literal notranslate"><span class="pre">&quot;expensive&quot;</span></code> to be true, so <code class="docutils literal notranslate"><span class="pre">any</span></code> should return true:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1545,9 +1461,9 @@ Name: bool_col, dtype: bool
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="logical-subsetting">
-<h3><span class="section-number">14.3.4. </span>Logical subsetting<a class="headerlink" href="#logical-subsetting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="logical-subsetting">
+<h3><span class="section-number">16.3.4. </span>Logical subsetting<a class="headerlink" href="#logical-subsetting" title="Permalink to this headline">#</a></h3>
 <p>Although we’ve been effectively using this all along, it’s useful to make it explicit: booleans can be used to logically subset a dataframe. Let’s say we only want the bits of a dataframe where <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1748,9 +1664,9 @@ Name: bool_col, dtype: bool
 </div></div></div>
 </div>
 <p>The expression <code class="docutils literal notranslate"><span class="pre">diamonds[&quot;x&quot;]</span> <span class="pre">&gt;</span> <span class="pre">diamonds[&quot;y&quot;]</span></code> creates a column of booleans that is used to filter to just the rows where the condition is true.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1764,7 +1680,7 @@ Name: bool_col, dtype: bool
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1772,44 +1688,119 @@ Name: bool_col, dtype: bool
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="communicate-plots.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Graphics for Communication</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="numbers.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">17. </span>Numbers</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">16.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booleans">16.2. Booleans</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-variables-and-conditions">16.2.1. Boolean Variables and Conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-in-list-comprehensions">16.2.2. Conditions in list comprehensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#truthsy-and-falsy-values">16.2.3. Truthsy and Falsy Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-and-all">16.2.4. any() and all()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booleans-in-pandas-data-frames">16.3. Booleans in <strong>pandas</strong> data frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-booleans-in-data-frames">16.3.1. Operations on booleans in data frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-booleans-from-comparisons-using-columns">16.3.2. Creating booleans from comparisons using columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-and-all-in-data-frames">16.3.3. any() and all() in data frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-subsetting">16.3.4. Logical subsetting</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="joins.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">13. </span>Joins</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="numbers.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">15. </span>Numbers</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

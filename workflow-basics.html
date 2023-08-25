@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Workflow: Basics &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>4. Workflow: Basics &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,467 +47,445 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workflow-basics';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Data Transformation" href="data-transform.html" />
+    <link rel="next" title="5. Data Transformation" href="data-transform.html" />
     <link rel="prev" title="2. Data Visualisation" href="data-visualise.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   9. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   10. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   11. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   12. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   13. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   14. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   15. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   16. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   17. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   18. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   19. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   20. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   21. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   22. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   23. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   24. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   25. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   26. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   27. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   28. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/workflow-basics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fworkflow-basics.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/workflow-basics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/workflow-basics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/workflow-basics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/workflow-basics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fworkflow-basics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/workflow-basics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Workflow: Basics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coding-basics">
-   3.1. Coding Basics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comments">
-   3.2. Comments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#keeping-track-of-variables">
-   3.3. Keeping Track of Variables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-s-in-a-name">
-   3.4. What’s In A Name?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calling-functions">
-   3.5. Calling Functions
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-basics">4.1. Coding Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">4.2. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keeping-track-of-variables">4.3. Keeping Track of Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-in-a-name">4.4. What’s In A Name?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-functions">4.5. Calling Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">4.6. Exercises</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Workflow: Basics</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coding-basics">
-   3.1. Coding Basics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comments">
-   3.2. Comments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#keeping-track-of-variables">
-   3.3. Keeping Track of Variables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-s-in-a-name">
-   3.4. What’s In A Name?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calling-functions">
-   3.5. Calling Functions
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="workflow-basics">
-<span id="id1"></span><h1><span class="section-number">3. </span>Workflow: Basics<a class="headerlink" href="#workflow-basics" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="workflow-basics">
+<span id="id1"></span><h1><span class="section-number">4. </span>Workflow: Basics<a class="headerlink" href="#workflow-basics" title="Permalink to this headline">#</a></h1>
 <p>If you followed the previous chapters, you will now have some experience running Python code. We didn’t give you many details, but you’ve obviously figured out the basics, or you would’ve thrown this book away in frustration! Frustration is natural when you start programming in Python, because it is such a stickler for punctuation, and even one character out of place will cause it to complain. But while you should expect to be a little frustrated, take comfort in that this experience is both typical and temporary: it happens to everyone, and the only way to get over it is to keep trying.</p>
 <p>Before we go any further, let’s make sure you’ve got a solid foundation in running Python code, and that you know about some of the most helpful Visual Studio Code features for working with Python.</p>
-<div class="section" id="coding-basics">
-<h2><span class="section-number">3.1. </span>Coding Basics<a class="headerlink" href="#coding-basics" title="Permalink to this headline">¶</a></h2>
+<section id="coding-basics">
+<h2><span class="section-number">4.1. </span>Coding Basics<a class="headerlink" href="#coding-basics" title="Permalink to this headline">#</a></h2>
 <p>Let’s review some basics we’ve omitted thus far in the interests of getting you up to speed as quickly as possible. You can use Python as a calculator:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -515,7 +501,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>The extra package <strong>numpy</strong> contains many of the additional mathematical operators that you might need. If you don’t already have <strong>numpy</strong> installed, open up the terminal in Visual Studio Code (go to “Terminal -&gt; New Terminal” and then type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">numpy</span></code> into the terminal then hit return). Once you have <strong>numpy</strong> installed, you can import it and use it like this:</p>
+<p>The extra package <strong>numpy</strong> contains many of the additional mathematical operators that you might need. If you don’t already have <strong>numpy</strong> installed, open up the terminal in Visual Studio Code (go to “Terminal -&gt; New Terminal” and then type <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy</span></code> into the terminal then hit return). Once you have <strong>numpy</strong> installed, you can import it and use it like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -577,9 +563,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>When reading that code, say “object name gets value” in your head.</p>
-</div>
-<div class="section" id="comments">
-<h2><span class="section-number">3.2. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="comments">
+<h2><span class="section-number">4.2. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
 <p>Python will ignore any text after <code class="docutils literal notranslate"><span class="pre">#</span></code>. This allows to you to write <strong>comments</strong>, text that is ignored by Python but can be read by other humans. We’ll sometimes include comments in examples explaining what’s happening with the code.</p>
 <p>Comments can be helpful for briefly describing what the subsequent code does.</p>
 <div class="cell docutils container">
@@ -598,9 +584,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>With short pieces of code like this, it is not necessary to leave a command for every single line of code and you should try to use informative names wherever you can because these help readers of your code (likely to be you in the future) understand what is going on!</p>
-</div>
-<div class="section" id="keeping-track-of-variables">
-<h2><span class="section-number">3.3. </span>Keeping Track of Variables<a class="headerlink" href="#keeping-track-of-variables" title="Permalink to this headline">¶</a></h2>
+<p>Our advice is to use comments to explain the <em>why</em> of your code, not the <em>how</em> or the <em>what</em>. The <em>what</em> and <em>how</em> of your code are always possible to figure out, even if it might be tedious, by carefully reading it. If you describe every step in the comments, and then change the code, you will have to remember to update the comments as well (tedious) or it will be confusing when you return to your code in the future.</p>
+<p>Figuring out <em>why</em> something was done is much more difficult, if not impossible. For example, geom_smooth() has an argument called span, that controls the smoothness of the curve, with larger values yielding a smoother curve. Suppose you decide to change the value of span from its default of 0.75 to 0.9: it’s easy for a future reader to understand <em>what</em> is happening, but unless you note your thinking in a comment, no one will understand <em>why</em> you changed the default.</p>
+<p>For data analysis code, use comments to explain your overall plan of attack and record important insights as you encounter them. There’s no way to re-capture this knowledge from the code itself.</p>
+</section>
+<section id="keeping-track-of-variables">
+<h2><span class="section-number">4.3. </span>Keeping Track of Variables<a class="headerlink" href="#keeping-track-of-variables" title="Permalink to this headline">#</a></h2>
 <p>You can always inspect an already-created object by typing its name into the interactive window:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -628,14 +617,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Visual Studio Code has some powerful features to help you keep track of objects:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>At the top of your interactive window, you should see a ‘Variables’ button. Click it to see a panel appear with all variables that you’ve defined.</p></li>
 <li><p>Hover your mouse over variables you’ve previously entered into the interactive window; you will see a pop-up that tells you what type of object it is.</p></li>
 <li><p>If you start typing a variable name into the interactive window, Visual Studio Code will try to auto-complete the name for you. Press the ‘tab’ key on your keyboard to accept the top option.</p></li>
 </ol>
-</div>
-<div class="section" id="what-s-in-a-name">
-<h2><span class="section-number">3.4. </span>What’s In A Name?<a class="headerlink" href="#what-s-in-a-name" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-s-in-a-name">
+<h2><span class="section-number">4.4. </span>What’s In A Name?<a class="headerlink" href="#what-s-in-a-name" title="Permalink to this headline">#</a></h2>
 <p>Object (aka “variable”) names must do the following to be valid in Python:</p>
 <ul class="simple">
 <li><p>start with a letter or the underscore character</p></li>
@@ -643,14 +632,57 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>only contain alpha-numeric characters and underscores (A-z, 0-9, and _)</p></li>
 </ul>
 <p>Object names in Python are case-sensitive too, so <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">Age</span></code> and <code class="docutils literal notranslate"><span class="pre">AGE</span></code> could all be three different variables.</p>
-<p>When you’re naming objects, it’s best to make them descriptive so you can keep track of what they are. You’ll need to adopt a convention for multiple words. We recommend snake_case, where you separate lowercase words with <code class="docutils literal notranslate"><span class="pre">_</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">i_use_snake_case</span></code> could be an object name.</p>
+<p>When you’re naming objects, it’s best to make them descriptive so you can keep track of what they are. You’ll need to adopt a convention for multiple words. We recommend snake_case, where you separate lowercase words with <code class="docutils literal notranslate"><span class="pre">_</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">i_use_snake_case</span></code> is a valid snake case name for an object.</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
 <p>Try creating the object <code class="docutils literal notranslate"><span class="pre">age</span></code> and assigning it the value <code class="docutils literal notranslate"><span class="pre">10</span></code>. What happens when you type <code class="docutils literal notranslate"><span class="pre">Age</span></code> into your console?</p>
 </div>
+<p>Remember that you can always inspect an object that you’ve created by typing its name again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span>
+</pre></div>
 </div>
-<div class="section" id="calling-functions">
-<h2><span class="section-number">3.5. </span>Calling Functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5, 7, 11, 13]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make another assignment:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">this_is_a_really_long_name</span> <span class="o">=</span> <span class="mf">2.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To save yourself time in inspecting this object via the interactive window, you can just begin typing the name (type “this”) and then hit the <kbd>TAB</kbd> button. Visual Studio Code will autocomplete what you’ve written using the variables you’ve defined during your session. This is a top tip to save time!</p>
+<p>If you’re using the interactive console, rather than a notebook, there’s another top tip. Let’s say you previously ran <code class="docutils literal notranslate"><span class="pre">this_is_a_really_long_name</span> <span class="pre">=</span> <span class="pre">2.5</span></code> but you <em>meant</em> to set it to 3.5. Don’t despair; you don’t have to type it all out again. With your cursor in the interactive window, you can simply hit <kbd>↑</kbd> on your keyboard and cycle through previous commands you issued. Change 2.5 to 3.5, hit shift + return, and you’ll have redefined your variable.</p>
+<p>Let’s define another variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">py_variable</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">^</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try to inspect it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">py_variabl</span>
+
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">aet</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">git_projects</span><span class="o">/</span><span class="n">python4DS</span><span class="o">/</span><span class="n">workflow</span><span class="o">-</span><span class="n">basics</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">Cell</span> <span class="mi">31</span> <span class="ow">in</span> <span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">py_variabl</span>
+
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;py_variabl&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</pre></div>
+</div>
+<p>This illustrates the brilliance and frustration of coding: your IDE (Visual Studio Code) will do tedious computations for you, but, in exchange, you must be precise in your instructions. If not, you’re likely to get an error that says the object you’re looking for was not found. Typos matter; Python can’t read your mind and say, “oh, they probably meant <code class="docutils literal notranslate"><span class="pre">py_variable</span></code> when they typed <code class="docutils literal notranslate"><span class="pre">py_variabl</span></code>”.</p>
+</section>
+<section id="calling-functions">
+<h2><span class="section-number">4.5. </span>Calling Functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">#</a></h2>
 <p>Python has a large number of built-in functions. You can also import functions from packages (like we did with <code class="docutils literal notranslate"><span class="pre">np.sin</span></code>) or define your own.</p>
 <p>In coding, a function has inputs, it performs its function, and it returns any outputs. Let’s see a simple example of using a built-in function, <code class="docutils literal notranslate"><span class="pre">sum</span></code>:</p>
 <div class="cell docutils container">
@@ -699,17 +731,50 @@ sum(iterable, /, start=0)
 </div>
 </div>
 <p>Or, in Visual Studio Code, hover your mouse over the function name.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Why does this code not work?</p>
+<p>Just as with variables, code completion works on functions too. Try typing in <code class="docutils literal notranslate"><span class="pre">su</span></code> and hitting tab to see this in action.</p>
+<p>You’ll need to be extra careful with objects that are strings (words, sentences, letters, and phrases), because these always need to come with quotation marks around them. You can use single or double quotation marks as you like, but i) the convention is double quotation marks, and ii) it’s good to be consistent, whichever you choose.</p>
+<p>Here’s an example of some code that throws an error</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;hello</span>
+
+  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;hello</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">unterminated</span> <span class="n">string</span> <span class="n">literal</span> <span class="p">(</span><span class="n">detected</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Again, Visual Studio Code can really help you out here because as soon as you open a double quotation mark, it will have the closing one ready for you.</p>
+</section>
+<section id="exercises">
+<h2><span class="section-number">4.6. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<ol class="arabic">
+<li><p>Why does this code not work?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_variable</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">my_varıable</span>
 </pre></div>
 </div>
 <p>Look carefully! This may seem like an exercise in pointlessness, but training your brain to notice even the tiniest difference will pay off when programming.</p>
+</li>
+<li><p>Tweak each of the following Python commands so that they run correctly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">palmerpenguins</span> <span class="kn">import</span> <span class="n">load_penguins</span>
+<span class="kn">from</span> <span class="nn">lets_pot</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">LetsPlot</span><span class="o">.</span><span class="n">setup_html</span><span class="p">()</span>
+<span class="n">penguins</span> <span class="o">=</span> <span class="n">load_penguins</span><span class="p">()</span>
+
+<span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span>
+        <span class="n">dTA</span><span class="o">=</span><span class="n">penguins</span><span class="p">,</span>
+        <span class="n">maping</span><span class="o">=</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;body_mass_g&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="o">+</span> <span class="n">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;lm)</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-</div>
-</div>
+</li>
+</ol>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -723,7 +788,7 @@ sum(iterable, /, start=0)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -731,44 +796,110 @@ sum(iterable, /, start=0)
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data-visualise.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Data Visualisation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data-transform.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Data Transformation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-basics">4.1. Coding Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">4.2. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keeping-track-of-variables">4.3. Keeping Track of Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-in-a-name">4.4. What’s In A Name?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-functions">4.5. Calling Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">4.6. Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="data-visualise.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Data Visualisation</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="data-transform.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Data Transformation</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

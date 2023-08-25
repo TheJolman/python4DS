@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>19. Dates and Times &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>21. Dates and Times &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,12 +47,20 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -53,624 +69,444 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'dates-and-times';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="20. Missing Values" href="missing-values.html" />
-    <link rel="prev" title="18. Categorical Data" href="categorical-data.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="22. Missing Values" href="missing-values.html" />
+    <link rel="prev" title="20. Categorical Data" href="categorical-data.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-packages-and-environments.html">
-   9. Workflow: Packages and Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   10. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   11. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   12. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   13. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   14. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   15. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   16. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   17. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   18. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   19. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   20. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">21. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   21. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   22. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   23. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   24. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   25. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   26. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   27. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   28. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   29. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/dates-and-times.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdates-and-times.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/dates-and-times.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/dates-and-times.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/dates-and-times.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/dates-and-times.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdates-and-times.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/dates-and-times.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dates and Times</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   19.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     19.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-in-python">
-   19.2. Time in Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-datetimes">
-   19.3. Creating Datetimes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#from-individual-components">
-     19.3.1. From Individual Components
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#from-a-string">
-     19.3.2. From a String
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operations-on-datetimes">
-   19.4. Operations on Datetimes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#timezones">
-   19.5. Timezones
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vectorised-datetimes">
-   19.6. Vectorised Datetimes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-datetimes-in-data-frames">
-   19.7. Working with Datetimes in Data Frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-and-using-time-series">
-     19.7.1. Creating and Using Time Series
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#datetime-offsets">
-     19.7.2. Datetime Offsets
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-dt-accessor">
-     19.7.3. The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .dt
-      </span>
-     </code>
-     accessor
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-datetime-index-and-setting-the-frequency">
-     19.7.4. Creating a datetime Index and Setting the Frequency
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#making-quick-time-series-plots">
-   19.8. Making Quick Time Series Plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resampling-rolling-and-shifting">
-   19.9. Resampling, Rolling, and Shifting
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resampling">
-     19.9.1. Resampling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rolling-window-functions">
-     19.9.2. Rolling Window Functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shifting">
-     19.9.3. Shifting
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">21.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">21.1.1. Prerequisites</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-in-python">21.2. Time in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-datetimes">21.3. Creating Datetimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-individual-components">21.3.1. From Individual Components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-string">21.3.2. From a String</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-datetimes">21.4. Operations on Datetimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timezones">21.5. Timezones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorised-datetimes">21.6. Vectorised Datetimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-datetimes-in-data-frames">21.7. Working with Datetimes in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-using-time-series">21.7.1. Creating and Using Time Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-offsets">21.7.2. Datetime Offsets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dt-accessor">21.7.3. The <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-datetime-index-and-setting-the-frequency">21.7.4. Creating a datetime Index and Setting the Frequency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-quick-time-series-plots">21.8. Making Quick Time Series Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-rolling-and-shifting">21.9. Resampling, Rolling, and Shifting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling">21.9.1. Resampling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-window-functions">21.9.2. Rolling Window Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shifting">21.9.3. Shifting</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dates and Times</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   19.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     19.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-in-python">
-   19.2. Time in Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-datetimes">
-   19.3. Creating Datetimes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#from-individual-components">
-     19.3.1. From Individual Components
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#from-a-string">
-     19.3.2. From a String
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operations-on-datetimes">
-   19.4. Operations on Datetimes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#timezones">
-   19.5. Timezones
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vectorised-datetimes">
-   19.6. Vectorised Datetimes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-datetimes-in-data-frames">
-   19.7. Working with Datetimes in Data Frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-and-using-time-series">
-     19.7.1. Creating and Using Time Series
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#datetime-offsets">
-     19.7.2. Datetime Offsets
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-dt-accessor">
-     19.7.3. The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .dt
-      </span>
-     </code>
-     accessor
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-datetime-index-and-setting-the-frequency">
-     19.7.4. Creating a datetime Index and Setting the Frequency
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#making-quick-time-series-plots">
-   19.8. Making Quick Time Series Plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resampling-rolling-and-shifting">
-   19.9. Resampling, Rolling, and Shifting
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resampling">
-     19.9.1. Resampling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rolling-window-functions">
-     19.9.2. Rolling Window Functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#shifting">
-     19.9.3. Shifting
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="dates-and-times">
-<span id="id1"></span><h1><span class="section-number">19. </span>Dates and Times<a class="headerlink" href="#dates-and-times" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><span class="section-number">19.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dates-and-times">
+<span id="id1"></span><h1><span class="section-number">21. </span>Dates and Times<a class="headerlink" href="#dates-and-times" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">21.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>This chapter will show you how to work with dates and times in Python. At first glance, dates and times seem simple. You use them all the time in your regular life, and they don’t seem to cause much confusion. However, the more you learn about dates and times, the more complicated they seem to get. To warm up, try these three seemingly simple questions:</p>
 <ul class="simple">
 <li><p>Does every year have 365 days?</p></li>
@@ -681,17 +517,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p>You might have remembered that many parts of the world use daylight savings time (DST), so that some days have 23 hours, and others have 25. You might not have known that some minutes have 61 seconds because every now and then leap seconds are added because the Earth’s rotation is gradually slowing down.</p>
 <p>Dates and times are hard because they have to reconcile two physical phenomena (the rotation of the Earth and its orbit around the sun) with a whole raft of geopolitical phenomena including months, time zones, and DST.</p>
 <p>This chapter won’t teach you every last detail about dates and times, but it will give you a solid grounding of practical skills that will help you with common data analysis challenges. In particular, one code task related to time that we won’t cover here includes how to run scripts or functions at a given frequency, ie how to schedule jobs.</p>
-<div class="section" id="prerequisites">
-<h3><span class="section-number">19.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<section id="prerequisites">
+<h3><span class="section-number">21.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
 <p>You will need to install the <strong>seaborn</strong> package for this chapter. This chapter uses the next generation version of <strong>seaborn</strong>, which can be installed by running the following on the command line (aka in the terminal):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --pre seaborn
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--pre<span class="w"> </span>seaborn
 </pre></div>
 </div>
 <p>We will also be using the <strong>pandas</strong> package and numerical package <strong>numpy</strong>.</p>
-</div>
-</div>
-<div class="section" id="time-in-python">
-<h2><span class="section-number">19.2. </span>Time in Python<a class="headerlink" href="#time-in-python" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="time-in-python">
+<h2><span class="section-number">21.2. </span>Time in Python<a class="headerlink" href="#time-in-python" title="Permalink to this headline">#</a></h2>
 <p>A point in time as represented in data science is composed of a clock time and a date. These two elements are brought together as a <em>datetime</em>.</p>
 <p>The datetime object is the fundamental time object in Python. It’s useful to know about these before moving on to datetime operations using <strong>pandas</strong> (which you’re far more likely to use in practice). Python’s <em>datetime</em> objects capture the year, month, day, hour, second, and microsecond. Let’s import the class that deals with datetimes (whose objects are of type datetime.datetime) and take a look at it.</p>
 <div class="cell docutils container">
@@ -704,7 +540,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-07-06 23:27:09.684944
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-08-25 23:44:47.170628
 </pre></div>
 </div>
 </div>
@@ -716,11 +552,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Try calling the year, month, and day functions on an instance of <code class="docutils literal notranslate"><span class="pre">datetime.now()</span></code>.</p>
 </div>
 <p>Note that, once created, <code class="docutils literal notranslate"><span class="pre">now</span></code> does not refresh itself: it’s frozen at the time that it was made.</p>
-</div>
-<div class="section" id="creating-datetimes">
-<h2><span class="section-number">19.3. </span>Creating Datetimes<a class="headerlink" href="#creating-datetimes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="from-individual-components">
-<h3><span class="section-number">19.3.1. </span>From Individual Components<a class="headerlink" href="#from-individual-components" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="creating-datetimes">
+<h2><span class="section-number">21.3. </span>Creating Datetimes<a class="headerlink" href="#creating-datetimes" title="Permalink to this headline">#</a></h2>
+<section id="from-individual-components">
+<h3><span class="section-number">21.3.1. </span>From Individual Components<a class="headerlink" href="#from-individual-components" title="Permalink to this headline">#</a></h3>
 <p>To create a datetime using given numerical information the command is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -736,9 +572,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>To make clearer and more readable code, you can also call this using keyword arguments: <code class="docutils literal notranslate"><span class="pre">datetime(year=2019,</span> <span class="pre">month=11,</span> <span class="pre">day=28)</span></code>.</p>
-</div>
-<div class="section" id="from-a-string">
-<h3><span class="section-number">19.3.2. </span>From a String<a class="headerlink" href="#from-a-string" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="from-a-string">
+<h3><span class="section-number">21.3.2. </span>From a String<a class="headerlink" href="#from-a-string" title="Permalink to this headline">#</a></h3>
 <p>One of the most common transformations you’re likely to need to do when it comes to times is the one from a string, like “4 July 2002”, to a datetime. You can do this using <code class="docutils literal notranslate"><span class="pre">datetime.strptime</span></code>. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -794,7 +630,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Thursday, 07, 2023&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Friday, 08, 2023&#39;
 </pre></div>
 </div>
 </div>
@@ -934,10 +770,10 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="operations-on-datetimes">
-<h2><span class="section-number">19.4. </span>Operations on Datetimes<a class="headerlink" href="#operations-on-datetimes" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="operations-on-datetimes">
+<h2><span class="section-number">21.4. </span>Operations on Datetimes<a class="headerlink" href="#operations-on-datetimes" title="Permalink to this headline">#</a></h2>
 <p>Many of the operations you’d expect to just work with datetimes, do for example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -960,7 +796,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1282 days, 23:27:09.684944
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1332 days, 23:44:47.170628
 </pre></div>
 </div>
 </div>
@@ -979,16 +815,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>This is of type <code class="docutils literal notranslate"><span class="pre">datetime.timedelta</span></code>.</p>
-</div>
-<div class="section" id="timezones">
-<h2><span class="section-number">19.5. </span>Timezones<a class="headerlink" href="#timezones" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="timezones">
+<h2><span class="section-number">21.5. </span>Timezones<a class="headerlink" href="#timezones" title="Permalink to this headline">#</a></h2>
 <p>Date and time objects may be categorized as aware or naive depending on whether or not they include timezone information; an aware object can locate itself relative to other aware objects, but a naive object does not contain enough information to unambiguously locate itself relative to other date/time objects. So far we’ve been working with naive datetime objects.</p>
 <p>The <a class="reference external" href="https://pypi.org/project/pytz/"><strong>pytz</strong></a> package can help you work with time zones. It has two main use cases: i) localise timezone-naive datetimes so that they become aware, ie have a timezone and ii) convert a datetimne in one timezone to another timezone.</p>
 <p>The default timezone for coding is UTC. ‘UTC’ is Coordinated Universal Time. It is a successor to, but distinct from, Greenwich Mean Time (GMT) and the various definitions of Universal Time. UTC is now the worldwide standard for regulating clocks and time measurement.</p>
 <p>All other timezones are defined relative to UTC, and include offsets like UTC+0800 - hours to add or subtract from UTC to derive the local time. No daylight saving time occurs in UTC, making it a useful timezone to perform date arithmetic without worrying about the confusion and ambiguities caused by daylight saving time transitions, your country changing its timezone, or mobile computers that roam through multiple timezones.</p>
-</div>
-<div class="section" id="vectorised-datetimes">
-<h2><span class="section-number">19.6. </span>Vectorised Datetimes<a class="headerlink" href="#vectorised-datetimes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vectorised-datetimes">
+<h2><span class="section-number">21.6. </span>Vectorised Datetimes<a class="headerlink" href="#vectorised-datetimes" title="Permalink to this headline">#</a></h2>
 <p>Now we come to vectorised operations on datetimes using the powerful <strong>numpy</strong> packages (and this is what is used by <strong>pandas</strong>). <strong>numpy</strong> has its own version of datetime, called <code class="docutils literal notranslate"><span class="pre">np.datetime64</span></code>, and it’s very efficient at scale. Let’s see it in action:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1041,9 +877,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>One word of warning with <strong>numpy</strong> and datetimes though: the more precise you go, and you can go down to femtoseconds (<span class="math notranslate nohighlight">\(10^{-15}\)</span> seconds), the more precise you go the smaller the range of dates you can hit. A popular choice of precision is <code class="docutils literal notranslate"><span class="pre">datetime64[ns]</span></code>, which can encode times from 1678 AD to 2262 AD. Working with seconds gets you 2.9<span class="math notranslate nohighlight">\(\times 10^9\)</span> BC to 2.9<span class="math notranslate nohighlight">\(\times 10^9\)</span> AD.</p>
-</div>
-<div class="section" id="working-with-datetimes-in-data-frames">
-<h2><span class="section-number">19.7. </span>Working with Datetimes in Data Frames<a class="headerlink" href="#working-with-datetimes-in-data-frames" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="working-with-datetimes-in-data-frames">
+<h2><span class="section-number">21.7. </span>Working with Datetimes in Data Frames<a class="headerlink" href="#working-with-datetimes-in-data-frames" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://pandas.pydata.org/"><strong>pandas</strong></a> is the workhorse of time series analysis in Python. The basic object is a <em>timestamp</em>. The <code class="docutils literal notranslate"><span class="pre">pd.to_datetime</span></code> function creates timestamps from strings that could reasonably represent datetimes. Let’s see an example of using <code class="docutils literal notranslate"><span class="pre">pd.to_datetime</span></code> to create a timestamp and then take a look at it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1061,8 +897,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>This is of type <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> and you can see that it has many of the same properties as the built-in Python <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> class from the previous chapter. As with that, the default setting for <code class="docutils literal notranslate"><span class="pre">tz</span></code> (timezone) and <code class="docutils literal notranslate"><span class="pre">tzinfo</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>. There are some extra properties, though, such as <code class="docutils literal notranslate"><span class="pre">freq</span></code> for frequency, which will be very useful when it comes to manipulating time <em>series</em> as opposed to just one or two datetimes.</p>
-<div class="section" id="creating-and-using-time-series">
-<h3><span class="section-number">19.7.1. </span>Creating and Using Time Series<a class="headerlink" href="#creating-and-using-time-series" title="Permalink to this headline">¶</a></h3>
+<section id="creating-and-using-time-series">
+<h3><span class="section-number">21.7.1. </span>Creating and Using Time Series<a class="headerlink" href="#creating-and-using-time-series" title="Permalink to this headline">#</a></h3>
 <p>There are two main scenarios in which you might be creating time series using <strong>pandas</strong>: i) creating one from scratch or ii) reading in data from a file. Let’s look at a few ways to do i) first.</p>
 <p>You can create a time series with <strong>pandas</strong> by taking a date as created above and extending it using <strong>pandas</strong> timedelta function:</p>
 <div class="cell docutils container">
@@ -1205,14 +1041,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 264 entries, 0 to 263
+RangeIndex: 266 entries, 0 to 265
 Data columns (total 2 columns):
  #   Column                      Non-Null Count  Dtype 
 ---  ------                      --------------  ----- 
- 0   date                        264 non-null    object
- 1   Vacancies (ICT), thousands  264 non-null    int64 
+ 0   date                        266 non-null    object
+ 1   Vacancies (ICT), thousands  266 non-null    int64 
 dtypes: int64(1), object(1)
-memory usage: 4.2+ KB
+memory usage: 4.3+ KB
 </pre></div>
 </div>
 </div>
@@ -1226,6 +1062,10 @@ memory usage: 4.2+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x6/ffnr59f116l96_y0q0bjfz7c0000gn/T/ipykernel_72275/3535541307.py:1: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df[&quot;date&quot;] = pd.to_datetime(df[&quot;date&quot;])
+</pre></div>
+</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   2001-05-01
 1   2001-06-01
 2   2001-07-01
@@ -1268,9 +1108,9 @@ Name: date, dtype: datetime64[ns]
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="datetime-offsets">
-<h3><span class="section-number">19.7.2. </span>Datetime Offsets<a class="headerlink" href="#datetime-offsets" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="datetime-offsets">
+<h3><span class="section-number">21.7.2. </span>Datetime Offsets<a class="headerlink" href="#datetime-offsets" title="Permalink to this headline">#</a></h3>
 <p>Our data, currently held in <code class="docutils literal notranslate"><span class="pre">df</span></code>, were read in as if they were from the <em>start</em> of the month but these data refer to the month that has passed and so should be for the <em>end</em> of the month. Fortunately, we can change this using a time offset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1333,9 +1173,9 @@ Name: date, dtype: datetime64[ns]
 </div></div></div>
 </div>
 <p>While we used the <code class="docutils literal notranslate"><span class="pre">MonthEnd</span></code> offset here, there are many different offsets available. You can find a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects">full table of date offsets here</a>.</p>
-</div>
-<div class="section" id="the-dt-accessor">
-<h3><span class="section-number">19.7.3. </span>The <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor<a class="headerlink" href="#the-dt-accessor" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-dt-accessor">
+<h3><span class="section-number">21.7.3. </span>The <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor<a class="headerlink" href="#the-dt-accessor" title="Permalink to this headline">#</a></h3>
 <p>When you have a datetime column, you can use the <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor to grab lots of useful information from it such as the <code class="docutils literal notranslate"><span class="pre">minute</span></code>, <code class="docutils literal notranslate"><span class="pre">month</span></code>, and so on. Some that are functions, rather than just accessors of underlying properties, are followed by brackets, <code class="docutils literal notranslate"><span class="pre">()</span></code>, because they are functions. Here are a few useful examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1369,14 +1209,14 @@ Using `dt.month`
 2    7
 3    8
 4    9
-Name: date, dtype: int64
+Name: date, dtype: int32
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-a-datetime-index-and-setting-the-frequency">
-<h3><span class="section-number">19.7.4. </span>Creating a datetime Index and Setting the Frequency<a class="headerlink" href="#creating-a-datetime-index-and-setting-the-frequency" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="creating-a-datetime-index-and-setting-the-frequency">
+<h3><span class="section-number">21.7.4. </span>Creating a datetime Index and Setting the Frequency<a class="headerlink" href="#creating-a-datetime-index-and-setting-the-frequency" title="Permalink to this headline">#</a></h3>
 <p>For the subsequent parts, we’ll set the datetime column to be the index of the dataframe. <em>This is the standard setup you will likely want to use when dealing with time series.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1530,10 +1370,10 @@ Name: date, dtype: int64
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="making-quick-time-series-plots">
-<h2><span class="section-number">19.8. </span>Making Quick Time Series Plots<a class="headerlink" href="#making-quick-time-series-plots" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="making-quick-time-series-plots">
+<h2><span class="section-number">21.8. </span>Making Quick Time Series Plots<a class="headerlink" href="#making-quick-time-series-plots" title="Permalink to this headline">#</a></h2>
 <p>Having managed to put your time series into a dataframe, perhaps converting a column of type string into a colume of type datetime in the process, you often just want to see the thing! We can achieve this using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> command, as long as we have a datetime index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1542,14 +1382,14 @@ Name: date, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dates-and-times_70_0.svg" src="_images/dates-and-times_70_0.svg" /></div>
+<img alt="_images/0d84d1649efef41fe2a6a12f53a622fa7aeaed081d53e961efee9299a167cfa5.svg" src="_images/0d84d1649efef41fe2a6a12f53a622fa7aeaed081d53e961efee9299a167cfa5.svg" /></div>
 </div>
-</div>
-<div class="section" id="resampling-rolling-and-shifting">
-<h2><span class="section-number">19.9. </span>Resampling, Rolling, and Shifting<a class="headerlink" href="#resampling-rolling-and-shifting" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="resampling-rolling-and-shifting">
+<h2><span class="section-number">21.9. </span>Resampling, Rolling, and Shifting<a class="headerlink" href="#resampling-rolling-and-shifting" title="Permalink to this headline">#</a></h2>
 <p>Now our data have a <em>datetime index</em>, some common time series operations are made very easy for us.</p>
-<div class="section" id="resampling">
-<h3><span class="section-number">19.9.1. </span>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">¶</a></h3>
+<section id="resampling">
+<h3><span class="section-number">21.9.1. </span>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">#</a></h3>
 <p>Quite frequently, there is a situation in which one would like to change the frequency of a given time series. A time index-based dataframe makes this easy via the <code class="docutils literal notranslate"><span class="pre">resample</span></code> function. <code class="docutils literal notranslate"><span class="pre">resample</span></code> must be told <em>how</em> you’d like to resample the data, for example via the mean or median. Here’s an example resampling the monthly data to annual and taking the mean:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1674,7 +1514,7 @@ Name: date, dtype: int64
     </tr>
     <tr>
       <th>2023-12-31</th>
-      <td>50.500000</td>
+      <td>50.333333</td>
     </tr>
   </tbody>
 </table>
@@ -1812,28 +1652,28 @@ Name: date, dtype: int64
       <td>...</td>
     </tr>
     <tr>
-      <th>2023-04-26</th>
+      <th>2023-06-26</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2023-04-27</th>
+      <th>2023-06-27</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2023-04-28</th>
+      <th>2023-06-28</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2023-04-29</th>
+      <th>2023-06-29</th>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2023-04-30</th>
-      <td>49.0</td>
+      <th>2023-06-30</th>
+      <td>48.0</td>
     </tr>
   </tbody>
 </table>
-<p>8005 rows × 1 columns</p>
+<p>8066 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Options to fill in missing time series data include using <code class="docutils literal notranslate"><span class="pre">bfill</span></code> or <code class="docutils literal notranslate"><span class="pre">ffill</span></code> to fill in the blanks based on the next or last available value, respectively, or <code class="docutils literal notranslate"><span class="pre">interpolate</span></code> (note how only the first 3 NaNs are replaced using the <code class="docutils literal notranslate"><span class="pre">limit</span></code> keyword argument):</p>
@@ -1929,11 +1769,11 @@ Name: date, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dates-and-times_81_0.svg" src="_images/dates-and-times_81_0.svg" /></div>
+<img alt="_images/8e2b4e2bfb6af208d4ee6e39b7271675c1c5e259dd90717b74125780bff2595a.svg" src="_images/8e2b4e2bfb6af208d4ee6e39b7271675c1c5e259dd90717b74125780bff2595a.svg" /></div>
 </div>
-</div>
-<div class="section" id="rolling-window-functions">
-<h3><span class="section-number">19.9.2. </span>Rolling Window Functions<a class="headerlink" href="#rolling-window-functions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rolling-window-functions">
+<h3><span class="section-number">21.9.2. </span>Rolling Window Functions<a class="headerlink" href="#rolling-window-functions" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">rolling</span></code> and <code class="docutils literal notranslate"><span class="pre">ewm</span></code> methods are both rolling window functions. The first includes functions of the sequence</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1999,28 +1839,28 @@ y_t = f(\{x_{t-i} \}_{i=0}^{i=R-1})
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-12-31</th>
-      <td>54.5</td>
-    </tr>
-    <tr>
-      <th>2023-01-31</th>
-      <td>52.5</td>
-    </tr>
-    <tr>
       <th>2023-02-28</th>
-      <td>51.5</td>
+      <td>52.0</td>
     </tr>
     <tr>
       <th>2023-03-31</th>
-      <td>51.0</td>
+      <td>52.5</td>
     </tr>
     <tr>
       <th>2023-04-30</th>
-      <td>49.5</td>
+      <td>51.5</td>
+    </tr>
+    <tr>
+      <th>2023-05-31</th>
+      <td>49.0</td>
+    </tr>
+    <tr>
+      <th>2023-06-30</th>
+      <td>47.5</td>
     </tr>
   </tbody>
 </table>
-<p>264 rows × 1 columns</p>
+<p>266 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ewm</span></code> includes the class of functions where data point <span class="math notranslate nohighlight">\(x_{t-i}\)</span> has a weight <span class="math notranslate nohighlight">\(w_i = (1-\alpha)^i\)</span>. As <span class="math notranslate nohighlight">\(0 &lt; \alpha &lt; 1\)</span>, points further back in time are given less weight. For example, an exponentially moving average is given by</p>
@@ -2089,28 +1929,28 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-12-31</th>
-      <td>61.987655</td>
-    </tr>
-    <tr>
-      <th>2023-01-31</th>
-      <td>59.790124</td>
-    </tr>
-    <tr>
       <th>2023-02-28</th>
-      <td>58.232099</td>
+      <td>58.432099</td>
     </tr>
     <tr>
       <th>2023-03-31</th>
-      <td>56.585679</td>
+      <td>57.145679</td>
     </tr>
     <tr>
       <th>2023-04-30</th>
-      <td>55.068544</td>
+      <td>55.916544</td>
+    </tr>
+    <tr>
+      <th>2023-05-31</th>
+      <td>54.133235</td>
+    </tr>
+    <tr>
+      <th>2023-06-30</th>
+      <td>52.906588</td>
     </tr>
   </tbody>
 </table>
-<p>264 rows × 1 columns</p>
+<p>266 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Let’s see these methods together on the stock market data.</p>
@@ -2131,7 +1971,7 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dates-and-times_87_0.svg" src="_images/dates-and-times_87_0.svg" /></div>
+<img alt="_images/39c594601d25b10596eac8645ab09c3e9f5d5e2d05d4860388340537a02ab95e.svg" src="_images/39c594601d25b10596eac8645ab09c3e9f5d5e2d05d4860388340537a02ab95e.svg" /></div>
 </div>
 <p>For more tools to analyse stocks, see the <a class="reference external" href="https://twopirllc.github.io/pandas-ta/"><strong>Pandas TA</strong></a> package.</p>
 <p>We can also use <code class="docutils literal notranslate"><span class="pre">rolling</span></code> as an intermediate step in creating more than one type of aggregation:</p>
@@ -2148,11 +1988,11 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dates-and-times_89_0.svg" src="_images/dates-and-times_89_0.svg" /></div>
+<img alt="_images/41b4d1c0766f4a4e73556f79977bd5da187a6ac95475496ae1eb72bbc4854d1c.svg" src="_images/41b4d1c0766f4a4e73556f79977bd5da187a6ac95475496ae1eb72bbc4854d1c.svg" /></div>
 </div>
-</div>
-<div class="section" id="shifting">
-<h3><span class="section-number">19.9.3. </span>Shifting<a class="headerlink" href="#shifting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="shifting">
+<h3><span class="section-number">21.9.3. </span>Shifting<a class="headerlink" href="#shifting" title="Permalink to this headline">#</a></h3>
 <p>Shifting can move series around in time; it’s what we need to create leads and lags of time series. Let’s create a lead and a lag in the data. Remember that a lead is going to shift the pattern in the data to the left (ie earlier in time), while the lag is going to shift patterns later in time (ie to the right).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2237,11 +2077,11 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dates-and-times_92_0.svg" src="_images/dates-and-times_92_0.svg" /></div>
+<img alt="_images/b366d77d0e265d787bee95b2f53a0ed8be942049fe5a7b5506ba1adaff864fda.svg" src="_images/b366d77d0e265d787bee95b2f53a0ed8be942049fe5a7b5506ba1adaff864fda.svg" /></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2255,7 +2095,7 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -2263,44 +2103,131 @@ y_t = \frac{x_t + (1 - \alpha)x_{t-1} + (1 - \alpha)^2 x_{t-2} + ...
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="categorical-data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">20. </span>Categorical Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="missing-values.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">22. </span>Missing Values</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">21.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">21.1.1. Prerequisites</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-in-python">21.2. Time in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-datetimes">21.3. Creating Datetimes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-individual-components">21.3.1. From Individual Components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-string">21.3.2. From a String</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-datetimes">21.4. Operations on Datetimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timezones">21.5. Timezones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorised-datetimes">21.6. Vectorised Datetimes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-datetimes-in-data-frames">21.7. Working with Datetimes in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-using-time-series">21.7.1. Creating and Using Time Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime-offsets">21.7.2. Datetime Offsets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dt-accessor">21.7.3. The <code class="docutils literal notranslate"><span class="pre">.dt</span></code> accessor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-datetime-index-and-setting-the-frequency">21.7.4. Creating a datetime Index and Setting the Frequency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-quick-time-series-plots">21.8. Making Quick Time Series Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-rolling-and-shifting">21.9. Resampling, Rolling, and Shifting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling">21.9.1. Resampling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-window-functions">21.9.2. Rolling Window Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shifting">21.9.3. Shifting</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="categorical-data.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">18. </span>Categorical Data</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="missing-values.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">20. </span>Missing Values</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

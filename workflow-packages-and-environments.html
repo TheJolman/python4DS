@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Workflow: Packages and Environments &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>10. Workflow: Packages and Environments &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,519 +47,478 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workflow-packages-and-environments';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="10. Postscript: Getting Further Help" href="workflow-help.html" />
-    <link rel="prev" title="8. Data Import" href="data-import.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="11. Postscript: Getting Further Help" href="workflow-help.html" />
+    <link rel="prev" title="9. Data Import" href="data-import.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   9. Workflow: Packages and Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   10. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   11. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   12. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">12. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">13. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   13. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   14. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   15. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   16. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   17. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   18. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   19. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   20. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">14. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   21. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   22. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   23. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   24. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">22. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">23. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">24. Rectangling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   25. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   26. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   27. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">26. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">27. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">28. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   28. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   29. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">29. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">30. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="_sources/workflow-packages-and-environments.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/workflow-packages-and-environments.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fworkflow-packages-and-environments.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/workflow-packages-and-environments.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/workflow-packages-and-environments.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/workflow-packages-and-environments.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fworkflow-packages-and-environments.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/workflow-packages-and-environments.ipynb" target="_blank"
+   class="btn btn-sm btn-download-notebook-button dropdown-item"
+   title="Download notebook file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="_sources/workflow-packages-and-environments.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Workflow: Packages and Environments</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#packages">
-   9.1. Packages
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     9.1.1. Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-command-line-in-brief">
-     9.1.2. The Command Line in Brief
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-packages">
-     9.1.3. Installing Packages
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-packages">
-     9.1.4. Using Packages
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#virtual-code-environments">
-   9.2. Virtual Code Environments
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">
-     9.2.1. Using Anaconda to Manage Python Environments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">
-     9.2.2. Using and Switching Between Conda Environments
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">10.1. Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">10.1.1. Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line-in-brief">10.1.2. The Command Line in Brief</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">10.1.3. Installing Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-packages">10.1.4. Using Packages</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-code-environments">10.2. Virtual Code Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">10.2.1. Using Anaconda to Manage Python Environments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">10.2.2. Using and Switching Between Conda Environments</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Workflow: Packages and Environments</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#packages">
-   9.1. Packages
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     9.1.1. Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-command-line-in-brief">
-     9.1.2. The Command Line in Brief
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-packages">
-     9.1.3. Installing Packages
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-packages">
-     9.1.4. Using Packages
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#virtual-code-environments">
-   9.2. Virtual Code Environments
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">
-     9.2.1. Using Anaconda to Manage Python Environments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">
-     9.2.2. Using and Switching Between Conda Environments
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="workflow-packages-and-environments">
-<span id="id1"></span><h1><span class="section-number">9. </span>Workflow: Packages and Environments<a class="headerlink" href="#workflow-packages-and-environments" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="workflow-packages-and-environments">
+<span id="id1"></span><h1><span class="section-number">10. </span>Workflow: Packages and Environments<a class="headerlink" href="#workflow-packages-and-environments" title="Permalink to this headline">#</a></h1>
 <p>In this chapter, you’re going to learn about packages and how to install them plus virtual coding environments that keep your packages isolated and your projects reproducible.</p>
-<div class="section" id="packages">
-<h2><span class="section-number">9.1. </span>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="introduction">
-<h3><span class="section-number">9.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<section id="packages">
+<h2><span class="section-number">10.1. </span>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">#</a></h2>
+<section id="introduction">
+<h3><span class="section-number">10.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
 <p>Packages (also called libraries) are key to extending the functionality of Python. The default installation of Anaconda comes with many (around 250) of the packages you’ll need, but it won’t be long before you’ll need to install some extra ones. There are packages for geoscience, for building websites, for analysing genetic data, for economics—pretty much for anything you can think of. Packages are typically not written by the core maintainers of the Python language but by enthusiasts, firms, researchers, academics, all sorts! Because anyone can write packages, they vary widely in their quality and usefulness. There are some that you’ll be seeing them again and again.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Name a more iconic trio, I&#39;ll wait. <a href="https://t.co/pGaLuUxQ3r">pic.twitter.com/pGaLuUxQ3r</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1032631145035427840?ref_src=twsrc%5Etfw">August 23, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>The three Python packages <strong>numpy</strong>, <strong>pandas</strong>, and <strong>maplotlib</strong>, which respectively provide numerical, data analysis, and plotting functionality, are ubiquitous. So many scripts begin by importing all three of them, as in the tweet above!</p>
 <p>There are typically two steps to using a new Python package:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><em>install</em> the package on the command line (aka the terminal), eg using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p></li>
 <li><p><em>import</em> the package into your Python session, eg using <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code></p></li>
 </ol>
 <p>When you issue an install command for a specific package, it is automatically downloaded from the internet and installed in the appropriate place on your computer. To install extra Python packages, you issue install commands to a text-based window called the “terminal”.</p>
-</div>
-<div class="section" id="the-command-line-in-brief">
-<h3><span class="section-number">9.1.2. </span>The Command Line in Brief<a class="headerlink" href="#the-command-line-in-brief" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-command-line-in-brief">
+<h3><span class="section-number">10.1.2. </span>The Command Line in Brief<a class="headerlink" href="#the-command-line-in-brief" title="Permalink to this headline">#</a></h3>
 <p>The <em>terminal</em> or <em>command line</em> or sometimes the <em>command prompt</em> was labelled 4 in the screenshot of Visual Studio Code from the chapter on <a class="reference internal" href="introduction.html#introduction"><span class="std std-ref">First Steps</span></a>. The terminal is a text-based way to issue all kinds of commands to your computer (not just Python commands) and knowing a little bit about it is really useful for coding (and more) because managing packages, environments (which we haven’t yet discussed), and version control (ditto) can all be done via the terminal. We’ll come to these in due course in the chapter on <a class="reference internal" href="command-line.html#command-line"><span class="std std-ref">The Command Line</span></a>, but for now, a little background on what the terminal is and what it does.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -565,37 +532,37 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The command line interacts with your operating system and is used to create, activate, or change python installations.</p>
 </div>
 <p>Use Visual Studio Code to open a terminal window by clicking Terminal -&gt; New Terminal on the list of commands at the very top of the window. If you have installed the Anaconda distribution of Python, your terminal should look something like this as your ‘command prompt’:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> your-username@your-computer current-directory %
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>your-username@your-computer<span class="w"> </span>current-directory<span class="w"> </span>%
 </pre></div>
 </div>
 <p>on Mac, and the same but with ‘%’ replaced by ‘$’ on linux, and (using the Anaconda Prompt)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> C:<span class="se">\U</span>sers<span class="se">\Y</span>ourUsername&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\Y</span>ourUsername&gt;
 </pre></div>
 </div>
 <p>on Windows. If you don’t see the word <code class="docutils literal notranslate"><span class="pre">(base)</span></code> at the start of the line, you may need to type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> first.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">(base)</span></code> part is saying that your current Python environment is the base one (later, we’ll see how to add others for reproducibility and to isolate projects). Unfortunately, and confusingly, the commands that you can use in the terminal on Mac and Linux, on the one hand, and Windows, on the other, are different but many of the principles are the same.</p>
 <p>For now, to at least try out the command line, let’s use something that works across all three of the major operating systems. Type <code class="docutils literal notranslate"><span class="pre">python</span></code> on the command prompt that came up in your new terminal window. You should see information about your installation of Python appear, including the version, followed by a Python prompt that looks like <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>. This is a kind of interactive Python session, in the terminal. It’s much less rich than the one available in Visual Studio Code (it can’t run scripts line-by-line, for example) but you can try <code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">World!')</span></code> and it will run, printing your message. To exit the terminal-based Python session, type <code class="docutils literal notranslate"><span class="pre">exit()</span></code> to go back to the regular command line.</p>
-</div>
-<div class="section" id="installing-packages">
-<h3><span class="section-number">9.1.3. </span>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="installing-packages">
+<h3><span class="section-number">10.1.3. </span>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">#</a></h3>
 <p>To install extra Python packages, there are two options, and both use the command line.</p>
 <div class="admonition-activating-conda-python-environments admonition">
 <p class="admonition-title">Activating Conda Python Environments</p>
 <p>You’ll need to have conda “activated” before installing a package in the terminal–if you don’t see the name of an environment, eg <code class="docutils literal notranslate"><span class="pre">(base)</span></code>, at the start of your terminal’s line, use the <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> command first. On Windows, this is usually the command prompt (available in the integrated Visual Studio Code terminal) or the Anaconda Command Prompt (available in the start menu).</p>
 </div>
 <p>Install packages on the command line by typing</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install package-name
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>package-name
 </pre></div>
 </div>
 <p>and hitting return, where <code class="docutils literal notranslate"><span class="pre">package-name</span></code> might be <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. This will try to install a version of the package that is already optimised for your type of computer, and will automatically come with any dependencies (packages the package you’re installing needs to run). The pre-built packages that are provided by Anaconda are convenient for a host of reasons. Anaconda provide pre-built versions of around 7,500 of the most popular packages (including the statistical programming language R).</p>
 <p>However, there are over 330,000 Python packages on PyPI (the Python Package Index) so you may sometimes find one that is not covered by <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>. When there isn’t a pre-built Anaconda version of a package available, the next thing to try is</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install packagename
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>packagename
 </pre></div>
 </div>
 <p>In true programming-humour style, pip is a recursive acronym that stands for ‘pip install packages’. You can see what packages you have installed by entering <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> into the command line.</p>
 <p>Here’s a full example of the commands used to install the <strong>pandas</strong> package into the base environment (you may not need the first one):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>your-username@your-computer current-directory % conda activate
-<span class="o">(</span>base<span class="o">)</span> your-username@your-computer current-directory % conda install pandas
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>your-username@your-computer<span class="w"> </span>current-directory<span class="w"> </span>%<span class="w"> </span>conda<span class="w"> </span>activate
+<span class="o">(</span>base<span class="o">)</span><span class="w"> </span>your-username@your-computer<span class="w"> </span>current-directory<span class="w"> </span>%<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>pandas
 </pre></div>
 </div>
 <div class="admonition-exercise admonition">
@@ -606,70 +573,75 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Exercise</p>
 <p>Install the <strong>skimpy</strong> package. (Hint: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> may not be enough.)</p>
 </div>
-</div>
-<div class="section" id="using-packages">
-<h3><span class="section-number">9.1.4. </span>Using Packages<a class="headerlink" href="#using-packages" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="using-packages">
+<h3><span class="section-number">10.1.4. </span>Using Packages<a class="headerlink" href="#using-packages" title="Permalink to this headline">#</a></h3>
 <p>Once you have installed a package, you need to be able to use it! This is usually done via an import statement at the top of your script or Jupyter Notebook. For example, to bring in <strong>pandas</strong>, it’s</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 <p>Why does Python do this? The idea of not just loading every package is to provide clarity over what function is being called from what package. It’s also not necessary to load every package for every piece of analysis, and you often actually want to know what the <em>minimum</em> set of packages is to reproduce an analysis. Making the package imports explicit helps with all of that.</p>
 <p>You may also wonder why one doesn’t just use <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pandas</span></code>. There’s actually nothing stopping you doing this except i) it’s convenient to have a shorter name and ii) there does tend to be a convention around imports, ie <code class="docutils literal notranslate"><span class="pre">pd</span></code> for <strong>pandas</strong> and <code class="docutils literal notranslate"><span class="pre">np</span></code> for <strong>numpy</strong>, and your code will be clearer to yourself and others if you follow the conventions.</p>
-</div>
-</div>
-<div class="section" id="virtual-code-environments">
-<h2><span class="section-number">9.2. </span>Virtual Code Environments<a class="headerlink" href="#virtual-code-environments" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="virtual-code-environments">
+<h2><span class="section-number">10.2. </span>Virtual Code Environments<a class="headerlink" href="#virtual-code-environments" title="Permalink to this headline">#</a></h2>
 <p>Virtual code environments allow you to isolate all of the packages that you’re using to do analysis for one project from the set of packages you might need for a different project. They’re an important part of creating a reproducible analytical pipeline but a key benefit is that others can reproduce the environment you used and it’s best practice to have an isolated environment per project.</p>
 <p>It may be easier to illustrate creating separate environments with an example. Let’s say you’re using Python 3.8, <strong>statsmodels</strong>, and <strong>pandas</strong> for one project, project A. And, for project B, you’re using Python 3.9 with <strong>numpy</strong> and <strong>scikit-learn</strong>. Even with the same version of Python, best practice would be to have two separate virtual Python environments: environment A, with everything needed for project A, and environment B, with everything needed for project B. For the case where you’re using different versions of Python, this isn’t just best practice, it’s essential.</p>
 <p>Many programming languages now come with an option to install packages and a version of the language in isolated environments. In Python, there are multiple tools for managing different environments. Of those, the easiest to work with is probably <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/index.html"><strong>Anaconda</strong></a> (conda for short).</p>
 <p>If you’re just getting going with data science, this book recommends that you use Anaconda (aka conda) environments.</p>
-<div class="section" id="using-anaconda-to-manage-python-environments">
-<h3><span class="section-number">9.2.1. </span>Using Anaconda to Manage Python Environments<a class="headerlink" href="#using-anaconda-to-manage-python-environments" title="Permalink to this headline">¶</a></h3>
+<section id="using-anaconda-to-manage-python-environments">
+<h3><span class="section-number">10.2.1. </span>Using Anaconda to Manage Python Environments<a class="headerlink" href="#using-anaconda-to-manage-python-environments" title="Permalink to this headline">#</a></h3>
 <p>Much of these two subsections is covered by the Anaconda documentation on <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">managing virtual environments</a>.</p>
 <p>If you’re using Anaconda, you manage and change environments on the command line (more on the command line in <a class="reference internal" href="command-line.html#command-line"><span class="std std-ref">The Command Line</span></a>). Before following these instructions, check that you have Anaconda installed and activated. You should see something like <code class="docutils literal notranslate"><span class="pre">(base)</span> <span class="pre">username&#64;computername:~$</span></code> on the command line (base is the default conda environment).</p>
 <p>To create a new environment called “myenv” with a specific version of Python (but no extra packages installed), it’s</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n myenv <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
 </pre></div>
 </div>
 <p>where you can of course specify other versions of Python by changing the number. To throw in a package or two, just add them to the end, for example</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n myenv <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 pandas jupyter
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8<span class="w"> </span>pandas<span class="w"> </span>jupyter
 </pre></div>
 </div>
 <p>You can see a list of the currently installed environments by running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env list
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>list
 </pre></div>
 </div>
 <p>Running the same command within an environment will list only those packages installed in that environment.</p>
 <p>When you install Anaconda, you will begin with a “base” environment. It’s a good idea not to use this for projects but to instead to create a new environment for each project.</p>
 <p>There are two downsides to installing environments directly from the command line. One is that you may have lots of packages. The second is that you may wish to keep a record of the environment you created. For both of these reasons, you can specify a conda environment using a file.</p>
 <p>The pandas example we saw above would look like</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span><span class="w"></span>
-<span class="nt">channels</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span><span class="w"></span>
-<span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.8</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyter</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.8</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyter</span>
 </pre></div>
 </div>
 <p>The environment is given by <code class="docutils literal notranslate"><span class="pre">name</span></code>, the channel (where to look for the packages) by <code class="docutils literal notranslate"><span class="pre">channels</span></code>, the specific packages by <code class="docutils literal notranslate"><span class="pre">dependencies</span></code>. Not all packages are available on conda’s channels, so sometimes extra ones are needed. By specifying <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> we get the widest possible selection of packages. Some packages are only available on pip; these can be specified with a sub-section of the file like so for the <strong>skimpy</strong> package:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span><span class="w"></span>
-<span class="nt">channels</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span><span class="w"></span>
-<span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.8</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyter</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pip</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skimpy</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.8</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyter</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pip</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skimpy</span>
 </pre></div>
 </div>
 <p>This goes into a file called <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>, which can be installed by running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
 </pre></div>
 </div>
 <p>This book is put together using an isolated <em>conda</em> environment specified in a file. It’s an unusually big one because there are a lot of packages featured in the book! Here they are:</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rich</span> <span class="kn">import</span> <span class="nb">print</span>
 
@@ -680,9 +652,10 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">
-name: python4DS
+name: py4ds2e
 channels:
   - conda-forge
 dependencies:
@@ -690,7 +663,7 @@ dependencies:
   - numpy
   - pandas
   - pip
-  - <span style="color: #808000; text-decoration-color: #808000">python</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3.9</span>
+  - <span style="color: #808000; text-decoration-color: #808000">python</span>=<span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3.10</span>
   - pyyaml
   - scipy
   - statsmodels
@@ -702,14 +675,8 @@ dependencies:
   - jupyter-book
   - pytest
   - pre-commit
-  - linearmodels
-  - pingouin
-  - plotly
-  - plotnine
-  - altair
   - jupyterlab
   - nbstripout
-  - vega_datasets
   - ghp-import
   - pip
   - black
@@ -718,34 +685,36 @@ dependencies:
   - pip:
     - skimpy
     - pyarrow
-    - pandas-profiling
     - watermark
     - graphviz
     - openpyxl
     - sqlmodel
     - ibis-framework
+    - lets-plot
+    - polars
+    - palmerpenguins
 </pre>
 </div></div>
 </div>
 <p>Of course, you can install packages as you go too, you don’t have to specify them when you create the environment. With the relevant environment activated, use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code> to do this.</p>
 <p>Finally, to remove an environment, it’s</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda remove --name myenv --all
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>--name<span class="w"> </span>myenv<span class="w"> </span>--all
 </pre></div>
 </div>
-</div>
-<div class="section" id="using-and-switching-between-conda-environments">
-<h3><span class="section-number">9.2.2. </span>Using and Switching Between Conda Environments<a class="headerlink" href="#using-and-switching-between-conda-environments" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="using-and-switching-between-conda-environments">
+<h3><span class="section-number">10.2.2. </span>Using and Switching Between Conda Environments<a class="headerlink" href="#using-and-switching-between-conda-environments" title="Permalink to this headline">#</a></h3>
 <p>To switch between conda environments on the command line, for example from the base environment to an environment called “myenv”, use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate myenv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
 </pre></div>
 </div>
 <p>on the command line. However, this only switches the environment if you plan to run code on the command line!</p>
 <p>Fortunately, Visual Studio Code has you covered and makes it very easy to switch Python environments for a project at the click of a button.</p>
 <p><img alt="A typical user view in Visual Studio Code" src="https://github.com/aeturrell/coding-for-economists/blob/main/img/vscode_layout.png?raw=true" /></p>
 <p>In the screenshot above, you can see the project-environment in two places: on the blue bar at the bottom of the screen, and (in 5), at the top right hand side of the interactive window. Click on either to change the Python environment that will be used to execute code. A similar top right selector is present for Jupyter Notebooks too.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -759,7 +728,7 @@ dependencies:
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -767,44 +736,116 @@ dependencies:
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data-import.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Data Import</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="workflow-help.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Postscript: Getting Further Help</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">10.1. Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">10.1.1. Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line-in-brief">10.1.2. The Command Line in Brief</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">10.1.3. Installing Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-packages">10.1.4. Using Packages</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-code-environments">10.2. Virtual Code Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">10.2.1. Using Anaconda to Manage Python Environments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">10.2.2. Using and Switching Between Conda Environments</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="data-import.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8. </span>Data Import</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="workflow-help.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Postscript: Getting Further Help</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

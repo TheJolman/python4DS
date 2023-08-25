@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24. Databases &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>25. Databases &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,634 +47,465 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'databases';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="25. Functions" href="functions.html" />
-    <link rel="prev" title="23. Rectangling" href="rectangling.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="26. Nested Data" href="rectangling.html" />
+    <link rel="prev" title="24. Spreadsheets" href="spreadsheets.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-packages-and-environments.html">
-   9. Workflow: Packages and Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   10. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   11. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   12. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   13. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   14. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   15. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   16. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   17. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   18. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   19. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   20. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   21. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   22. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   23. Rectangling
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   24. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">25. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   25. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   26. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   27. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   28. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   29. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/databases.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdatabases.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/databases.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/databases.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/databases.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/databases.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdatabases.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/databases.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Databases</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   24.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     24.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#database-basics">
-   24.2. Database Basics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#connecting-to-databases">
-   24.3. Connecting to Databases
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-databases-directly">
-   24.4. Working with Databases Directly
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-database">
-     24.4.1. Creating a Database
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-sql-queries">
-   24.5. Basic SQL Queries
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#joins">
-     24.5.1. Joins
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     24.5.2. Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">
-   24.6. Exploring SQL Databases with
-   <strong>
-    Datasette
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sql-with-pandas">
-   24.7. SQL with
-   <strong>
-    pandas
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sql-with-ibis">
-   24.8. SQL with
-   <strong>
-    ibis
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sql-with-sqlmodel">
-   24.9. SQL with
-   <strong>
-    SQLModel
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">
-     24.9.1. Creating a SQL Database with
-     <strong>
-      SQLModel
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">
-     24.9.2. Reading from SQL using
-     <strong>
-      SQLModel
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-to-learn-more-about-sql">
-   24.10. Where to Learn More About SQL
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">25.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">25.1.1. Prerequisites</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-basics">25.2. Database Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-databases">25.3. Connecting to Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-databases-directly">25.4. Working with Databases Directly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-database">25.4.1. Creating a Database</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-sql-queries">25.5. Basic SQL Queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins">25.5.1. Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">25.5.2. Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">25.6. Exploring SQL Databases with <strong>Datasette</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-pandas">25.7. SQL with <strong>pandas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-ibis">25.8. SQL with <strong>ibis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-sqlmodel">25.9. SQL with <strong>SQLModel</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">25.9.1. Creating a SQL Database with <strong>SQLModel</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">25.9.2. Reading from SQL using <strong>SQLModel</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more-about-sql">25.10. Where to Learn More About SQL</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Databases</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   24.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     24.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#database-basics">
-   24.2. Database Basics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#connecting-to-databases">
-   24.3. Connecting to Databases
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-databases-directly">
-   24.4. Working with Databases Directly
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-database">
-     24.4.1. Creating a Database
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-sql-queries">
-   24.5. Basic SQL Queries
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#joins">
-     24.5.1. Joins
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     24.5.2. Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">
-   24.6. Exploring SQL Databases with
-   <strong>
-    Datasette
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sql-with-pandas">
-   24.7. SQL with
-   <strong>
-    pandas
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sql-with-ibis">
-   24.8. SQL with
-   <strong>
-    ibis
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sql-with-sqlmodel">
-   24.9. SQL with
-   <strong>
-    SQLModel
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">
-     24.9.1. Creating a SQL Database with
-     <strong>
-      SQLModel
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">
-     24.9.2. Reading from SQL using
-     <strong>
-      SQLModel
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-to-learn-more-about-sql">
-   24.10. Where to Learn More About SQL
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="databases">
-<span id="id1"></span><h1><span class="section-number">24. </span>Databases<a class="headerlink" href="#databases" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><span class="section-number">24.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="databases">
+<span id="id1"></span><h1><span class="section-number">25. </span>Databases<a class="headerlink" href="#databases" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">25.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>A huge amount of data lives in databases, so it’s essential that you know how to access them. Sometimes you can ask someone to download a snapshot into a .csv for you, but this gets painful quickly: every time you need to make a change you’ll have to communicate with another human. You want to be able to reach into the database directly to get the data you need, when you need it.</p>
 <p>In this chapter, you’ll first learn the basics of Python packages that can interact with SQL databses: how to use them to connect to a database and then retrieve data with a SQL<a class="footnote-reference brackets" href="#import-databases-1" id="id2">1</a> query. <strong>SQL</strong>, short for <strong>s</strong>tructured <strong>q</strong>uery <strong>l</strong>anguage, is the lingua franca of databases, and is an important language for all data scientists to learn. You won’t become a SQL master by the end of the chapter, but you will be able to identify the most important components and understand what they do.</p>
-<div class="section" id="prerequisites">
-<h3><span class="section-number">24.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<section id="prerequisites">
+<h3><span class="section-number">25.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
 <p>You will need the <strong>pandas</strong>, <strong>SQLModel</strong>, and <strong>ibis</strong> packages for this chapter. You probably already have <strong>pandas</strong> installed; to install <strong>SQLModel</strong> and <strong>ibis</strong> respectively run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sqlmodel</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ibis-framework</span></code> on your computer’s command line. First, let’s bring in some general packages and turn off verbose warnings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -678,10 +517,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="database-basics">
-<h2><span class="section-number">24.2. </span>Database Basics<a class="headerlink" href="#database-basics" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="database-basics">
+<h2><span class="section-number">25.2. </span>Database Basics<a class="headerlink" href="#database-basics" title="Permalink to this headline">#</a></h2>
 <p>At the simplest level, you can think about a database as a collection of data frames, called <strong>tables</strong> in database terminology.
 Like a <strong>pandas</strong> dataframe, a database table is a collection of named columns, where every value in the column is the same type.
 There are three high level differences between data frames and database tables:</p>
@@ -700,9 +539,9 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <li><p><em>Cloud</em> DBMS’s, like Snowflake, Amazon’s RedShift, and Google’s BigQuery, are similar to client server DBMS’s, but they run in the cloud. This means that they can easily handle extremely large datasets and can automatically provide more compute resources as needed.</p></li>
 <li><p><em>In-process</em> DBMS’s, like SQLite or duckdb, run entirely on your computer. They’re great for working with large datasets where you’re the primary user.</p></li>
 </ul>
-</div>
-<div class="section" id="connecting-to-databases">
-<h2><span class="section-number">24.3. </span>Connecting to Databases<a class="headerlink" href="#connecting-to-databases" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="connecting-to-databases">
+<h2><span class="section-number">25.3. </span>Connecting to Databases<a class="headerlink" href="#connecting-to-databases" title="Permalink to this headline">#</a></h2>
 <p>To connect to a database from Python, there are a number of options, but it does depend on what <em>kind</em> of database you are connecting to. The steps (eg connect to the database, upload data, run SQL series) are similar though, so we won’t lose much by just choosing one example—a SQLite database. SQLite is a small, fast, self-contained, SQL database engine and the most used database engine in the world. A lot of the data on your computer and mobile phone will in fact be in SQLite databases. (Simon Willison has some <a class="reference external" href="https://dogsheep.github.io/">great tools</a> to help export some of the data that you’ve created!)</p>
 <p>We will always need two steps though, regardless of what kind of SQL database we are connecting to:</p>
 <ul class="simple">
@@ -711,9 +550,9 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </ul>
 <p>The precise details of the connection varies a lot from DBMS to DBMS so unfortunately we can’t cover all the details here. The initial setup will often take a little fiddling (and maybe some research) to get right, but you’ll generally only need to do it once. We’ll do the best we can to cover some basics here.</p>
 <p>Setting up a client-server or cloud DBMS would be a pain for this book, so we’ll instead use an in-computer DBMS.</p>
-</div>
-<div class="section" id="working-with-databases-directly">
-<h2><span class="section-number">24.4. </span>Working with Databases Directly<a class="headerlink" href="#working-with-databases-directly" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="working-with-databases-directly">
+<h2><span class="section-number">25.4. </span>Working with Databases Directly<a class="headerlink" href="#working-with-databases-directly" title="Permalink to this headline">#</a></h2>
 <p>Let’s connect to a small SQLite database called the <a class="reference external" href="https://database.guide/2-sample-databases-sqlite/">Chinook database</a>, which contains information about the artists, songs, and albums from a music shop, as well as information on the shop’s employees, customers, and the customers purchases. This information is contained in eleven tables. The figure below shows the data schema:</p>
 <p><img alt="Data schema of Chinook database" src="https://github.com/arjunchndr/Analyzing-Chinook-Database-using-SQL-and-Python/raw/master/chinook-schema.svg" /></p>
 <p>You can download the file, Chinook.sqlite, from the github repository of this book <a class="reference external" href="https://github.com/aeturrell/python4DS/tree/main/data">here</a>; on your computer, you’ll need to save it in a subdirectory (relative to where your code is being executed) called ‘data’ to work through the exercises below.</p>
@@ -845,8 +684,8 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 </div>
-<div class="section" id="creating-a-database">
-<h3><span class="section-number">24.4.1. </span>Creating a Database<a class="headerlink" href="#creating-a-database" title="Permalink to this headline">¶</a></h3>
+<section id="creating-a-database">
+<h3><span class="section-number">25.4.1. </span>Creating a Database<a class="headerlink" href="#creating-a-database" title="Permalink to this headline">#</a></h3>
 <p>Often, you’ll want to create a SQL database to later (efficiently) access cuts of data. Let’s create a test database directly using the <strong>sqlite</strong> package. This process involves a <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> statement, then the name of the table followed by the names of the columns and their data types.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -884,23 +723,23 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <p>Whahey, this worked!</p>
-</div>
-</div>
-<div class="section" id="basic-sql-queries">
-<h2><span class="section-number">24.5. </span>Basic SQL Queries<a class="headerlink" href="#basic-sql-queries" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="basic-sql-queries">
+<h2><span class="section-number">25.5. </span>Basic SQL Queries<a class="headerlink" href="#basic-sql-queries" title="Permalink to this headline">#</a></h2>
 <p>A full description of SQL queries is outside the scope of this book, but we’ll try and arm you with the basics.  The top-level components of SQL are called <strong>statements</strong>. Common statements include <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> for defining new tables, <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> for adding data, and <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> for retrieving data. We will on focus on <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statements, also called <strong>queries</strong>, because they are almost exclusively what you’ll use as a data scientist.</p>
 <p>A query is made up of <strong>clauses</strong>. There are six important clauses: <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, and <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code>. Every query must have the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code><a class="footnote-reference brackets" href="#import-databases-4" id="id3">2</a> and <code class="docutils literal notranslate"><span class="pre">FROM</span></code><a class="footnote-reference brackets" href="#import-databases-5" id="id4">3</a> clauses and the simplest query is <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">table</span></code>, which selects all columns from a specified table called “table”. <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> and <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> control which rows are included and how they are ordered. <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> converts the query to a summary, causing aggregation to happen. <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> limits how many rows are returned.</p>
 <p>Important: in SQL, the order matters. You must always write the clauses in the order <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>. Confusingly, this order doesn’t match how the clauses actually evaluated which is first <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, then <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, and <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>.</p>
 <p>Let’s look at a few of these in action. To get a few entries, it’s</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Artist</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Artist</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>To be specific about columns, it’s</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Artist</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Artist</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>To reverse order, use “ORDER BY” and then “DESC”. For example, this query gives us the ten longest tracks</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">track</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">track</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Another headline feature is being able to filter. For example, we could ask for the first ten tracks that are at least 3 minutes long. Let’s run this one for real:</p>
@@ -948,8 +787,8 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 </div>
-<div class="section" id="joins">
-<h3><span class="section-number">24.5.1. </span>Joins<a class="headerlink" href="#joins" title="Permalink to this headline">¶</a></h3>
+<section id="joins">
+<h3><span class="section-number">25.5.1. </span>Joins<a class="headerlink" href="#joins" title="Permalink to this headline">#</a></h3>
 <p>If you’re familiar with joins in <strong>pandas</strong>, SQL joins are very similar. Let’s see if we can join the ‘album’ and ‘track’ tables to find the <em>name</em> of the albums in the above query.</p>
 <p>Note that as soon as we have the <em>same</em> column names in more than one table, we need to specify the table we are referring to when we use that column name. There are different options for joins (eg <code class="docutils literal notranslate"><span class="pre">INNER</span></code>, <code class="docutils literal notranslate"><span class="pre">LEFT</span></code>) that you can find out more about <a class="reference external" href="https://en.wikipedia.org/wiki/Join_(SQL)">here</a>.</p>
 <div class="cell docutils container">
@@ -971,14 +810,14 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="functions">
-<h3><span class="section-number">24.5.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="functions">
+<h3><span class="section-number">25.5.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h3>
 <p>We already snuck in one function: <code class="docutils literal notranslate"><span class="pre">AVG</span></code>. Others that you can apply to columns include <code class="docutils literal notranslate"><span class="pre">SUM</span></code>, <code class="docutils literal notranslate"><span class="pre">MIN</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX</span></code>, <code class="docutils literal notranslate"><span class="pre">FIRST</span></code>, <code class="docutils literal notranslate"><span class="pre">LAST</span></code> and <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> (the data scientist’s friend). You can find out more about SQL functions <a class="reference external" href="https://www.tutorialspoint.com/sql/sql-useful-functions.htm">here</a>.</p>
-</div>
-</div>
-<div class="section" id="exploring-sql-databases-with-datasette">
-<h2><span class="section-number">24.6. </span>Exploring SQL Databases with <strong>Datasette</strong><a class="headerlink" href="#exploring-sql-databases-with-datasette" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="exploring-sql-databases-with-datasette">
+<h2><span class="section-number">25.6. </span>Exploring SQL Databases with <strong>Datasette</strong><a class="headerlink" href="#exploring-sql-databases-with-datasette" title="Permalink to this headline">#</a></h2>
 <p>SQL can be pretty intimidating at first, but there’s a great tool for getting to know it better called <a class="reference external" href="https://datasette.io/"><strong>Datasette</strong></a>. Datasette is a tool for exploring (and creating and sharing) databases. It’s author says that “Datasette is aimed at data journalists, museum curators, archivists, local governments, scientists, researchers and anyone else who has data that they wish to share with the world. It is part of a wider ecosystem of 40 tools and 99 plugins dedicated to making working with structured data as productive as possible.”</p>
 <p>In this context, <strong>Datasette</strong> is useful in two ways:</p>
 <ul class="simple">
@@ -994,7 +833,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <li><p>you can use the online coding service glitch to run it. See an example <a class="reference external" href="https://glitch.com/~datasette-csvs">here</a>.</p></li>
 </ul>
 <p><strong>Datasette</strong> comes as a Python package that you can install on the command line by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">datasette</span></code>. Once you have it installed in a Python environment, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datasette path/to/database.db -o
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datasette<span class="w"> </span>path/to/database.db<span class="w"> </span>-o
 </pre></div>
 </div>
 <p>and you should find that your default browser opens straight away on a page showing the tables in the database (the page should have an address beginning <code class="docutils literal notranslate"><span class="pre">http://localhost:8001/</span></code>).</p>
@@ -1002,23 +841,23 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
 <p>Using the Chinook database on your own computer, run the SQL query with the join from before, ie:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"></span>
-<span class="w">  </span><span class="n">albumid</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="k">AVG</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1</span><span class="n">e3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"></span>
-<span class="w">  </span><span class="n">track</span><span class="w"></span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">  </span><span class="n">albumid</span><span class="w"></span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"></span>
-<span class="w">  </span><span class="k">AVG</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="w"> </span><span class="k">ASC</span><span class="w"></span>
-<span class="k">LIMIT</span><span class="w"></span>
-<span class="w">  </span><span class="mi">5</span><span class="w"></span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+<span class="w">  </span><span class="n">albumid</span><span class="p">,</span>
+<span class="w">  </span><span class="k">AVG</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1</span><span class="n">e3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span>
+<span class="k">FROM</span>
+<span class="w">  </span><span class="n">track</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">  </span><span class="n">albumid</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span>
+<span class="w">  </span><span class="k">AVG</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="w"> </span><span class="k">ASC</span>
+<span class="k">LIMIT</span>
+<span class="w">  </span><span class="mi">5</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="sql-with-pandas">
-<h2><span class="section-number">24.7. </span>SQL with <strong>pandas</strong><a class="headerlink" href="#sql-with-pandas" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sql-with-pandas">
+<h2><span class="section-number">25.7. </span>SQL with <strong>pandas</strong><a class="headerlink" href="#sql-with-pandas" title="Permalink to this headline">#</a></h2>
 <p><strong>pandas</strong> is well-equipped for working with SQL. We can simply push the query we just created straight through using its <code class="docutils literal notranslate"><span class="pre">read_sql</span></code> function—but bear in mind we need to pass in the connection we created to the database too:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1087,9 +926,9 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 <p>One nice feature of this is that the column names in SQL get passed straight to the column names in our dataframe.</p>
 <p>Now, when you’re writing Python in Visual Studio Code (at least with the Python extensions installed), you get a lot of high quality syntax and auto-completion support. Extensions to the Python language also allow you to take a great deal of care over the types of variables that you are dealing with. Wouldn’t it be nice to have all of that with SQL too (even when accessing it via Python)? The next two packages we’ll look at provide that. Both make working with SQL databases from Python a lot easier and more productive.</p>
-</div>
-<div class="section" id="sql-with-ibis">
-<h2><span class="section-number">24.8. </span>SQL with <strong>ibis</strong><a class="headerlink" href="#sql-with-ibis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sql-with-ibis">
+<h2><span class="section-number">25.8. </span>SQL with <strong>ibis</strong><a class="headerlink" href="#sql-with-ibis" title="Permalink to this headline">#</a></h2>
 <p>It’s not exactly satisfactory to have to write out your SQL queries in text. What if we could create commands directly from <strong>pandas</strong> commands? You can’t <em>quite</em> do that, but there’s a package that gets you pretty close and it’s called <a class="reference external" href="https://ibis-project.org/"><strong>ibis</strong></a>. <strong>ibis</strong> is particularly useful when you are reading from a database and want to query it just like you would a <strong>pandas</strong> dataframe.</p>
 <p><strong>Ibis</strong> can connect to local databases (eg a SQLite database), server-based databases (eg Postgres), or cloud-based databased (eg Google’s BigQuery). The syntax to make a connection is, for example, <code class="docutils literal notranslate"><span class="pre">ibis.bigquery.connect</span></code>.</p>
 <p>Let’s see <strong>ibis</strong> in action by reproducing the commands we’ve already seen on the Chinook database, a locally hosted database. First we import it and make a connection to the database.</p>
@@ -1105,99 +944,19 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>TrackId</th>
-      <th>Name</th>
-      <th>AlbumId</th>
-      <th>MediaTypeId</th>
-      <th>GenreId</th>
-      <th>Composer</th>
-      <th>Milliseconds</th>
-      <th>Bytes</th>
-      <th>UnitPrice</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>For Those About To Rock (We Salute You)</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>343719</td>
-      <td>11170334</td>
-      <td>0.99</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Balls to the Wall</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>None</td>
-      <td>342562</td>
-      <td>5510424</td>
-      <td>0.99</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Fast As a Shark</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>F. Baltes, S. Kaufman, U. Dirkscneider &amp; W. Ho...</td>
-      <td>230619</td>
-      <td>3990994</td>
-      <td>0.99</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Restless and Wild</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>F. Baltes, R.A. Smith-Diesel, S. Kaufman, U. D...</td>
-      <td>252051</td>
-      <td>4331779</td>
-      <td>0.99</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Princess of the Dawn</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>Deaffy &amp; R.A. Smith-Diesel</td>
-      <td>375418</td>
-      <td>6290521</td>
-      <td>0.99</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃<span style="font-weight: bold"> TrackId </span>┃<span style="font-weight: bold"> Name                                    </span>┃<span style="font-weight: bold"> AlbumId </span>┃<span style="font-weight: bold"> MediaTypeId </span>┃<span style="font-weight: bold"> GenreId </span>┃<span style="font-weight: bold"> Composer                                                               </span>┃<span style="font-weight: bold"> Milliseconds </span>┃<span style="font-weight: bold"> Bytes    </span>┃<span style="font-weight: bold"> UnitPrice       </span>┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>  │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!string</span>                                 │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>      │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string</span>                                                                 │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>       │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>    │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!decimal(10, 2)</span> │
+├─────────┼─────────────────────────────────────────┼─────────┼─────────────┼─────────┼────────────────────────────────────────────────────────────────────────┼──────────────┼──────────┼─────────────────┤
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">For Those About To Rock (We Salute You)</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">343719</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">11170334</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │ <span style="color: #008000; text-decoration-color: #008000">Balls to the Wall                      </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">NULL</span>                                                                   │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">342562</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">5510424</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │ <span style="color: #008000; text-decoration-color: #008000">Fast As a Shark                        </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">F. Baltes, S. Kaufman, U. Dirkscneider &amp; W. Hoffman                   </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">230619</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3990994</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4</span> │ <span style="color: #008000; text-decoration-color: #008000">Restless and Wild                      </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">F. Baltes, R.A. Smith-Diesel, S. Kaufman, U. Dirkscneider &amp; W. Hoffman</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">252051</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4331779</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">5</span> │ <span style="color: #008000; text-decoration-color: #008000">Princess of the Dawn                   </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Deaffy &amp; R.A. Smith-Diesel                                            </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">375418</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6290521</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │
+└─────────┴─────────────────────────────────────────┴─────────┴─────────────┴─────────┴────────────────────────────────────────────────────────────────────────┴──────────────┴──────────┴─────────────────┘
+</pre>
+</div></div>
 </div>
 <p>As an aside, you can list the available tables using</p>
 <div class="cell docutils container">
@@ -1227,110 +986,24 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">track</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;AlbumId&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span>
     <span class="n">mean_mins_track</span><span class="o">=</span><span class="n">track</span><span class="o">.</span><span class="n">Milliseconds</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">/</span> <span class="mf">1e3</span> <span class="o">/</span> <span class="mi">60</span>
-<span class="p">)</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="s2">&quot;mean_mins_track&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s2">&quot;mean_mins_track&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>TrackId</th>
-      <th>Name</th>
-      <th>AlbumId</th>
-      <th>MediaTypeId</th>
-      <th>GenreId</th>
-      <th>Composer</th>
-      <th>Milliseconds</th>
-      <th>Bytes</th>
-      <th>UnitPrice</th>
-      <th>mean_mins_track</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3496</td>
-      <td>Étude 1, In C Major - Preludio (Presto) - Liszt</td>
-      <td>340</td>
-      <td>4</td>
-      <td>24</td>
-      <td>None</td>
-      <td>51780</td>
-      <td>2229617</td>
-      <td>0.99</td>
-      <td>0.863000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3501</td>
-      <td>L'orfeo, Act 3, Sinfonia (Orchestra)</td>
-      <td>345</td>
-      <td>2</td>
-      <td>24</td>
-      <td>Claudio Monteverdi</td>
-      <td>66639</td>
-      <td>1189062</td>
-      <td>0.99</td>
-      <td>1.110650</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3452</td>
-      <td>SCRIABIN: Prelude in B Major, Op. 11, No. 11</td>
-      <td>318</td>
-      <td>4</td>
-      <td>24</td>
-      <td>None</td>
-      <td>101293</td>
-      <td>3819535</td>
-      <td>0.99</td>
-      <td>1.688217</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3448</td>
-      <td>Lamentations of Jeremiah, First Set \ Incipit ...</td>
-      <td>314</td>
-      <td>2</td>
-      <td>24</td>
-      <td>Thomas Tallis</td>
-      <td>69194</td>
-      <td>1208080</td>
-      <td>0.99</td>
-      <td>1.691350</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3492</td>
-      <td>Sing Joyfully</td>
-      <td>314</td>
-      <td>2</td>
-      <td>24</td>
-      <td>William Byrd</td>
-      <td>133768</td>
-      <td>2256484</td>
-      <td>0.99</td>
-      <td>1.691350</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃<span style="font-weight: bold"> TrackId </span>┃<span style="font-weight: bold"> Name                                                     </span>┃<span style="font-weight: bold"> AlbumId </span>┃<span style="font-weight: bold"> MediaTypeId </span>┃<span style="font-weight: bold"> GenreId </span>┃<span style="font-weight: bold"> Composer           </span>┃<span style="font-weight: bold"> Milliseconds </span>┃<span style="font-weight: bold"> Bytes   </span>┃<span style="font-weight: bold"> UnitPrice       </span>┃<span style="font-weight: bold"> mean_mins_track </span>┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>  │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!string</span>                                                  │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>      │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string</span>             │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>       │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!decimal(10, 2)</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">float64</span>         │
+├─────────┼──────────────────────────────────────────────────────────┼─────────┼─────────────┼─────────┼────────────────────┼──────────────┼─────────┼─────────────────┼─────────────────┤
+│    <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3496</span> │ <span style="color: #008000; text-decoration-color: #008000">Étude 1, In C Major - Preludio (Presto) - Liszt         </span> │     <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">340</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4</span> │      <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">24</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">NULL</span>               │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">51780</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2229617</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.863000</span> │
+│    <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3501</span> │ <span style="color: #008000; text-decoration-color: #008000">L'orfeo, Act 3, Sinfonia (Orchestra)                    </span> │     <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">345</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │      <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">24</span> │ <span style="color: #008000; text-decoration-color: #008000">Claudio Monteverdi</span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">66639</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1189062</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.110650</span> │
+│    <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3452</span> │ <span style="color: #008000; text-decoration-color: #008000">SCRIABIN: Prelude in B Major, Op. 11, No. 11            </span> │     <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">318</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4</span> │      <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">24</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">NULL</span>               │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">101293</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3819535</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.688217</span> │
+│    <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3448</span> │ <span style="color: #008000; text-decoration-color: #008000">Lamentations of Jeremiah, First Set \ Incipit Lamentatio</span> │     <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">314</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │      <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">24</span> │ <span style="color: #008000; text-decoration-color: #008000">Thomas Tallis     </span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">69194</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1208080</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.691350</span> │
+│    <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3492</span> │ <span style="color: #008000; text-decoration-color: #008000">Sing Joyfully                                           </span> │     <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">314</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │      <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">24</span> │ <span style="color: #008000; text-decoration-color: #008000">William Byrd      </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">133768</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2256484</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │        <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.691350</span> │
+└─────────┴──────────────────────────────────────────────────────────┴─────────┴─────────────┴─────────┴────────────────────┴──────────────┴─────────┴─────────────────┴─────────────────┘
+</pre>
+</div></div>
 </div>
 <p>What about joins? Of course, you can do these too. As an example, let’s join the genre and track tables on the shared variable, “GenreId”.</p>
 <div class="cell docutils container">
@@ -1345,206 +1018,35 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>TrackId</th>
-      <th>Name_x</th>
-      <th>AlbumId</th>
-      <th>MediaTypeId</th>
-      <th>GenreId_x</th>
-      <th>Composer</th>
-      <th>Milliseconds</th>
-      <th>Bytes</th>
-      <th>UnitPrice</th>
-      <th>GenreId_y</th>
-      <th>Name_y</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>For Those About To Rock (We Salute You)</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>343719</td>
-      <td>11170334</td>
-      <td>0.99</td>
-      <td>1</td>
-      <td>Rock</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Balls to the Wall</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>None</td>
-      <td>342562</td>
-      <td>5510424</td>
-      <td>0.99</td>
-      <td>1</td>
-      <td>Rock</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Fast As a Shark</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>F. Baltes, S. Kaufman, U. Dirkscneider &amp; W. Ho...</td>
-      <td>230619</td>
-      <td>3990994</td>
-      <td>0.99</td>
-      <td>1</td>
-      <td>Rock</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Restless and Wild</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>F. Baltes, R.A. Smith-Diesel, S. Kaufman, U. D...</td>
-      <td>252051</td>
-      <td>4331779</td>
-      <td>0.99</td>
-      <td>1</td>
-      <td>Rock</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Princess of the Dawn</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>Deaffy &amp; R.A. Smith-Diesel</td>
-      <td>375418</td>
-      <td>6290521</td>
-      <td>0.99</td>
-      <td>1</td>
-      <td>Rock</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>3498</th>
-      <td>3499</td>
-      <td>Pini Di Roma (Pinien Von Rom) \ I Pini Della V...</td>
-      <td>343</td>
-      <td>2</td>
-      <td>24</td>
-      <td>None</td>
-      <td>286741</td>
-      <td>4718950</td>
-      <td>0.99</td>
-      <td>24</td>
-      <td>Classical</td>
-    </tr>
-    <tr>
-      <th>3499</th>
-      <td>3500</td>
-      <td>String Quartet No. 12 in C Minor, D. 703 "Quar...</td>
-      <td>344</td>
-      <td>2</td>
-      <td>24</td>
-      <td>Franz Schubert</td>
-      <td>139200</td>
-      <td>2283131</td>
-      <td>0.99</td>
-      <td>24</td>
-      <td>Classical</td>
-    </tr>
-    <tr>
-      <th>3500</th>
-      <td>3501</td>
-      <td>L'orfeo, Act 3, Sinfonia (Orchestra)</td>
-      <td>345</td>
-      <td>2</td>
-      <td>24</td>
-      <td>Claudio Monteverdi</td>
-      <td>66639</td>
-      <td>1189062</td>
-      <td>0.99</td>
-      <td>24</td>
-      <td>Classical</td>
-    </tr>
-    <tr>
-      <th>3501</th>
-      <td>3502</td>
-      <td>Quintet for Horn, Violin, 2 Violas, and Cello ...</td>
-      <td>346</td>
-      <td>2</td>
-      <td>24</td>
-      <td>Wolfgang Amadeus Mozart</td>
-      <td>221331</td>
-      <td>3665114</td>
-      <td>0.99</td>
-      <td>24</td>
-      <td>Classical</td>
-    </tr>
-    <tr>
-      <th>3502</th>
-      <td>3503</td>
-      <td>Koyaanisqatsi</td>
-      <td>347</td>
-      <td>2</td>
-      <td>10</td>
-      <td>Philip Glass</td>
-      <td>206005</td>
-      <td>3305164</td>
-      <td>0.99</td>
-      <td>10</td>
-      <td>Soundtrack</td>
-    </tr>
-  </tbody>
-</table>
-<p>3503 rows × 11 columns</p>
-</div></div></div>
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┏━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃<span style="font-weight: bold"> TrackId </span>┃<span style="font-weight: bold"> Name                                    </span>┃<span style="font-weight: bold"> AlbumId </span>┃<span style="font-weight: bold"> MediaTypeId </span>┃<span style="font-weight: bold"> GenreId </span>┃<span style="font-weight: bold"> Composer                                                               </span>┃<span style="font-weight: bold"> Milliseconds </span>┃<span style="font-weight: bold"> Bytes    </span>┃<span style="font-weight: bold"> UnitPrice       </span>┃<span style="font-weight: bold"> Name_right </span>┃
+┡━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>  │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!string</span>                                 │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>      │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>   │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string</span>                                                                 │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!int32</span>       │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">int32</span>    │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">!decimal(10, 2)</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">string</span>     │
+├─────────┼─────────────────────────────────────────┼─────────┼─────────────┼─────────┼────────────────────────────────────────────────────────────────────────┼──────────────┼──────────┼─────────────────┼────────────┤
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">For Those About To Rock (We Salute You)</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">343719</span> │ <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">11170334</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │ <span style="color: #008000; text-decoration-color: #008000">Balls to the Wall                      </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">NULL</span>                                                                   │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">342562</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">5510424</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │ <span style="color: #008000; text-decoration-color: #008000">Fast As a Shark                        </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">F. Baltes, S. Kaufman, U. Dirkscneider &amp; W. Hoffman                   </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">230619</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3990994</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4</span> │ <span style="color: #008000; text-decoration-color: #008000">Restless and Wild                      </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">F. Baltes, R.A. Smith-Diesel, S. Kaufman, U. Dirkscneider &amp; W. Hoffman</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">252051</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4331779</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">5</span> │ <span style="color: #008000; text-decoration-color: #008000">Princess of the Dawn                   </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Deaffy &amp; R.A. Smith-Diesel                                            </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">375418</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6290521</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6</span> │ <span style="color: #008000; text-decoration-color: #008000">Put The Finger On You                  </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">205662</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6713451</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">7</span> │ <span style="color: #008000; text-decoration-color: #008000">Let's Get It Up                        </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">233926</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">7636561</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">8</span> │ <span style="color: #008000; text-decoration-color: #008000">Inject The Venom                       </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">210834</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6852860</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">9</span> │ <span style="color: #008000; text-decoration-color: #008000">Snowballed                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">203102</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6599424</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│      <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">10</span> │ <span style="color: #008000; text-decoration-color: #008000">Evil Walks                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │           <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> │ <span style="color: #008000; text-decoration-color: #008000">Angus Young, Malcolm Young, Brian Johnson                             </span> │       <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">263497</span> │  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">8611245</span> │            <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.99</span> │ <span style="color: #008000; text-decoration-color: #008000">Rock      </span> │
+│       <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span>                                       │       <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │           <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │       <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span>                                                                      │            <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │        <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │               <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span> │ <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">…</span>          │
+└─────────┴─────────────────────────────────────────┴─────────┴─────────────┴─────────┴────────────────────────────────────────────────────────────────────────┴──────────────┴──────────┴─────────────────┴────────────┘
+</pre>
+</div></div>
 </div>
 <p><strong>Ibis</strong> does a lot more than is shown here, including lazy evaluation, geospatial work, typing, and of course all of the common SQL commands that you’d expect. For more, check out the <a class="reference external" href="https://ibis-project.org/">documentation</a>.</p>
-</div>
-<div class="section" id="sql-with-sqlmodel">
-<h2><span class="section-number">24.9. </span>SQL with <strong>SQLModel</strong><a class="headerlink" href="#sql-with-sqlmodel" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sql-with-sqlmodel">
+<h2><span class="section-number">25.9. </span>SQL with <strong>SQLModel</strong><a class="headerlink" href="#sql-with-sqlmodel" title="Permalink to this headline">#</a></h2>
 <p><strong>Ibis</strong> isn’t the only smart option for working with SQL from Python; <a class="reference external" href="https://sqlmodel.tiangolo.com/"><strong>SQLModel</strong></a> is another option. Use <strong>sqlmodel</strong> when you want to create production-grade SQL databases or want to query them using a slightly different flavour of syntax to <strong>ibis</strong> with extremely rich support.</p>
 <p>So a couple of key strengths of <strong>sqlmodel</strong> include fantastic auto-complete support and being very strict on datatypes (which will save time in the long run, especially if you are <em>creating</em> databases).</p>
 <p>First, make sure you have the package installed by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sqlmodel</span></code> on the command line.</p>
-<div class="section" id="creating-a-sql-database-with-sqlmodel">
-<h3><span class="section-number">24.9.1. </span>Creating a SQL Database with <strong>SQLModel</strong><a class="headerlink" href="#creating-a-sql-database-with-sqlmodel" title="Permalink to this headline">¶</a></h3>
+<section id="creating-a-sql-database-with-sqlmodel">
+<h3><span class="section-number">25.9.1. </span>Creating a SQL Database with <strong>SQLModel</strong><a class="headerlink" href="#creating-a-sql-database-with-sqlmodel" title="Permalink to this headline">#</a></h3>
 <p>Imagine you have a SQL table called “hero” and you want it to have this data:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1640,9 +1142,9 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="reading-from-sql-using-sqlmodel">
-<h3><span class="section-number">24.9.2. </span>Reading from SQL using <strong>SQLModel</strong><a class="headerlink" href="#reading-from-sql-using-sqlmodel" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="reading-from-sql-using-sqlmodel">
+<h3><span class="section-number">25.9.2. </span>Reading from SQL using <strong>SQLModel</strong><a class="headerlink" href="#reading-from-sql-using-sqlmodel" title="Permalink to this headline">#</a></h3>
 <p><strong>SQLModel</strong> translates all of the usual SQL statements into functions. “SELECT” is no different. So let’s see an example of reading the SQL database directly from <strong>SQLModel</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1657,10 +1159,10 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>secret_name=&#39;Dive Wilson&#39; id=1 name=&#39;Deadpond&#39; age=None
-secret_name=&#39;Pedro Parqueador&#39; id=2 name=&#39;Spider-Boy&#39; age=None
-secret_name=&#39;Tommy Sharp&#39; id=3 name=&#39;Rusty-Man&#39; age=48
-secret_name=&#39;Barjabeen Bhabra&#39; id=4 name=&#39;Ms Amazing&#39; age=17
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age=None name=&#39;Deadpond&#39; secret_name=&#39;Dive Wilson&#39; id=1
+age=None name=&#39;Spider-Boy&#39; secret_name=&#39;Pedro Parqueador&#39; id=2
+age=48 name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3
+age=17 name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4
 </pre></div>
 </div>
 </div>
@@ -1678,10 +1180,10 @@ secret_name=&#39;Barjabeen Bhabra&#39; id=4 name=&#39;Ms Amazing&#39; age=17
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>secret_name=&#39;Dive Wilson&#39; id=1 name=&#39;Deadpond&#39; age=None
-secret_name=&#39;Pedro Parqueador&#39; id=2 name=&#39;Spider-Boy&#39; age=None
-secret_name=&#39;Tommy Sharp&#39; id=3 name=&#39;Rusty-Man&#39; age=48
-secret_name=&#39;Barjabeen Bhabra&#39; id=4 name=&#39;Ms Amazing&#39; age=17
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age=None name=&#39;Deadpond&#39; secret_name=&#39;Dive Wilson&#39; id=1
+age=None name=&#39;Spider-Boy&#39; secret_name=&#39;Pedro Parqueador&#39; id=2
+age=48 name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3
+age=17 name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4
 </pre></div>
 </div>
 </div>
@@ -1699,17 +1201,17 @@ secret_name=&#39;Barjabeen Bhabra&#39; id=4 name=&#39;Ms Amazing&#39; age=17
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>secret_name=&#39;Barjabeen Bhabra&#39; id=4 name=&#39;Ms Amazing&#39; age=17
-secret_name=&#39;Tommy Sharp&#39; id=3 name=&#39;Rusty-Man&#39; age=48
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age=17 name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4
+age=48 name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3
 </pre></div>
 </div>
 </div>
 </div>
 <p>This has barely scraped the surface of what <strong>SQLModel</strong> can do: joins, updating data, deleting rows, and more are all possible too.</p>
-</div>
-</div>
-<div class="section" id="where-to-learn-more-about-sql">
-<h2><span class="section-number">24.10. </span>Where to Learn More About SQL<a class="headerlink" href="#where-to-learn-more-about-sql" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="where-to-learn-more-about-sql">
+<h2><span class="section-number">25.10. </span>Where to Learn More About SQL<a class="headerlink" href="#where-to-learn-more-about-sql" title="Permalink to this headline">#</a></h2>
 <p>If you’ve finished this chapter and would like to learn more about SQL, here are some further resources:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://sqlfordatascientists.com"><em>SQL for Data Scientists</em></a> by Renée M. P. Teate is an introduction to SQL designed specifically for the needs of data scientists, and includes examples of the sort of highly interconnected data you’re likely to encounter in real organisations.</p></li>
@@ -1731,8 +1233,8 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
 <dd><p>Technically, only the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is required, since you can write queries like <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">1+1</span></code> to perform basic calculations. But if you want to work with data (as you always do!) you’ll also need a <code class="docutils literal notranslate"><span class="pre">FROM</span></code> clause.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1746,7 +1248,7 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1754,44 +1256,128 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="spreadsheets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Spreadsheets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rectangling.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">26. </span>Nested Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">25.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">25.1.1. Prerequisites</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-basics">25.2. Database Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-databases">25.3. Connecting to Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-databases-directly">25.4. Working with Databases Directly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-database">25.4.1. Creating a Database</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-sql-queries">25.5. Basic SQL Queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins">25.5.1. Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">25.5.2. Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">25.6. Exploring SQL Databases with <strong>Datasette</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-pandas">25.7. SQL with <strong>pandas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-ibis">25.8. SQL with <strong>ibis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-sqlmodel">25.9. SQL with <strong>SQLModel</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">25.9.1. Creating a SQL Database with <strong>SQLModel</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">25.9.2. Reading from SQL using <strong>SQLModel</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more-about-sql">25.10. Where to Learn More About SQL</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="rectangling.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">23. </span>Rectangling</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="functions.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">25. </span>Functions</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

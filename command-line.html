@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>27. The Command Line &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>30. The Command Line &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,12 +47,20 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -53,496 +69,452 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'command-line';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="28. Markdown" href="markdown.html" />
-    <link rel="prev" title="26. Iteration" href="iteration.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="31. Markdown" href="markdown.html" />
+    <link rel="prev" title="29. Iteration" href="iteration.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-packages-and-environments.html">
-   9. Workflow: Packages and Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   10. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   11. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   12. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   13. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   14. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   15. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   16. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   17. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   18. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   19. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   20. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">16. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">17. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">18. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">19. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">20. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">21. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">22. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">23. Missing Values</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   21. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   22. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   23. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   24. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">25. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Rectangling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">27. Databases</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   25. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   26. Iteration
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   27. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   28. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   29. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="_sources/command-line.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/command-line.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fcommand-line.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
+<div class="article-header-buttons">
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/command-line.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-the-command-line">
-   27.1. What is the command line?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-is-the-command-line-useful">
-   27.2. Why is the command line useful?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-the-command-line">
-   27.3. Using the command line
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#navigating-directories">
-     27.3.1. Navigating directories
-    </a>
-   </li>
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/command-line.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/command-line.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-python-on-the-command-line">
-   27.4. Using Python on the command line
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-commands-for-the-terminal">
-   27.5. Useful commands for the terminal
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scripting">
-   27.6. Scripting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-command-line-tools">
-   27.7. Useful command line tools
-  </a>
- </li>
-</ul>
+</div>
 
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fcommand-line.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/command-line.ipynb" target="_blank"
+   class="btn btn-sm btn-download-notebook-button dropdown-item"
+   title="Download notebook file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="_sources/command-line.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Command Line</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-command-line">30.1. What is the command line?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-the-command-line-useful">30.2. Why is the command line useful?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">30.3. Using the command line</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-directories">30.3.1. Navigating directories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-on-the-command-line">30.4. Using Python on the command line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-commands-for-the-terminal">30.5. Useful commands for the terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">30.6. Scripting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-command-line-tools">30.7. Useful command line tools</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The Command Line</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-the-command-line">
-   27.1. What is the command line?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-is-the-command-line-useful">
-   27.2. Why is the command line useful?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-the-command-line">
-   27.3. Using the command line
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#navigating-directories">
-     27.3.1. Navigating directories
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-python-on-the-command-line">
-   27.4. Using Python on the command line
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-commands-for-the-terminal">
-   27.5. Useful commands for the terminal
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scripting">
-   27.6. Scripting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-command-line-tools">
-   27.7. Useful command line tools
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-command-line">
-<span id="command-line"></span><h1><span class="section-number">27. </span>The Command Line<a class="headerlink" href="#the-command-line" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-command-line">
+<span id="command-line"></span><h1><span class="section-number">30. </span>The Command Line<a class="headerlink" href="#the-command-line" title="Permalink to this headline">#</a></h1>
 <p>In this chapter, you’ll meet the <em>command line</em> and learn how to use it. Beyond a few key commands like <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;packagename&gt;</span></code> you don’t strictly need to know how to use the command line to follow the rest of this book. However, even a tiny bit of knowledge of the command line goes a long way in coding and will serve you well.</p>
 <p>To try out any of the commands in this chapter on your machine, you can select ‘New Terminal’ from the menu bar in Visual Studio Code (Mac and Linux), use the Windows Subsystem for Linux or git bash (Windows), or use a free <a class="reference external" href="https://cocalc.com/doc/terminal.html">online terminal</a>.</p>
 <p>This chapter has benefited from numerous sources, including absolutely excellent notes by <a class="reference external" href="https://grantmcdermott.com/">Grant McDermott</a>, Melanie Walsh’s <a class="reference external" href="https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html">Introduction to Cultural Analytics &amp; Python</a>, <a class="reference external" href="https://ericmjl.github.io/data-science-bootstrap-notes/">Data Science Bootstrap</a>, <a class="reference external" href="https://calmcode.io/">calmcode.io</a>, and <a class="reference external" href="https://merely-useful.tech/py-rse/">Research Software Engineering with Python</a>. A promising resource that, at the time of writing, was still being compiled is <a class="reference external" href="https://www.datascienceatthecommandline.com/2e/">Data Science at the Command Line</a>.</p>
-<div class="section" id="what-is-the-command-line">
-<h2><span class="section-number">27.1. </span>What is the command line?<a class="headerlink" href="#what-is-the-command-line" title="Permalink to this headline">¶</a></h2>
+<section id="what-is-the-command-line">
+<h2><span class="section-number">30.1. </span>What is the command line?<a class="headerlink" href="#what-is-the-command-line" title="Permalink to this headline">#</a></h2>
 <p>The command line is a way to directly issue text-based commands to a computer one line at a time (as distinct from a graphical user interface, or GUI, that you navigate with a mouse). It goes under many names: shell, bash, terminal, CLI, and command line. These are actually different things but most people tend to use them to mean the same thing most of the time. The <em>shell</em> is the part of an operating system that you interact with but mostly people use shell to mean the command line. <em>bash</em> is the programming language that is used in the command line; it’s actually a synonym for ‘Born Again SHell’. The <em>terminal</em> is sometimes used to refer to the command line on Macs. Finally, a <em>CLI</em> is just an acronym for command line interface, and is often used in the context of an application; for example, pip has a command line interface because you run it on the command line to install packages (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">packagename</span></code>).</p>
 <p>It’s worth mentioning that there’s a big difference between the command line on UNIX based systems (MacOS and Linux), and on Windows systems. Here, we’ll only address the UNIX version. There is a command line on Windows but it’s not widely used for coding. If you’re on a Windows machine, you can access a UNIX command line using the Windows Subsystem for Linux.</p>
-</div>
-<div class="section" id="why-is-the-command-line-useful">
-<h2><span class="section-number">27.2. </span>Why is the command line useful?<a class="headerlink" href="#why-is-the-command-line-useful" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="why-is-the-command-line-useful">
+<h2><span class="section-number">30.2. </span>Why is the command line useful?<a class="headerlink" href="#why-is-the-command-line-useful" title="Permalink to this headline">#</a></h2>
 <p>The command line has many uses. Graphical user interfaces are, generally, a bit easier to use <em>but</em> they’re not very repeatable or scalable. Because the command line uses text-based instructions and can be programmed, it is both repeatable and scalable; properties that are very useful for research and analysis.</p>
 <p>The broad reasons you might use the command line to issue instructions include:</p>
 <ul class="simple">
@@ -560,9 +532,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>transforming between document types, for example <span class="math notranslate nohighlight">\(\LaTeX\)</span> (.tex) to Word (.docx)</p></li>
 <li><p>connecting to, and using, cloud resources</p></li>
 </ul>
-</div>
-<div class="section" id="using-the-command-line">
-<h2><span class="section-number">27.3. </span>Using the command line<a class="headerlink" href="#using-the-command-line" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-the-command-line">
+<h2><span class="section-number">30.3. </span>Using the command line<a class="headerlink" href="#using-the-command-line" title="Permalink to this headline">#</a></h2>
 <p>Bash is often the default command line shell on UNIX but zsh has gained popularity and is now the default for Mac. If you’re wondering what to use then I recommend zsh (Z Shell) from <a class="reference external" href="https://ohmyz.sh/">oh-my-zsh</a>.</p>
 <p>To open up the command line within Visual Studio Code, you can use the <kbd>⌃</kbd> + <kbd>`</kbd> keyboard shortcut (on Mac) or <kbd>ctrl</kbd> + <kbd>`</kbd> (Windows/Linux), or click “View &gt; Terminal”.</p>
 <p>You should now see something like this</p>
@@ -573,7 +545,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Let’s try a simple command: type <code class="docutils literal notranslate"><span class="pre">date</span></code> into a command line window and hit return. You should see today’s date and time (and timezone). You could also try <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">hello</span></code> and <code class="docutils literal notranslate"><span class="pre">whoami</span></code>.</p>
 <p>All commands that you run in the terminal have the same structure:
 <code class="docutils literal notranslate"><span class="pre">command</span></code>, followed by <code class="docutils literal notranslate"><span class="pre">option(s)</span></code>, followed by <code class="docutils literal notranslate"><span class="pre">argument(s)</span></code>. The options are also called flags. An example serves to demonstrate this: if you have a terminal open in a directory that includes a CSV file called ‘data.csv’, the command to look at the first 5 lines is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head -n <span class="m">5</span> data.csv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>data.csv
 </pre></div>
 </div>
 <p>here <code class="docutils literal notranslate"><span class="pre">head</span></code> is the command that looks at the start of the file, <code class="docutils literal notranslate"><span class="pre">-n</span></code> is an option, <code class="docutils literal notranslate"><span class="pre">5</span></code> is the argument to get 5 lines of the file, and <code class="docutils literal notranslate"><span class="pre">data.csv</span></code> is the final argument-the file name.</p>
@@ -594,8 +566,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><kbd>ctrl</kbd> + <kbd>u</kbd> to delete everything to the left of the cursor.</p></li>
 <li><p><kbd>ctrl</kbd> + <kbd>r</kbd> to search through previously used commands</p></li>
 </ul>
-<div class="section" id="navigating-directories">
-<h3><span class="section-number">27.3.1. </span>Navigating directories<a class="headerlink" href="#navigating-directories" title="Permalink to this headline">¶</a></h3>
+<section id="navigating-directories">
+<h3><span class="section-number">30.3.1. </span>Navigating directories<a class="headerlink" href="#navigating-directories" title="Permalink to this headline">#</a></h3>
 <p>While we’re on navigating, it’s useful to understand <em>where</em> in the computer you are when you open the command line. If you open a terminal pane within VS Code, you will start (by default at least) within the same folder as your project. Starting a terminal instance outside of VS Code will get you a terminal in a root directory for your computer; for example, on a Mac, opening a new terminal window starts you in <code class="docutils literal notranslate"><span class="pre">/Users/yourusername/</span></code>.</p>
 <p>To find out “where” you are when you open a terminal, you can use the <code class="docutils literal notranslate"><span class="pre">pwd</span></code> command, which stands for “print working directory”.</p>
 <p>The table below shows some useful commands for moving around your computer using the command line. Note that <code class="docutils literal notranslate"><span class="pre">cd</span></code> accepts a location <em>relative</em> to your current directory.</p>
@@ -626,26 +598,26 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="using-python-on-the-command-line">
-<h2><span class="section-number">27.4. </span>Using Python on the command line<a class="headerlink" href="#using-python-on-the-command-line" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="using-python-on-the-command-line">
+<h2><span class="section-number">30.4. </span>Using Python on the command line<a class="headerlink" href="#using-python-on-the-command-line" title="Permalink to this headline">#</a></h2>
 <p>There are several ways in which the command line is useful for Python (and these ways are applicable to other languages too).</p>
 <p>Of course, packages are installed at the command line, for example to install Jupyter Lab (for running notebooks), the command is</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jupyterlab
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab
 </pre></div>
 </div>
 <p>Say you have a script called <code class="docutils literal notranslate"><span class="pre">analysis.py</span></code>, you can run it with Python on the command line using</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python analysis.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>analysis.py
 </pre></div>
 </div>
 <p>which calls Python as a programme and gives it <code class="docutils literal notranslate"><span class="pre">analysis.py</span></code> as the argument. If you have multiple versions of Python, which you should do if you’re following best practice and using a version per project, then you can see <em>which</em> version of Python is being used with</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which python
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>python
 </pre></div>
 </div>
-</div>
-<div class="section" id="useful-commands-for-the-terminal">
-<h2><span class="section-number">27.5. </span>Useful commands for the terminal<a class="headerlink" href="#useful-commands-for-the-terminal" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="useful-commands-for-the-terminal">
+<h2><span class="section-number">30.5. </span>Useful commands for the terminal<a class="headerlink" href="#useful-commands-for-the-terminal" title="Permalink to this headline">#</a></h2>
 <p>Now we’ll see some useful commands for the terminal.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -743,66 +715,66 @@ const thebe_selector_output = ".output, .cell_output"
 <p><img alt="More details of the grep command" src="https://pbs.twimg.com/media/DcPeD_CW0AEkSar?format=jpg&amp;name=small" />
 <em>More details of the grep command, by <a class="reference external" href="https://twitter.com/b0rk">&#64;b0rk</a>.</em></p>
 <p>You can write for loops in bash (remember, it’s a language). The general structure is</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> LIST
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>LIST
 <span class="k">do</span>
-  OPERATION <span class="nv">$i</span> <span class="c1"># the $ sign indicates a variable in bash</span>
+<span class="w">  </span>OPERATION<span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="c1"># the $ sign indicates a variable in bash</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 <p>These can be squeezed into a single line (though it’s less readable):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$i</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 <p>A more interesting example is giving the number of lines of text, number of words, and number of characters of every CSV file in a directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> <span class="k">$(</span>ls *.csv<span class="k">)</span>
-<span class="k">do</span> 
-  wc <span class="nv">$i</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>ls<span class="w"> </span>*.csv<span class="k">)</span>
+<span class="k">do</span><span class="w"> </span>
+<span class="w">  </span>wc<span class="w"> </span><span class="nv">$i</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 <p>We can get even more fancy with the above example and put those counts in a new text file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch counts_of_csvs.txt
-<span class="k">for</span> i <span class="k">in</span> <span class="k">$(</span>ls *.csv<span class="k">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>counts_of_csvs.txt
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>ls<span class="w"> </span>*.csv<span class="k">)</span>
 <span class="k">do</span>
-  wc <span class="nv">$i</span> &gt;&gt; counts_of_csvs.txt
+<span class="w">  </span>wc<span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>counts_of_csvs.txt
 <span class="k">done</span>
 </pre></div>
 </div>
 <p>A couple of new features appeared in the examples above.</p>
 <p><code class="docutils literal notranslate"><span class="pre">*</span></code> is a <em>wildcard character</em>, it tells bash to look for anything that ends in “.csv”. This is not the only special case; <code class="docutils literal notranslate"><span class="pre">?</span></code> serves a similar purpose of standing in for any character but just <em>one</em> character rather than arbitrarily many. If you had a folder with <code class="docutils literal notranslate"><span class="pre">file1.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">file2.csv</span></code>, etc., up to 9, then you could use <code class="docutils literal notranslate"><span class="pre">file?.csv</span></code> to refer to all of them but this would not pick up <code class="docutils literal notranslate"><span class="pre">file10.csv</span></code>.</p>
 <p>Another special character we’ve already seen is the curly brace, <code class="docutils literal notranslate"><span class="pre">{}</span></code>. Whenever you have a common substring in a series of commands using curly braces tells the command line to expand what’s in them automatically. In an example above, this is used on 1 to 5. But it can also be used in, for example, file names:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp /path/to/project/<span class="o">{</span>foo,bar,baz<span class="o">}</span>.csv /newpath
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>/path/to/project/<span class="o">{</span>foo,bar,baz<span class="o">}</span>.csv<span class="w"> </span>/newpath
 </pre></div>
 </div>
 <p>would copy the csv files called <code class="docutils literal notranslate"><span class="pre">foo</span></code>, <code class="docutils literal notranslate"><span class="pre">bar</span></code>, and <code class="docutils literal notranslate"><span class="pre">baz</span></code> to the directory <code class="docutils literal notranslate"><span class="pre">/newpath</span></code>. Similarly,</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch <span class="o">{</span>a..c<span class="o">}{</span>.csv,.txt<span class="o">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span><span class="o">{</span>a..c<span class="o">}{</span>.csv,.txt<span class="o">}</span>
 </pre></div>
 </div>
 <p>would create the files a.csv, a.txt, b.csv, b.txt, c.csv, and c.txt.</p>
-</div>
-<div class="section" id="scripting">
-<h2><span class="section-number">27.6. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="scripting">
+<h2><span class="section-number">30.6. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">#</a></h2>
 <p>For tasks that will be repeated, it’s more reproducible and reliable to put your terminal commands into a script than executing them from memory each time—not to mention a lot easier! Because the command line has its own language, we can create scripts that execute commands. There are some differences between bash and zsh but we’ll try and keep the guidelines general.</p>
 <p>Create a script called <code class="docutils literal notranslate"><span class="pre">hello_world.sh</span></code>. Inside it, write:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">echo</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span>
 </pre></div>
 </div>
 <p>The first line is called a shebang and it indicates what programme to run the commands below with (sh means any Bash-compatible shell). The <code class="docutils literal notranslate"><span class="pre">#</span></code> character also indicates a comment. The second part will print out a string to the screen. Now, depending on whether you’re using bash or zsh, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash hello_world.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>hello_world.sh
 <span class="c1"># or</span>
-zsh hello_world.sh
+zsh<span class="w"> </span>hello_world.sh
 </pre></div>
 </div>
 <p>Let’s see a more complex example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">echo</span> <span class="s2">&quot;Starting program at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
-<span class="nb">echo</span> <span class="s2">&quot;Running program </span><span class="nv">$0</span><span class="s2"> with </span><span class="nv">$#</span><span class="s2"> arguments</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Starting program at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running program </span><span class="nv">$0</span><span class="s2"> with </span><span class="nv">$#</span><span class="s2"> arguments</span>
 </pre></div>
 </div>
 <p>which produces</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Starting program at Thu <span class="m">25</span> Mar <span class="m">2021</span> <span class="m">21</span>:23:22 GMT
-Running program hello_world.sh with <span class="m">0</span> arguments
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Starting<span class="w"> </span>program<span class="w"> </span>at<span class="w"> </span>Thu<span class="w"> </span><span class="m">25</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">2021</span><span class="w"> </span><span class="m">21</span>:23:22<span class="w"> </span>GMT
+Running<span class="w"> </span>program<span class="w"> </span>hello_world.sh<span class="w"> </span>with<span class="w"> </span><span class="m">0</span><span class="w"> </span>arguments
 </pre></div>
 </div>
 <p>Notice that using <code class="docutils literal notranslate"><span class="pre">&quot;$(command)&quot;</span></code> inserted the output of the command into the text string. To assign variables in bash and zsh scripts, use the syntax <code class="docutils literal notranslate"><span class="pre">foo=bar</span></code> (no spaces) and access the value of the variable with <code class="docutils literal notranslate"><span class="pre">$foo</span></code>.</p>
@@ -816,13 +788,13 @@ Running program hello_world.sh with <span class="m">0</span> arguments
 <li><p><code class="docutils literal notranslate"><span class="pre">!!</span></code> - Entire last command, including arguments</p></li>
 </ul>
 <p>You can find more of these special variables <a class="reference external" href="https://tldp.org/LDP/abs/html/special-chars.html">here</a>.</p>
-</div>
-<div class="section" id="useful-command-line-tools">
-<h2><span class="section-number">27.7. </span>Useful command line tools<a class="headerlink" href="#useful-command-line-tools" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="useful-command-line-tools">
+<h2><span class="section-number">30.7. </span>Useful command line tools<a class="headerlink" href="#useful-command-line-tools" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://pandoc.org/"><strong>pandoc</strong></a> is absolutely brilliant: if you need to convert files containing text from one format to another, it really is a swiss-army knife. There isn’t space here to list the ridiculous number of documents it can convert between, but, importantly, it can translate back and forth between all of the following: markdown, <span class="math notranslate nohighlight">\(\LaTeX\)</span>, Microsoft Word’s docx, OpenOffice’s ODT, HTML, and Jupyter Notebook.</p>
 <p>It can also write from any of those formats (and more) in one direction <em>to</em> PDF, Microsoft Powerpoint, and <span class="math notranslate nohighlight">\(\LaTeX\)</span> Beamer.</p>
 <p>To use <strong>pandoc</strong>, install it following the instructions on the website and then call it like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc mydoc.tex -o mydoc.docx
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc<span class="w"> </span>mydoc.tex<span class="w"> </span>-o<span class="w"> </span>mydoc.docx
 </pre></div>
 </div>
 <p>This is an example where the input is a .tex document and the output, <code class="docutils literal notranslate"><span class="pre">-o</span></code>, is a Microsoft Word docx file.</p>
@@ -830,7 +802,7 @@ Running program hello_world.sh with <span class="m">0</span> arguments
 <p><a class="reference external" href="https://the.exa.website/"><strong>exa</strong></a> is an upgrade on the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command. It is designed to be an improved file lister with more features and better defaults. It uses colours to distinguish file types and metadata. Follow the instructions on the website to install it on your operating system. To replace <code class="docutils literal notranslate"><span class="pre">ls</span></code> with <code class="docutils literal notranslate"><span class="pre">exa</span></code>, you can use a terminal <em>alias</em>. There’s a good guide <a class="reference external" href="https://ericmjl.github.io/data-science-bootstrap-notes/create-shell-command-aliases-for-your-commonly-used-commands/">available here</a>.</p>
 <p><strong>nano</strong> is a built-in text editor that runs <em>within</em> the terminal. This can be really useful if you’re working on the cloud (but it’s not got the rich features of a GUI-based text editor like VS Code). To open a file using <strong>nano</strong>, the command is <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">file.txt</span></code>. Nano displays instructions on how to navigate when it loads up but exiting is the hardest part: when you’re done, hit <code class="docutils literal notranslate"><span class="pre">Ctrl+X</span></code>, then <code class="docutils literal notranslate"><span class="pre">y</span></code> to save, and then <code class="docutils literal notranslate"><span class="pre">enter</span></code> to exit.</p>
 <p><a class="reference external" href="https://www.gnu.org/software/wget/"><strong>wget</strong></a> is a command-line utility for downloading files from the internet. It’s very simple to use, the syntax is just <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">[options]</span> <span class="pre">[url]</span></code>. For example, to download the starwars csv file used in this book, the command is</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/aeturrell/coding-for-economists/blob/main/data/starwars.csv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/aeturrell/coding-for-economists/blob/main/data/starwars.csv
 </pre></div>
 </div>
 <p><a class="reference external" href="https://htop.dev/"><strong>htop</strong></a> is a tool that lets you see what processes are running on your computer at any time (across individual processors), and how much memory you are using up. To install it on a Mac, you can use <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">htop</span></code> if you use homebrew. Otherwise you can compile it from source after downloading it from the website. To use it, simply type <code class="docutils literal notranslate"><span class="pre">htop</span></code> on the command line.</p>
@@ -838,8 +810,8 @@ Running program hello_world.sh with <span class="m">0</span> arguments
 <p><a class="reference external" href="https://www.ffmpeg.org/"><strong>ffmpeg</strong></a> is a command line tool that aims to “decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge.” Look at the documentation for all of the uses.</p>
 <p><a class="reference external" href="https://github.com/mptre/yank"><strong>yank</strong></a> reads input from stdin (what you see in the terminal) and displays a selection interface that allows a field to be selected and copied to the clipboard. A typical use case would be to copy and paste a file name that you’ve found from using the <code class="docutils literal notranslate"><span class="pre">ls</span></code> command. For example, running <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lah</span> <span class="pre">|</span> <span class="pre">yank</span></code> in a directory brings up a list of permissions, sizes, users, dates modified, and names of files. You can then navigate to the filename you want with the keyboard, hit return, and have that file name in the clipboard ready to paste into your next terminal command. There’s a nice demo <a class="reference external" href="https://calmcode.io/cool-cli/yank.html">here</a>.</p>
 <p>For more on the command line, see <a class="reference external" href="https://github.com/jlevy/the-art-of-command-line">The Art of the Command Line</a>. In terms of other commands, you might like to check out <code class="docutils literal notranslate"><span class="pre">patch</span></code>, <code class="docutils literal notranslate"><span class="pre">sed</span></code>, and <code class="docutils literal notranslate"><span class="pre">awk</span></code>.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -853,7 +825,7 @@ Running program hello_world.sh with <span class="m">0</span> arguments
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -861,44 +833,114 @@ Running program hello_world.sh with <span class="m">0</span> arguments
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="iteration.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">29. </span>Iteration</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">31. </span>Markdown</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-command-line">30.1. What is the command line?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-the-command-line-useful">30.2. Why is the command line useful?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-command-line">30.3. Using the command line</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-directories">30.3.1. Navigating directories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-on-the-command-line">30.4. Using Python on the command line</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-commands-for-the-terminal">30.5. Useful commands for the terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">30.6. Scripting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-command-line-tools">30.7. Useful command line tools</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="iteration.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">26. </span>Iteration</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">28. </span>Markdown</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

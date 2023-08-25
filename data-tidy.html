@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Tidy Data &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>7. Tidy Data &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,521 +47,461 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data-tidy';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7. Workflow: Writing Code" href="workflow-writing-code.html" />
-    <link rel="prev" title="5. Workflow: Style" href="workflow-style.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="8. Workflow: Writing Code" href="workflow-writing-code.html" />
+    <link rel="prev" title="6. Workflow: Style" href="workflow-style.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-transform.html">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   9. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   10. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   11. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   12. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   13. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   14. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   15. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   16. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   17. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   18. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   19. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   20. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   21. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   22. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   23. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   24. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   25. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   26. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   27. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   28. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/data-tidy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdata-tidy.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/data-tidy.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/data-tidy.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/data-tidy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/data-tidy.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdata-tidy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/data-tidy.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tidy Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   6.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     6.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   6.2. Tidy Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#make-data-tidy-with-pandas">
-   6.3. Make Data Tidy with
-   <strong>
-    pandas
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#melt">
-     6.3.1. Melt
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#wide-to-long">
-     6.3.2. Wide to Long
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stack-and-unstack">
-     6.3.3. Stack and Unstack
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">
-     6.3.4. Pivoting data from tidy to, err, untidy data
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">7.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">7.1.1. Prerequisites</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.2. Tidy Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-data-tidy-with-pandas">7.3. Make Data Tidy with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melt">7.3.1. Melt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-to-long">7.3.2. Wide to Long</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-and-unstack">7.3.3. Stack and Unstack</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">7.3.4. Pivoting data from tidy to, err, untidy data</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tidy Data</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   6.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     6.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   6.2. Tidy Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#make-data-tidy-with-pandas">
-   6.3. Make Data Tidy with
-   <strong>
-    pandas
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#melt">
-     6.3.1. Melt
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#wide-to-long">
-     6.3.2. Wide to Long
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stack-and-unstack">
-     6.3.3. Stack and Unstack
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">
-     6.3.4. Pivoting data from tidy to, err, untidy data
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tidy-data">
-<span id="data-tidy"></span><h1><span class="section-number">6. </span>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tidy-data">
+<span id="data-tidy"></span><h1><span class="section-number">7. </span>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>In this chapter, you will learn a consistent way to organise your data in Python using the principle known as <em>tidy data</em>. Tidy data is not appropriate for everything, but for a lot of analysis and a lot of tabular data it will be what you need. Getting your data into this format requires some work up front, but that work pays off in the long term. Once you have tidy data, you will spend much less time munging data from one representation to another, allowing you to spend more time on the data questions you care about.</p>
 <p>In this chapter, you’ll first learn the definition of tidy data and see it applied to simple toy dataset. Then we’ll dive into the main tool you’ll use for tidying data: melting. Melting allows you to change the form of your data, without changing any of the values. We’ll finish up with a discussion of usefully untidy data, and how you can create it if needed.</p>
 <p>If you particularly enjoy this chapter and want to learn more about the underlying theory, you can learn more in the <a class="reference external" href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> paper published in the Journal of Statistical Software.</p>
-<div class="section" id="prerequisites">
-<h3><span class="section-number">6.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<section id="prerequisites">
+<h3><span class="section-number">7.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
 <p>This chapter will use the <strong>pandas</strong> data analysis package.</p>
-</div>
-</div>
-<div class="section" id="id1">
-<h2><span class="section-number">6.2. </span>Tidy Data<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id1">
+<h2><span class="section-number">7.2. </span>Tidy Data<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>There are three interrelated features that make a dataset tidy:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Each variable is a column; each column is a variable.</p></li>
 <li><p>Each observation is row; each row is an observation.</p></li>
 <li><p>Each value is a cell; each cell is a single value.</p></li>
@@ -561,18 +509,18 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The figure below shows this:</p>
 <p><img alt="" src="https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png" /></p>
 <p>Why ensure that your data is tidy? There are two main advantages:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>There’s a general advantage to picking one consistent way of storing data.
 If you have a consistent data structure, it’s easier to learn the tools that work with it because they have an underlying uniformity. Some tools, for example data visualisation package <strong>seaborn</strong>, are designed with tidy data in mind.</p></li>
 <li><p>There’s a specific advantage to placing variables in columns because it allows you to take advantage of <strong>pandas</strong>’ vectorised operations (operations that are more efficient).</p></li>
 </ol>
 <p>Tidy data aren’t going to be appropriate <em>every</em> time and in every case, but they’re a really, really good default for tabular data. Once you use it as your default, it’s easier to think about how to perform subsequent operations.</p>
 <p>Having said that tidy data are great, they are, but one of <strong>pandas</strong>’ advantages relative to other data analysis libraries is that it isn’t <em>too</em> tied to tidy data and can navigate awkward non-tidy data manipulation tasks happily too.</p>
-</div>
-<div class="section" id="make-data-tidy-with-pandas">
-<h2><span class="section-number">6.3. </span>Make Data Tidy with <strong>pandas</strong><a class="headerlink" href="#make-data-tidy-with-pandas" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="melt">
-<h3><span class="section-number">6.3.1. </span>Melt<a class="headerlink" href="#melt" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="make-data-tidy-with-pandas">
+<h2><span class="section-number">7.3. </span>Make Data Tidy with <strong>pandas</strong><a class="headerlink" href="#make-data-tidy-with-pandas" title="Permalink to this headline">#</a></h2>
+<section id="melt">
+<h3><span class="section-number">7.3.1. </span>Melt<a class="headerlink" href="#melt" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">melt</span></code> can help you go from untidy to tidy data (from wide data to long data), and is a <em>really</em> good one to remember.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_melt.png" /></p>
 <p>Here’s an example of it in action:</p>
@@ -666,9 +614,9 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 <p class="admonition-title">Exercise</p>
 <p>Perform a melt that uses <code class="docutils literal notranslate"><span class="pre">job</span></code> as the id instead of <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">last</span></code>.</p>
 </div>
-</div>
-<div class="section" id="wide-to-long">
-<h3><span class="section-number">6.3.2. </span>Wide to Long<a class="headerlink" href="#wide-to-long" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="wide-to-long">
+<h3><span class="section-number">7.3.2. </span>Wide to Long<a class="headerlink" href="#wide-to-long" title="Permalink to this headline">#</a></h3>
 <p>If you don’t wan the headscratching of melt, there’s also <code class="docutils literal notranslate"><span class="pre">wide_to_long</span></code>, which is really useful for typical data cleaning cases where you have data like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -722,7 +670,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>d</td>
       <td>2.5</td>
       <td>3.2</td>
-      <td>2.049365</td>
+      <td>0.624558</td>
       <td>0</td>
     </tr>
     <tr>
@@ -731,7 +679,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>e</td>
       <td>1.2</td>
       <td>1.3</td>
-      <td>-1.011877</td>
+      <td>-0.419471</td>
       <td>1</td>
     </tr>
     <tr>
@@ -740,7 +688,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>f</td>
       <td>0.7</td>
       <td>0.1</td>
-      <td>0.538581</td>
+      <td>0.607954</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -790,42 +738,42 @@ If you have a consistent data structure, it’s easier to learn the tools that w
     <tr>
       <th>0</th>
       <th>1970</th>
-      <td>2.049365</td>
+      <td>0.624558</td>
       <td>a</td>
       <td>2.5</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1970</th>
-      <td>-1.011877</td>
+      <td>-0.419471</td>
       <td>b</td>
       <td>1.2</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1970</th>
-      <td>0.538581</td>
+      <td>0.607954</td>
       <td>c</td>
       <td>0.7</td>
     </tr>
     <tr>
       <th>0</th>
       <th>1980</th>
-      <td>2.049365</td>
+      <td>0.624558</td>
       <td>d</td>
       <td>3.2</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1980</th>
-      <td>-1.011877</td>
+      <td>-0.419471</td>
       <td>e</td>
       <td>1.3</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1980</th>
-      <td>0.538581</td>
+      <td>0.607954</td>
       <td>f</td>
       <td>0.1</td>
     </tr>
@@ -833,9 +781,9 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="stack-and-unstack">
-<h3><span class="section-number">6.3.3. </span>Stack and Unstack<a class="headerlink" href="#stack-and-unstack" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stack-and-unstack">
+<h3><span class="section-number">7.3.3. </span>Stack and Unstack<a class="headerlink" href="#stack-and-unstack" title="Permalink to this headline">#</a></h3>
 <p>Stack, <code class="docutils literal notranslate"><span class="pre">stack()</span></code> is a shortcut for taking a single type of wide data variable from columns and turning it into a long form dataset, but with an extra index.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_stack.png" /></p>
 <p>Unstack, <code class="docutils literal notranslate"><span class="pre">unstack()</span></code> unsurprisingly does the same operation, but in reverse.</p>
@@ -891,46 +839,46 @@ If you have a consistent data structure, it’s easier to learn the tools that w
     <tr>
       <th rowspan="2" valign="top">bar</th>
       <th>one</th>
-      <td>0.211458</td>
-      <td>-0.404293</td>
+      <td>-0.168154</td>
+      <td>-1.592390</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>0.385365</td>
-      <td>-0.628472</td>
+      <td>0.435900</td>
+      <td>-0.584890</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">baz</th>
       <th>one</th>
-      <td>-2.187925</td>
-      <td>-0.411039</td>
+      <td>-0.945521</td>
+      <td>1.414188</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-1.326035</td>
-      <td>-1.189582</td>
+      <td>0.126750</td>
+      <td>-0.959095</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">foo</th>
       <th>one</th>
-      <td>0.612145</td>
-      <td>-0.059049</td>
+      <td>0.451685</td>
+      <td>-0.869429</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-0.336327</td>
-      <td>0.792936</td>
+      <td>2.408400</td>
+      <td>0.267472</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">qux</th>
       <th>one</th>
-      <td>-1.529997</td>
-      <td>-0.087690</td>
+      <td>-0.239303</td>
+      <td>-0.846082</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-1.537326</td>
-      <td>-0.672543</td>
+      <td>0.692216</td>
+      <td>1.046550</td>
     </tr>
   </tbody>
 </table>
@@ -946,22 +894,22 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first  second   
-bar    one     A    0.211458
-               B   -0.404293
-       two     A    0.385365
-               B   -0.628472
-baz    one     A   -2.187925
-               B   -0.411039
-       two     A   -1.326035
-               B   -1.189582
-foo    one     A    0.612145
-               B   -0.059049
-       two     A   -0.336327
-               B    0.792936
-qux    one     A   -1.529997
-               B   -0.087690
-       two     A   -1.537326
-               B   -0.672543
+bar    one     A   -0.168154
+               B   -1.592390
+       two     A    0.435900
+               B   -0.584890
+baz    one     A   -0.945521
+               B    1.414188
+       two     A    0.126750
+               B   -0.959095
+foo    one     A    0.451685
+               B   -0.869429
+       two     A    2.408400
+               B    0.267472
+qux    one     A   -0.239303
+               B   -0.846082
+       two     A    0.692216
+               B    1.046550
 dtype: float64
 </pre></div>
 </div>
@@ -1015,32 +963,32 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">one</th>
       <th>A</th>
-      <td>0.211458</td>
-      <td>-2.187925</td>
-      <td>0.612145</td>
-      <td>-1.529997</td>
+      <td>-0.168154</td>
+      <td>-0.945521</td>
+      <td>0.451685</td>
+      <td>-0.239303</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-0.404293</td>
-      <td>-0.411039</td>
-      <td>-0.059049</td>
-      <td>-0.087690</td>
+      <td>-1.592390</td>
+      <td>1.414188</td>
+      <td>-0.869429</td>
+      <td>-0.846082</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">two</th>
       <th>A</th>
-      <td>0.385365</td>
-      <td>-1.326035</td>
-      <td>-0.336327</td>
-      <td>-1.537326</td>
+      <td>0.435900</td>
+      <td>0.126750</td>
+      <td>2.408400</td>
+      <td>0.692216</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-0.628472</td>
-      <td>-1.189582</td>
-      <td>0.792936</td>
-      <td>-0.672543</td>
+      <td>-0.584890</td>
+      <td>-0.959095</td>
+      <td>0.267472</td>
+      <td>1.046550</td>
     </tr>
   </tbody>
 </table>
@@ -1050,9 +998,9 @@ dtype: float64
 <p class="admonition-title">Exercise</p>
 <p>What happens if you unstack to <code class="docutils literal notranslate"><span class="pre">level=1</span></code> instead? What about applying <code class="docutils literal notranslate"><span class="pre">unstack()</span></code> twice?</p>
 </div>
-</div>
-<div class="section" id="pivoting-data-from-tidy-to-err-untidy-data">
-<h3><span class="section-number">6.3.4. </span>Pivoting data from tidy to, err, untidy data<a class="headerlink" href="#pivoting-data-from-tidy-to-err-untidy-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="pivoting-data-from-tidy-to-err-untidy-data">
+<h3><span class="section-number">7.3.4. </span>Pivoting data from tidy to, err, untidy data<a class="headerlink" href="#pivoting-data-from-tidy-to-err-untidy-data" title="Permalink to this headline">#</a></h3>
 <p>At the start of this chapter, we said you should use tidy data–one row per observation, one column per variable–whenever you can. But there are times when you will want to take your lovingly prepared tidy data and pivot it into a wider format. <code class="docutils literal notranslate"><span class="pre">pivot</span></code> and <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code> help you to do that.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_pivot.png" /></p>
 <p>This can be especially useful for time series data, where operations like <code class="docutils literal notranslate"><span class="pre">shift</span></code> or <code class="docutils literal notranslate"><span class="pre">diff</span></code> are typically applied assuming that an entry in one row follows (in time) from the one above. Here’s an example:</p>
@@ -1101,39 +1049,39 @@ dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>10</th>
-      <td>2000-01-31</td>
-      <td>B</td>
-      <td>type4</td>
-      <td>-0.133153</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2000-08-31</td>
-      <td>B</td>
-      <td>type2</td>
-      <td>0.267177</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2000-09-30</td>
+      <th>2</th>
+      <td>2000-03-31</td>
       <td>A</td>
       <td>type4</td>
-      <td>-0.021342</td>
+      <td>-0.687709</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2000-08-31</td>
+      <td>A</td>
+      <td>type3</td>
+      <td>2.172760</td>
     </tr>
     <tr>
       <th>13</th>
       <td>2000-04-30</td>
       <td>B</td>
       <td>type4</td>
-      <td>1.119824</td>
+      <td>1.764018</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>2000-07-31</td>
+      <th>0</th>
+      <td>2000-01-31</td>
       <td>A</td>
-      <td>type4</td>
-      <td>-3.113683</td>
+      <td>type3</td>
+      <td>0.035377</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2000-10-31</td>
+      <td>B</td>
+      <td>type1</td>
+      <td>1.355736</td>
     </tr>
   </tbody>
 </table>
@@ -1182,48 +1130,48 @@ dtype: float64
     </tr>
     <tr>
       <th>2000-02-29</th>
-      <td>0.603801</td>
-      <td>-0.133153</td>
+      <td>0.035377</td>
+      <td>-0.681642</td>
     </tr>
     <tr>
       <th>2000-03-31</th>
-      <td>0.870648</td>
-      <td>0.789933</td>
+      <td>0.441572</td>
+      <td>1.171024</td>
     </tr>
     <tr>
       <th>2000-04-30</th>
-      <td>1.266660</td>
-      <td>0.616975</td>
+      <td>-0.687709</td>
+      <td>1.590345</td>
     </tr>
     <tr>
       <th>2000-05-31</th>
-      <td>-1.128152</td>
-      <td>1.119824</td>
+      <td>0.313813</td>
+      <td>1.764018</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>-0.766049</td>
-      <td>-0.495023</td>
+      <td>1.150646</td>
+      <td>-1.678836</td>
     </tr>
     <tr>
       <th>2000-07-31</th>
-      <td>-0.874570</td>
-      <td>-0.900398</td>
+      <td>-0.077697</td>
+      <td>0.319117</td>
     </tr>
     <tr>
       <th>2000-08-31</th>
-      <td>-3.113683</td>
-      <td>-1.504641</td>
+      <td>0.824107</td>
+      <td>0.287681</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>0.606277</td>
-      <td>0.267177</td>
+      <td>2.172760</td>
+      <td>-0.698313</td>
     </tr>
     <tr>
       <th>2000-10-31</th>
-      <td>-0.021342</td>
-      <td>-0.588383</td>
+      <td>-1.080058</td>
+      <td>0.780137</td>
     </tr>
   </tbody>
 </table>
@@ -1234,9 +1182,9 @@ dtype: float64
 <p class="admonition-title">Exercise</p>
 <p>Perform a pivot that applies to both the <code class="docutils literal notranslate"><span class="pre">variable</span></code> and <code class="docutils literal notranslate"><span class="pre">category</span></code> columns. (Hint: remember that you will need to pass multiple objects via a list.)</p>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1250,7 +1198,7 @@ dtype: float64
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1258,44 +1206,116 @@ dtype: float64
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="workflow-style.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Workflow: Style</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="workflow-writing-code.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Workflow: Writing Code</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">7.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">7.1.1. Prerequisites</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.2. Tidy Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-data-tidy-with-pandas">7.3. Make Data Tidy with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melt">7.3.1. Melt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-to-long">7.3.2. Wide to Long</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-and-unstack">7.3.3. Stack and Unstack</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">7.3.4. Pivoting data from tidy to, err, untidy data</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="workflow-style.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Workflow: Style</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="workflow-writing-code.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Workflow: Writing Code</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

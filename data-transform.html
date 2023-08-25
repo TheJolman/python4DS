@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Data Transformation &#8212; Python for Data Science</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>5. Data Transformation &#8212; Python for Data Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,649 +47,473 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-LXJC37BJVX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-LXJC37BJVX');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data-transform';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Workflow: Style" href="workflow-style.html" />
-    <link rel="prev" title="3. Workflow: Basics" href="workflow-basics.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="next" title="6. Workflow: Style" href="workflow-style.html" />
+    <link rel="prev" title="4. Workflow: Basics" href="workflow-basics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Data Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
-   First Steps
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">First Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting Started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="whole-game.html">
-   1. Whole game
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-visualise.html">
-   2. Data Visualisation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-basics.html">
-   3. Workflow: Basics
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   4. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-style.html">
-   5. Workflow: Style
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-tidy.html">
-   6. Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-writing-code.html">
-   7. Workflow: Writing Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="data-import.html">
-   8. Data Import
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="workflow-help.html">
-   9. Postscript: Getting Further Help
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Visualise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="exploratory-data-analysis.html">
-   10. Exploratory Data Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="communicate-plots.html">
-   11. Graphics for Communication
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Transform
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="joins.html">
-   12. Joins
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="boolean-data.html">
-   13. Boolean Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numbers.html">
-   14. Numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   15. Strings and Text
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="regex.html">
-   16. Regular Expressions, aka regex
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="categorical-data.html">
-   17. Categorical Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dates-and-times.html">
-   18. Dates and Times
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="missing-values.html">
-   19. Missing Values
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Import
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="spreadsheets.html">
-   20. Spreadsheets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="webscraping-and-apis.html">
-   21. Webscraping and APIs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="rectangling.html">
-   22. Rectangling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="databases.html">
-   23. Databases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Programme
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   24. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="iteration.html">
-   25. Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="command-line.html">
-   26. The Command Line
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Communicate
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   27. Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quarto.html">
-   28. Quarto
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="zreferences.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/data-transform.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/aeturrell/python4DS"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdata-transform.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/data-transform.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/data-transform.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aeturrell/python4DS/main?urlpath=lab/tree/data-transform.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/aeturrell/python4DS/blob/main/data-transform.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/aeturrell/python4DS/issues/new?title=Issue%20on%20page%20%2Fdata-transform.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/data-transform.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Transformation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   4.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     4.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pandas-basics">
-   4.2.
-   <strong>
-    pandas
-   </strong>
-   basics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">
-   4.3. Manipulating Rows in Data Frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-rows">
-     4.3.1. Accessing Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filtering-rows-with-query">
-     4.3.2. Filtering rows with query
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-arranging-rows">
-     4.3.3. Re-arranging Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises">
-     4.3.4. Exercises
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-columns">
-   4.4. Manipulating Columns
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-new-columns">
-     4.4.1. Creating New Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-columns">
-     4.4.2. Accessing Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming-columns">
-     4.4.3. Renaming Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-ordering-columns">
-     4.4.4. Re-ordering Columns
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">
-   4.5. Review of How to Access Rows, Columns, and Values
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#column-and-row-exercises">
-     4.5.1. Column and Row Exercises
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">
-   4.6. Grouping, changing the index, and applying summary statistics
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grouping-and-aggregating">
-     4.6.1. Grouping and Aggregating
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grouping-by-multiple-variables">
-     4.6.2. Grouping by multiple variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grouping-and-transforming">
-     4.6.3. Grouping and Transforming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#groupby-exercises">
-     4.6.4. Groupby Exercises
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">5.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">5.1.1. Prerequisites</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-basics">5.2. <strong>pandas</strong> basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">5.3. Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">5.3.1. Accessing Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">5.3.2. Filtering rows with query</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">5.3.3. Re-arranging Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">5.3.4. Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">5.4. Manipulating Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">5.4.1. Creating New Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">5.4.2. Accessing Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">5.4.3. Renaming Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">5.4.4. Re-ordering Columns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">5.5. Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">5.5.1. Column and Row Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">5.6. Grouping, changing the index, and applying summary statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-aggregating">5.6.1. Grouping and Aggregating</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-by-multiple-variables">5.6.2. Grouping by multiple variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-transforming">5.6.3. Grouping and Transforming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-exercises">5.6.4. Groupby Exercises</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Transformation</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   4.1. Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     4.1.1. Prerequisites
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pandas-basics">
-   4.2.
-   <strong>
-    pandas
-   </strong>
-   basics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">
-   4.3. Manipulating Rows in Data Frames
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-rows">
-     4.3.1. Accessing Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filtering-rows-with-query">
-     4.3.2. Filtering rows with query
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-arranging-rows">
-     4.3.3. Re-arranging Rows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises">
-     4.3.4. Exercises
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manipulating-columns">
-   4.4. Manipulating Columns
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-new-columns">
-     4.4.1. Creating New Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-columns">
-     4.4.2. Accessing Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming-columns">
-     4.4.3. Renaming Columns
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#re-ordering-columns">
-     4.4.4. Re-ordering Columns
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">
-   4.5. Review of How to Access Rows, Columns, and Values
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#column-and-row-exercises">
-     4.5.1. Column and Row Exercises
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">
-   4.6. Grouping, changing the index, and applying summary statistics
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grouping-and-aggregating">
-     4.6.1. Grouping and Aggregating
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grouping-by-multiple-variables">
-     4.6.2. Grouping by multiple variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grouping-and-transforming">
-     4.6.3. Grouping and Transforming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#groupby-exercises">
-     4.6.4. Groupby Exercises
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-transformation">
-<span id="data-transform"></span><h1><span class="section-number">4. </span>Data Transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2><span class="section-number">4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-transformation">
+<span id="data-transform"></span><h1><span class="section-number">5. </span>Data Transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2><span class="section-number">5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>It’s very rare that data arrive in exactly the right form you need. Often, you’ll need to create some new variables or summaries, or maybe you just want to rename the variables or reorder the observations to make the data a little easier to work with.</p>
 <p>You’ll learn how to do all that (and more!) in this chapter, which will introduce you to data transformation using the <strong>pandas</strong> package and a new dataset on flights that departed New York City in 2013.</p>
 <p>The goal of this chapter is to give you an overview of all the key tools for transforming a data frame, a special kind of object that holds tabular data.</p>
 <p>We’ll come back these functions in more detail in later chapters, as we start to dig into specific types of data (e.g. numbers, strings, dates).</p>
-<div class="section" id="prerequisites">
-<h3><span class="section-number">4.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<section id="prerequisites">
+<h3><span class="section-number">5.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
 <p>In this chapter we’ll focus on the <strong>pandas</strong> package, one of the most widely used tools for data science. You’ll need to ensure you have <strong>pandas</strong> installed. To do this, you can run</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -699,7 +531,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.4.2&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2.0.3&#39;
 </pre></div>
 </div>
 </div>
@@ -919,28 +751,28 @@ memory usage: 48.8+ MB
 <p>The table below gives some of the most common data types you are likely to encounter.</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p><strong>Name of data type</strong></p></th>
-<th class="text-align:center head"><p><strong>Type of data</strong></p></th>
+<tr class="row-odd"><th class="text-center head"><p><strong>Name of data type</strong></p></th>
+<th class="text-center head"><p><strong>Type of data</strong></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>float64</p></td>
-<td class="text-align:center"><p>real numbers</p></td>
+<tr class="row-even"><td class="text-center"><p>float64</p></td>
+<td class="text-center"><p>real numbers</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>category</p></td>
-<td class="text-align:center"><p>categories</p></td>
+<tr class="row-odd"><td class="text-center"><p>category</p></td>
+<td class="text-center"><p>categories</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>datetime64</p></td>
-<td class="text-align:center"><p>date times</p></td>
+<tr class="row-even"><td class="text-center"><p>datetime64</p></td>
+<td class="text-center"><p>date times</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>int64</p></td>
-<td class="text-align:center"><p>integers</p></td>
+<tr class="row-odd"><td class="text-center"><p>int64</p></td>
+<td class="text-center"><p>integers</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:center"><p>bool</p></td>
-<td class="text-align:center"><p>True or False</p></td>
+<tr class="row-even"><td class="text-center"><p>bool</p></td>
+<td class="text-center"><p>True or False</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>string</p></td>
-<td class="text-align:center"><p>text</p></td>
+<tr class="row-odd"><td class="text-center"><p>string</p></td>
+<td class="text-center"><p>text</p></td>
 </tr>
 </tbody>
 </table>
@@ -948,15 +780,38 @@ memory usage: 48.8+ MB
 <p>We would like to work with the <code class="docutils literal notranslate"><span class="pre">&quot;time_hour&quot;</span></code> variable in the form of a datetime; fortunately, <strong>pandas</strong> makes it easy to perform that conversion on that specific column</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="p">[</span><span class="s2">&quot;time_hour&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">flights</span><span class="p">[</span><span class="s2">&quot;time_hour&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="p">[</span><span class="s2">&quot;time_hour&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0         2013-01-01T10:00:00Z
+1         2013-01-01T10:00:00Z
+2         2013-01-01T10:00:00Z
+3         2013-01-01T10:00:00Z
+4         2013-01-01T11:00:00Z
+                  ...         
+336771    2013-09-30T18:00:00Z
+336772    2013-10-01T02:00:00Z
+336773    2013-09-30T16:00:00Z
+336774    2013-09-30T15:00:00Z
+336775    2013-09-30T12:00:00Z
+Name: time_hour, Length: 336776, dtype: object
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="p">[</span><span class="s2">&quot;time_hour&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">flights</span><span class="p">[</span><span class="s2">&quot;time_hour&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%SZ&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="pandas-basics">
-<h2><span class="section-number">4.2. </span><strong>pandas</strong> basics<a class="headerlink" href="#pandas-basics" title="Permalink to this headline">¶</a></h2>
+</div>
+</section>
+</section>
+<section id="pandas-basics">
+<h2><span class="section-number">5.2. </span><strong>pandas</strong> basics<a class="headerlink" href="#pandas-basics" title="Permalink to this headline">#</a></h2>
 <p><strong>pandas</strong> is a really comprehensive package, and this book will barely scratch the surface of what it can do. But it’s built around a few simple ideas that, once they’ve clicked, make life a lot easier.</p>
 <p>Let’s start with the absolute basics. The most basic pandas object is a dataframe. A DataFrame is a 2-dimensional data structure that can store data of different types (including characters, integers, floating point values, categorical data, even lists) in columns. It is made up of rows and columns (with each row-column cell containing a value), plus two bits of contextual information: the index (which carries information about each row) and the column names (which carry information about each column).</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/01_table_dataframe.svg" /></p>
@@ -1044,7 +899,7 @@ memory usage: 48.8+ MB
 <p>You can see there are 5 columns (named <code class="docutils literal notranslate"><span class="pre">&quot;col0&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;col4&quot;</span></code>) and that the index consists of four entries named <code class="docutils literal notranslate"><span class="pre">&quot;row0&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;row3&quot;</span></code>.</p>
 <p>A second key point you should know is that the operations on a <strong>pandas</strong> data frame can be chained together. We need not perform one assignment per line of code; we can actually do multiple assignments in a single command.</p>
 <p>Let’s see an example of this. We’re going to string together four operations:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>we will use <code class="docutils literal notranslate"><span class="pre">query</span></code> to find only the rows where the destination <code class="docutils literal notranslate"><span class="pre">&quot;dest&quot;</span></code> column has the value <code class="docutils literal notranslate"><span class="pre">&quot;IAH&quot;</span></code>. This doesn’t change the index, it only removes irrelevant rows. In effect, this step removes rows we’re not interested in.</p></li>
 <li><p>we will use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to group rows by the year, month, and day (we pass a list of columns to the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> function). This step changes the index; the new index will have three columns in that track the year, month, and day. In effect, this step changes the index.</p></li>
 <li><p>we will choose which columns we wish to keep after the groupby operation by passing a list of them to a set of square brackets (the double brackets are because it’s a list within a dataframe). Here we just want one column, <code class="docutils literal notranslate"><span class="pre">&quot;arr_delay&quot;</span></code>. This doesn’t affect the index. In effect, this step removes columns we’re not interested in.</p></li>
@@ -1141,7 +996,7 @@ memory usage: 48.8+ MB
 </div></div></div>
 </div>
 <p>You can see here that we’ve created a new dataframe with a new index. To do it, we used four key operations:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>manipulating rows</p></li>
 <li><p>manipulating the index</p></li>
 <li><p>manipulating columns</p></li>
@@ -1149,9 +1004,9 @@ memory usage: 48.8+ MB
 </ol>
 <p>Most operations you could want to do to a single dataframe are covered by these, but there are different options for each of them depending on what you need.</p>
 <p>Let’s now dig a bit more into these operations.</p>
-</div>
-<div class="section" id="manipulating-rows-in-data-frames">
-<h2><span class="section-number">4.3. </span>Manipulating Rows in Data Frames<a class="headerlink" href="#manipulating-rows-in-data-frames" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="manipulating-rows-in-data-frames">
+<h2><span class="section-number">5.3. </span>Manipulating Rows in Data Frames<a class="headerlink" href="#manipulating-rows-in-data-frames" title="Permalink to this headline">#</a></h2>
 <p>Let’s create some fake data to show how this works.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1261,8 +1116,8 @@ memory usage: 48.8+ MB
 </table>
 </div></div></div>
 </div>
-<div class="section" id="accessing-rows">
-<h3><span class="section-number">4.3.1. </span>Accessing Rows<a class="headerlink" href="#accessing-rows" title="Permalink to this headline">¶</a></h3>
+<section id="accessing-rows">
+<h3><span class="section-number">5.3.1. </span>Accessing Rows<a class="headerlink" href="#accessing-rows" title="Permalink to this headline">#</a></h3>
 <p>To access a particular row directly, you can use <code class="docutils literal notranslate"><span class="pre">df.loc['rowname']</span></code> or <code class="docutils literal notranslate"><span class="pre">df.loc[['rowname1',</span> <span class="pre">'rowname1']]</span></code> for two different rows.</p>
 <p>For example,</p>
 <div class="cell docutils container">
@@ -1405,9 +1260,9 @@ Name: a, dtype: object
 </div></div></div>
 </div>
 <p>There are other ways to access multiple rows that make use of <em>slicing</em> but we’ll leave that topic for another time.</p>
-</div>
-<div class="section" id="filtering-rows-with-query">
-<h3><span class="section-number">4.3.2. </span>Filtering rows with query<a class="headerlink" href="#filtering-rows-with-query" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="filtering-rows-with-query">
+<h3><span class="section-number">5.3.2. </span>Filtering rows with query<a class="headerlink" href="#filtering-rows-with-query" title="Permalink to this headline">#</a></h3>
 <p>As with the flights example, we can also filter rows based on a condition using <code class="docutils literal notranslate"><span class="pre">query</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1617,7 +1472,7 @@ Name: a, dtype: object
       <td>1400</td>
       <td>5</td>
       <td>15</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1639,7 +1494,7 @@ Name: a, dtype: object
       <td>1416</td>
       <td>5</td>
       <td>29</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1661,7 +1516,7 @@ Name: a, dtype: object
       <td>1089</td>
       <td>5</td>
       <td>40</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1683,7 +1538,7 @@ Name: a, dtype: object
       <td>1576</td>
       <td>5</td>
       <td>45</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1705,7 +1560,7 @@ Name: a, dtype: object
       <td>762</td>
       <td>6</td>
       <td>0</td>
-      <td>2013-01-01 11:00:00+00:00</td>
+      <td>2013-01-01 11:00:00</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1749,7 +1604,7 @@ Name: a, dtype: object
       <td>1576</td>
       <td>23</td>
       <td>59</td>
-      <td>2013-01-02 04:00:00+00:00</td>
+      <td>2013-01-02 04:00:00</td>
     </tr>
     <tr>
       <th>838</th>
@@ -1771,7 +1626,7 @@ Name: a, dtype: object
       <td>416</td>
       <td>16</td>
       <td>30</td>
-      <td>2013-01-01 21:00:00+00:00</td>
+      <td>2013-01-01 21:00:00</td>
     </tr>
     <tr>
       <th>839</th>
@@ -1793,7 +1648,7 @@ Name: a, dtype: object
       <td>1389</td>
       <td>19</td>
       <td>35</td>
-      <td>2013-01-02 00:00:00+00:00</td>
+      <td>2013-01-02 00:00:00</td>
     </tr>
     <tr>
       <th>840</th>
@@ -1815,7 +1670,7 @@ Name: a, dtype: object
       <td>1096</td>
       <td>15</td>
       <td>0</td>
-      <td>2013-01-01 20:00:00+00:00</td>
+      <td>2013-01-01 20:00:00</td>
     </tr>
     <tr>
       <th>841</th>
@@ -1837,7 +1692,7 @@ Name: a, dtype: object
       <td>1069</td>
       <td>6</td>
       <td>0</td>
-      <td>2013-01-01 11:00:00+00:00</td>
+      <td>2013-01-01 11:00:00</td>
     </tr>
   </tbody>
 </table>
@@ -1845,9 +1700,9 @@ Name: a, dtype: object
 </div></div></div>
 </div>
 <p>Note that equality is tested by <code class="docutils literal notranslate"><span class="pre">==</span></code> and <em>not</em> by <code class="docutils literal notranslate"><span class="pre">=</span></code>, because the latter is used for assignment.</p>
-</div>
-<div class="section" id="re-arranging-rows">
-<h3><span class="section-number">4.3.3. </span>Re-arranging Rows<a class="headerlink" href="#re-arranging-rows" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="re-arranging-rows">
+<h3><span class="section-number">5.3.3. </span>Re-arranging Rows<a class="headerlink" href="#re-arranging-rows" title="Permalink to this headline">#</a></h3>
 <p>Again and again, you will want to re-order the rows of your dataframe according to the values in a particular column. <strong>pandas</strong> makes this very easy via the <code class="docutils literal notranslate"><span class="pre">.sort_values</span></code> function. It takes a data frame and a set of column names to sort by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns. For example, the following code sorts by the departure time, which is spread over four columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1916,7 +1771,7 @@ Name: a, dtype: object
       <td>1400</td>
       <td>5</td>
       <td>15</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1938,7 +1793,7 @@ Name: a, dtype: object
       <td>1416</td>
       <td>5</td>
       <td>29</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1960,7 +1815,7 @@ Name: a, dtype: object
       <td>1089</td>
       <td>5</td>
       <td>40</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1982,7 +1837,7 @@ Name: a, dtype: object
       <td>1576</td>
       <td>5</td>
       <td>45</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
     </tr>
     <tr>
       <th>4</th>
@@ -2004,7 +1859,7 @@ Name: a, dtype: object
       <td>762</td>
       <td>6</td>
       <td>0</td>
-      <td>2013-01-01 11:00:00+00:00</td>
+      <td>2013-01-01 11:00:00</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2048,7 +1903,7 @@ Name: a, dtype: object
       <td>1605</td>
       <td>7</td>
       <td>5</td>
-      <td>2013-12-31 12:00:00+00:00</td>
+      <td>2013-12-31 12:00:00</td>
     </tr>
     <tr>
       <th>111292</th>
@@ -2070,7 +1925,7 @@ Name: a, dtype: object
       <td>541</td>
       <td>8</td>
       <td>25</td>
-      <td>2013-12-31 13:00:00+00:00</td>
+      <td>2013-12-31 13:00:00</td>
     </tr>
     <tr>
       <th>111293</th>
@@ -2092,7 +1947,7 @@ Name: a, dtype: object
       <td>431</td>
       <td>16</td>
       <td>15</td>
-      <td>2013-12-31 21:00:00+00:00</td>
+      <td>2013-12-31 21:00:00</td>
     </tr>
     <tr>
       <th>111294</th>
@@ -2114,7 +1969,7 @@ Name: a, dtype: object
       <td>719</td>
       <td>6</td>
       <td>0</td>
-      <td>2013-12-31 11:00:00+00:00</td>
+      <td>2013-12-31 11:00:00</td>
     </tr>
     <tr>
       <th>111295</th>
@@ -2136,7 +1991,7 @@ Name: a, dtype: object
       <td>2475</td>
       <td>8</td>
       <td>30</td>
-      <td>2013-12-31 13:00:00+00:00</td>
+      <td>2013-12-31 13:00:00</td>
     </tr>
   </tbody>
 </table>
@@ -2212,7 +2067,7 @@ For example, this code shows the most delayed flights:</p>
       <td>4983</td>
       <td>9</td>
       <td>0</td>
-      <td>2013-01-09 14:00:00+00:00</td>
+      <td>2013-01-09 14:00:00</td>
     </tr>
     <tr>
       <th>235778</th>
@@ -2234,7 +2089,7 @@ For example, this code shows the most delayed flights:</p>
       <td>483</td>
       <td>19</td>
       <td>35</td>
-      <td>2013-06-15 23:00:00+00:00</td>
+      <td>2013-06-15 23:00:00</td>
     </tr>
     <tr>
       <th>8239</th>
@@ -2256,7 +2111,7 @@ For example, this code shows the most delayed flights:</p>
       <td>719</td>
       <td>16</td>
       <td>35</td>
-      <td>2013-01-10 21:00:00+00:00</td>
+      <td>2013-01-10 21:00:00</td>
     </tr>
     <tr>
       <th>327043</th>
@@ -2278,7 +2133,7 @@ For example, this code shows the most delayed flights:</p>
       <td>2586</td>
       <td>18</td>
       <td>45</td>
-      <td>2013-09-20 22:00:00+00:00</td>
+      <td>2013-09-20 22:00:00</td>
     </tr>
     <tr>
       <th>270376</th>
@@ -2300,7 +2155,7 @@ For example, this code shows the most delayed flights:</p>
       <td>589</td>
       <td>16</td>
       <td>0</td>
-      <td>2013-07-22 20:00:00+00:00</td>
+      <td>2013-07-22 20:00:00</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2344,7 +2199,7 @@ For example, this code shows the most delayed flights:</p>
       <td>213</td>
       <td>14</td>
       <td>55</td>
-      <td>2013-09-30 18:00:00+00:00</td>
+      <td>2013-09-30 18:00:00</td>
     </tr>
     <tr>
       <th>336772</th>
@@ -2366,7 +2221,7 @@ For example, this code shows the most delayed flights:</p>
       <td>198</td>
       <td>22</td>
       <td>0</td>
-      <td>2013-10-01 02:00:00+00:00</td>
+      <td>2013-10-01 02:00:00</td>
     </tr>
     <tr>
       <th>336773</th>
@@ -2388,7 +2243,7 @@ For example, this code shows the most delayed flights:</p>
       <td>764</td>
       <td>12</td>
       <td>10</td>
-      <td>2013-09-30 16:00:00+00:00</td>
+      <td>2013-09-30 16:00:00</td>
     </tr>
     <tr>
       <th>336774</th>
@@ -2410,7 +2265,7 @@ For example, this code shows the most delayed flights:</p>
       <td>419</td>
       <td>11</td>
       <td>59</td>
-      <td>2013-09-30 15:00:00+00:00</td>
+      <td>2013-09-30 15:00:00</td>
     </tr>
     <tr>
       <th>336775</th>
@@ -2432,7 +2287,7 @@ For example, this code shows the most delayed flights:</p>
       <td>431</td>
       <td>8</td>
       <td>40</td>
-      <td>2013-09-30 12:00:00+00:00</td>
+      <td>2013-09-30 12:00:00</td>
     </tr>
   </tbody>
 </table>
@@ -2512,7 +2367,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>2475</td>
       <td>7</td>
       <td>0</td>
-      <td>2013-11-01 11:00:00+00:00</td>
+      <td>2013-11-01 11:00:00</td>
     </tr>
     <tr>
       <th>181270</th>
@@ -2534,7 +2389,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>1389</td>
       <td>6</td>
       <td>0</td>
-      <td>2013-04-18 10:00:00+00:00</td>
+      <td>2013-04-18 10:00:00</td>
     </tr>
     <tr>
       <th>256340</th>
@@ -2556,16 +2411,16 @@ For example, we could look for the top three destinations of the flights that we
       <td>214</td>
       <td>17</td>
       <td>0</td>
-      <td>2013-07-07 21:00:00+00:00</td>
+      <td>2013-07-07 21:00:00</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="exercises">
-<h3><span class="section-number">4.3.4. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h3>
-<ol>
+</section>
+<section id="exercises">
+<h3><span class="section-number">5.3.4. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
 <li><p>Find all flights that</p>
 <p>a. Had an arrival delay of two or more hours</p>
 <p>b. Flew to Houston (<code class="docutils literal notranslate"><span class="pre">&quot;IAH&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;HOU&quot;</span></code>)</p>
@@ -2579,17 +2434,17 @@ For example, we could look for the top three destinations of the flights that we
 <li><p>Which flights traveled the farthest?</p></li>
 <li><p>Does it matter what order you used <code class="docutils literal notranslate"><span class="pre">query()</span></code> and <code class="docutils literal notranslate"><span class="pre">sort_values()</span></code> in if you’re using both? Why/why not? Think about the results and how much work the functions would have to do.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="manipulating-columns">
-<h2><span class="section-number">4.4. </span>Manipulating Columns<a class="headerlink" href="#manipulating-columns" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="manipulating-columns">
+<h2><span class="section-number">5.4. </span>Manipulating Columns<a class="headerlink" href="#manipulating-columns" title="Permalink to this headline">#</a></h2>
 <p>This section will show you how to apply various operations you may need to columns in your data frame.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some <strong>pandas</strong> operations can apply either to columns or rows, depending on the syntax used. For example, accessing values by position can be achieved in the same way for rows and columns via <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> where to access the ith row you would use <code class="docutils literal notranslate"><span class="pre">df.iloc[i]</span></code> and to access the jth column you would use <code class="docutils literal notranslate"><span class="pre">df.iloc[:,</span> <span class="pre">j]</span></code> where <code class="docutils literal notranslate"><span class="pre">:</span></code> stands in for ‘any row’.</p>
 </div>
-<div class="section" id="creating-new-columns">
-<h3><span class="section-number">4.4.1. </span>Creating New Columns<a class="headerlink" href="#creating-new-columns" title="Permalink to this headline">¶</a></h3>
+<section id="creating-new-columns">
+<h3><span class="section-number">5.4.1. </span>Creating New Columns<a class="headerlink" href="#creating-new-columns" title="Permalink to this headline">#</a></h3>
 <p>Let’s now move on to creating new columns, either using new information or from existing columns. Given a dataframe, <code class="docutils literal notranslate"><span class="pre">df</span></code>, creating a new column with the same value repeated is as easy as using square brackets with a string (text enclosed by quotation marks) in.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3136,7 +2991,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>1400</td>
       <td>5</td>
       <td>15</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
       <td>-9.0</td>
       <td>370.044053</td>
     </tr>
@@ -3160,7 +3015,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>1416</td>
       <td>5</td>
       <td>29</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
       <td>-16.0</td>
       <td>374.273128</td>
     </tr>
@@ -3184,7 +3039,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>1089</td>
       <td>5</td>
       <td>40</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
       <td>-31.0</td>
       <td>408.375000</td>
     </tr>
@@ -3208,7 +3063,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>1576</td>
       <td>5</td>
       <td>45</td>
-      <td>2013-01-01 10:00:00+00:00</td>
+      <td>2013-01-01 10:00:00</td>
       <td>17.0</td>
       <td>516.721311</td>
     </tr>
@@ -3232,7 +3087,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>762</td>
       <td>6</td>
       <td>0</td>
-      <td>2013-01-01 11:00:00+00:00</td>
+      <td>2013-01-01 11:00:00</td>
       <td>19.0</td>
       <td>394.137931</td>
     </tr>
@@ -3280,7 +3135,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>213</td>
       <td>14</td>
       <td>55</td>
-      <td>2013-09-30 18:00:00+00:00</td>
+      <td>2013-09-30 18:00:00</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -3304,7 +3159,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>198</td>
       <td>22</td>
       <td>0</td>
-      <td>2013-10-01 02:00:00+00:00</td>
+      <td>2013-10-01 02:00:00</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -3328,7 +3183,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>764</td>
       <td>12</td>
       <td>10</td>
-      <td>2013-09-30 16:00:00+00:00</td>
+      <td>2013-09-30 16:00:00</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -3352,7 +3207,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>419</td>
       <td>11</td>
       <td>59</td>
-      <td>2013-09-30 15:00:00+00:00</td>
+      <td>2013-09-30 15:00:00</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -3376,7 +3231,7 @@ For example, we could look for the top three destinations of the flights that we
       <td>431</td>
       <td>8</td>
       <td>40</td>
-      <td>2013-09-30 12:00:00+00:00</td>
+      <td>2013-09-30 12:00:00</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -3392,9 +3247,9 @@ For example, we could look for the top three destinations of the flights that we
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="accessing-columns">
-<h3><span class="section-number">4.4.2. </span>Accessing Columns<a class="headerlink" href="#accessing-columns" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="accessing-columns">
+<h3><span class="section-number">5.4.2. </span>Accessing Columns<a class="headerlink" href="#accessing-columns" title="Permalink to this headline">#</a></h3>
 <p>Just as with selecting rows, there are many options and ways to select the columns to operate on. The one with the simplest syntax is the name of the data frame followed by square brackets and the column name (as a string)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3878,9 +3733,9 @@ The selection from the data frame:
 </div></div></div>
 </div>
 <p>As well as <code class="docutils literal notranslate"><span class="pre">startswith</span></code>, there are other commands like <code class="docutils literal notranslate"><span class="pre">endswith</span></code>, <code class="docutils literal notranslate"><span class="pre">contains</span></code>, <code class="docutils literal notranslate"><span class="pre">isnumeric</span></code>, and <code class="docutils literal notranslate"><span class="pre">islower</span></code>.</p>
-</div>
-<div class="section" id="renaming-columns">
-<h3><span class="section-number">4.4.3. </span>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="renaming-columns">
+<h3><span class="section-number">5.4.3. </span>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this headline">#</a></h3>
 <p>There are three easy ways to rename columns, depending on what the context is. The first is to use the dedicated <code class="docutils literal notranslate"><span class="pre">rename</span></code> function with an object called a dictionary. Dictionaries in Python consist of curly brackets with comma separated pairs of values where the first values maps into the second value. An example of a dictionary would be <code class="docutils literal notranslate"><span class="pre">{'old_col1':</span> <span class="pre">'new_col1',</span> <span class="pre">'old_col2':</span> <span class="pre">'new_col2'}</span></code>. Let’s see this in practice (but note that we are not ‘saving’ the resulting data frame, just showing it—to save it, you’d need to add <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> </code> to the left-hand side of the code below).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4155,9 +4010,9 @@ The selection from the data frame:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="re-ordering-columns">
-<h3><span class="section-number">4.4.4. </span>Re-ordering Columns<a class="headerlink" href="#re-ordering-columns" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="re-ordering-columns">
+<h3><span class="section-number">5.4.4. </span>Re-ordering Columns<a class="headerlink" href="#re-ordering-columns" title="Permalink to this headline">#</a></h3>
 <p>By default, new columns are added to the right-hand side of the data frame. But you may have reasons to want the columns to appear in a particular order, or perhaps you’d just find it more convenient to have new columns on the left-hand side when there are many columns in a data frame (which happens a lot).</p>
 <p>The simplest way to re-order (all) columns is to create a new list of their names with them in the order that you’d like them: but be careful you don’t forget any columns that you’d like to keep!</p>
 <p>Let’s see an example with a fresh version of the fake data from earlier. We’ll put all of the odd-numbered columns first, in descending order, then the even similarly.</p>
@@ -4445,10 +4300,10 @@ The selection from the data frame:
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="review-of-how-to-access-rows-columns-and-values">
-<h2><span class="section-number">4.5. </span>Review of How to Access Rows, Columns, and Values<a class="headerlink" href="#review-of-how-to-access-rows-columns-and-values" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="review-of-how-to-access-rows-columns-and-values">
+<h2><span class="section-number">5.5. </span>Review of How to Access Rows, Columns, and Values<a class="headerlink" href="#review-of-how-to-access-rows-columns-and-values" title="Permalink to this headline">#</a></h2>
 <p>With all of these different ways to access values in data frames, it can get confusing. These are the different ways to get the first column of a dataframe (when that first column is called <code class="docutils literal notranslate"><span class="pre">column</span></code> and the dataframe is <code class="docutils literal notranslate"><span class="pre">df</span></code>):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">df.column</span></code></p></li>
@@ -4476,9 +4331,9 @@ The selection from the data frame:
 <p>If you only want to remember one syntax for accessing rows and columns by name, use the pattern <code class="docutils literal notranslate"><span class="pre">df.loc[[&quot;row0&quot;,</span> <span class="pre">&quot;row1&quot;,</span> <span class="pre">...],</span> <span class="pre">[&quot;col0&quot;,</span> <span class="pre">&quot;col1&quot;,</span> <span class="pre">...]]</span></code>. This also works with a single row or a single column (or both).</p>
 <p>If you only want to remember one syntax for accessing rows and columns by position, use the pattern <code class="docutils literal notranslate"><span class="pre">df.iloc[[0,</span> <span class="pre">1,</span> <span class="pre">...],</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">...]]</span></code>. This also works with a single row or a single column (or both).</p>
 </div>
-<div class="section" id="column-and-row-exercises">
-<h3><span class="section-number">4.5.1. </span>Column and Row Exercises<a class="headerlink" href="#column-and-row-exercises" title="Permalink to this headline">¶</a></h3>
-<ol>
+<section id="column-and-row-exercises">
+<h3><span class="section-number">5.5.1. </span>Column and Row Exercises<a class="headerlink" href="#column-and-row-exercises" title="Permalink to this headline">#</a></h3>
+<ol class="arabic">
 <li><p>Compare <code class="docutils literal notranslate"><span class="pre">air_time</span></code> with <code class="docutils literal notranslate"><span class="pre">arr_time</span> <span class="pre">-</span> <span class="pre">dep_time</span></code>. What do you expect to see? What do you see What do you need to do to fix it?</p></li>
 <li><p>Compare <code class="docutils literal notranslate"><span class="pre">dep_time</span></code>, <code class="docutils literal notranslate"><span class="pre">sched_dep_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">dep_delay</span></code>. How would you expect those three numbers to be related?</p></li>
 <li><p>Brainstorm as many ways as possible to select <code class="docutils literal notranslate"><span class="pre">dep_time</span></code>, <code class="docutils literal notranslate"><span class="pre">dep_delay</span></code>, <code class="docutils literal notranslate"><span class="pre">arr_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">arr_delay</span></code> from <code class="docutils literal notranslate"><span class="pre">flights</span></code>.</p></li>
@@ -4497,15 +4352,15 @@ How can you change that default?</p>
 <p>(Hint: you can use help even on functions that apply to data frames, eg use <code class="docutils literal notranslate"><span class="pre">help(flights.columns.str.contains)</span></code>)</p>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="grouping-changing-the-index-and-applying-summary-statistics">
-<h2><span class="section-number">4.6. </span>Grouping, changing the index, and applying summary statistics<a class="headerlink" href="#grouping-changing-the-index-and-applying-summary-statistics" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="grouping-changing-the-index-and-applying-summary-statistics">
+<h2><span class="section-number">5.6. </span>Grouping, changing the index, and applying summary statistics<a class="headerlink" href="#grouping-changing-the-index-and-applying-summary-statistics" title="Permalink to this headline">#</a></h2>
 <p>So far you’ve learned about working with rows and columns. <strong>pandas</strong> gets even more powerful when you add in the ability to work with groups. Creating groups will often also mean a change of index. And because groups tend to imply an aggregation or pooling of data, they often go hand-in-hand with the application of a summary statistic.</p>
 <p>The diagram below gives a sense of how these operations can proceed together. Note that the ‘split’ operation is achieved through grouping, while apply produces summary statistics. At the end, you get a data frame with a new index (one entry per group) in what is shown as the ‘combine’ step.</p>
 <p><img alt="" src="https://jakevdp.github.io/PythonDataScienceHandbook/figures/03.08-split-apply-combine.png" /></p>
-<div class="section" id="grouping-and-aggregating">
-<h3><span class="section-number">4.6.1. </span>Grouping and Aggregating<a class="headerlink" href="#grouping-and-aggregating" title="Permalink to this headline">¶</a></h3>
+<section id="grouping-and-aggregating">
+<h3><span class="section-number">5.6.1. </span>Grouping and Aggregating<a class="headerlink" href="#grouping-and-aggregating" title="Permalink to this headline">#</a></h3>
 <p>Let’s take a look at creating a group using the <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> function followed by selecting a column and applying a summary statistic via an aggregation. Note that <em>aggregation</em>, via <code class="docutils literal notranslate"><span class="pre">.agg</span></code>, always produces a new index because we have collapsed information down to the group-level (and the new index is made of those levels).</p>
 <p>The key point to remember is: use <code class="docutils literal notranslate"><span class="pre">.agg</span></code> with <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> when you want your groups to become the new index.</p>
 <div class="cell docutils container">
@@ -4823,9 +4678,9 @@ How can you change that default?</p>
 </div></div></div>
 </div>
 <p>Means and counts can get you a surprisingly long way in data science!</p>
-</div>
-<div class="section" id="grouping-by-multiple-variables">
-<h3><span class="section-number">4.6.2. </span>Grouping by multiple variables<a class="headerlink" href="#grouping-by-multiple-variables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="grouping-by-multiple-variables">
+<h3><span class="section-number">5.6.2. </span>Grouping by multiple variables<a class="headerlink" href="#grouping-by-multiple-variables" title="Permalink to this headline">#</a></h3>
 <p>This is as simple as passing <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> a list representing multiple columns instead of a string representing a single column.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5181,9 +5036,9 @@ How can you change that default?</p>
 </div></div></div>
 </div>
 <p>Finally, you can do more complicated re-arrangements of the index with an operation called <code class="docutils literal notranslate"><span class="pre">unstack</span></code>, which pivots the chosen index variable to be a column variable instead (introducing a multi column level structure). It’s usually best to avoid this.</p>
-</div>
-<div class="section" id="grouping-and-transforming">
-<h3><span class="section-number">4.6.3. </span>Grouping and Transforming<a class="headerlink" href="#grouping-and-transforming" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="grouping-and-transforming">
+<h3><span class="section-number">5.6.3. </span>Grouping and Transforming<a class="headerlink" href="#grouping-and-transforming" title="Permalink to this headline">#</a></h3>
 <p>You may not always want to change the index to reflect new groups when performing computations at the group level.</p>
 <p>The key point to remember is: use <code class="docutils literal notranslate"><span class="pre">.transform</span></code> with <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> when you want to perform computations on your groups but you want to go back to the original index.</p>
 <p>Let’s say we wanted to express the arrival delay, <code class="docutils literal notranslate"><span class="pre">&quot;arr_del&quot;</span></code>, of each flight as a fraction of the worst arrival delay in each month.</p>
@@ -5275,17 +5130,17 @@ How can you change that default?</p>
 </div></div></div>
 </div>
 <p>Note that the first few entries of <code class="docutils literal notranslate"><span class="pre">&quot;max_delay_month&quot;</span></code> are all the same because the month is the same for those entries, but the delay fraction changes with each row.</p>
-</div>
-<div class="section" id="groupby-exercises">
-<h3><span class="section-number">4.6.4. </span>Groupby Exercises<a class="headerlink" href="#groupby-exercises" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
+</section>
+<section id="groupby-exercises">
+<h3><span class="section-number">5.6.4. </span>Groupby Exercises<a class="headerlink" href="#groupby-exercises" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
 <li><p>Which carrier has the worst delays? Challenge: can you disentangle the effects of bad airports vs. bad carriers? Why/why not? (Hint: think about <code class="docutils literal notranslate"><span class="pre">flights.groupby([&quot;carrier&quot;,</span> <span class="pre">&quot;dest&quot;]).count()</span></code>)</p></li>
 <li><p>Find the most delayed flight to each destination.</p></li>
 <li><p>How do delays vary over the course of the day?</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -5299,7 +5154,7 @@ How can you change that default?</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -5307,44 +5162,134 @@ How can you change that default?</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="workflow-basics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Workflow: Basics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="workflow-style.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Workflow: Style</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">5.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">5.1.1. Prerequisites</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-basics">5.2. <strong>pandas</strong> basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">5.3. Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">5.3.1. Accessing Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">5.3.2. Filtering rows with query</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">5.3.3. Re-arranging Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">5.3.4. Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">5.4. Manipulating Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">5.4.1. Creating New Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">5.4.2. Accessing Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">5.4.3. Renaming Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">5.4.4. Re-ordering Columns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">5.5. Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">5.5.1. Column and Row Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">5.6. Grouping, changing the index, and applying summary statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-aggregating">5.6.1. Grouping and Aggregating</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-by-multiple-variables">5.6.2. Grouping by multiple variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-transforming">5.6.3. Grouping and Transforming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-exercises">5.6.4. Groupby Exercises</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="workflow-basics.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Workflow: Basics</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="workflow-style.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Workflow: Style</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The Py4DS Community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Py4DS Community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
