@@ -521,7 +521,7 @@ document.write(`
 </section>
 <section id="a-python-interpreter">
 <h3>A Python interpreter<a class="headerlink" href="#a-python-interpreter" title="Permalink to this headline">#</a></h3>
-<p>Python is both a programming language that you can read, and a language that computers can read, interpret, and then carry out instructions based on. For your computer to be able to read and execute Python code, you will need to get Python installed on your computer. There are lots of ways to install a Python “interpreter” on your computer, this book recommends the <em>Anaconda distribution</em> of Python for its flexibility and simplicity.</p>
+<p>Python is both a programming language that you can read, and a language that computers can read, interpret, and then carry out instructions based on. For your computer to be able to read and execute Python code, you will need to get Python installed on your computer. There are lots of ways to install a Python “interpreter” on your computer, but this book recommends the <em>Anaconda distribution</em> of Python for its flexibility and simplicity.</p>
 </section>
 <section id="packages">
 <h3>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">#</a></h3>
@@ -546,6 +546,7 @@ document.write(`
 </section>
 <section id="how-to-get-started-on-your-own-computer">
 <h2>How to get started on your own computer<a class="headerlink" href="#how-to-get-started-on-your-own-computer" title="Permalink to this headline">#</a></h2>
+<p>These instructions are for if you’re going to work with Python locally, on your own computer.</p>
 <section id="installing-python">
 <h3>Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">#</a></h3>
 <p>To download and install Python, we’ll use the Anaconda “distribution” of Python, which is available on all major operating systems. To install it, follow the instructions below or watch this video on <em><a class="reference external" href="https://www.youtube.com/watch?v=ZWQwGR5ppnk">how to install Python using the Anaconda distribution of Python</a></em>.</p>
@@ -567,6 +568,7 @@ document.write(`
 </section>
 <section id="data-science-in-the-cloud">
 <h2>Data science in the cloud<a class="headerlink" href="#data-science-in-the-cloud" title="Permalink to this headline">#</a></h2>
+<p>These instructions are for if you’re planning to do your data science remotely, using a computer in the cloud.</p>
 <p>There are many ways to do data science in the cloud, but we’re going to share with you the absolute simplest. For this, you will need to sign up for a <a class="reference external" href="https://github.com/">Github Account</a>. Github is an organisation that’s owned by Microsoft and which provides a range of services including a way to back-up code on the cloud, and cloud computing. One of the services offered is <em>Github Codespaces</em>. A GitHub Codespace is an online cloud computer that you connect to from your browser window. It has a generous 60 hours free of computing per month.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -654,7 +656,7 @@ document.write(`
 <h2>Alternative ways to run the code from the book<a class="headerlink" href="#alternative-ways-to-run-the-code-from-the-book" title="Permalink to this headline">#</a></h2>
 <p>As well as following this book using your own computer or on the cloud via Github Codespaces, you can run the code online through a few other options. The first is the easiest to get started with.</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://research.google.com/colaboratory/">Google Colab notebooks</a>. Free for most use. You can launch most pages in this book interactively by using the ‘Colab’ button under the rocket symbol at the top of the page. It will be in the form of a notebook (which mixes code and text) rather than a script (.py file) but the code you write is the same.</p></li>
+<li><p><a class="reference external" href="https://research.google.com/colaboratory/">Google Colab notebooks</a>. Free for most use. You can launch most pages in this book interactively by using the ‘Colab’ button under the rocket symbol at the top of the page. It will be in the form of a notebook (which mixes code and text) rather than a script (.py file) but the code you write is the same. Note that you may need to update packages to the most recent versions. On Colab, you can do this by runnin <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">**packagename**</span></code> in a code cell—note the extra exclamation mark, which tells Colab that this is an instruction for the operating system rather than for Python.</p></li>
 <li><p><a class="reference external" href="https://www.gitpod.io/">Gitpod Workspace</a>. An alternative to Codespaces. This is a remote, cloud-based version of Visual Studio Code with Python installed and will run Python scripts. Note that the free tier covers 50 hours per month.</p></li>
 </ol>
 </section>

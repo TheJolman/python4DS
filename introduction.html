@@ -468,7 +468,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-won-t-learn">What you won’t learn</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#big-data">Big data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-julia-and-friends">R, Julia, and friends</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#julia-and-r">Julia and R</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-about-this-book">Details about this book</a></li>
@@ -523,15 +523,15 @@ document.write(`
 <p>(If your data is bigger than this, carefully consider whether your big data problem is actually a small data problem in disguise. While the complete data set might be big, often the data needed to answer a specific question is small. You might be able to find a subset, subsample, or summary that fits in memory and still allows you to answer the question that you’re interested in. The challenge here is finding the right small data, which often requires a lot of iteration.)</p>
 <p>Another possibility is that your big data problem is actually a large number of small data problems in disguise. Each individual problem might fit in memory, but you have millions of them. For example, you might want to fit a model to each person in your dataset. This would be trivial if you had just 10 or 100 people, but instead you have a million. Fortunately, each problem is independent of the others (a setup that is sometimes called embarrassingly parallel), so you just need a system (like <a class="reference external" href="https://hadoop.apache.org/">Hadoop</a> or <a class="reference external" href="https://spark.apache.org/">Spark</a>) that allows you to send different datasets to different computers for processing. Once you’ve figured out how to answer your question for a single subset using the tools described in this book, you can learn new tools like <strong>pyspark</strong> to solve it for the full dataset.</p>
 </section>
-<section id="r-julia-and-friends">
-<h3>R, Julia, and friends<a class="headerlink" href="#r-julia-and-friends" title="Permalink to this headline">#</a></h3>
-<p>In this book, you won’t learn anything about R, Julia, or any other programming language useful for data science. This isn’t because we think these tools are bad. They’re not! And in practice, most data science teams use a mix of languages. However, you may find it easier to learn one set of tools at a time. In this book you’ll see what we think of as the three critical tools for data science:</p>
+<section id="julia-and-r">
+<h3>Julia and R<a class="headerlink" href="#julia-and-r" title="Permalink to this headline">#</a></h3>
+<p>In this book, you won’t learn anything about R or Julia, which are both sometimes used for data science. This isn’t because we think these tools are bad. They’re not! In this book you’ll see what we think of as the three critical tools for data science:</p>
 <ul class="simple">
 <li><p>Python</p></li>
 <li><p>SQL</p></li>
 <li><p>command line scripting</p></li>
 </ul>
-<p>This book predominantly uses Python, which is usually ranked as the first or second most popular programming language in the world and, just as importantly, it’s also one of the easiest to learn. It’s a general purpose language, which means it can perform a wide range of tasks. This combination of features is why people say Python has a low floor and a high ceiling. It’s also very versatile; the joke goes that Python is the 2nd best language at everything, and there’s some truth to that (although Python is 1st best at some tasks, like machine learning). But a language that covers such a lot of ground is also very useful; and Python is widely used across industry, academia, and the public sector, and is often taught in schools too.</p>
+<p>These are the three languages that will get you a job as a data scientist, and that’s a very good reason to focus on them. We’ll spend most of our time with Python, and for good reason. Python is usually ranked as the first or second most popular programming language in the world and, just as importantly, it’s also one of the easiest to learn. It’s a general purpose language, which means it can perform a wide range of tasks. This combination of features is why people say Python has a low floor and a high ceiling. It’s also very versatile; the joke goes that Python is the 2nd best language at everything, and there’s some truth to that (although Python is 1st best at some tasks, like machine learning). But a language that covers such a lot of ground is also very useful; and Python is widely used across industry, academia, and the public sector, and is often taught in schools too.</p>
 <p>We think Python is a great place to start your data science journey because it is the most popular tool for data science and programming more generally, with a large community behind it.</p>
 </section>
 </section>
@@ -624,7 +624,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-won-t-learn">What you won’t learn</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#big-data">Big data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-julia-and-friends">R, Julia, and friends</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#julia-and-r">Julia and R</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-about-this-book">Details about this book</a></li>
