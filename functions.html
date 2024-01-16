@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>28. Functions &#8212; Python for Data Science</title>
+    <title>27. Functions &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="29. Iteration" href="iteration.html" />
-    <link rel="prev" title="27. Webscraping and APIs" href="webscraping-and-apis.html" />
+    <link rel="next" title="28. Iteration" href="iteration.html" />
+    <link rel="prev" title="26. Webscraping and APIs" href="webscraping-and-apis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,14 +474,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">28.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">28.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">27.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">27.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">28.2. Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-you-write-a-function">28.3. When should you write a function?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-are-for-humans-and-computers">28.4. Functions are for humans and computers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-scope">28.5. Function Scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">27.2. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-you-write-a-function">27.3. When should you write a function?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-are-for-humans-and-computers">27.4. Functions are for humans and computers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-scope">27.5. Function Scope</a></li>
 </ul>
             </nav>
         </div>
@@ -483,9 +494,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="functions">
-<span id="id1"></span><h1><span class="section-number">28. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">27. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">28.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">27.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>One of the best ways to improve your reach as a data scientist is to write functions.
 Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.
 Writing a function has three big advantages over using copy-and-paste:</p>
@@ -503,12 +514,12 @@ Youcanmanagewithoutit, but it sure makes things easier to read!
 As with styles of punctuation, there are many possible variations.
 Here we present the style we use in our code, but the most important thing is to be consistent.</p>
 <section id="prerequisites">
-<h3><span class="section-number">28.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">27.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>You will need the <strong>pandas</strong> and <strong>numpy</strong> packages for this chapter.</p>
 </section>
 </section>
 <section id="id2">
-<h2><span class="section-number">28.2. </span>Functions<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">27.2. </span>Functions<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>A function has inputs, it performs its function, and it returns any outputs. Functions begin with a def keyword for ‘define a function’. It then has a name, followed by brackets, (), which may contain function arguments and function keyword arguments. This is followed by a colon. The body of the function is then indented relative to the left-most text. Function arguments are defined in brackets following the name, with different inputs separated by commas. Any outputs are given with the return keyword, again with different variables separated by commas.</p>
 <p>Let’s see a very simple example of a function with a single <em>argument</em> (or arg):</p>
 <div class="cell docutils container">
@@ -572,7 +583,7 @@ Here we present the style we use in our code, but the most important thing is to
 <p class="admonition-title">Exercise</p>
 <p>What is the return type of a function with multiple return values separated by commas following the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement?</p>
 </div>
-<p>In that last example, you’ll notice that we added some text to the function. This is a doc-string, or documentation string. It’s there to help users (and, most likely, future you) to understand what the function does. Let’s see how this works in action by calling <code class="docutils literal notranslate"><span class="pre">help</span></code> on the <code class="docutils literal notranslate"><span class="pre">score_message</span></code> function:</p>
+<p>In that last example, you’ll notice that we added some text to the function. This is a doc-string, or documentation string. It’s there to help users (and, most likely, future you) to understand what the function does. Let’s see how this works in action by calling <code class="docutils literal notranslate"><span class="pre">help()</span></code> on the <code class="docutils literal notranslate"><span class="pre">score_message</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">score_message</span><span class="p">)</span>
@@ -603,7 +614,7 @@ score_message(score, name=&#39;student&#39;)
 <p>To learn more about args and kwargs, check out these <a class="reference external" href="https://calmcode.io/args-kwargs/introduction.html">short video tutorials</a>.</p>
 </section>
 <section id="when-should-you-write-a-function">
-<h2><span class="section-number">28.3. </span>When should you write a function?<a class="headerlink" href="#when-should-you-write-a-function" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">27.3. </span>When should you write a function?<a class="headerlink" href="#when-should-you-write-a-function" title="Permalink to this heading">#</a></h2>
 <p>You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code).
 For example, take a look at this code.
 What does it do?</p>
@@ -715,7 +726,7 @@ That process is called unit testing. Unfortunately, it’s beyond the scope of t
 </div>
 <p>Compared to the original, this code is easier to understand and we’ve eliminated one class of copy-and-paste errors. There is still quite a bit of duplication since we’re doing the same thing to multiple columns; we can actually remove this too, but we’ll cover how to do that later in the book.</p>
 <p>Another advantage of functions is that if our requirements change, we only need to make the change in one place.
-For example, we might discover that some of our variables include infinite values, and <code class="docutils literal notranslate"><span class="pre">rescale</span></code> (effectively) fails:</p>
+For example, we might discover that some of our variables include infinite values, and <code class="docutils literal notranslate"><span class="pre">rescale()</span></code> (effectively) fails:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rescale</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
@@ -761,7 +772,7 @@ dtype: float64
 The more repetition you have in your code, the more places you need to remember to update when things change (and they always do!), and the more likely you are to create bugs over time.</p>
 </section>
 <section id="functions-are-for-humans-and-computers">
-<h2><span class="section-number">28.4. </span>Functions are for humans and computers<a class="headerlink" href="#functions-are-for-humans-and-computers" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">27.4. </span>Functions are for humans and computers<a class="headerlink" href="#functions-are-for-humans-and-computers" title="Permalink to this heading">#</a></h2>
 <p>It’s important to remember that functions are not just for the computer, but are also for humans. For the most part, Python doesn’t care what your function is called, or what comments it contains, but these are important for human readers. This section discusses some things that you should bear in mind when writing functions that humans can understand.</p>
 <p>The name of a function is important. Ideally, the name of your function will be short, but clearly evoke what the function does. That’s hard! But it’s better to be clear than short, as Visual Studio Code’s autocomplete makes it easy to type long names.</p>
 <p>Generally, function names should be verbs, and arguments should be nouns. There are some exceptions: nouns are ok if the function computes a very well known noun (i.e. <code class="docutils literal notranslate"><span class="pre">mean</span></code> is better than <code class="docutils literal notranslate"><span class="pre">compute_mean</span></code>), or accessing some property of an object (i.e. <code class="docutils literal notranslate"><span class="pre">coef</span></code> is better than <code class="docutils literal notranslate"><span class="pre">get_coefficients</span></code>). A good sign that a noun might be a better choice is if you’re using a very broad verb like “get”, “compute”, “calculate”, or “determine”.
@@ -787,7 +798,7 @@ Use your best judgement and don’t be afraid to rename a function if you figure
 <p>A good example of this design is the <strong>pandas</strong> package: if you don’t remember exactly which function you need to read in data, you can type <code class="docutils literal notranslate"><span class="pre">pd.read_</span></code> and jog your memory as the autocomplete brings up the options.</p>
 </section>
 <section id="function-scope">
-<h2><span class="section-number">28.5. </span>Function Scope<a class="headerlink" href="#function-scope" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">27.5. </span>Function Scope<a class="headerlink" href="#function-scope" title="Permalink to this heading">#</a></h2>
 <p>Scope refers to what parts of your code can see what other parts. There are three different scopes to bear in mind: local, global, and non-local.</p>
 <p><strong>Local</strong></p>
 <p>If you define a variable inside a function, the rest of your code won’t be able to ‘see’ it or use it. For example, here’s a function that creates a variable and then an example of calling that variable:</p>
@@ -869,11 +880,10 @@ y is outside a function: I&#39;m a global variable
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="webscraping-and-apis.html"
@@ -881,7 +891,7 @@ y is outside a function: I&#39;m a global variable
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">27. </span>Webscraping and APIs</p>
+        <p class="prev-next-title"><span class="section-number">26. </span>Webscraping and APIs</p>
       </div>
     </a>
     <a class="right-next"
@@ -889,14 +899,11 @@ y is outside a function: I&#39;m a global variable
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">29. </span>Iteration</p>
+        <p class="prev-next-title"><span class="section-number">28. </span>Iteration</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -911,14 +918,14 @@ y is outside a function: I&#39;m a global variable
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">28.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">28.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">27.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">27.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">28.2. Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-you-write-a-function">28.3. When should you write a function?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-are-for-humans-and-computers">28.4. Functions are for humans and computers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-scope">28.5. Function Scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">27.2. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-you-write-a-function">27.3. When should you write a function?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-are-for-humans-and-computers">27.4. Functions are for humans and computers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-scope">27.5. Function Scope</a></li>
 </ul>
   </nav></div>
 
@@ -966,8 +973,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>12. Visualisation &#8212; Python for Data Science</title>
+    <title>11. Visualisation &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="13. Layers" href="vis-layers.html" />
-    <link rel="prev" title="11. Postscript: Getting Further Help" href="workflow-help.html" />
+    <link rel="next" title="12. Layers" href="vis-layers.html" />
+    <link rel="prev" title="10. Postscript: Getting Further Help" href="workflow-help.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -442,10 +453,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -453,7 +464,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -480,11 +491,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophies-of-data-visualisation">12.1. Philosophies of data visualisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purposes-of-data-visualisation">12.2. Purposes of data visualisation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-viz">12.2.1. Exploratory Data Viz</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-data-viz">12.2.2. Scientific Data Viz</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#narrative-data-viz">12.2.3. Narrative Data Viz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophies-of-data-visualisation">11.1. Philosophies of data visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purposes-of-data-visualisation">11.2. Purposes of data visualisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-viz">11.2.1. Exploratory Data Viz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-data-viz">11.2.2. Scientific Data Viz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#narrative-data-viz">11.2.3. Narrative Data Viz</a></li>
 </ul>
 </li>
 </ul>
@@ -499,15 +510,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="visualisation">
-<span id="visualise"></span><h1><span class="section-number">12. </span>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">#</a></h1>
+<span id="visualise"></span><h1><span class="section-number">11. </span>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this heading">#</a></h1>
 <p>After reading the first part of the book, you understand the basics of the most important tools for doing data science. Now it’s time to start diving into the details. In this part of the book, you’ll learn about visualising data in further depth (in <a class="reference internal" href="vis-layers.html#vis-layers"><span class="std std-ref">Layers</span></a>), and get further stuck into the details of the different kinds of data visualisation (in <a class="reference internal" href="exploratory-data-analysis.html#exploratory-data-analysis"><span class="std std-ref">Exploratory Data Analysis</span></a> and <a class="reference internal" href="communicate-plots.html#communicate-plots"><span class="std std-ref">Graphics for Communication</span></a>). In this short chapter, we discuss the different ways to create visualisations, and the different purposes of visualisations.</p>
 <section id="philosophies-of-data-visualisation">
-<h2><span class="section-number">12.1. </span>Philosophies of data visualisation<a class="headerlink" href="#philosophies-of-data-visualisation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">11.1. </span>Philosophies of data visualisation<a class="headerlink" href="#philosophies-of-data-visualisation" title="Permalink to this heading">#</a></h2>
 <p>There are broadly two categories of approach to using code to create data visualisations: <em>imperative</em> (build what you want from individual elements) and <em>declarative</em> (say what you want from a list of pre-existing options). Choosing which to use involves a trade-off: imperative libraries offer you flexibility but at the cost of some verbosity; declarative libraries offer you a quick way to plot your data, but only if it’s in the right format to begin with, and customisation to special chart types is more difficult.</p>
 <p>Python has many excellent plotting packages, including perhaps the most powerful imperative plotting package around, <strong>matplotlib</strong>, and an amazing declarative library that we already saw, <strong>lets-plot</strong>. These two libraries will get you a long way, and each could be worthy of an entire book themselves. Fortunately for us, though, we can do 95% of what we need with a small number of commands from one or the other of them. In general, to keep this book as light as possible, we’ve opted to use <strong>lets-plot</strong> wherever possible—and <a class="reference internal" href="vis-layers.html#vis-layers"><span class="std std-ref">Layers</span></a> is going to take you on a more in-depth tour of how to use it yourself.</p>
 </section>
 <section id="purposes-of-data-visualisation">
-<h2><span class="section-number">12.2. </span>Purposes of data visualisation<a class="headerlink" href="#purposes-of-data-visualisation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">11.2. </span>Purposes of data visualisation<a class="headerlink" href="#purposes-of-data-visualisation" title="Permalink to this heading">#</a></h2>
 <p>Data visualisation has all kinds of different purposes. It can be useful to bear in mind three broad categories of visualisation that are out there:</p>
 <ul class="simple">
 <li><p>exploratory</p></li>
@@ -516,22 +527,22 @@ document.write(`
 </ul>
 <p>Let’s look at each in a bit more detail.</p>
 <section id="exploratory-data-viz">
-<h3><span class="section-number">12.2.1. </span>Exploratory Data Viz<a class="headerlink" href="#exploratory-data-viz" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">11.2.1. </span>Exploratory Data Viz<a class="headerlink" href="#exploratory-data-viz" title="Permalink to this heading">#</a></h3>
 <p>The first of the three kinds is <em>exploratory data visualisation</em>, and it’s the kind that you do when you’re looking and data and trying to understand it. Just plotting the data is a really good strategy for getting a feel for any issues there might be. This is perhaps most famously demonstrated by Anscombe’s quartet: four different datasets with the same mean, standard deviation, and correlation but very different data distributions.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/ff1f289845acebf22266e63954fb3307d7a4aebf44e708a1f64cdcd4deec1fed.svg" src="_images/ff1f289845acebf22266e63954fb3307d7a4aebf44e708a1f64cdcd4deec1fed.svg" /></div>
+<img alt="_images/47c6646d503161501b292fe4986fe029e76b61f3aa5a8d864007e794e14d806a.svg" src="_images/47c6646d503161501b292fe4986fe029e76b61f3aa5a8d864007e794e14d806a.svg" /></div>
 </div>
 <p>Exploratory visualisation is usually quick and dirty, and flexible too. Some exploratory data viz can be automated, and there’s a whole host of packages to help with this, including <a class="reference external" href="https://aeturrell.github.io/skimpy/"><strong>skimpy</strong></a>.</p>
 <p>Beyond you and perhaps your co-authors/collaborators, however, not many other people should be seeing your exploratory visualisation! They will typically be worked up quickly, be numerous, and be throw-away. We’ll look more at this in <a class="reference internal" href="exploratory-data-analysis.html#exploratory-data-analysis"><span class="std std-ref">Exploratory Data Analysis</span></a>.</p>
 </section>
 <section id="scientific-data-viz">
-<h3><span class="section-number">12.2.2. </span>Scientific Data Viz<a class="headerlink" href="#scientific-data-viz" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">11.2.2. </span>Scientific Data Viz<a class="headerlink" href="#scientific-data-viz" title="Permalink to this heading">#</a></h3>
 <p>The second kind, scientific data visualisation, is the prime cut of your exploratory visualisation. It’s the kind of plot you might include in a more technical paper, the picture that says a thousand words. I often think of the first image of a black hole <span id="id1">Akiyama <em>et al.</em> [<a class="reference internal" href="zreferences.html#id6" title="Kazunori Akiyama, Antxon Alberdi, Walter Alef, Keiichi Asada, Rebecca Azulay, Anne-Kathrin Baczko, David Ball, Mislav Baloković, John Barrett, Dan Bintley, and others. First m87 event horizon telescope results. iv. imaging the central supermassive black hole. The Astrophysical Journal Letters, 875(1):L4, 2019.">AAA+19</a>]</span> as a prime example of this. You can get away with having a high density of information in a scientific plot and, in short format journals, you may need to. The journal Physical Review Letters, which has an 8 page limit, has a classic of this genre in more or less every issue. Ensuring that important values can be accurately read from the plot is especially important in these kinds of charts. But they can also be the kind of plot that presents the killer results in a study; they might not be exciting to people who don’t look at charts for a living, but they might be exciting and, just as importantly, understandable by your peers.</p>
 <p>This type of visualisation is especially popular in the big science journals like <em>Nature</em> and <em>Science</em>, where space is at a premium. We won’t cover this type of plot in this book, because it tends to be very bespoke.</p>
 </section>
 <section id="narrative-data-viz">
-<h3><span class="section-number">12.2.3. </span>Narrative Data Viz<a class="headerlink" href="#narrative-data-viz" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">11.2.3. </span>Narrative Data Viz<a class="headerlink" href="#narrative-data-viz" title="Permalink to this heading">#</a></h3>
 <p>The third and final kind is narrative data visualisation. This is the one that requires the most thought in the step where you go from the first view to the end product. It’s a visualisation that doesn’t just show a picture, but gives an insight. These are the kind of visualisations that you might see in the <em>Financial Times</em>, <em>The Economist</em>, or on the <em>BBC News</em> website. They come with aids that help the viewer focus on the aspects that the creator wanted them to (you can think of these aids or focuses as doing for visualisation what bold font does for text). They’re well worth using in your work, especially if you’re trying to communicate a particular narrative, and especially if the people you’re communicating with don’t have deep knowledge of the topic. You might use them in a paper that you hope will have a wide readership, in a blog post summarising your work, or in a report intended for a policymaker.</p>
 <p>You can find more information on the topic of communicating via data visualisations in the <a class="reference internal" href="communicate-plots.html#communicate-plots"><span class="std std-ref">Graphics for Communication</span></a> chapter.</p>
 </section>
@@ -563,11 +574,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="workflow-help.html"
@@ -575,7 +585,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Postscript: Getting Further Help</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Postscript: Getting Further Help</p>
       </div>
     </a>
     <a class="right-next"
@@ -583,14 +593,11 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>Layers</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Layers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -605,11 +612,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophies-of-data-visualisation">12.1. Philosophies of data visualisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purposes-of-data-visualisation">12.2. Purposes of data visualisation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-viz">12.2.1. Exploratory Data Viz</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-data-viz">12.2.2. Scientific Data Viz</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#narrative-data-viz">12.2.3. Narrative Data Viz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophies-of-data-visualisation">11.1. Philosophies of data visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purposes-of-data-visualisation">11.2. Purposes of data visualisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-viz">11.2.1. Exploratory Data Viz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-data-viz">11.2.2. Scientific Data Viz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#narrative-data-viz">11.2.3. Narrative Data Viz</a></li>
 </ul>
 </li>
 </ul>
@@ -659,8 +666,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

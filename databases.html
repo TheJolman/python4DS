@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>25. Databases &#8212; Python for Data Science</title>
+    <title>24. Databases &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="26. Nested Data" href="rectangling.html" />
-    <link rel="prev" title="24. Spreadsheets" href="spreadsheets.html" />
+    <link rel="next" title="25. Nested Data" href="rectangling.html" />
+    <link rel="prev" title="23. Spreadsheets" href="spreadsheets.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,30 +474,30 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">25.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">25.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">24.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">24.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-basics">25.2. Database Basics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-databases">25.3. Connecting to Databases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-databases-directly">25.4. Working with Databases Directly</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-database">25.4.1. Creating a Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-basics">24.2. Database Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-databases">24.3. Connecting to Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-databases-directly">24.4. Working with Databases Directly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-database">24.4.1. Creating a Database</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-sql-queries">25.5. Basic SQL Queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins">25.5.1. Joins</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">25.5.2. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-sql-queries">24.5. Basic SQL Queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins">24.5.1. Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">24.5.2. Functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">25.6. Exploring SQL Databases with <strong>Datasette</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-pandas">25.7. SQL with <strong>pandas</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-ibis">25.8. SQL with <strong>ibis</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-sqlmodel">25.9. SQL with <strong>SQLModel</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">25.9.1. Creating a SQL Database with <strong>SQLModel</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">25.9.2. Reading from SQL using <strong>SQLModel</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">24.6. Exploring SQL Databases with <strong>Datasette</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-pandas">24.7. SQL with <strong>pandas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-ibis">24.8. SQL with <strong>ibis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-sqlmodel">24.9. SQL with <strong>SQLModel</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">24.9.1. Creating a SQL Database with <strong>SQLModel</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">24.9.2. Reading from SQL using <strong>SQLModel</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more-about-sql">25.10. Where to Learn More About SQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more-about-sql">24.10. Where to Learn More About SQL</a></li>
 </ul>
             </nav>
         </div>
@@ -499,13 +510,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="databases">
-<span id="id1"></span><h1><span class="section-number">25. </span>Databases<a class="headerlink" href="#databases" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">24. </span>Databases<a class="headerlink" href="#databases" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">25.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>A huge amount of data lives in databases, so it’s essential that you know how to access them. Sometimes you can ask someone to download a snapshot into a .csv for you, but this gets painful quickly: every time you need to make a change you’ll have to communicate with another human. You want to be able to reach into the database directly to get the data you need, when you need it.</p>
-<p>In this chapter, you’ll first learn the basics of Python packages that can interact with SQL databses: how to use them to connect to a database and then retrieve data with a SQL<a class="footnote-reference brackets" href="#import-databases-1" id="id2">1</a> query. <strong>SQL</strong>, short for <strong>s</strong>tructured <strong>q</strong>uery <strong>l</strong>anguage, is the lingua franca of databases, and is an important language for all data scientists to learn. You won’t become a SQL master by the end of the chapter, but you will be able to identify the most important components and understand what they do.</p>
+<p>In this chapter, you’ll first learn the basics of Python packages that can interact with SQL databses: how to use them to connect to a database and then retrieve data with a SQL<a class="footnote-reference brackets" href="#import-databases-1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> query. <strong>SQL</strong>, short for <strong>s</strong>tructured <strong>q</strong>uery <strong>l</strong>anguage, is the lingua franca of databases, and is an important language for all data scientists to learn. You won’t become a SQL master by the end of the chapter, but you will be able to identify the most important components and understand what they do.</p>
 <section id="prerequisites">
-<h3><span class="section-number">25.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>You will need the <strong>pandas</strong>, <strong>SQLModel</strong>, and <strong>ibis</strong> packages for this chapter. You probably already have <strong>pandas</strong> installed; to install <strong>SQLModel</strong> and <strong>ibis</strong> respectively run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sqlmodel</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ibis-framework</span></code> on your computer’s command line. First, let’s bring in some general packages and turn off verbose warnings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -520,9 +531,9 @@ document.write(`
 </section>
 </section>
 <section id="database-basics">
-<h2><span class="section-number">25.2. </span>Database Basics<a class="headerlink" href="#database-basics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.2. </span>Database Basics<a class="headerlink" href="#database-basics" title="Permalink to this heading">#</a></h2>
 <p>At the simplest level, you can think about a database as a collection of data frames, called <strong>tables</strong> in database terminology.
-Like a <strong>pandas</strong> dataframe, a database table is a collection of named columns, where every value in the column is the same type.
+Like a <strong>pandas</strong> data frame, a database table is a collection of named columns, where every value in the column is the same type.
 There are three high level differences between data frames and database tables:</p>
 <ul class="simple">
 <li><p>Database tables are stored on disk (ie on file) and can be arbitrarily large.
@@ -541,7 +552,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </ul>
 </section>
 <section id="connecting-to-databases">
-<h2><span class="section-number">25.3. </span>Connecting to Databases<a class="headerlink" href="#connecting-to-databases" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.3. </span>Connecting to Databases<a class="headerlink" href="#connecting-to-databases" title="Permalink to this heading">#</a></h2>
 <p>To connect to a database from Python, there are a number of options, but it does depend on what <em>kind</em> of database you are connecting to. The steps (eg connect to the database, upload data, run SQL series) are similar though, so we won’t lose much by just choosing one example—a SQLite database. SQLite is a small, fast, self-contained, SQL database engine and the most used database engine in the world. A lot of the data on your computer and mobile phone will in fact be in SQLite databases. (Simon Willison has some <a class="reference external" href="https://dogsheep.github.io/">great tools</a> to help export some of the data that you’ve created!)</p>
 <p>We will always need two steps though, regardless of what kind of SQL database we are connecting to:</p>
 <ul class="simple">
@@ -552,7 +563,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <p>Setting up a client-server or cloud DBMS would be a pain for this book, so we’ll instead use an in-computer DBMS.</p>
 </section>
 <section id="working-with-databases-directly">
-<h2><span class="section-number">25.4. </span>Working with Databases Directly<a class="headerlink" href="#working-with-databases-directly" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.4. </span>Working with Databases Directly<a class="headerlink" href="#working-with-databases-directly" title="Permalink to this heading">#</a></h2>
 <p>Let’s connect to a small SQLite database called the <a class="reference external" href="https://database.guide/2-sample-databases-sqlite/">Chinook database</a>, which contains information about the artists, songs, and albums from a music shop, as well as information on the shop’s employees, customers, and the customers purchases. This information is contained in eleven tables. The figure below shows the data schema:</p>
 <p><img alt="Data schema of Chinook database" src="https://github.com/arjunchndr/Analyzing-Chinook-Database-using-SQL-and-Python/raw/master/chinook-schema.svg" /></p>
 <p>You can download the file, Chinook.sqlite, from the github repository of this book <a class="reference external" href="https://github.com/aeturrell/python4DS/tree/main/data">here</a>; on your computer, you’ll need to save it in a subdirectory (relative to where your code is being executed) called ‘data’ to work through the exercises below.</p>
@@ -584,7 +595,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 </div>
-<p>Note that the output here is in the form a Python object called a tuple. If we wanted to put this into a <strong>pandas</strong> dataframe, we can just pass it straight in:</p>
+<p>Note that the output here is in the form a Python object called a tuple. If we wanted to put this into a <strong>pandas</strong> data frame, we can just pass it straight in:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -685,7 +696,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <section id="creating-a-database">
-<h3><span class="section-number">25.4.1. </span>Creating a Database<a class="headerlink" href="#creating-a-database" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.4.1. </span>Creating a Database<a class="headerlink" href="#creating-a-database" title="Permalink to this heading">#</a></h3>
 <p>Often, you’ll want to create a SQL database to later (efficiently) access cuts of data. Let’s create a test database directly using the <strong>sqlite</strong> package. This process involves a <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> statement, then the name of the table followed by the names of the columns and their data types.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -726,9 +737,9 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </section>
 </section>
 <section id="basic-sql-queries">
-<h2><span class="section-number">25.5. </span>Basic SQL Queries<a class="headerlink" href="#basic-sql-queries" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.5. </span>Basic SQL Queries<a class="headerlink" href="#basic-sql-queries" title="Permalink to this heading">#</a></h2>
 <p>A full description of SQL queries is outside the scope of this book, but we’ll try and arm you with the basics.  The top-level components of SQL are called <strong>statements</strong>. Common statements include <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> for defining new tables, <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> for adding data, and <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> for retrieving data. We will on focus on <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statements, also called <strong>queries</strong>, because they are almost exclusively what you’ll use as a data scientist.</p>
-<p>A query is made up of <strong>clauses</strong>. There are six important clauses: <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, and <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code>. Every query must have the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code><a class="footnote-reference brackets" href="#import-databases-4" id="id3">2</a> and <code class="docutils literal notranslate"><span class="pre">FROM</span></code><a class="footnote-reference brackets" href="#import-databases-5" id="id4">3</a> clauses and the simplest query is <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">table</span></code>, which selects all columns from a specified table called “table”. <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> and <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> control which rows are included and how they are ordered. <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> converts the query to a summary, causing aggregation to happen. <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> limits how many rows are returned.</p>
+<p>A query is made up of <strong>clauses</strong>. There are six important clauses: <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, and <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code>. Every query must have the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code><a class="footnote-reference brackets" href="#import-databases-4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> and <code class="docutils literal notranslate"><span class="pre">FROM</span></code><a class="footnote-reference brackets" href="#import-databases-5" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> clauses and the simplest query is <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">table</span></code>, which selects all columns from a specified table called “table”. <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> and <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> control which rows are included and how they are ordered. <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> converts the query to a summary, causing aggregation to happen. <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> limits how many rows are returned.</p>
 <p>Important: in SQL, the order matters. You must always write the clauses in the order <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>. Confusingly, this order doesn’t match how the clauses actually evaluated which is first <code class="docutils literal notranslate"><span class="pre">FROM</span></code>, then <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, and <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>.</p>
 <p>Let’s look at a few of these in action. To get a few entries, it’s</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Artist</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
@@ -788,7 +799,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <section id="joins">
-<h3><span class="section-number">25.5.1. </span>Joins<a class="headerlink" href="#joins" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.5.1. </span>Joins<a class="headerlink" href="#joins" title="Permalink to this heading">#</a></h3>
 <p>If you’re familiar with joins in <strong>pandas</strong>, SQL joins are very similar. Let’s see if we can join the ‘album’ and ‘track’ tables to find the <em>name</em> of the albums in the above query.</p>
 <p>Note that as soon as we have the <em>same</em> column names in more than one table, we need to specify the table we are referring to when we use that column name. There are different options for joins (eg <code class="docutils literal notranslate"><span class="pre">INNER</span></code>, <code class="docutils literal notranslate"><span class="pre">LEFT</span></code>) that you can find out more about <a class="reference external" href="https://en.wikipedia.org/wiki/Join_(SQL)">here</a>.</p>
 <div class="cell docutils container">
@@ -812,12 +823,12 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </section>
 <section id="functions">
-<h3><span class="section-number">25.5.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.5.2. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
 <p>We already snuck in one function: <code class="docutils literal notranslate"><span class="pre">AVG</span></code>. Others that you can apply to columns include <code class="docutils literal notranslate"><span class="pre">SUM</span></code>, <code class="docutils literal notranslate"><span class="pre">MIN</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX</span></code>, <code class="docutils literal notranslate"><span class="pre">FIRST</span></code>, <code class="docutils literal notranslate"><span class="pre">LAST</span></code> and <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> (the data scientist’s friend). You can find out more about SQL functions <a class="reference external" href="https://www.tutorialspoint.com/sql/sql-useful-functions.htm">here</a>.</p>
 </section>
 </section>
 <section id="exploring-sql-databases-with-datasette">
-<h2><span class="section-number">25.6. </span>Exploring SQL Databases with <strong>Datasette</strong><a class="headerlink" href="#exploring-sql-databases-with-datasette" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.6. </span>Exploring SQL Databases with <strong>Datasette</strong><a class="headerlink" href="#exploring-sql-databases-with-datasette" title="Permalink to this heading">#</a></h2>
 <p>SQL can be pretty intimidating at first, but there’s a great tool for getting to know it better called <a class="reference external" href="https://datasette.io/"><strong>Datasette</strong></a>. Datasette is a tool for exploring (and creating and sharing) databases. It’s author says that “Datasette is aimed at data journalists, museum curators, archivists, local governments, scientists, researchers and anyone else who has data that they wish to share with the world. It is part of a wider ecosystem of 40 tools and 99 plugins dedicated to making working with structured data as productive as possible.”</p>
 <p>In this context, <strong>Datasette</strong> is useful in two ways:</p>
 <ul class="simple">
@@ -857,8 +868,8 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </section>
 <section id="sql-with-pandas">
-<h2><span class="section-number">25.7. </span>SQL with <strong>pandas</strong><a class="headerlink" href="#sql-with-pandas" title="Permalink to this headline">#</a></h2>
-<p><strong>pandas</strong> is well-equipped for working with SQL. We can simply push the query we just created straight through using its <code class="docutils literal notranslate"><span class="pre">read_sql</span></code> function—but bear in mind we need to pass in the connection we created to the database too:</p>
+<h2><span class="section-number">24.7. </span>SQL with <strong>pandas</strong><a class="headerlink" href="#sql-with-pandas" title="Permalink to this heading">#</a></h2>
+<p><strong>pandas</strong> is well-equipped for working with SQL. We can simply push the query we just created straight through using its <code class="docutils literal notranslate"><span class="pre">read_sql()</span></code> function—but bear in mind we need to pass in the connection we created to the database too:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_join</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
@@ -924,12 +935,12 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </table>
 </div></div></div>
 </div>
-<p>One nice feature of this is that the column names in SQL get passed straight to the column names in our dataframe.</p>
+<p>One nice feature of this is that the column names in SQL get passed straight to the column names in our data frame.</p>
 <p>Now, when you’re writing Python in Visual Studio Code (at least with the Python extensions installed), you get a lot of high quality syntax and auto-completion support. Extensions to the Python language also allow you to take a great deal of care over the types of variables that you are dealing with. Wouldn’t it be nice to have all of that with SQL too (even when accessing it via Python)? The next two packages we’ll look at provide that. Both make working with SQL databases from Python a lot easier and more productive.</p>
 </section>
 <section id="sql-with-ibis">
-<h2><span class="section-number">25.8. </span>SQL with <strong>ibis</strong><a class="headerlink" href="#sql-with-ibis" title="Permalink to this headline">#</a></h2>
-<p>It’s not exactly satisfactory to have to write out your SQL queries in text. What if we could create commands directly from <strong>pandas</strong> commands? You can’t <em>quite</em> do that, but there’s a package that gets you pretty close and it’s called <a class="reference external" href="https://ibis-project.org/"><strong>ibis</strong></a>. <strong>ibis</strong> is particularly useful when you are reading from a database and want to query it just like you would a <strong>pandas</strong> dataframe.</p>
+<h2><span class="section-number">24.8. </span>SQL with <strong>ibis</strong><a class="headerlink" href="#sql-with-ibis" title="Permalink to this heading">#</a></h2>
+<p>It’s not exactly satisfactory to have to write out your SQL queries in text. What if we could create commands directly from <strong>pandas</strong> commands? You can’t <em>quite</em> do that, but there’s a package that gets you pretty close and it’s called <a class="reference external" href="https://ibis-project.org/"><strong>ibis</strong></a>. <strong>ibis</strong> is particularly useful when you are reading from a database and want to query it just like you would a <strong>pandas</strong> data frame.</p>
 <p><strong>Ibis</strong> can connect to local databases (eg a SQLite database), server-based databases (eg Postgres), or cloud-based databased (eg Google’s BigQuery). The syntax to make a connection is, for example, <code class="docutils literal notranslate"><span class="pre">ibis.bigquery.connect</span></code>.</p>
 <p>Let’s see <strong>ibis</strong> in action by reproducing the commands we’ve already seen on the Chinook database, a locally hosted database. First we import it and make a connection to the database.</p>
 <div class="cell docutils container">
@@ -981,7 +992,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 </div>
-<p>Okay, now let’s reproduce the following query: “SELECT albumid, AVG(milliseconds)/1e3/60 FROM track GROUP BY albumid ORDER BY AVG(milliseconds) ASC LIMIT 5;”. We’ll use a groupby, a mutate (which you can think of like <strong>pandas</strong>’ assign statement), a sort, and then <code class="docutils literal notranslate"><span class="pre">limit</span></code> to only show the first five entries.</p>
+<p>Okay, now let’s reproduce the following query: “SELECT albumid, AVG(milliseconds)/1e3/60 FROM track GROUP BY albumid ORDER BY AVG(milliseconds) ASC LIMIT 5;”. We’ll use a groupby, a mutate (which you can think of like <strong>pandas</strong>’ assign statement), a sort, and then <code class="docutils literal notranslate"><span class="pre">limit()</span></code> to only show the first five entries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">track</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;AlbumId&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span>
@@ -1041,14 +1052,14 @@ More recently, there’s been much development of <strong>column-oriented</stron
 <p><strong>Ibis</strong> does a lot more than is shown here, including lazy evaluation, geospatial work, typing, and of course all of the common SQL commands that you’d expect. For more, check out the <a class="reference external" href="https://ibis-project.org/">documentation</a>.</p>
 </section>
 <section id="sql-with-sqlmodel">
-<h2><span class="section-number">25.9. </span>SQL with <strong>SQLModel</strong><a class="headerlink" href="#sql-with-sqlmodel" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.9. </span>SQL with <strong>SQLModel</strong><a class="headerlink" href="#sql-with-sqlmodel" title="Permalink to this heading">#</a></h2>
 <p><strong>Ibis</strong> isn’t the only smart option for working with SQL from Python; <a class="reference external" href="https://sqlmodel.tiangolo.com/"><strong>SQLModel</strong></a> is another option. Use <strong>sqlmodel</strong> when you want to create production-grade SQL databases or want to query them using a slightly different flavour of syntax to <strong>ibis</strong> with extremely rich support.</p>
 <p>So a couple of key strengths of <strong>sqlmodel</strong> include fantastic auto-complete support and being very strict on datatypes (which will save time in the long run, especially if you are <em>creating</em> databases).</p>
 <p>First, make sure you have the package installed by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sqlmodel</span></code> on the command line.</p>
 <section id="creating-a-sql-database-with-sqlmodel">
-<h3><span class="section-number">25.9.1. </span>Creating a SQL Database with <strong>SQLModel</strong><a class="headerlink" href="#creating-a-sql-database-with-sqlmodel" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.9.1. </span>Creating a SQL Database with <strong>SQLModel</strong><a class="headerlink" href="#creating-a-sql-database-with-sqlmodel" title="Permalink to this heading">#</a></h3>
 <p>Imagine you have a SQL table called “hero” and you want it to have this data:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>id</p></th>
 <th class="head"><p>name</p></th>
@@ -1144,7 +1155,7 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </section>
 <section id="reading-from-sql-using-sqlmodel">
-<h3><span class="section-number">25.9.2. </span>Reading from SQL using <strong>SQLModel</strong><a class="headerlink" href="#reading-from-sql-using-sqlmodel" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">24.9.2. </span>Reading from SQL using <strong>SQLModel</strong><a class="headerlink" href="#reading-from-sql-using-sqlmodel" title="Permalink to this heading">#</a></h3>
 <p><strong>SQLModel</strong> translates all of the usual SQL statements into functions. “SELECT” is no different. So let’s see an example of reading the SQL database directly from <strong>SQLModel</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1159,10 +1170,10 @@ More recently, there’s been much development of <strong>column-oriented</stron
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name=&#39;Deadpond&#39; secret_name=&#39;Dive Wilson&#39; id=1 age=None
-name=&#39;Spider-Boy&#39; secret_name=&#39;Pedro Parqueador&#39; id=2 age=None
-name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3 age=48
-name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4 age=17
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name=&#39;Deadpond&#39; secret_name=&#39;Dive Wilson&#39; age=None id=1
+name=&#39;Spider-Boy&#39; secret_name=&#39;Pedro Parqueador&#39; age=None id=2
+name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; age=48 id=3
+name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; age=17 id=4
 </pre></div>
 </div>
 </div>
@@ -1180,10 +1191,10 @@ name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4 age=17
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name=&#39;Deadpond&#39; secret_name=&#39;Dive Wilson&#39; id=1 age=None
-name=&#39;Spider-Boy&#39; secret_name=&#39;Pedro Parqueador&#39; id=2 age=None
-name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3 age=48
-name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4 age=17
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name=&#39;Deadpond&#39; secret_name=&#39;Dive Wilson&#39; age=None id=1
+name=&#39;Spider-Boy&#39; secret_name=&#39;Pedro Parqueador&#39; age=None id=2
+name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; age=48 id=3
+name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; age=17 id=4
 </pre></div>
 </div>
 </div>
@@ -1201,8 +1212,8 @@ name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4 age=17
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; id=4 age=17
-name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3 age=48
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name=&#39;Ms Amazing&#39; secret_name=&#39;Barjabeen Bhabra&#39; age=17 id=4
+name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; age=48 id=3
 </pre></div>
 </div>
 </div>
@@ -1211,7 +1222,7 @@ name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3 age=48
 </section>
 </section>
 <section id="where-to-learn-more-about-sql">
-<h2><span class="section-number">25.10. </span>Where to Learn More About SQL<a class="headerlink" href="#where-to-learn-more-about-sql" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.10. </span>Where to Learn More About SQL<a class="headerlink" href="#where-to-learn-more-about-sql" title="Permalink to this heading">#</a></h2>
 <p>If you’ve finished this chapter and would like to learn more about SQL, here are some further resources:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://sqlfordatascientists.com"><em>SQL for Data Scientists</em></a> by Renée M. P. Teate is an introduction to SQL designed specifically for the needs of data scientists, and includes examples of the sort of highly interconnected data you’re likely to encounter in real organisations.</p></li>
@@ -1221,18 +1232,19 @@ name=&#39;Rusty-Man&#39; secret_name=&#39;Tommy Sharp&#39; id=3 age=48
 <li><p>Learn SQL by solving a <a class="reference external" href="https://mystery.knightlab.com/">murder mystery</a></p></li>
 </ul>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="import-databases-1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p>SQL is either pronounced “s”-“q”-“l” or “sequel”.</p>
-</dd>
-<dt class="label" id="import-databases-4"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
-<dd><p>Confusingly, depending on the context, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is either a statement or a clause.
+<aside class="footnote brackets" id="import-databases-1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>SQL is either pronounced “s”-“q”-“l” or “sequel”.</p>
+</aside>
+<aside class="footnote brackets" id="import-databases-4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Confusingly, depending on the context, <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is either a statement or a clause.
 To avoid this confusion, we’ll generally use query instead of <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement.</p>
-</dd>
-<dt class="label" id="import-databases-5"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
-<dd><p>Technically, only the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is required, since you can write queries like <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">1+1</span></code> to perform basic calculations. But if you want to work with data (as you always do!) you’ll also need a <code class="docutils literal notranslate"><span class="pre">FROM</span></code> clause.</p>
-</dd>
-</dl>
+</aside>
+<aside class="footnote brackets" id="import-databases-5" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>Technically, only the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is required, since you can write queries like <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">1+1</span></code> to perform basic calculations. But if you want to work with data (as you always do!) you’ll also need a <code class="docutils literal notranslate"><span class="pre">FROM</span></code> clause.</p>
+</aside>
 </section>
 </section>
 
@@ -1261,11 +1273,10 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="spreadsheets.html"
@@ -1273,7 +1284,7 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">24. </span>Spreadsheets</p>
+        <p class="prev-next-title"><span class="section-number">23. </span>Spreadsheets</p>
       </div>
     </a>
     <a class="right-next"
@@ -1281,14 +1292,11 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">26. </span>Nested Data</p>
+        <p class="prev-next-title"><span class="section-number">25. </span>Nested Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1303,30 +1311,30 @@ To avoid this confusion, we’ll generally use query instead of <code class="doc
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">25.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">25.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">24.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">24.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-basics">25.2. Database Basics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-databases">25.3. Connecting to Databases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-databases-directly">25.4. Working with Databases Directly</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-database">25.4.1. Creating a Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-basics">24.2. Database Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-databases">24.3. Connecting to Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-databases-directly">24.4. Working with Databases Directly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-database">24.4.1. Creating a Database</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-sql-queries">25.5. Basic SQL Queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins">25.5.1. Joins</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">25.5.2. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-sql-queries">24.5. Basic SQL Queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins">24.5.1. Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">24.5.2. Functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">25.6. Exploring SQL Databases with <strong>Datasette</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-pandas">25.7. SQL with <strong>pandas</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-ibis">25.8. SQL with <strong>ibis</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-sqlmodel">25.9. SQL with <strong>SQLModel</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">25.9.1. Creating a SQL Database with <strong>SQLModel</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">25.9.2. Reading from SQL using <strong>SQLModel</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-sql-databases-with-datasette">24.6. Exploring SQL Databases with <strong>Datasette</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-pandas">24.7. SQL with <strong>pandas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-ibis">24.8. SQL with <strong>ibis</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-with-sqlmodel">24.9. SQL with <strong>SQLModel</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sql-database-with-sqlmodel">24.9.1. Creating a SQL Database with <strong>SQLModel</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-sql-using-sqlmodel">24.9.2. Reading from SQL using <strong>SQLModel</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more-about-sql">25.10. Where to Learn More About SQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more-about-sql">24.10. Where to Learn More About SQL</a></li>
 </ul>
   </nav></div>
 
@@ -1374,8 +1382,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

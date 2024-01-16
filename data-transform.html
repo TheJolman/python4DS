@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Data Transformation &#8212; Python for Data Science</title>
+    <title>4. Data Transformation &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. Workflow: Style" href="workflow-style.html" />
-    <link rel="prev" title="4. Workflow: Basics" href="workflow-basics.html" />
+    <link rel="next" title="5. Workflow: Style" href="workflow-style.html" />
+    <link rel="prev" title="3. Workflow: Basics" href="workflow-basics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,34 +474,34 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">5.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">5.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">4.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">4.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-basics">5.2. <strong>pandas</strong> basics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">5.3. Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">5.3.1. Accessing Rows</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">5.3.2. Filtering rows with query</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">5.3.3. Re-arranging Rows</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">5.3.4. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-basics">4.2. <strong>pandas</strong> basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">4.3. Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">4.3.1. Accessing Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">4.3.2. Filtering rows with query</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">4.3.3. Re-arranging Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">4.3.4. Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">5.4. Manipulating Columns</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">5.4.1. Creating New Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">5.4.2. Accessing Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">5.4.3. Renaming Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">5.4.4. Re-ordering Columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">4.4. Manipulating Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">4.4.1. Creating New Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">4.4.2. Accessing Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">4.4.3. Renaming Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">4.4.4. Re-ordering Columns</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">5.5. Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">5.5.1. Column and Row Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">4.5. Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">4.5.1. Column and Row Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">5.6. Grouping, changing the index, and applying summary statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-aggregating">5.6.1. Grouping and Aggregating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-by-multiple-variables">5.6.2. Grouping by multiple variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-transforming">5.6.3. Grouping and Transforming</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-exercises">5.6.4. Groupby Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">4.6. Grouping, changing the index, and applying summary statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-aggregating">4.6.1. Grouping and Aggregating</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-by-multiple-variables">4.6.2. Grouping by multiple variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-transforming">4.6.3. Grouping and Transforming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-exercises">4.6.4. Groupby Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -505,15 +516,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-transformation">
-<span id="data-transform"></span><h1><span class="section-number">5. </span>Data Transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">#</a></h1>
+<span id="data-transform"></span><h1><span class="section-number">4. </span>Data Transformation<a class="headerlink" href="#data-transformation" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>It’s very rare that data arrive in exactly the right form you need. Often, you’ll need to create some new variables or summaries, or maybe you just want to rename the variables or reorder the observations to make the data a little easier to work with.</p>
 <p>You’ll learn how to do all that (and more!) in this chapter, which will introduce you to data transformation using the <strong>pandas</strong> package and a new dataset on flights that departed New York City in 2013.</p>
 <p>The goal of this chapter is to give you an overview of all the key tools for transforming a data frame, a special kind of object that holds tabular data.</p>
 <p>We’ll come back these functions in more detail in later chapters, as we start to dig into specific types of data (e.g. numbers, strings, dates).</p>
 <section id="prerequisites">
-<h3><span class="section-number">5.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>In this chapter we’ll focus on the <strong>pandas</strong> package, one of the most widely used tools for data science. You’ll need to ensure you have <strong>pandas</strong> installed. To do this, you can run</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -749,10 +760,10 @@ memory usage: 48.8+ MB
 </div>
 <p>You might have noticed the short abbreviations that appear in the <code class="docutils literal notranslate"><span class="pre">Dtypes</span></code> column. These tell you the type of the values in their respective columns: <code class="docutils literal notranslate"><span class="pre">int64</span></code> is short for integer (eg whole numbers) and <code class="docutils literal notranslate"><span class="pre">float64</span></code> is short for double-precision floating point number (these are real numbers). <code class="docutils literal notranslate"><span class="pre">object</span></code> is a bit of a catch all category for any data type that <strong>pandas</strong> is not really confident about inferring. Although not found here, other data types include <code class="docutils literal notranslate"><span class="pre">string</span></code> for text and <code class="docutils literal notranslate"><span class="pre">datetime</span></code> for combinations of a date and time.</p>
 <p>The table below gives some of the most common data types you are likely to encounter.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-center head"><p><strong>Name of data type</strong></p></th>
-<th class="text-center head"><p><strong>Type of data</strong></p></th>
+<tr class="row-odd"><th class="head text-center"><p><strong>Name of data type</strong></p></th>
+<th class="head text-center"><p><strong>Type of data</strong></p></th>
 </tr>
 </thead>
 <tbody>
@@ -811,9 +822,9 @@ Name: time_hour, Length: 336776, dtype: object
 </section>
 </section>
 <section id="pandas-basics">
-<h2><span class="section-number">5.2. </span><strong>pandas</strong> basics<a class="headerlink" href="#pandas-basics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.2. </span><strong>pandas</strong> basics<a class="headerlink" href="#pandas-basics" title="Permalink to this heading">#</a></h2>
 <p><strong>pandas</strong> is a really comprehensive package, and this book will barely scratch the surface of what it can do. But it’s built around a few simple ideas that, once they’ve clicked, make life a lot easier.</p>
-<p>Let’s start with the absolute basics. The most basic pandas object is a dataframe. A DataFrame is a 2-dimensional data structure that can store data of different types (including characters, integers, floating point values, categorical data, even lists) in columns. It is made up of rows and columns (with each row-column cell containing a value), plus two bits of contextual information: the index (which carries information about each row) and the column names (which carry information about each column).</p>
+<p>Let’s start with the absolute basics. The most basic pandas object is DataFrame. A DataFrame is a 2-dimensional data structure that can store data of different types (including characters, integers, floating point values, categorical data, even lists) in columns. It is made up of rows and columns (with each row-column cell containing a value), plus two bits of contextual information: the index (which carries information about each row) and the column names (which carry information about each column).</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/01_table_dataframe.svg" /></p>
 <p>Perhaps the most important notion to have about <strong>pandas</strong> data frames is that they are built around an index that sits on the left-hand side of the data frame. Every time you perform an operation on a data frame, you need to think about how it might or might not affect the index; or, put another way, whether you want to modify the index.</p>
 <p>Let’s see a simple example of this with a made-up data frame:</p>
@@ -900,10 +911,10 @@ Name: time_hour, Length: 336776, dtype: object
 <p>A second key point you should know is that the operations on a <strong>pandas</strong> data frame can be chained together. We need not perform one assignment per line of code; we can actually do multiple assignments in a single command.</p>
 <p>Let’s see an example of this. We’re going to string together four operations:</p>
 <ol class="arabic simple">
-<li><p>we will use <code class="docutils literal notranslate"><span class="pre">query</span></code> to find only the rows where the destination <code class="docutils literal notranslate"><span class="pre">&quot;dest&quot;</span></code> column has the value <code class="docutils literal notranslate"><span class="pre">&quot;IAH&quot;</span></code>. This doesn’t change the index, it only removes irrelevant rows. In effect, this step removes rows we’re not interested in.</p></li>
-<li><p>we will use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to group rows by the year, month, and day (we pass a list of columns to the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> function). This step changes the index; the new index will have three columns in that track the year, month, and day. In effect, this step changes the index.</p></li>
-<li><p>we will choose which columns we wish to keep after the groupby operation by passing a list of them to a set of square brackets (the double brackets are because it’s a list within a dataframe). Here we just want one column, <code class="docutils literal notranslate"><span class="pre">&quot;arr_delay&quot;</span></code>. This doesn’t affect the index. In effect, this step removes columns we’re not interested in.</p></li>
-<li><p>finally, we must specify what groupby operation we wish to apply; when aggregating the information in multiple rows down to one row, we need to say how that information should be aggregated. In this case, we’ll use the mean. In effect, this step applies a statistic to the variable(s) we selected earlier, across the groups we created earlier.</p></li>
+<li><p>we will use <code class="docutils literal notranslate"><span class="pre">query()</span></code> to find only the rows where the destination <code class="docutils literal notranslate"><span class="pre">&quot;dest&quot;</span></code> column has the value <code class="docutils literal notranslate"><span class="pre">&quot;IAH&quot;</span></code>. This doesn’t change the index, it only removes irrelevant rows. In effect, this step removes rows we’re not interested in.</p></li>
+<li><p>we will use <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> to group rows by the year, month, and day (we pass a list of columns to the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> function). This step changes the index; the new index will have three columns in that track the year, month, and day. In effect, this step changes the index.</p></li>
+<li><p>we will choose which columns we wish to keep after the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> operation by passing a list of them to a set of square brackets (the double brackets are because it’s a list within a data frame). Here we just want one column, <code class="docutils literal notranslate"><span class="pre">&quot;arr_delay&quot;</span></code>. This doesn’t affect the index. In effect, this step removes columns we’re not interested in.</p></li>
+<li><p>finally, we must specify what <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> operation we wish to apply; when aggregating the information in multiple rows down to one row, we need to say how that information should be aggregated. In this case, we’ll use the <code class="docutils literal notranslate"><span class="pre">mean()</span></code>. In effect, this step applies a statistic to the variable(s) we selected earlier, across the groups we created earlier.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -995,18 +1006,18 @@ Name: time_hour, Length: 336776, dtype: object
 <p>365 rows × 1 columns</p>
 </div></div></div>
 </div>
-<p>You can see here that we’ve created a new dataframe with a new index. To do it, we used four key operations:</p>
+<p>You can see here that we’ve created a new data frame with a new index. To do it, we used four key operations:</p>
 <ol class="arabic simple">
 <li><p>manipulating rows</p></li>
 <li><p>manipulating the index</p></li>
 <li><p>manipulating columns</p></li>
 <li><p>applying statistics</p></li>
 </ol>
-<p>Most operations you could want to do to a single dataframe are covered by these, but there are different options for each of them depending on what you need.</p>
+<p>Most operations you could want to do to a single data frame are covered by these, but there are different options for each of them depending on what you need.</p>
 <p>Let’s now dig a bit more into these operations.</p>
 </section>
 <section id="manipulating-rows-in-data-frames">
-<h2><span class="section-number">5.3. </span>Manipulating Rows in Data Frames<a class="headerlink" href="#manipulating-rows-in-data-frames" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3. </span>Manipulating Rows in Data Frames<a class="headerlink" href="#manipulating-rows-in-data-frames" title="Permalink to this heading">#</a></h2>
 <p>Let’s create some fake data to show how this works.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1117,8 +1128,8 @@ Name: time_hour, Length: 336776, dtype: object
 </div></div></div>
 </div>
 <section id="accessing-rows">
-<h3><span class="section-number">5.3.1. </span>Accessing Rows<a class="headerlink" href="#accessing-rows" title="Permalink to this headline">#</a></h3>
-<p>To access a particular row directly, you can use <code class="docutils literal notranslate"><span class="pre">df.loc['rowname']</span></code> or <code class="docutils literal notranslate"><span class="pre">df.loc[['rowname1',</span> <span class="pre">'rowname1']]</span></code> for two different rows.</p>
+<h3><span class="section-number">4.3.1. </span>Accessing Rows<a class="headerlink" href="#accessing-rows" title="Permalink to this heading">#</a></h3>
+<p>To access a particular row directly, you can use <code class="docutils literal notranslate"><span class="pre">df.loc['rowname']</span></code> or <code class="docutils literal notranslate"><span class="pre">df.loc[['rowname1',</span> <span class="pre">'rowname2']]</span></code> for two different rows.</p>
 <p>For example,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1179,7 +1190,7 @@ Name: time_hour, Length: 336776, dtype: object
 </table>
 </div></div></div>
 </div>
-<p>But you can also access particular rows based on their location in the dataframe using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code>. Remember that Python indices begin from zero, so to retrieve the first row you would use <code class="docutils literal notranslate"><span class="pre">.iloc[0]</span></code>:</p>
+<p>But you can also access particular rows based on their location in the data frame using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code>. Remember that Python indices begin from zero, so to retrieve the first row you would use <code class="docutils literal notranslate"><span class="pre">.iloc[0]</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1262,8 +1273,8 @@ Name: a, dtype: object
 <p>There are other ways to access multiple rows that make use of <em>slicing</em> but we’ll leave that topic for another time.</p>
 </section>
 <section id="filtering-rows-with-query">
-<h3><span class="section-number">5.3.2. </span>Filtering rows with query<a class="headerlink" href="#filtering-rows-with-query" title="Permalink to this headline">#</a></h3>
-<p>As with the flights example, we can also filter rows based on a condition using <code class="docutils literal notranslate"><span class="pre">query</span></code>:</p>
+<h3><span class="section-number">4.3.2. </span>Filtering rows with query<a class="headerlink" href="#filtering-rows-with-query" title="Permalink to this heading">#</a></h3>
+<p>As with the flights example, we can also filter rows based on a condition using <code class="docutils literal notranslate"><span class="pre">query()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;col6 == &#39;kiwi&#39; or col6 == &#39;pineapple&#39;&quot;</span><span class="p">)</span>
@@ -1403,7 +1414,7 @@ Name: a, dtype: object
 </table>
 </div></div></div>
 </div>
-<p>In fact, there are lots of options that work with <code class="docutils literal notranslate"><span class="pre">query</span></code>: as well as <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> (greater than), you can use <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> (greater than or equal to), <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> (less than), <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> (less than or equal to), <code class="docutils literal notranslate"><span class="pre">==</span></code> (equal to), and <code class="docutils literal notranslate"><span class="pre">!=</span></code> (not equal to). You can also use the commands <code class="docutils literal notranslate"><span class="pre">and</span></code> as well as <code class="docutils literal notranslate"><span class="pre">or</span></code> to combine multiple conditions. Here’s an example of <code class="docutils literal notranslate"><span class="pre">and</span></code> from the <code class="docutils literal notranslate"><span class="pre">flights</span></code> dataframe:</p>
+<p>In fact, there are lots of options that work with <code class="docutils literal notranslate"><span class="pre">query()</span></code>: as well as <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> (greater than), you can use <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> (greater than or equal to), <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> (less than), <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> (less than or equal to), <code class="docutils literal notranslate"><span class="pre">==</span></code> (equal to), and <code class="docutils literal notranslate"><span class="pre">!=</span></code> (not equal to). You can also use the commands <code class="docutils literal notranslate"><span class="pre">and</span></code> as well as <code class="docutils literal notranslate"><span class="pre">or</span></code> to combine multiple conditions. Here’s an example of <code class="docutils literal notranslate"><span class="pre">and</span></code> from the <code class="docutils literal notranslate"><span class="pre">flights</span></code> data frame:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Flights that departed on January 1</span>
@@ -1702,8 +1713,8 @@ Name: a, dtype: object
 <p>Note that equality is tested by <code class="docutils literal notranslate"><span class="pre">==</span></code> and <em>not</em> by <code class="docutils literal notranslate"><span class="pre">=</span></code>, because the latter is used for assignment.</p>
 </section>
 <section id="re-arranging-rows">
-<h3><span class="section-number">5.3.3. </span>Re-arranging Rows<a class="headerlink" href="#re-arranging-rows" title="Permalink to this headline">#</a></h3>
-<p>Again and again, you will want to re-order the rows of your dataframe according to the values in a particular column. <strong>pandas</strong> makes this very easy via the <code class="docutils literal notranslate"><span class="pre">.sort_values</span></code> function. It takes a data frame and a set of column names to sort by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns. For example, the following code sorts by the departure time, which is spread over four columns.</p>
+<h3><span class="section-number">4.3.3. </span>Re-arranging Rows<a class="headerlink" href="#re-arranging-rows" title="Permalink to this heading">#</a></h3>
+<p>Again and again, you will want to re-order the rows of your data frame according to the values in a particular column. <strong>pandas</strong> makes this very easy via the <code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code> function. It takes a data frame and a set of column names to sort by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns. For example, the following code sorts by the departure time, which is spread over four columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;dep_time&quot;</span><span class="p">])</span>
@@ -2419,7 +2430,7 @@ For example, we could look for the top three destinations of the flights that we
 </div>
 </section>
 <section id="exercises">
-<h3><span class="section-number">5.3.4. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.4. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Find all flights that</p>
 <p>a. Had an arrival delay of two or more hours</p>
@@ -2437,15 +2448,15 @@ For example, we could look for the top three destinations of the flights that we
 </section>
 </section>
 <section id="manipulating-columns">
-<h2><span class="section-number">5.4. </span>Manipulating Columns<a class="headerlink" href="#manipulating-columns" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.4. </span>Manipulating Columns<a class="headerlink" href="#manipulating-columns" title="Permalink to this heading">#</a></h2>
 <p>This section will show you how to apply various operations you may need to columns in your data frame.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some <strong>pandas</strong> operations can apply either to columns or rows, depending on the syntax used. For example, accessing values by position can be achieved in the same way for rows and columns via <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> where to access the ith row you would use <code class="docutils literal notranslate"><span class="pre">df.iloc[i]</span></code> and to access the jth column you would use <code class="docutils literal notranslate"><span class="pre">df.iloc[:,</span> <span class="pre">j]</span></code> where <code class="docutils literal notranslate"><span class="pre">:</span></code> stands in for ‘any row’.</p>
 </div>
 <section id="creating-new-columns">
-<h3><span class="section-number">5.4.1. </span>Creating New Columns<a class="headerlink" href="#creating-new-columns" title="Permalink to this headline">#</a></h3>
-<p>Let’s now move on to creating new columns, either using new information or from existing columns. Given a dataframe, <code class="docutils literal notranslate"><span class="pre">df</span></code>, creating a new column with the same value repeated is as easy as using square brackets with a string (text enclosed by quotation marks) in.</p>
+<h3><span class="section-number">4.4.1. </span>Creating New Columns<a class="headerlink" href="#creating-new-columns" title="Permalink to this heading">#</a></h3>
+<p>Let’s now move on to creating new columns, either using new information or from existing columns. Given a data frame, <code class="docutils literal notranslate"><span class="pre">df</span></code>, creating a new column with the same value repeated is as easy as using square brackets with a string (text enclosed by quotation marks) in.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;new_column0&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
@@ -2787,7 +2798,7 @@ For example, we could look for the top three destinations of the flights that we
 </table>
 </div></div></div>
 </div>
-<p>Very often, you will want to create a new column that is the result of an operation on existing columns. There are a couple of ways to do this. The ‘stand-alone’ method works in a similar way to what we’ve just seen except that we refer to the dataframe on the right-hand side of the assignment statement too:</p>
+<p>Very often, you will want to create a new column that is the result of an operation on existing columns. There are a couple of ways to do this. The ‘stand-alone’ method works in a similar way to what we’ve just seen except that we refer to the data frame on the right-hand side of the assignment statement too:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;new_column3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;col0&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;new_column0&quot;</span><span class="p">]</span>
@@ -2916,7 +2927,7 @@ For example, we could look for the top three destinations of the flights that we
 </table>
 </div></div></div>
 </div>
-<p>The other way to do this involves an ‘assign’ statement and is used when you wish to chain multiple steps together (like we saw earlier). These use a special syntax called a ‘lambda’ statement, which (here at least) just provides a way of specifying to <strong>pandas</strong> that we wish to perform the operation on every row. Below is an example using the flights data. You should note though that the word ‘row’ below is a dummy; you could replace it with any variable name (for example, <code class="docutils literal notranslate"><span class="pre">x</span></code>) but <code class="docutils literal notranslate"><span class="pre">row</span></code> makes what is happening a little bit clearer.</p>
+<p>The other way to do this involves an ‘assign()’ statement and is used when you wish to chain multiple steps together (like we saw earlier). These use a special syntax called a ‘lambda’ statement, which (here at least) just provides a way of specifying to <strong>pandas</strong> that we wish to perform the operation on every row. Below is an example using the flights data. You should note though that the word ‘row’ below is a dummy; you could replace it with any variable name (for example, <code class="docutils literal notranslate"><span class="pre">x</span></code>) but <code class="docutils literal notranslate"><span class="pre">row</span></code> makes what is happening a little bit clearer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
@@ -3249,7 +3260,7 @@ For example, we could look for the top three destinations of the flights that we
 </div>
 </section>
 <section id="accessing-columns">
-<h3><span class="section-number">5.4.2. </span>Accessing Columns<a class="headerlink" href="#accessing-columns" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.4.2. </span>Accessing Columns<a class="headerlink" href="#accessing-columns" title="Permalink to this heading">#</a></h3>
 <p>Just as with selecting rows, there are many options and ways to select the columns to operate on. The one with the simplest syntax is the name of the data frame followed by square brackets and the column name (as a string)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3455,7 +3466,7 @@ Name: col0, dtype: float64
 </div></div></div>
 </div>
 <p>There are other ways to access multiple columns that make use of slicing but we’ll leave that topic for another time.</p>
-<p>Sometimes, you’ll want to select columns based on the <em>type</em> of data that they hold. For this, <strong>pandas</strong> provides a function <code class="docutils literal notranslate"><span class="pre">.select_dtypes</span></code>. Let’s use this to select all columns with integers in the flights data.</p>
+<p>Sometimes, you’ll want to select columns based on the <em>type</em> of data that they hold. For this, <strong>pandas</strong> provides a function <code class="docutils literal notranslate"><span class="pre">.select_dtypes()</span></code>. Let’s use this to select all columns with integers in the flights data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
@@ -3732,11 +3743,11 @@ The selection from the data frame:
 </table>
 </div></div></div>
 </div>
-<p>As well as <code class="docutils literal notranslate"><span class="pre">startswith</span></code>, there are other commands like <code class="docutils literal notranslate"><span class="pre">endswith</span></code>, <code class="docutils literal notranslate"><span class="pre">contains</span></code>, <code class="docutils literal notranslate"><span class="pre">isnumeric</span></code>, and <code class="docutils literal notranslate"><span class="pre">islower</span></code>.</p>
+<p>As well as <code class="docutils literal notranslate"><span class="pre">startswith()</span></code>, there are other commands like <code class="docutils literal notranslate"><span class="pre">endswith()</span></code>, <code class="docutils literal notranslate"><span class="pre">contains()</span></code>, <code class="docutils literal notranslate"><span class="pre">isnumeric()</span></code>, and <code class="docutils literal notranslate"><span class="pre">islower()</span></code>.</p>
 </section>
 <section id="renaming-columns">
-<h3><span class="section-number">5.4.3. </span>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this headline">#</a></h3>
-<p>There are three easy ways to rename columns, depending on what the context is. The first is to use the dedicated <code class="docutils literal notranslate"><span class="pre">rename</span></code> function with an object called a dictionary. Dictionaries in Python consist of curly brackets with comma separated pairs of values where the first values maps into the second value. An example of a dictionary would be <code class="docutils literal notranslate"><span class="pre">{'old_col1':</span> <span class="pre">'new_col1',</span> <span class="pre">'old_col2':</span> <span class="pre">'new_col2'}</span></code>. Let’s see this in practice (but note that we are not ‘saving’ the resulting data frame, just showing it—to save it, you’d need to add <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> </code> to the left-hand side of the code below).</p>
+<h3><span class="section-number">4.4.3. </span>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this heading">#</a></h3>
+<p>There are three easy ways to rename columns, depending on what the context is. The first is to use the dedicated <code class="docutils literal notranslate"><span class="pre">rename()</span></code> function with an object called a dictionary. Dictionaries in Python consist of curly brackets with comma separated pairs of values where the first values maps into the second value. An example of a dictionary would be <code class="docutils literal notranslate"><span class="pre">{'old_col1':</span> <span class="pre">'new_col1',</span> <span class="pre">'old_col2':</span> <span class="pre">'new_col2'}</span></code>. Let’s see this in practice (but note that we are not ‘saving’ the resulting data frame, just showing it—to save it, you’d need to add <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> </code> to the left-hand side of the code below).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;col3&quot;</span><span class="p">:</span> <span class="s2">&quot;letters&quot;</span><span class="p">,</span> <span class="s2">&quot;col4&quot;</span><span class="p">:</span> <span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="s2">&quot;col6&quot;</span><span class="p">:</span> <span class="s2">&quot;fruit&quot;</span><span class="p">})</span>
@@ -3993,7 +4004,7 @@ The selection from the data frame:
 </table>
 </div></div></div>
 </div>
-<p>Finally, we might be interested in just replacing specific parts of column names. In this case, we can use <code class="docutils literal notranslate"><span class="pre">.str.replace</span></code>. As an example, let’s add the word <code class="docutils literal notranslate"><span class="pre">&quot;Original&quot;</span></code> ahead of the original columns:</p>
+<p>Finally, we might be interested in just replacing specific parts of column names. In this case, we can use <code class="docutils literal notranslate"><span class="pre">.str.replace()</span></code>. As an example, let’s add the word <code class="docutils literal notranslate"><span class="pre">&quot;Original&quot;</span></code> ahead of the original columns:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Col&quot;</span><span class="p">,</span> <span class="s2">&quot;Original_column&quot;</span><span class="p">)</span>
@@ -4012,7 +4023,7 @@ The selection from the data frame:
 </div>
 </section>
 <section id="re-ordering-columns">
-<h3><span class="section-number">5.4.4. </span>Re-ordering Columns<a class="headerlink" href="#re-ordering-columns" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.4.4. </span>Re-ordering Columns<a class="headerlink" href="#re-ordering-columns" title="Permalink to this heading">#</a></h3>
 <p>By default, new columns are added to the right-hand side of the data frame. But you may have reasons to want the columns to appear in a particular order, or perhaps you’d just find it more convenient to have new columns on the left-hand side when there are many columns in a data frame (which happens a lot).</p>
 <p>The simplest way to re-order (all) columns is to create a new list of their names with them in the order that you’d like them: but be careful you don’t forget any columns that you’d like to keep!</p>
 <p>Let’s see an example with a fresh version of the fake data from earlier. We’ll put all of the odd-numbered columns first, in descending order, then the even similarly.</p>
@@ -4207,7 +4218,7 @@ The selection from the data frame:
 </table>
 </div></div></div>
 </div>
-<p>Of course, this is quite tedious if you have lots of columns! There are methods that can help make this easier depending on your context. Perhaps you’d just liked to sort the columns in order? This can be achieved by combining <code class="docutils literal notranslate"><span class="pre">sorted</span></code> and the <code class="docutils literal notranslate"><span class="pre">reindex</span></code> command (which works for rows or columns) with <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>, which means the second axis ie columns.</p>
+<p>Of course, this is quite tedious if you have lots of columns! There are methods that can help make this easier depending on your context. Perhaps you’d just liked to sort the columns in order? This can be achieved by combining <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> and the <code class="docutils literal notranslate"><span class="pre">reindex()</span></code> command (which works for rows or columns) with <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>, which means the second axis (i.e. columns).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -4303,8 +4314,8 @@ The selection from the data frame:
 </section>
 </section>
 <section id="review-of-how-to-access-rows-columns-and-values">
-<h2><span class="section-number">5.5. </span>Review of How to Access Rows, Columns, and Values<a class="headerlink" href="#review-of-how-to-access-rows-columns-and-values" title="Permalink to this headline">#</a></h2>
-<p>With all of these different ways to access values in data frames, it can get confusing. These are the different ways to get the first column of a dataframe (when that first column is called <code class="docutils literal notranslate"><span class="pre">column</span></code> and the dataframe is <code class="docutils literal notranslate"><span class="pre">df</span></code>):</p>
+<h2><span class="section-number">4.5. </span>Review of How to Access Rows, Columns, and Values<a class="headerlink" href="#review-of-how-to-access-rows-columns-and-values" title="Permalink to this heading">#</a></h2>
+<p>With all of these different ways to access values in data frames, it can get confusing. These are the different ways to get the first column of a data frame (when that first column is called <code class="docutils literal notranslate"><span class="pre">column</span></code> and the data frame is <code class="docutils literal notranslate"><span class="pre">df</span></code>):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">df.column</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">df[&quot;column&quot;]</span></code></p></li>
@@ -4323,7 +4334,7 @@ The selection from the data frame:
 <li><p><code class="docutils literal notranslate"><span class="pre">df.iloc[0,</span> <span class="pre">0]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">df.loc[&quot;row&quot;,</span> <span class="pre">&quot;column&quot;]</span></code></p></li>
 </ul>
-<p>In the above examples, square brackets are instructions about <em>where</em> to grab bits from the data frame. They are a bit like an address system for values within a dataframe. Square brackets <em>also</em> denote lists though. So if you want to select <em>multiple</em> columns or rows, you might see syntax like this:</p>
+<p>In the above examples, square brackets are instructions about <em>where</em> to grab bits from the data frame. They are a bit like an address system for values within a data frame. Square brackets <em>also</em> denote lists though. So if you want to select <em>multiple</em> columns or rows, you might see syntax like this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">df.loc[[&quot;row0&quot;,</span> <span class="pre">&quot;row1&quot;],</span> <span class="pre">[&quot;column0&quot;,</span> <span class="pre">&quot;column2&quot;]]</span></code></p>
 <p>which picks out two rows and two columns via the lists <code class="docutils literal notranslate"><span class="pre">[&quot;row0&quot;,</span> <span class="pre">&quot;row1&quot;]</span></code> and <code class="docutils literal notranslate"><span class="pre">[&quot;column0&quot;,</span> <span class="pre">&quot;column2&quot;]</span></code>. Because there are lists alongside the usual system of selecting values, there are two sets of square brackets.</p>
 <div class="tip admonition">
@@ -4332,13 +4343,13 @@ The selection from the data frame:
 <p>If you only want to remember one syntax for accessing rows and columns by position, use the pattern <code class="docutils literal notranslate"><span class="pre">df.iloc[[0,</span> <span class="pre">1,</span> <span class="pre">...],</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">...]]</span></code>. This also works with a single row or a single column (or both).</p>
 </div>
 <section id="column-and-row-exercises">
-<h3><span class="section-number">5.5.1. </span>Column and Row Exercises<a class="headerlink" href="#column-and-row-exercises" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.5.1. </span>Column and Row Exercises<a class="headerlink" href="#column-and-row-exercises" title="Permalink to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Compare <code class="docutils literal notranslate"><span class="pre">air_time</span></code> with <code class="docutils literal notranslate"><span class="pre">arr_time</span> <span class="pre">-</span> <span class="pre">dep_time</span></code>. What do you expect to see? What do you see What do you need to do to fix it?</p></li>
 <li><p>Compare <code class="docutils literal notranslate"><span class="pre">dep_time</span></code>, <code class="docutils literal notranslate"><span class="pre">sched_dep_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">dep_delay</span></code>. How would you expect those three numbers to be related?</p></li>
 <li><p>Brainstorm as many ways as possible to select <code class="docutils literal notranslate"><span class="pre">dep_time</span></code>, <code class="docutils literal notranslate"><span class="pre">dep_delay</span></code>, <code class="docutils literal notranslate"><span class="pre">arr_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">arr_delay</span></code> from <code class="docutils literal notranslate"><span class="pre">flights</span></code>.</p></li>
 <li><p>What happens if you include the name of a row or column multiple times when trying to select them?</p></li>
-<li><p>What does the <code class="docutils literal notranslate"><span class="pre">.isin</span></code> function do in the following?</p>
+<li><p>What does the <code class="docutils literal notranslate"><span class="pre">.isin()</span></code> function do in the following?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;dep_delay&quot;</span><span class="p">,</span> <span class="s2">&quot;arr_delay&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -4355,14 +4366,14 @@ How can you change that default?</p>
 </section>
 </section>
 <section id="grouping-changing-the-index-and-applying-summary-statistics">
-<h2><span class="section-number">5.6. </span>Grouping, changing the index, and applying summary statistics<a class="headerlink" href="#grouping-changing-the-index-and-applying-summary-statistics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.6. </span>Grouping, changing the index, and applying summary statistics<a class="headerlink" href="#grouping-changing-the-index-and-applying-summary-statistics" title="Permalink to this heading">#</a></h2>
 <p>So far you’ve learned about working with rows and columns. <strong>pandas</strong> gets even more powerful when you add in the ability to work with groups. Creating groups will often also mean a change of index. And because groups tend to imply an aggregation or pooling of data, they often go hand-in-hand with the application of a summary statistic.</p>
 <p>The diagram below gives a sense of how these operations can proceed together. Note that the ‘split’ operation is achieved through grouping, while apply produces summary statistics. At the end, you get a data frame with a new index (one entry per group) in what is shown as the ‘combine’ step.</p>
 <p><img alt="" src="https://jakevdp.github.io/PythonDataScienceHandbook/figures/03.08-split-apply-combine.png" /></p>
 <section id="grouping-and-aggregating">
-<h3><span class="section-number">5.6.1. </span>Grouping and Aggregating<a class="headerlink" href="#grouping-and-aggregating" title="Permalink to this headline">#</a></h3>
-<p>Let’s take a look at creating a group using the <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> function followed by selecting a column and applying a summary statistic via an aggregation. Note that <em>aggregation</em>, via <code class="docutils literal notranslate"><span class="pre">.agg</span></code>, always produces a new index because we have collapsed information down to the group-level (and the new index is made of those levels).</p>
-<p>The key point to remember is: use <code class="docutils literal notranslate"><span class="pre">.agg</span></code> with <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> when you want your groups to become the new index.</p>
+<h3><span class="section-number">4.6.1. </span>Grouping and Aggregating<a class="headerlink" href="#grouping-and-aggregating" title="Permalink to this heading">#</a></h3>
+<p>Let’s take a look at creating a group using the <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> function followed by selecting a column and applying a summary statistic via an aggregation. Note that <em>aggregation</em>, via <code class="docutils literal notranslate"><span class="pre">.agg()</span></code>, always produces a new index because we have collapsed information down to the group-level (and the new index is made of those levels).</p>
+<p>The key point to remember is: use <code class="docutils literal notranslate"><span class="pre">.agg()</span></code> with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> when you want your groups to become the new index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">flights</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)[[</span><span class="s2">&quot;dep_delay&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
@@ -4449,7 +4460,7 @@ How can you change that default?</p>
 </div></div></div>
 </div>
 <p>This now represents the mean departure delay by month. Notice that our index has changed! We now have month where we original had an index that was just the row number. The index plays an important role in grouping operations because it keeps track of the groups you have in the rest of your data frame.</p>
-<p>Often, you might want to do multiple summary operations in one go. The most comprehensive syntax for this is via <code class="docutils literal notranslate"><span class="pre">.agg</span></code>. We can reproduce what we did above using <code class="docutils literal notranslate"><span class="pre">.agg</span></code>:</p>
+<p>Often, you might want to do multiple summary operations in one go. The most comprehensive syntax for this is via <code class="docutils literal notranslate"><span class="pre">.agg()</span></code>. We can reproduce what we did above using <code class="docutils literal notranslate"><span class="pre">.agg()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">flights</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)[[</span><span class="s2">&quot;dep_delay&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s2">&quot;mean&quot;</span><span class="p">))</span>
@@ -4536,7 +4547,7 @@ How can you change that default?</p>
 </div></div></div>
 </div>
 <p>where you pass in whatever aggregation you want. Some common options are in the table below:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Aggregation</p></th>
 <th class="head"><p>Description</p></th>
@@ -4680,8 +4691,8 @@ How can you change that default?</p>
 <p>Means and counts can get you a surprisingly long way in data science!</p>
 </section>
 <section id="grouping-by-multiple-variables">
-<h3><span class="section-number">5.6.2. </span>Grouping by multiple variables<a class="headerlink" href="#grouping-by-multiple-variables" title="Permalink to this headline">#</a></h3>
-<p>This is as simple as passing <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> a list representing multiple columns instead of a string representing a single column.</p>
+<h3><span class="section-number">4.6.2. </span>Grouping by multiple variables<a class="headerlink" href="#grouping-by-multiple-variables" title="Permalink to this heading">#</a></h3>
+<p>This is as simple as passing <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> a list representing multiple columns instead of a string representing a single column.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">month_year_delay</span> <span class="o">=</span> <span class="n">flights</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
@@ -5038,9 +5049,9 @@ How can you change that default?</p>
 <p>Finally, you can do more complicated re-arrangements of the index with an operation called <code class="docutils literal notranslate"><span class="pre">unstack</span></code>, which pivots the chosen index variable to be a column variable instead (introducing a multi column level structure). It’s usually best to avoid this.</p>
 </section>
 <section id="grouping-and-transforming">
-<h3><span class="section-number">5.6.3. </span>Grouping and Transforming<a class="headerlink" href="#grouping-and-transforming" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.6.3. </span>Grouping and Transforming<a class="headerlink" href="#grouping-and-transforming" title="Permalink to this heading">#</a></h3>
 <p>You may not always want to change the index to reflect new groups when performing computations at the group level.</p>
-<p>The key point to remember is: use <code class="docutils literal notranslate"><span class="pre">.transform</span></code> with <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> when you want to perform computations on your groups but you want to go back to the original index.</p>
+<p>The key point to remember is: use <code class="docutils literal notranslate"><span class="pre">.transform()</span></code> with <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> when you want to perform computations on your groups but you want to go back to the original index.</p>
 <p>Let’s say we wanted to express the arrival delay, <code class="docutils literal notranslate"><span class="pre">&quot;arr_del&quot;</span></code>, of each flight as a fraction of the worst arrival delay in each month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5132,7 +5143,7 @@ How can you change that default?</p>
 <p>Note that the first few entries of <code class="docutils literal notranslate"><span class="pre">&quot;max_delay_month&quot;</span></code> are all the same because the month is the same for those entries, but the delay fraction changes with each row.</p>
 </section>
 <section id="groupby-exercises">
-<h3><span class="section-number">5.6.4. </span>Groupby Exercises<a class="headerlink" href="#groupby-exercises" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.6.4. </span>Groupby Exercises<a class="headerlink" href="#groupby-exercises" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Which carrier has the worst delays? Challenge: can you disentangle the effects of bad airports vs. bad carriers? Why/why not? (Hint: think about <code class="docutils literal notranslate"><span class="pre">flights.groupby([&quot;carrier&quot;,</span> <span class="pre">&quot;dest&quot;]).count()</span></code>)</p></li>
 <li><p>Find the most delayed flight to each destination.</p></li>
@@ -5167,11 +5178,10 @@ How can you change that default?</p>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="workflow-basics.html"
@@ -5179,7 +5189,7 @@ How can you change that default?</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Workflow: Basics</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Workflow: Basics</p>
       </div>
     </a>
     <a class="right-next"
@@ -5187,14 +5197,11 @@ How can you change that default?</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Workflow: Style</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Workflow: Style</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -5209,34 +5216,34 @@ How can you change that default?</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">5.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">5.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">4.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">4.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-basics">5.2. <strong>pandas</strong> basics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">5.3. Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">5.3.1. Accessing Rows</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">5.3.2. Filtering rows with query</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">5.3.3. Re-arranging Rows</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">5.3.4. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-basics">4.2. <strong>pandas</strong> basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-rows-in-data-frames">4.3. Manipulating Rows in Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-rows">4.3.1. Accessing Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-rows-with-query">4.3.2. Filtering rows with query</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-arranging-rows">4.3.3. Re-arranging Rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">4.3.4. Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">5.4. Manipulating Columns</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">5.4.1. Creating New Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">5.4.2. Accessing Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">5.4.3. Renaming Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">5.4.4. Re-ordering Columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-columns">4.4. Manipulating Columns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-columns">4.4.1. Creating New Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-columns">4.4.2. Accessing Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-columns">4.4.3. Renaming Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-ordering-columns">4.4.4. Re-ordering Columns</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">5.5. Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">5.5.1. Column and Row Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-how-to-access-rows-columns-and-values">4.5. Review of How to Access Rows, Columns, and Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-and-row-exercises">4.5.1. Column and Row Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">5.6. Grouping, changing the index, and applying summary statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-aggregating">5.6.1. Grouping and Aggregating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-by-multiple-variables">5.6.2. Grouping by multiple variables</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-transforming">5.6.3. Grouping and Transforming</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-exercises">5.6.4. Groupby Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-changing-the-index-and-applying-summary-statistics">4.6. Grouping, changing the index, and applying summary statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-aggregating">4.6.1. Grouping and Aggregating</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-by-multiple-variables">4.6.2. Grouping by multiple variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-and-transforming">4.6.3. Grouping and Transforming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-exercises">4.6.4. Groupby Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -5286,8 +5293,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

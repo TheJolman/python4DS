@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>23. Joins &#8212; Python for Data Science</title>
+    <title>22. Joins &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="24. Spreadsheets" href="spreadsheets.html" />
-    <link rel="prev" title="22. Missing Values" href="missing-values.html" />
+    <link rel="next" title="23. Spreadsheets" href="spreadsheets.html" />
+    <link rel="prev" title="21. Missing Values" href="missing-values.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,12 +474,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">23.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">23.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">22.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">22.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenate">23.2. Concatenate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge">23.3. Merge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenate">22.2. Concatenate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge">22.3. Merge</a></li>
 </ul>
             </nav>
         </div>
@@ -481,22 +492,22 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="joins">
-<span id="id1"></span><h1><span class="section-number">23. </span>Joins<a class="headerlink" href="#joins" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">22. </span>Joins<a class="headerlink" href="#joins" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">23.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>It’s rare that a data analysis involves only a single data frame. Typically you have many data frames, and you must <em>join</em> them together to answer the questions that you’re interested in.</p>
-<p><strong>pandas</strong> has a really rich set of options for combining one or more dataframes, with the two most important being concatenate and merge. Some of the examples in this chapter show you how to join a pair of data frames. Fortunately this is enough, since you can combine three data frames by combining two pairs.</p>
+<p><strong>pandas</strong> has a really rich set of options for combining one or more data frames, with the two most important being concatenate and merge. Some of the examples in this chapter show you how to join a pair of data frames. Fortunately this is enough, since you can combine three data frames by combining two pairs.</p>
 <section id="prerequisites">
-<h3><span class="section-number">23.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">22.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>This chapter will use the <strong>pandas</strong> data analysis package.</p>
 </section>
 </section>
 <section id="concatenate">
-<h2><span class="section-number">23.2. </span>Concatenate<a class="headerlink" href="#concatenate" title="Permalink to this headline">#</a></h2>
-<p>If you have two or more dataframes with the same index or the same columns, you can glue them together into a single dataframe using <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code>.</p>
+<h2><span class="section-number">22.2. </span>Concatenate<a class="headerlink" href="#concatenate" title="Permalink to this heading">#</a></h2>
+<p>If you have two or more data frames with the same index or the same columns, you can glue them together into a single data frame using <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code>.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/08_concat_row.svg" /></p>
-<p>For the same columns, pass <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> to glue the index together; for the same index, pass <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> to glue the columns together. The concatenate function will typically be used on a list of dataframes.</p>
-<p>If you want to track where the original data came from in the final dataframe, use the <code class="docutils literal notranslate"><span class="pre">keys</span></code> keyword.</p>
+<p>For the same columns, pass <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> to glue the index together; for the same index, pass <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> to glue the columns together. The concatenate function will typically be used on a list of data frames.</p>
+<p>If you want to track where the original data came from in the final data frame, use the <code class="docutils literal notranslate"><span class="pre">keys</span></code> keyword.</p>
 <p>Here’s an example using data on two different states’ populations that also makes uses of the <code class="docutils literal notranslate"><span class="pre">keys</span></code> option:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -506,12 +517,12 @@ document.write(`
 <span class="n">state_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ca&quot;</span><span class="p">,</span> <span class="s2">&quot;il&quot;</span><span class="p">]</span>
 <span class="n">end_url</span> <span class="o">=</span> <span class="s2">&quot;pop.dta&quot;</span>
 
-<span class="c1"># This grabs the two dataframes, one for each state</span>
+<span class="c1"># This grabs the two data frames, one for each state</span>
 <span class="n">list_of_state_dfs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="n">state</span> <span class="o">+</span> <span class="n">end_url</span><span class="p">)</span> <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">state_codes</span><span class="p">]</span>
-<span class="c1"># Show example of first entry in list of dataframes</span>
+<span class="c1"># Show example of first entry in list of data frames</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">list_of_state_dfs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="c1"># Concatenate the list of dataframes</span>
+<span class="c1"># Concatenate the list of data frames</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_state_dfs</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="n">state_codes</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
@@ -584,10 +595,10 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-<p>Note that the <code class="docutils literal notranslate"><span class="pre">keys</span></code> argument is optional, but is useful for keeping track of origin dataframes within the merged dataframe.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">keys</span></code> argument is optional, but is useful for keeping track of origin data frames within the merged data frame.</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Concatenate the follow two dataframes:</p>
+<p>Concatenate the follow two data frames:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
                    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;letter&#39;</span><span class="p">,</span> <span class="s1">&#39;number&#39;</span><span class="p">])</span>
 
@@ -598,15 +609,15 @@ document.write(`
 </div>
 </section>
 <section id="merge">
-<h2><span class="section-number">23.3. </span>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">#</a></h2>
-<p>There are so many options for merging dataframes using <code class="docutils literal notranslate"><span class="pre">pd.merge(left,</span> <span class="pre">right,</span> <span class="pre">on=...,</span> <span class="pre">how=...</span></code> that we won’t be able to cover them all here. The most important features are: the two dataframes to be merged, what variables (aka keys) to merge on (and these can be indexes) via <code class="docutils literal notranslate"><span class="pre">on=</span></code>, and <em>how</em> to do the merge (eg left, right, outer, inner) via <code class="docutils literal notranslate"><span class="pre">how=</span></code>. This diagram shows an example of a merge using keys from the left-hand dataframe:</p>
+<h2><span class="section-number">22.3. </span>Merge<a class="headerlink" href="#merge" title="Permalink to this heading">#</a></h2>
+<p>There are so many options for merging data frames using <code class="docutils literal notranslate"><span class="pre">pd.merge(left,</span> <span class="pre">right,</span> <span class="pre">on=...,</span> <span class="pre">how=...</span></code> that we won’t be able to cover them all here. The most important features are: the two data frames to be merged, what variables (aka keys) to merge on (and these can be indexes) via <code class="docutils literal notranslate"><span class="pre">on=</span></code>, and <em>how</em> to do the merge (eg left, right, outer, inner) via <code class="docutils literal notranslate"><span class="pre">how=</span></code>. This diagram shows an example of a merge using keys from the left-hand data frame:</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/08_merge_left.svg" /></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">how=</span></code> keyword works in the following ways:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">how='left'</span></code> uses keys from the left dataframe only to merge.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">how='right'</span></code> uses keys from the right dataframe only to merge.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">how='inner'</span></code> uses keys that appear in both dataframes to merge.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">how='outer'</span></code> uses the cartesian product of keys in both dataframes to merge on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">how='left'</span></code> uses keys from the left data frame only to merge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">how='right'</span></code> uses keys from the right data frame only to merge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">how='inner'</span></code> uses keys that appear in both data frames to merge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">how='outer'</span></code> uses the cartesian product of keys in both data frames to merge on.</p></li>
 </ul>
 <p>Let’s see examples of some of these:</p>
 <div class="cell docutils container">
@@ -700,7 +711,7 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-<p>Note that the key combination of K2 and K0 did not exist in the left-hand dataframe, and so its entries in the final dataframe are NaNs. But it <em>does</em> have entries because we chose the keys from the right-hand dataframe.</p>
+<p>Note that the key combination of K2 and K0 did not exist in the left-hand data frame, and so its entries in the final data frame are NaNs. But it <em>does</em> have entries because we chose the keys from the right-hand data frame.</p>
 <p>What about an inner merge?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -767,7 +778,7 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-<p>Now we see that the combination K2 and K0 are excluded because they didn’t exist in the overlap of keys in both dataframes.</p>
+<p>Now we see that the combination K2 and K0 are excluded because they didn’t exist in the overlap of keys in both data frames.</p>
 <p>Finally, let’s take a look at an outer merge that comes with some extra info via the <code class="docutils literal notranslate"><span class="pre">indicator</span></code> keyword:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -868,10 +879,10 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-<p>Now we can see that the products of all key combinations are here. The <code class="docutils literal notranslate"><span class="pre">indicator=True</span></code> option has caused an extra column to be added, called ‘_merge’, that tells us which dataframe the keys on that row came from.</p>
+<p>Now we can see that the products of all key combinations are here. The <code class="docutils literal notranslate"><span class="pre">indicator=True</span></code> option has caused an extra column to be added, called ‘_merge’, that tells us which data frame the keys on that row came from.</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Merge the following two dataframes using the <code class="docutils literal notranslate"><span class="pre">left_on</span></code> and <code class="docutils literal notranslate"><span class="pre">right_on</span></code> keyword arguments to specify a join on <code class="docutils literal notranslate"><span class="pre">lkey</span></code> and <code class="docutils literal notranslate"><span class="pre">rkey</span></code> respectively:</p>
+<p>Merge the following two data frames using the <code class="docutils literal notranslate"><span class="pre">left_on</span></code> and <code class="docutils literal notranslate"><span class="pre">right_on</span></code> keyword arguments to specify a join on <code class="docutils literal notranslate"><span class="pre">lkey</span></code> and <code class="docutils literal notranslate"><span class="pre">rkey</span></code> respectively:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;lkey&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">],</span>
                     <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]})</span>
 <span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;rkey&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">],</span>
@@ -881,12 +892,12 @@ document.write(`
 </div>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Merge the following two dataframes on <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> using <code class="docutils literal notranslate"><span class="pre">how=&quot;left&quot;</span></code> as a keyword argument:</p>
+<p>Merge the following two data frames on <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> using <code class="docutils literal notranslate"><span class="pre">how=&quot;left&quot;</span></code> as a keyword argument:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]})</span>
 <span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">],</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
 </pre></div>
 </div>
-<p>What do you notice about the position <code class="docutils literal notranslate"><span class="pre">.loc[1,</span> <span class="pre">&quot;c&quot;]</span></code> in the merged dataframe?</p>
+<p>What do you notice about the position <code class="docutils literal notranslate"><span class="pre">.loc[1,</span> <span class="pre">&quot;c&quot;]</span></code> in the merged data frame?</p>
 </div>
 <p>For more on the options for merging, see <strong>pandas</strong>’ comprehensive <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/merging.html#database-style-dataframe-or-named-series-joining-merging">merging documentation</a>.</p>
 </section>
@@ -917,11 +928,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="missing-values.html"
@@ -929,7 +939,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">22. </span>Missing Values</p>
+        <p class="prev-next-title"><span class="section-number">21. </span>Missing Values</p>
       </div>
     </a>
     <a class="right-next"
@@ -937,14 +947,11 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">24. </span>Spreadsheets</p>
+        <p class="prev-next-title"><span class="section-number">23. </span>Spreadsheets</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -959,12 +966,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">23.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">23.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">22.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">22.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenate">23.2. Concatenate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge">23.3. Merge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenate">22.2. Concatenate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge">22.3. Merge</a></li>
 </ul>
   </nav></div>
 
@@ -1012,8 +1019,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

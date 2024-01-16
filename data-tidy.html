@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7. Tidy Data &#8212; Python for Data Science</title>
+    <title>6. Tidy Data &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. Workflow: Writing Code" href="workflow-writing-code.html" />
-    <link rel="prev" title="6. Workflow: Style" href="workflow-style.html" />
+    <link rel="next" title="7. Workflow: Writing Code" href="workflow-writing-code.html" />
+    <link rel="prev" title="5. Workflow: Style" href="workflow-style.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,16 +474,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">7.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">7.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">6.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.2. Tidy Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-data-tidy-with-pandas">7.3. Make Data Tidy with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melt">7.3.1. Melt</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-to-long">7.3.2. Wide to Long</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-and-unstack">7.3.3. Stack and Unstack</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">7.3.4. Pivoting data from tidy to, err, untidy data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2. Tidy Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-data-tidy-with-pandas">6.3. Make Data Tidy with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melt">6.3.1. Melt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-to-long">6.3.2. Wide to Long</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-and-unstack">6.3.3. Stack and Unstack</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">6.3.4. Pivoting data from tidy to, err, untidy data</a></li>
 </ul>
 </li>
 </ul>
@@ -487,19 +498,19 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tidy-data">
-<span id="data-tidy"></span><h1><span class="section-number">7. </span>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this headline">#</a></h1>
+<span id="data-tidy"></span><h1><span class="section-number">6. </span>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In this chapter, you will learn a consistent way to organise your data in Python using the principle known as <em>tidy data</em>. Tidy data is not appropriate for everything, but for a lot of analysis and a lot of tabular data it will be what you need. Getting your data into this format requires some work up front, but that work pays off in the long term. Once you have tidy data, you will spend much less time munging data from one representation to another, allowing you to spend more time on the data questions you care about.</p>
 <p>In this chapter, you’ll first learn the definition of tidy data and see it applied to simple toy dataset. Then we’ll dive into the main tool you’ll use for tidying data: melting. Melting allows you to change the form of your data, without changing any of the values. We’ll finish up with a discussion of usefully untidy data, and how you can create it if needed.</p>
 <p>If you particularly enjoy this chapter and want to learn more about the underlying theory, you can learn more in the <a class="reference external" href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> paper published in the Journal of Statistical Software.</p>
 <section id="prerequisites">
-<h3><span class="section-number">7.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>This chapter will use the <strong>pandas</strong> data analysis package.</p>
 </section>
 </section>
 <section id="id1">
-<h2><span class="section-number">7.2. </span>Tidy Data<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.2. </span>Tidy Data<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>There are three interrelated features that make a dataset tidy:</p>
 <ol class="arabic simple">
 <li><p>Each variable is a column; each column is a variable.</p></li>
@@ -518,10 +529,10 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 <p>Having said that tidy data are great, they are, but one of <strong>pandas</strong>’ advantages relative to other data analysis libraries is that it isn’t <em>too</em> tied to tidy data and can navigate awkward non-tidy data manipulation tasks happily too.</p>
 </section>
 <section id="make-data-tidy-with-pandas">
-<h2><span class="section-number">7.3. </span>Make Data Tidy with <strong>pandas</strong><a class="headerlink" href="#make-data-tidy-with-pandas" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.3. </span>Make Data Tidy with <strong>pandas</strong><a class="headerlink" href="#make-data-tidy-with-pandas" title="Permalink to this heading">#</a></h2>
 <section id="melt">
-<h3><span class="section-number">7.3.1. </span>Melt<a class="headerlink" href="#melt" title="Permalink to this headline">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">melt</span></code> can help you go from untidy to tidy data (from wide data to long data), and is a <em>really</em> good one to remember.</p>
+<h3><span class="section-number">6.3.1. </span>Melt<a class="headerlink" href="#melt" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">melt()</span></code> can help you go from untidy to tidy data (from wide data to long data), and is a <em>really</em> good one to remember.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_melt.png" /></p>
 <p>Here’s an example of it in action:</p>
 <div class="cell docutils container">
@@ -612,12 +623,12 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 </div>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Perform a melt that uses <code class="docutils literal notranslate"><span class="pre">job</span></code> as the id instead of <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">last</span></code>.</p>
+<p>Perform a <code class="docutils literal notranslate"><span class="pre">melt()</span></code> that uses <code class="docutils literal notranslate"><span class="pre">job</span></code> as the id instead of <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">last</span></code>.</p>
 </div>
 </section>
 <section id="wide-to-long">
-<h3><span class="section-number">7.3.2. </span>Wide to Long<a class="headerlink" href="#wide-to-long" title="Permalink to this headline">#</a></h3>
-<p>If you don’t wan the headscratching of melt, there’s also <code class="docutils literal notranslate"><span class="pre">wide_to_long</span></code>, which is really useful for typical data cleaning cases where you have data like this:</p>
+<h3><span class="section-number">6.3.2. </span>Wide to Long<a class="headerlink" href="#wide-to-long" title="Permalink to this heading">#</a></h3>
+<p>If you don’t want the headscratching of <code class="docutils literal notranslate"><span class="pre">melt()</span></code>, there’s also <code class="docutils literal notranslate"><span class="pre">wide_to_long()</span></code>, which is really useful for typical data cleaning cases where you have data like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -670,7 +681,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>d</td>
       <td>2.5</td>
       <td>3.2</td>
-      <td>-0.207659</td>
+      <td>-0.151654</td>
       <td>0</td>
     </tr>
     <tr>
@@ -679,7 +690,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>e</td>
       <td>1.2</td>
       <td>1.3</td>
-      <td>0.348191</td>
+      <td>-0.274889</td>
       <td>1</td>
     </tr>
     <tr>
@@ -688,7 +699,7 @@ If you have a consistent data structure, it’s easier to learn the tools that w
       <td>f</td>
       <td>0.7</td>
       <td>0.1</td>
-      <td>-1.176379</td>
+      <td>0.067486</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -738,42 +749,42 @@ If you have a consistent data structure, it’s easier to learn the tools that w
     <tr>
       <th>0</th>
       <th>1970</th>
-      <td>-0.207659</td>
+      <td>-0.151654</td>
       <td>a</td>
       <td>2.5</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1970</th>
-      <td>0.348191</td>
+      <td>-0.274889</td>
       <td>b</td>
       <td>1.2</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1970</th>
-      <td>-1.176379</td>
+      <td>0.067486</td>
       <td>c</td>
       <td>0.7</td>
     </tr>
     <tr>
       <th>0</th>
       <th>1980</th>
-      <td>-0.207659</td>
+      <td>-0.151654</td>
       <td>d</td>
       <td>3.2</td>
     </tr>
     <tr>
       <th>1</th>
       <th>1980</th>
-      <td>0.348191</td>
+      <td>-0.274889</td>
       <td>e</td>
       <td>1.3</td>
     </tr>
     <tr>
       <th>2</th>
       <th>1980</th>
-      <td>-1.176379</td>
+      <td>0.067486</td>
       <td>f</td>
       <td>0.1</td>
     </tr>
@@ -783,12 +794,12 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 </div>
 </section>
 <section id="stack-and-unstack">
-<h3><span class="section-number">7.3.3. </span>Stack and Unstack<a class="headerlink" href="#stack-and-unstack" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.3.3. </span>Stack and Unstack<a class="headerlink" href="#stack-and-unstack" title="Permalink to this heading">#</a></h3>
 <p>Stack, <code class="docutils literal notranslate"><span class="pre">stack()</span></code> is a shortcut for taking a single type of wide data variable from columns and turning it into a long form dataset, but with an extra index.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_stack.png" /></p>
 <p>Unstack, <code class="docutils literal notranslate"><span class="pre">unstack()</span></code> unsurprisingly does the same operation, but in reverse.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_unstack.png" /></p>
-<p>Let’s define a multi-index dataframe to demonstrate this:</p>
+<p>Let’s define a multi-index data frame to demonstrate this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
@@ -839,46 +850,46 @@ If you have a consistent data structure, it’s easier to learn the tools that w
     <tr>
       <th rowspan="2" valign="top">bar</th>
       <th>one</th>
-      <td>0.021023</td>
-      <td>-0.219138</td>
+      <td>0.112215</td>
+      <td>-1.293469</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>1.238979</td>
-      <td>0.292175</td>
+      <td>-0.508366</td>
+      <td>0.878523</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">baz</th>
       <th>one</th>
-      <td>0.995190</td>
-      <td>0.142858</td>
+      <td>-0.022039</td>
+      <td>-1.542429</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>0.505710</td>
-      <td>0.232057</td>
+      <td>-0.308247</td>
+      <td>1.010441</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">foo</th>
       <th>one</th>
-      <td>0.996246</td>
-      <td>0.697060</td>
+      <td>-0.515674</td>
+      <td>1.104245</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>1.491161</td>
-      <td>0.150436</td>
+      <td>0.382622</td>
+      <td>-0.044313</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">qux</th>
       <th>one</th>
-      <td>-0.568839</td>
-      <td>-0.095370</td>
+      <td>-0.457411</td>
+      <td>-0.483903</td>
     </tr>
     <tr>
       <th>two</th>
-      <td>-0.638819</td>
-      <td>-0.796604</td>
+      <td>1.387316</td>
+      <td>-1.432871</td>
     </tr>
   </tbody>
 </table>
@@ -894,22 +905,22 @@ If you have a consistent data structure, it’s easier to learn the tools that w
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first  second   
-bar    one     A    0.021023
-               B   -0.219138
-       two     A    1.238979
-               B    0.292175
-baz    one     A    0.995190
-               B    0.142858
-       two     A    0.505710
-               B    0.232057
-foo    one     A    0.996246
-               B    0.697060
-       two     A    1.491161
-               B    0.150436
-qux    one     A   -0.568839
-               B   -0.095370
-       two     A   -0.638819
-               B   -0.796604
+bar    one     A    0.112215
+               B   -1.293469
+       two     A   -0.508366
+               B    0.878523
+baz    one     A   -0.022039
+               B   -1.542429
+       two     A   -0.308247
+               B    1.010441
+foo    one     A   -0.515674
+               B    1.104245
+       two     A    0.382622
+               B   -0.044313
+qux    one     A   -0.457411
+               B   -0.483903
+       two     A    1.387316
+               B   -1.432871
 dtype: float64
 </pre></div>
 </div>
@@ -963,32 +974,32 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">one</th>
       <th>A</th>
-      <td>0.021023</td>
-      <td>0.995190</td>
-      <td>0.996246</td>
-      <td>-0.568839</td>
+      <td>0.112215</td>
+      <td>-0.022039</td>
+      <td>-0.515674</td>
+      <td>-0.457411</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>-0.219138</td>
-      <td>0.142858</td>
-      <td>0.697060</td>
-      <td>-0.095370</td>
+      <td>-1.293469</td>
+      <td>-1.542429</td>
+      <td>1.104245</td>
+      <td>-0.483903</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">two</th>
       <th>A</th>
-      <td>1.238979</td>
-      <td>0.505710</td>
-      <td>1.491161</td>
-      <td>-0.638819</td>
+      <td>-0.508366</td>
+      <td>-0.308247</td>
+      <td>0.382622</td>
+      <td>1.387316</td>
     </tr>
     <tr>
       <th>B</th>
-      <td>0.292175</td>
-      <td>0.232057</td>
-      <td>0.150436</td>
-      <td>-0.796604</td>
+      <td>0.878523</td>
+      <td>1.010441</td>
+      <td>-0.044313</td>
+      <td>-1.432871</td>
     </tr>
   </tbody>
 </table>
@@ -1000,10 +1011,10 @@ dtype: float64
 </div>
 </section>
 <section id="pivoting-data-from-tidy-to-err-untidy-data">
-<h3><span class="section-number">7.3.4. </span>Pivoting data from tidy to, err, untidy data<a class="headerlink" href="#pivoting-data-from-tidy-to-err-untidy-data" title="Permalink to this headline">#</a></h3>
-<p>At the start of this chapter, we said you should use tidy data–one row per observation, one column per variable–whenever you can. But there are times when you will want to take your lovingly prepared tidy data and pivot it into a wider format. <code class="docutils literal notranslate"><span class="pre">pivot</span></code> and <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code> help you to do that.</p>
+<h3><span class="section-number">6.3.4. </span>Pivoting data from tidy to, err, untidy data<a class="headerlink" href="#pivoting-data-from-tidy-to-err-untidy-data" title="Permalink to this heading">#</a></h3>
+<p>At the start of this chapter, we said you should use tidy data–one row per observation, one column per variable–whenever you can. But there are times when you will want to take your lovingly prepared tidy data and pivot it into a wider format. <code class="docutils literal notranslate"><span class="pre">pivot()</span></code> and <code class="docutils literal notranslate"><span class="pre">pivot_table()</span></code> help you to do that.</p>
 <p><img alt="" src="https://pandas.pydata.org/docs/_images/reshaping_pivot.png" /></p>
-<p>This can be especially useful for time series data, where operations like <code class="docutils literal notranslate"><span class="pre">shift</span></code> or <code class="docutils literal notranslate"><span class="pre">diff</span></code> are typically applied assuming that an entry in one row follows (in time) from the one above. Here’s an example:</p>
+<p>This can be especially useful for time series data, where operations like <code class="docutils literal notranslate"><span class="pre">shift()</span></code> or <code class="docutils literal notranslate"><span class="pre">diff()</span></code> are typically applied assuming that an entry in one row follows (in time) from the one above. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1049,45 +1060,45 @@ dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>14</th>
+      <th>4</th>
       <td>2000-05-31</td>
-      <td>B</td>
-      <td>type2</td>
-      <td>0.608253</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2000-04-30</td>
-      <td>B</td>
-      <td>type1</td>
-      <td>-0.919857</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2000-07-31</td>
-      <td>B</td>
-      <td>type3</td>
-      <td>0.239821</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2000-08-31</td>
       <td>A</td>
       <td>type2</td>
-      <td>-0.237544</td>
+      <td>0.992832</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>2000-08-31</td>
+      <th>12</th>
+      <td>2000-03-31</td>
       <td>B</td>
       <td>type3</td>
-      <td>0.094471</td>
+      <td>0.734309</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2000-01-31</td>
+      <td>B</td>
+      <td>type1</td>
+      <td>1.510898</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2000-09-30</td>
+      <td>B</td>
+      <td>type2</td>
+      <td>0.162529</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2000-04-30</td>
+      <td>A</td>
+      <td>type2</td>
+      <td>-0.644224</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>If we just run <code class="docutils literal notranslate"><span class="pre">shift</span></code> on this, it’s going to shift variable B’s and A’s together even though these overlap in time. So we pivot to a wider format (and then we can shift safely).</p>
+<p>If we just run <code class="docutils literal notranslate"><span class="pre">shift()</span></code> on this, it’s going to shift variable B’s and A’s together even though these overlap in time. So we pivot to a wider format (and then we can shift safely).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -1130,48 +1141,48 @@ dtype: float64
     </tr>
     <tr>
       <th>2000-02-29</th>
-      <td>-0.444529</td>
-      <td>1.009537</td>
+      <td>-0.168554</td>
+      <td>1.510898</td>
     </tr>
     <tr>
       <th>2000-03-31</th>
-      <td>0.352805</td>
-      <td>-1.597296</td>
+      <td>0.150220</td>
+      <td>0.003945</td>
     </tr>
     <tr>
       <th>2000-04-30</th>
-      <td>1.044899</td>
-      <td>-0.146446</td>
+      <td>-2.296833</td>
+      <td>0.734309</td>
     </tr>
     <tr>
       <th>2000-05-31</th>
-      <td>-0.077630</td>
-      <td>-0.919857</td>
+      <td>-0.644224</td>
+      <td>-0.515981</td>
     </tr>
     <tr>
       <th>2000-06-30</th>
-      <td>0.074546</td>
-      <td>0.608253</td>
+      <td>0.992832</td>
+      <td>-0.315335</td>
     </tr>
     <tr>
       <th>2000-07-31</th>
-      <td>1.167594</td>
-      <td>0.500025</td>
+      <td>1.662016</td>
+      <td>-1.987315</td>
     </tr>
     <tr>
       <th>2000-08-31</th>
-      <td>-0.994775</td>
-      <td>0.239821</td>
+      <td>-1.302095</td>
+      <td>0.029737</td>
     </tr>
     <tr>
       <th>2000-09-30</th>
-      <td>-0.237544</td>
-      <td>0.094471</td>
+      <td>-0.207576</td>
+      <td>-1.020441</td>
     </tr>
     <tr>
       <th>2000-10-31</th>
-      <td>0.699974</td>
-      <td>0.271197</td>
+      <td>-0.213138</td>
+      <td>0.162529</td>
     </tr>
   </tbody>
 </table>
@@ -1180,7 +1191,7 @@ dtype: float64
 <p>To go back to the original structure, albeit without the <code class="docutils literal notranslate"><span class="pre">category</span></code> columns, apply <code class="docutils literal notranslate"><span class="pre">.unstack().reset_index()</span></code>.</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
-<p>Perform a pivot that applies to both the <code class="docutils literal notranslate"><span class="pre">variable</span></code> and <code class="docutils literal notranslate"><span class="pre">category</span></code> columns. (Hint: remember that you will need to pass multiple objects via a list.)</p>
+<p>Perform a <code class="docutils literal notranslate"><span class="pre">pivot()</span></code> that applies to both the <code class="docutils literal notranslate"><span class="pre">variable</span></code> and <code class="docutils literal notranslate"><span class="pre">category</span></code> columns. (Hint: remember that you will need to pass multiple objects via a list.)</p>
 </div>
 </section>
 </section>
@@ -1211,11 +1222,10 @@ dtype: float64
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="workflow-style.html"
@@ -1223,7 +1233,7 @@ dtype: float64
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Workflow: Style</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Workflow: Style</p>
       </div>
     </a>
     <a class="right-next"
@@ -1231,14 +1241,11 @@ dtype: float64
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Workflow: Writing Code</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Workflow: Writing Code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1253,16 +1260,16 @@ dtype: float64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">7.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">7.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">6.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.2. Tidy Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-data-tidy-with-pandas">7.3. Make Data Tidy with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melt">7.3.1. Melt</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-to-long">7.3.2. Wide to Long</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-and-unstack">7.3.3. Stack and Unstack</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">7.3.4. Pivoting data from tidy to, err, untidy data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2. Tidy Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-data-tidy-with-pandas">6.3. Make Data Tidy with <strong>pandas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melt">6.3.1. Melt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-to-long">6.3.2. Wide to Long</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-and-unstack">6.3.3. Stack and Unstack</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-data-from-tidy-to-err-untidy-data">6.3.4. Pivoting data from tidy to, err, untidy data</a></li>
 </ul>
 </li>
 </ul>
@@ -1312,8 +1319,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

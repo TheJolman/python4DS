@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Prerequisites &#8212; Python for Data Science</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -74,7 +76,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="1. Whole Game" href="whole-game.html" />
     <link rel="prev" title="First Steps" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -495,10 +506,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="prerequisites">
-<span id="prereq"></span><h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h1>
+<span id="prereq"></span><h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h1>
 <p>Congratulations on starting your data science journey! In this chapter, we’re going to help you install or access the tools you need to start learning and doing data science. We’ve made a few assumptions about what you already know in order to get the most out of this book. You should be generally numerically literate, and it’s helpful if you have some programming experience already.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>We’ll be helping you get set up with:</p>
 <ul class="simple">
 <li><p>an <em>integrated development environment</em>, or IDE, a place to write and run code</p></li>
@@ -507,7 +518,7 @@ document.write(`
 </ul>
 <p>While there will be much more information on the how to come, let’s first spend a moment explaining <em>what</em> these are.</p>
 <section id="integrated-development-environment-or-ide">
-<h3>Integrated development environment, or IDE<a class="headerlink" href="#integrated-development-environment-or-ide" title="Permalink to this headline">#</a></h3>
+<h3>Integrated development environment, or IDE<a class="headerlink" href="#integrated-development-environment-or-ide" title="Permalink to this heading">#</a></h3>
 <p>An <em>integrated development environment</em> (IDE) is a software application that provides a few tools to make coding easier. The most important of these is a way to write the code itself! IDEs are not the only way to programme, but they are perhaps the most useful. Note that the language and the place you write the language (the IDE) are separate things: the language is a way of processing your instructions, the IDE is where you write those instructions. There are a lot of integrated development environments (IDEs) out there. This book strongly recommends Microsoft’s <em>Visual Studio Code</em>, which works on all major operating systems and is one of the most popular. Here are some of the useful features that <em>Visual Studio Code</em> provides:</p>
 <ul class="simple">
 <li><p>a way to run your code interactively (line-by-line) or all at once</p></li>
@@ -520,15 +531,15 @@ document.write(`
 </ul>
 </section>
 <section id="a-python-interpreter">
-<h3>A Python interpreter<a class="headerlink" href="#a-python-interpreter" title="Permalink to this headline">#</a></h3>
+<h3>A Python interpreter<a class="headerlink" href="#a-python-interpreter" title="Permalink to this heading">#</a></h3>
 <p>Python is both a programming language that you can read, and a language that computers can read, interpret, and then carry out instructions based on. For your computer to be able to read and execute Python code, you will need to get Python installed on your computer. There are lots of ways to install a Python “interpreter” on your computer, but this book recommends the <em>Anaconda distribution</em> of Python for its flexibility and simplicity.</p>
 </section>
 <section id="packages">
-<h3>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">#</a></h3>
+<h3>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h3>
 <p>A Python <strong>package</strong> is a collection of functions, data, and documentation that extends the capabilities of an installed version of Python. Using packages is key to most data science because most of the functionality we’ll need comes from extra packages. You’ll see statetments like <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> at the start of many Python code scripts—these are instructions to use an installed package (here one called <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) and to give it a shortened name (<code class="docutils literal notranslate"><span class="pre">np</span></code>, for convenience) in the rest of the script. The functions in the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package are then accessed through syntax like <code class="docutils literal notranslate"><span class="pre">np.</span></code>; for example, you can take logs with <code class="docutils literal notranslate"><span class="pre">np.log(x)</span></code> where <code class="docutils literal notranslate"><span class="pre">x</span></code> is a variable containing a number. You need only install packages once.</p>
 </section>
 <section id="typical-workflow">
-<h3>Typical workflow<a class="headerlink" href="#typical-workflow" title="Permalink to this headline">#</a></h3>
+<h3>Typical workflow<a class="headerlink" href="#typical-workflow" title="Permalink to this heading">#</a></h3>
 <p>The typical workflow for analysis with code might be something like this:</p>
 <ul class="simple">
 <li><p>Open up your <em>integrated development environment</em> (IDE)</p></li>
@@ -545,10 +556,10 @@ document.write(`
 </section>
 </section>
 <section id="how-to-get-started-on-your-own-computer">
-<h2>How to get started on your own computer<a class="headerlink" href="#how-to-get-started-on-your-own-computer" title="Permalink to this headline">#</a></h2>
+<h2>How to get started on your own computer<a class="headerlink" href="#how-to-get-started-on-your-own-computer" title="Permalink to this heading">#</a></h2>
 <p>These instructions are for if you’re going to work with Python locally, on your own computer.</p>
 <section id="installing-python">
-<h3>Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">#</a></h3>
+<h3>Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this heading">#</a></h3>
 <p>To download and install Python, we’ll use the Anaconda “distribution” of Python, which is available on all major operating systems. To install it, follow the instructions below or watch this video on <em><a class="reference external" href="https://www.youtube.com/watch?v=ZWQwGR5ppnk">how to install Python using the Anaconda distribution of Python</a></em>.</p>
 <iframe width="700" height="394" src="https://www.youtube.com/embed/ZWQwGR5ppnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>Download the individual edition of the <a class="reference external" href="https://www.anaconda.com/">Anaconda distribution</a> of Python for your operating system and install it. This will provide you with a Python installation and a host of the most useful libraries. If you get stuck, there are more detailed instructions available for installing the Anaconda distribution of Python <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">on Windows</a>, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">on Mac</a>, and <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">on Linux</a>.</p>
@@ -559,7 +570,7 @@ document.write(`
 </div>
 </section>
 <section id="installing-your-integrated-development-environment-visual-studio-code">
-<h3>Installing your integrated development environment, Visual Studio Code<a class="headerlink" href="#installing-your-integrated-development-environment-visual-studio-code" title="Permalink to this headline">#</a></h3>
+<h3>Installing your integrated development environment, Visual Studio Code<a class="headerlink" href="#installing-your-integrated-development-environment-visual-studio-code" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> is a free and open source IDE from Microsoft that is available on all major operating systems. Just like Python itself, Visual Studio can be extended with packages, and it is those packages, called extensions in this case, that make it so useful. As well as Python, Visual Studio Code supports a ton of other languages.</p>
 <p>Download and install Visual Studio Code. If you need some help, there is a video below that will walk you through downloading and installing Visual Studio Code, and then using it to run Python code in both scripts and in notebooks. We’ll go through these instructions in detail in the rest of this chapter.</p>
 <iframe width="700" height="394" src="https://www.youtube.com/embed/1kKTYsQdaPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -567,7 +578,7 @@ document.write(`
 </section>
 </section>
 <section id="data-science-in-the-cloud">
-<h2>Data science in the cloud<a class="headerlink" href="#data-science-in-the-cloud" title="Permalink to this headline">#</a></h2>
+<h2>Data science in the cloud<a class="headerlink" href="#data-science-in-the-cloud" title="Permalink to this heading">#</a></h2>
 <p>These instructions are for if you’re planning to do your data science remotely, using a computer in the cloud.</p>
 <p>There are many ways to do data science in the cloud, but we’re going to share with you the absolute simplest. For this, you will need to sign up for a <a class="reference external" href="https://github.com/">Github Account</a>. Github is an organisation that’s owned by Microsoft and which provides a range of services including a way to back-up code on the cloud, and cloud computing. One of the services offered is <em>Github Codespaces</em>. A GitHub Codespace is an online cloud computer that you connect to from your browser window. It has a generous 60 hours free of computing per month.</p>
 <div class="admonition note">
@@ -578,9 +589,9 @@ document.write(`
 <p>You will find that a new page loads with several panels in. This is an online version of Visual Studio Code that works much like if you had installed it on your own computer. It will already have a version of Python installed—you can check which one by running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code> in the terminal. The terminal is usually found in the lowest panel of Visual Studio Code, and, in Codespaces, will typically display a welcome message.</p>
 </section>
 <section id="running-your-first-python-code">
-<h2>Running your first Python code<a class="headerlink" href="#running-your-first-python-code" title="Permalink to this headline">#</a></h2>
+<h2>Running your first Python code<a class="headerlink" href="#running-your-first-python-code" title="Permalink to this heading">#</a></h2>
 <section id="getting-to-grips-with-visual-studio-code">
-<h3>Getting to grips with Visual Studio Code<a class="headerlink" href="#getting-to-grips-with-visual-studio-code" title="Permalink to this headline">#</a></h3>
+<h3>Getting to grips with Visual Studio Code<a class="headerlink" href="#getting-to-grips-with-visual-studio-code" title="Permalink to this heading">#</a></h3>
 <p>Once you have Visual Studio Code installed and opened (either on your own computer or in the cloud), navigate to the ‘extensions’ tab on the left hand side vertical bar of icons (it’s the one that looks like 4 squares). You’ll need to install the <em>Python extension for VS Code</em>, which you can search for by using the text box within VS Code’s extensions panel. If you’re using the cloud version, you may find that it’s already installed.</p>
 <p>There are some other extensions it’s useful to have and install (if they aren’t already):</p>
 <ul class="simple">
@@ -601,7 +612,7 @@ document.write(`
 <p>Note that there is lots of useful information arrayed right at the bottom of the window in the blue bar, including the version of Python currently being used by VS Code.</p>
 </section>
 <section id="running-python-code">
-<h3>Running Python code<a class="headerlink" href="#running-python-code" title="Permalink to this headline">#</a></h3>
+<h3>Running Python code<a class="headerlink" href="#running-python-code" title="Permalink to this heading">#</a></h3>
 <p>Now you will create and run your first code. If you get stuck, there’s a more in-depth tutorial over at the <a class="reference external" href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code documentation</a>.</p>
 <p>In Visual Studio Code, click on the “Explorer” symbol (some files on the left-hand side of the screen) to bring up a file explorer. Check you’re in a good location on your computer to try things out and, if not, change the folder you’re in using File -&gt; Open Folder until you’re happy.</p>
 <p>Now, still with the explorer panel open, click on the symbol that looks like a blank piece of paper with a “+” sign on it. This will create a new file, and your cursor should move to name it. Name it <code class="docutils literal notranslate"><span class="pre">hello_world.py</span></code>. The file extension, <code class="docutils literal notranslate"><span class="pre">.py</span></code>, is very important as it implicitly tells Visual Studio Code that this is a Python script.</p>
@@ -645,7 +656,7 @@ document.write(`
 </div>
 </section>
 <section id="installing-packages">
-<h3>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">#</a></h3>
+<h3>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this heading">#</a></h3>
 <p>We use the <em>terminal</em> or <em>command line</em> within Visual Studio Code to install additional Python packages. In the figure earlier in the Chapter, this is labelled as panel number 4.</p>
 <p>To install an extra package, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">**packagename**</span></code> in the command line. You could try installing the data analysispackage <strong>polars</strong> this way, by running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">polars</span></code>. We’ll see how to use <strong>polars</strong> in later chapters, but if you want to know if it installed correctly, just look for the message saying “Successfully installed polars” followed by the version number.</p>
 <p>There’ll be more on installing and using packages in <a class="reference internal" href="workflow-packages-and-environments.html#workflow-packages-and-environments"><span class="std std-ref">Workflow: Packages and Environments</span></a>.</p>
@@ -653,7 +664,7 @@ document.write(`
 </section>
 </section>
 <section id="alternative-ways-to-run-the-code-from-the-book">
-<h2>Alternative ways to run the code from the book<a class="headerlink" href="#alternative-ways-to-run-the-code-from-the-book" title="Permalink to this headline">#</a></h2>
+<h2>Alternative ways to run the code from the book<a class="headerlink" href="#alternative-ways-to-run-the-code-from-the-book" title="Permalink to this heading">#</a></h2>
 <p>As well as following this book using your own computer or on the cloud via Github Codespaces, you can run the code online through a few other options. The first is the easiest to get started with.</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://research.google.com/colaboratory/">Google Colab notebooks</a>. Free for most use. You can launch most pages in this book interactively by using the ‘Colab’ button under the rocket symbol at the top of the page. It will be in the form of a notebook (which mixes code and text) rather than a script (.py file) but the code you write is the same. Note that you may need to update packages to the most recent versions. On Colab, you can do this by runnin <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">**packagename**</span></code> in a code cell—note the extra exclamation mark, which tells Colab that this is an instruction for the operating system rather than for Python.</p></li>
@@ -687,11 +698,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="introduction.html"
@@ -711,10 +721,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -796,8 +803,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

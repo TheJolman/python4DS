@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>29. Iteration &#8212; Python for Data Science</title>
+    <title>28. Iteration &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="30. The Command Line" href="command-line.html" />
-    <link rel="prev" title="28. Functions" href="functions.html" />
+    <link rel="next" title="29. The Command Line" href="command-line.html" />
+    <link rel="prev" title="27. Functions" href="functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,17 +474,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">29.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">29.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">28.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">28.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">29.2. For Loops</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-and-other-comprehensions">29.3. List (and Other) Comprehensions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">29.4. While Loops</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-with-pandas-data-frames">29.5. Iteration with <strong>pandas</strong> Data Frames</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operations-and-assign">29.5.1. Assignment Operations and <code class="docutils literal notranslate"><span class="pre">assign</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apply">29.5.2. Apply</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eval-uate">29.5.3. Eval(uate)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">28.2. For Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-and-other-comprehensions">28.3. List (and Other) Comprehensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">28.4. While Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-with-pandas-data-frames">28.5. Iteration with <strong>pandas</strong> Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operations-and-assign">28.5.1. Assignment Operations and <code class="docutils literal notranslate"><span class="pre">assign</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apply">28.5.2. Apply</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eval-uate">28.5.3. Eval(uate)</a></li>
 </ul>
 </li>
 </ul>
@@ -488,9 +499,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="iteration">
-<span id="id1"></span><h1><span class="section-number">29. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">28. </span>Iteration<a class="headerlink" href="#iteration" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">29.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">28.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In <a class="reference internal" href="functions.html#functions"><span class="std std-ref">Functions</span></a>, we talked about how important it is to reduce duplication in your code by creating functions instead of copying-and-pasting. Reducing code duplication has three main benefits:</p>
 <ol class="arabic simple">
 <li><p>It’s easier to see the intent of your code, because your eyes are drawn to what’s different, not what stays the same.</p></li>
@@ -501,12 +512,12 @@ As your needs change, you only need to make changes in one place, rather than re
 <p>One tool for reducing duplication is functions, which reduce duplication by identifying repeated patterns of code and extract them out into independent pieces that can be easily reused and updated. Another tool for reducing duplication is <em>iteration</em>, which helps you when you need to do the same thing to multiple inputs: repeating the same operation on different columns, or on different datasets.</p>
 <p>In this chapter you’ll learn about iteration in three ways: explicit iteration, using for loops and while loops; iteration via comprehensions (eg list comprehensions); and iteration for <strong>pandas</strong> data frames.</p>
 <section id="prerequisites">
-<h3><span class="section-number">29.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">28.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>This chapter will use the <strong>pandas</strong> data analysis package.</p>
 </section>
 </section>
 <section id="for-loops">
-<h2><span class="section-number">29.2. </span>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">28.2. </span>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h2>
 <p>A loop is a way of executing a similar piece of code over and over in a similar way.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop does something <em>for</em> the time that the condition is satisfied. For example,</p>
 <div class="cell docutils container">
@@ -583,7 +594,7 @@ o
 <p class="admonition-title">Exercise</p>
 <p>Write a for loop that prints out “Python for Data Science” so that each word is printed in a successive iteration.</p>
 </div>
-<p>A useful trick with for loops is the <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> keyword, which runs through an index that keeps track of the place of items in a list:</p>
+<p>A useful trick with for loops is the <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> keyword, which runs through an index that keeps track of the place of items in a list:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Lovelace&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="s2">&quot;Hopper&quot;</span><span class="p">,</span> <span class="s2">&quot;Babbage&quot;</span><span class="p">]</span>
@@ -643,7 +654,7 @@ In Wellesley, the temperature is 29 degrees C today.
 <p class="admonition-title">Exercise</p>
 <p>Write a dictionary that maps four cities you know into their respective countries and print the results using the <code class="docutils literal notranslate"><span class="pre">key,</span> <span class="pre">value</span></code> iteration trick.</p>
 </div>
-<p>Another useful type of for loop is provided by the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function. You can think of the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function as being like a zipper, bringing elements from two different iterators together in turn. Here’s an example:</p>
+<p>Another useful type of for loop is provided by the <code class="docutils literal notranslate"><span class="pre">zip()</span></code> function. You can think of the <code class="docutils literal notranslate"><span class="pre">zip()</span></code> function as being like a zipper, bringing elements from two different iterators together in turn. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ada&quot;</span><span class="p">,</span> <span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="s2">&quot;Grace&quot;</span><span class="p">,</span> <span class="s2">&quot;Charles&quot;</span><span class="p">]</span>
@@ -671,7 +682,7 @@ Charles Babbage
 </div>
 </section>
 <section id="list-and-other-comprehensions">
-<h2><span class="section-number">29.3. </span>List (and Other) Comprehensions<a class="headerlink" href="#list-and-other-comprehensions" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">28.3. </span>List (and Other) Comprehensions<a class="headerlink" href="#list-and-other-comprehensions" title="Permalink to this heading">#</a></h2>
 <p>There’s a second way to do loops in Python and, in most but <a class="reference external" href="https://towardsdatascience.com/list-comprehensions-vs-for-loops-it-is-not-what-you-think-34071d4d8207">not all</a> <a class="reference external" href="https://stackoverflow.com/questions/22108488/are-list-comprehensions-and-functional-functions-faster-than-for-loops">cases</a>, they run faster. More importantly, and <em>this</em> is the reason it’s good practice to use them where possible, they are very readable. They are called <em>list comprehensions</em>.</p>
 <p>List comprehensions can combine what a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and (if needed) what a <code class="docutils literal notranslate"><span class="pre">condition</span></code> do in a single line of code. First, let’s look at a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop that adds one to each value done as a list comprehension (NB: in practice, we would use super-fast <strong>numpy</strong> arrays for this kind of operation):</p>
 <div class="cell docutils container">
@@ -741,7 +752,7 @@ Charles Babbage
 </div>
 </div>
 </div>
-<p>Many of the constructs we’ve seen can be combined. For instance, there is no reason why we can’t have a nested or repeated list comprehension using <code class="docutils literal notranslate"><span class="pre">zip</span></code>, and, perhaps more surprisingly, sometimes these are useful!</p>
+<p>Many of the constructs we’ve seen can be combined. For instance, there is no reason why we can’t have a nested or repeated list comprehension using <code class="docutils literal notranslate"><span class="pre">zip()</span></code>, and, perhaps more surprisingly, sometimes these are useful!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ada&quot;</span><span class="p">,</span> <span class="s2">&quot;Adam&quot;</span><span class="p">,</span> <span class="s2">&quot;Grace&quot;</span><span class="p">,</span> <span class="s2">&quot;Charles&quot;</span><span class="p">]</span>
@@ -794,7 +805,7 @@ Charles Babbage
 <p>If you’d like to learn more about list comprehensions, check out these <a class="reference external" href="https://calmcode.io/comprehensions/introduction.html">short video tutorials</a>.</p>
 </section>
 <section id="while-loops">
-<h2><span class="section-number">29.4. </span>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">28.4. </span>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> loops continue to execute code until their conditional expression evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>. (Of course, if it evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> forever, your code will just continue to execute…)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -831,11 +842,11 @@ execution complete
 </div>
 </section>
 <section id="iteration-with-pandas-data-frames">
-<h2><span class="section-number">29.5. </span>Iteration with <strong>pandas</strong> Data Frames<a class="headerlink" href="#iteration-with-pandas-data-frames" title="Permalink to this headline">#</a></h2>
-<p>For loops, while loops, and comprehensions all work on <strong>pandas</strong> dataframes, but they are generally a bad way to get things done because they are slow and not memory efficient. To aid cases where iteration is needed, <strong>pandas</strong> has built-in methods for iteration depending on what you need to do.</p>
-<p>These built-in methods for iteration have an overlap with what we’ve seen in <a class="reference internal" href="data-transform.html#data-transform"><span class="std std-ref">Data Transformation</span></a> but we’ll dig a little deeper into <code class="docutils literal notranslate"><span class="pre">assign</span></code>/assignment operations, <code class="docutils literal notranslate"><span class="pre">apply</span></code>, and <code class="docutils literal notranslate"><span class="pre">eval</span></code> here.</p>
+<h2><span class="section-number">28.5. </span>Iteration with <strong>pandas</strong> Data Frames<a class="headerlink" href="#iteration-with-pandas-data-frames" title="Permalink to this heading">#</a></h2>
+<p>For loops, while loops, and comprehensions all work on <strong>pandas</strong> data frames, but they are generally a bad way to get things done because they are slow and not memory efficient. To aid cases where iteration is needed, <strong>pandas</strong> has built-in methods for iteration depending on what you need to do.</p>
+<p>These built-in methods for iteration have an overlap with what we’ve seen in <a class="reference internal" href="data-transform.html#data-transform"><span class="std std-ref">Data Transformation</span></a> but we’ll dig a little deeper into <code class="docutils literal notranslate"><span class="pre">assign()</span></code>/assignment operations, <code class="docutils literal notranslate"><span class="pre">apply()</span></code>, and <code class="docutils literal notranslate"><span class="pre">eval()</span></code> here.</p>
 <section id="assignment-operations-and-assign">
-<h3><span class="section-number">29.5.1. </span>Assignment Operations and <code class="docutils literal notranslate"><span class="pre">assign</span></code><a class="headerlink" href="#assignment-operations-and-assign" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">28.5.1. </span>Assignment Operations and <code class="docutils literal notranslate"><span class="pre">assign</span></code><a class="headerlink" href="#assignment-operations-and-assign" title="Permalink to this heading">#</a></h3>
 <p>An assignment is a statement that <em>assigns</em> the value on the right to the object on the left with an equals sign in the middle.</p>
 <p>Let’s imagine we have a data frame like this:</p>
 <div class="cell docutils container">
@@ -876,45 +887,45 @@ execution complete
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.643607</td>
-      <td>0.261770</td>
-      <td>-0.071714</td>
-      <td>-0.268988</td>
+      <td>-0.672707</td>
+      <td>-1.191252</td>
+      <td>1.310262</td>
+      <td>-1.718854</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.330774</td>
-      <td>-2.553166</td>
-      <td>-1.915145</td>
-      <td>0.492884</td>
+      <td>-1.012113</td>
+      <td>-0.248659</td>
+      <td>0.315426</td>
+      <td>0.618831</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.146981</td>
-      <td>-1.775110</td>
-      <td>-1.445693</td>
-      <td>0.220737</td>
+      <td>0.061770</td>
+      <td>1.406947</td>
+      <td>-1.053638</td>
+      <td>1.576074</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.631817</td>
-      <td>-0.476532</td>
-      <td>1.550637</td>
-      <td>-0.862219</td>
+      <td>-0.116667</td>
+      <td>0.157367</td>
+      <td>-1.034134</td>
+      <td>-3.013428</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-2.932940</td>
-      <td>1.110911</td>
-      <td>-0.719064</td>
-      <td>0.059588</td>
+      <td>2.540155</td>
+      <td>1.691005</td>
+      <td>-0.230417</td>
+      <td>-0.448499</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-3.155890</td>
-      <td>-0.557275</td>
-      <td>0.515843</td>
-      <td>2.064351</td>
+      <td>0.257599</td>
+      <td>0.073494</td>
+      <td>-0.964395</td>
+      <td>0.929931</td>
     </tr>
   </tbody>
 </table>
@@ -928,10 +939,10 @@ execution complete
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a   -0.987190
-b   -0.516904
-c   -0.395389
-d    0.140163
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a   -0.027449
+b    0.115431
+c   -0.597406
+d    0.085166
 dtype: float64
 </pre></div>
 </div>
@@ -944,12 +955,12 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -0.170351
-1   -1.622959
-2   -0.612478
-3    0.537053
-4   -0.329738
-5   -0.020716
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -0.931979
+1    0.033384
+2    0.734358
+3   -0.575401
+4    0.730294
+5    0.165546
 dtype: float64
 </pre></div>
 </div>
@@ -972,12 +983,12 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>876 µs ± 4.78 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>613 µs ± 1.75 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
 </div>
-<p>But to do this, every individual cell must be accessed and operated on—so it is very slow, taking milliseconds. <strong>pandas</strong> has far faster ways of performing the same operation. For simple operations on dataframes with consistent type, you can simply add five to the whole data frame:</p>
+<p>But to do this, every individual cell must be accessed and operated on—so it is very slow, taking milliseconds. <strong>pandas</strong> has far faster ways of performing the same operation. For simple operations on data frames with consistent type, you can simply add five to the whole data frame:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> df + 5
@@ -985,14 +996,14 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.3 µs ± 176 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.2 µs ± 64.6 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
 </div>
 </div>
 <p>This took tens of <em>microseconds</em>, much faster.</p>
 <p>This also works on a per column basis, so you can do <code class="docutils literal notranslate"><span class="pre">df[&quot;a&quot;]</span> <span class="pre">=</span> <span class="pre">df[&quot;a&quot;]</span> <span class="pre">+</span> <span class="pre">5</span></code> and so on.</p>
-<p>These operations have equivalents using the <code class="docutils literal notranslate"><span class="pre">assign</span></code> operator, which allows for <em>method chaining</em>; stringing multiple operations together. The <code class="docutils literal notranslate"><span class="pre">assign</span></code> operator version of <code class="docutils literal notranslate"><span class="pre">df[&quot;new_a&quot;]</span> <span class="pre">=</span> <span class="pre">df[&quot;a&quot;]</span> <span class="pre">+</span> <span class="pre">5</span></code> would be</p>
+<p>These operations have equivalents using the <code class="docutils literal notranslate"><span class="pre">assign()</span></code> operator, which allows for <em>method chaining</em>; stringing multiple operations together. The <code class="docutils literal notranslate"><span class="pre">assign()</span></code> operator version of <code class="docutils literal notranslate"><span class="pre">df[&quot;new_a&quot;]</span> <span class="pre">=</span> <span class="pre">df[&quot;a&quot;]</span> <span class="pre">+</span> <span class="pre">5</span></code> would be</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">new_a</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
@@ -1002,8 +1013,8 @@ dtype: float64
 </div>
 </section>
 <section id="apply">
-<h3><span class="section-number">29.5.2. </span>Apply<a class="headerlink" href="#apply" title="Permalink to this headline">#</a></h3>
-<p>What happens if you have a more complicated function you want to iterate over? This is where <strong>pandas</strong>’ <code class="docutils literal notranslate"><span class="pre">apply</span></code> comes in, and can be used with assignment. <code class="docutils literal notranslate"><span class="pre">apply</span></code> can also be used across rows or columns. Like <code class="docutils literal notranslate"><span class="pre">assign</span></code>, it can be combined with a lambda function and used with either the whole data frame or just a column (in which case no need to specify <code class="docutils literal notranslate"><span class="pre">axis=</span></code>).</p>
+<h3><span class="section-number">28.5.2. </span>Apply<a class="headerlink" href="#apply" title="Permalink to this heading">#</a></h3>
+<p>What happens if you have a more complicated function you want to iterate over? This is where <strong>pandas</strong>’ <code class="docutils literal notranslate"><span class="pre">apply()</span></code> comes in, and can be used with assignment. <code class="docutils literal notranslate"><span class="pre">apply()</span></code> can also be used across rows or columns. Like <code class="docutils literal notranslate"><span class="pre">assign()</span></code>, it can be combined with a lambda function and used with either the whole data frame or just a column (in which case no need to specify <code class="docutils literal notranslate"><span class="pre">axis=</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;new_a&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1011,12 +1022,12 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -4.666482
-1   -5.638119
-2   -5.329481
-3   -7.027525
-4   -3.169982
-5   -6.073182
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -7.501854
+1   -5.564144
+2   -2.539194
+3   -3.808360
+4   -3.078301
+5   -3.961978
 dtype: float64
 </pre></div>
 </div>
@@ -1064,51 +1075,51 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>-1.370377</td>
-      <td>-0.465001</td>
-      <td>-0.798485</td>
-      <td>-0.995759</td>
-      <td>3.629623</td>
+      <td>-1.083655</td>
+      <td>-1.602200</td>
+      <td>0.899314</td>
+      <td>-2.129803</td>
+      <td>3.916345</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.003379</td>
-      <td>-2.225771</td>
-      <td>-1.587750</td>
-      <td>0.820279</td>
-      <td>3.996621</td>
+      <td>-1.744387</td>
+      <td>-0.980933</td>
+      <td>-0.416848</td>
+      <td>-0.113444</td>
+      <td>3.255613</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.288202</td>
-      <td>-2.633889</td>
-      <td>-2.304473</td>
-      <td>-0.638042</td>
-      <td>5.288202</td>
+      <td>-1.348815</td>
+      <td>-0.003638</td>
+      <td>-2.464222</td>
+      <td>0.165489</td>
+      <td>3.651185</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.063287</td>
-      <td>-2.171636</td>
-      <td>-0.144467</td>
-      <td>-2.557324</td>
-      <td>4.936713</td>
+      <td>-0.291961</td>
+      <td>-0.017927</td>
+      <td>-1.209428</td>
+      <td>-3.188722</td>
+      <td>4.708039</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-2.850051</td>
-      <td>1.193800</td>
-      <td>-0.636175</td>
-      <td>0.142477</td>
-      <td>2.149949</td>
+      <td>0.321675</td>
+      <td>-0.527475</td>
+      <td>-2.448897</td>
+      <td>-2.666979</td>
+      <td>5.321675</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-3.298118</td>
-      <td>-0.699503</td>
-      <td>0.373615</td>
-      <td>1.922123</td>
-      <td>1.701882</td>
+      <td>-0.853247</td>
+      <td>-1.037351</td>
+      <td>-2.075240</td>
+      <td>-0.180915</td>
+      <td>4.146753</td>
     </tr>
   </tbody>
 </table>
@@ -1116,8 +1127,8 @@ dtype: float64
 </div>
 </section>
 <section id="eval-uate">
-<h3><span class="section-number">29.5.3. </span>Eval(uate)<a class="headerlink" href="#eval-uate" title="Permalink to this headline">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">eval</span></code> evaluates a string describing operations on DataFrame columns to create new columns. It operates on columns only, not rows or elements. Here’s an example:</p>
+<h3><span class="section-number">28.5.3. </span>Eval(uate)<a class="headerlink" href="#eval-uate" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">eval()</span></code> evaluates a string describing operations on DataFrame columns to create new columns. It operates on columns only, not rows or elements. Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s2">&quot;a / new_a&quot;</span><span class="p">)</span>
@@ -1155,57 +1166,57 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>-1.370377</td>
-      <td>-0.465001</td>
-      <td>-0.798485</td>
-      <td>-0.995759</td>
-      <td>3.629623</td>
-      <td>-0.377554</td>
+      <td>-1.083655</td>
+      <td>-1.602200</td>
+      <td>0.899314</td>
+      <td>-2.129803</td>
+      <td>3.916345</td>
+      <td>-0.276701</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.003379</td>
-      <td>-2.225771</td>
-      <td>-1.587750</td>
-      <td>0.820279</td>
-      <td>3.996621</td>
-      <td>-0.251057</td>
+      <td>-1.744387</td>
+      <td>-0.980933</td>
+      <td>-0.416848</td>
+      <td>-0.113444</td>
+      <td>3.255613</td>
+      <td>-0.535809</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.288202</td>
-      <td>-2.633889</td>
-      <td>-2.304473</td>
-      <td>-0.638042</td>
-      <td>5.288202</td>
-      <td>0.054499</td>
+      <td>-1.348815</td>
+      <td>-0.003638</td>
+      <td>-2.464222</td>
+      <td>0.165489</td>
+      <td>3.651185</td>
+      <td>-0.369418</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.063287</td>
-      <td>-2.171636</td>
-      <td>-0.144467</td>
-      <td>-2.557324</td>
-      <td>4.936713</td>
-      <td>-0.012820</td>
+      <td>-0.291961</td>
+      <td>-0.017927</td>
+      <td>-1.209428</td>
+      <td>-3.188722</td>
+      <td>4.708039</td>
+      <td>-0.062013</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-2.850051</td>
-      <td>1.193800</td>
-      <td>-0.636175</td>
-      <td>0.142477</td>
-      <td>2.149949</td>
-      <td>-1.325637</td>
+      <td>0.321675</td>
+      <td>-0.527475</td>
+      <td>-2.448897</td>
+      <td>-2.666979</td>
+      <td>5.321675</td>
+      <td>0.060446</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-3.298118</td>
-      <td>-0.699503</td>
-      <td>0.373615</td>
-      <td>1.922123</td>
-      <td>1.701882</td>
-      <td>-1.937924</td>
+      <td>-0.853247</td>
+      <td>-1.037351</td>
+      <td>-2.075240</td>
+      <td>-0.180915</td>
+      <td>4.146753</td>
+      <td>-0.205763</td>
     </tr>
   </tbody>
 </table>
@@ -1241,11 +1252,10 @@ dtype: float64
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="functions.html"
@@ -1253,7 +1263,7 @@ dtype: float64
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">28. </span>Functions</p>
+        <p class="prev-next-title"><span class="section-number">27. </span>Functions</p>
       </div>
     </a>
     <a class="right-next"
@@ -1261,14 +1271,11 @@ dtype: float64
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">30. </span>The Command Line</p>
+        <p class="prev-next-title"><span class="section-number">29. </span>The Command Line</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1283,17 +1290,17 @@ dtype: float64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">29.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">29.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">28.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">28.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">29.2. For Loops</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-and-other-comprehensions">29.3. List (and Other) Comprehensions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">29.4. While Loops</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-with-pandas-data-frames">29.5. Iteration with <strong>pandas</strong> Data Frames</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operations-and-assign">29.5.1. Assignment Operations and <code class="docutils literal notranslate"><span class="pre">assign</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apply">29.5.2. Apply</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eval-uate">29.5.3. Eval(uate)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">28.2. For Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-and-other-comprehensions">28.3. List (and Other) Comprehensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">28.4. While Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-with-pandas-data-frames">28.5. Iteration with <strong>pandas</strong> Data Frames</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operations-and-assign">28.5.1. Assignment Operations and <code class="docutils literal notranslate"><span class="pre">assign</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apply">28.5.2. Apply</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eval-uate">28.5.3. Eval(uate)</a></li>
 </ul>
 </li>
 </ul>
@@ -1343,8 +1350,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

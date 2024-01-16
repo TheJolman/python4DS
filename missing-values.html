@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>22. Missing Values &#8212; Python for Data Science</title>
+    <title>21. Missing Values &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="23. Joins" href="joins.html" />
-    <link rel="prev" title="21. Dates and Times" href="dates-and-times.html" />
+    <link rel="next" title="22. Joins" href="joins.html" />
+    <link rel="prev" title="20. Dates and Times" href="dates-and-times.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,19 +474,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">22.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">22.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">21.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">21.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-missing-values">22.2. Explicit Missing Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-missing-values">22.2.1. Types of Missing Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-explicit-missing-values">22.2.2. Dealing with Explicit Missing Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-na-values">22.2.3. Adding NA values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-missing-values">21.2. Explicit Missing Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-missing-values">21.2.1. Types of Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-explicit-missing-values">21.2.2. Dealing with Explicit Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-na-values">21.2.3. Adding NA values</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implicit-missing-values">22.3. Implicit Missing Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting">22.3.1. Pivoting</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values-in-categorical-variables">22.3.2. Missing Values in Categorical Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implicit-missing-values">21.3. Implicit Missing Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting">21.3.1. Pivoting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values-in-categorical-variables">21.3.2. Missing Values in Categorical Variables</a></li>
 </ul>
 </li>
 </ul>
@@ -490,21 +501,21 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="missing-values">
-<span id="id1"></span><h1><span class="section-number">22. </span>Missing Values<a class="headerlink" href="#missing-values" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">21. </span>Missing Values<a class="headerlink" href="#missing-values" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">22.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In this chapter, we’ll look at the tools and tricks for dealing with missing values.  We’ll start by discussing some general tools for working with missing values recorded as <code class="docutils literal notranslate"><span class="pre">NA</span></code>s. We’ll then explore the idea of implicitly missing values, values are that are simply absent from your data, and show some tools you can use to make them explicit.
 We’ll finish off with a related discussion of empty groups, caused by categories that don’t appear in the data.</p>
 <section id="prerequisites">
-<h3><span class="section-number">22.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">21.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>This chapter will use the <strong>pandas</strong> data analysis package.</p>
 </section>
 </section>
 <section id="explicit-missing-values">
-<h2><span class="section-number">22.2. </span>Explicit Missing Values<a class="headerlink" href="#explicit-missing-values" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.2. </span>Explicit Missing Values<a class="headerlink" href="#explicit-missing-values" title="Permalink to this heading">#</a></h2>
 <p>To begin, let’s explore a few handy tools for creating or eliminating missing explicit values, i.e. cells where you see an <code class="docutils literal notranslate"><span class="pre">NA</span></code> or <code class="docutils literal notranslate"><span class="pre">nan</span></code>.</p>
 <section id="types-of-missing-values">
-<h3><span class="section-number">22.2.1. </span>Types of Missing Values<a class="headerlink" href="#types-of-missing-values" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">21.2.1. </span>Types of Missing Values<a class="headerlink" href="#types-of-missing-values" title="Permalink to this heading">#</a></h3>
 <p>One thing to note about missing values in <strong>pandas</strong> is that they are not all created alike!</p>
 <p>For example, real numbers in <strong>pandas</strong> (such as the <code class="docutils literal notranslate"><span class="pre">float64</span></code> dtype) uses a ‘nan’ (aka, Not a Number):</p>
 <div class="cell docutils container">
@@ -676,7 +687,7 @@ We’ll finish off with a related discussion of empty groups, caused by categori
 </table>
 </div></div></div>
 </div>
-<p>Both of these types of missing value can be found using <strong>pandas</strong> <code class="docutils literal notranslate"><span class="pre">.isna</span></code> function. This returns a new column of boolean values that are <code class="docutils literal notranslate"><span class="pre">True</span></code> if the value is any kind of missing value.</p>
+<p>Both of these types of missing value can be found using <strong>pandas</strong> <code class="docutils literal notranslate"><span class="pre">.isna()</span></code> function. This returns a new column of boolean values that are <code class="docutils literal notranslate"><span class="pre">True</span></code> if the value is any kind of missing value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
@@ -737,8 +748,8 @@ We’ll finish off with a related discussion of empty groups, caused by categori
 <p>As a convenience, there is also a <code class="docutils literal notranslate"><span class="pre">notna()</span></code> function.</p>
 </section>
 <section id="dealing-with-explicit-missing-values">
-<h3><span class="section-number">22.2.2. </span>Dealing with Explicit Missing Values<a class="headerlink" href="#dealing-with-explicit-missing-values" title="Permalink to this headline">#</a></h3>
-<p>There are various options for dealing with missing values. The <code class="docutils literal notranslate"><span class="pre">fillna</span></code> function achieves this. Let’s take a look at it with some test data:</p>
+<h3><span class="section-number">21.2.2. </span>Dealing with Explicit Missing Values<a class="headerlink" href="#dealing-with-explicit-missing-values" title="Permalink to this heading">#</a></h3>
+<p>There are various options for dealing with missing values. The <code class="docutils literal notranslate"><span class="pre">fillna()</span></code> function achieves this. Let’s take a look at it with some test data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nan_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
@@ -1197,7 +1208,7 @@ Name: A, dtype: float64
 </table>
 </div></div></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">dropna</span></code> takes some keyword arguments too; for example <code class="docutils literal notranslate"><span class="pre">how=&quot;all&quot;</span></code> only drops a column or row if <em>all</em> of the values are NA.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dropna()</span></code> takes some keyword arguments too; for example <code class="docutils literal notranslate"><span class="pre">how=&quot;all&quot;</span></code> only drops a column or row if <em>all</em> of the values are NA.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nan_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
@@ -1316,7 +1327,7 @@ Name: A, dtype: float64
 </div>
 </section>
 <section id="adding-na-values">
-<h3><span class="section-number">22.2.3. </span>Adding NA values<a class="headerlink" href="#adding-na-values" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">21.2.3. </span>Adding NA values<a class="headerlink" href="#adding-na-values" title="Permalink to this heading">#</a></h3>
 <p>Sometimes you’ll hit the opposite problem where some concrete value actually represents a missing value. This typically arises in data generated by older software that doesn’t have a proper way to represent missing values, so it must instead use some special value like 99 or -999.</p>
 <p>If possible, handle this when reading in the data, for example, by using the <code class="docutils literal notranslate"><span class="pre">na_values=</span></code> keyword argument when calling <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code>. If you discover the problem later, or your data source doesn’t provide a way to handle it on reading the file, you can use a range of options to replace the given data:</p>
 <div class="cell docutils container">
@@ -1374,7 +1385,7 @@ Name: A, dtype: float64
 </table>
 </div></div></div>
 </div>
-<p>The easiest option is probably <code class="docutils literal notranslate"><span class="pre">.replace</span></code>:</p>
+<p>The easiest option is probably <code class="docutils literal notranslate"><span class="pre">.replace()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata_df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span><span class="p">})</span>
@@ -1428,7 +1439,7 @@ Name: A, dtype: float64
 </table>
 </div></div></div>
 </div>
-<p>Because <code class="docutils literal notranslate"><span class="pre">.replace</span></code> accepts a dictionary, it’s possible to replace several values at once:</p>
+<p>Because <code class="docutils literal notranslate"><span class="pre">.replace()</span></code> accepts a dictionary, it’s possible to replace several values at once:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata_df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">99</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span><span class="p">})</span>
@@ -1482,11 +1493,11 @@ Name: A, dtype: float64
 </table>
 </div></div></div>
 </div>
-<p>Note that this applies to <em>every</em> column in the dataframe. To apply it to just one, just select that specific column.</p>
+<p>Note that this applies to <em>every</em> column in the data frame. To apply it to just one, just select that specific column.</p>
 </section>
 </section>
 <section id="implicit-missing-values">
-<h2><span class="section-number">22.3. </span>Implicit Missing Values<a class="headerlink" href="#implicit-missing-values" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.3. </span>Implicit Missing Values<a class="headerlink" href="#implicit-missing-values" title="Permalink to this heading">#</a></h2>
 <p>So far we’ve talked about missing values that are <strong>explicitly</strong> missing, i.e. you can see an <code class="docutils literal notranslate"><span class="pre">NA</span></code> or similar in your data.
 But missing values can also be <strong>implicitly</strong> missing, if an entire row of data is simply absent from the data.
 Let’s illustrate the difference with a simple data set that records the price of some stock each quarter:</p>
@@ -1588,7 +1599,7 @@ Let’s illustrate the difference with a simple data set that records the price 
 In other cases, explicit missings are forced upon you by the structure of the data and you want to get rid of them.
 The following sections discuss some tools for moving between implicit and explicit missingness.</p>
 <section id="pivoting">
-<h3><span class="section-number">22.3.1. </span>Pivoting<a class="headerlink" href="#pivoting" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">21.3.1. </span>Pivoting<a class="headerlink" href="#pivoting" title="Permalink to this heading">#</a></h3>
 <p>You’ve already seen one tool that can make implicit missings explicit and vice versa: pivoting. Making data wider can make implicit missing values explicit because every combination of the rows and new columns must have some value For example, if we pivot <code class="docutils literal notranslate"><span class="pre">stocks</span></code> to put <code class="docutils literal notranslate"><span class="pre">quarter</span></code> in the columns (and make <code class="docutils literal notranslate"><span class="pre">year</span></code> the index), both missing values become explicit:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1650,7 +1661,7 @@ The following sections discuss some tools for moving between implicit and explic
 <p>By default, making data longer preserves explicit missing values.</p>
 </section>
 <section id="missing-values-in-categorical-variables">
-<h3><span class="section-number">22.3.2. </span>Missing Values in Categorical Variables<a class="headerlink" href="#missing-values-in-categorical-variables" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">21.3.2. </span>Missing Values in Categorical Variables<a class="headerlink" href="#missing-values-in-categorical-variables" title="Permalink to this heading">#</a></h3>
 <p>A final type of missingness is the empty group, a group that doesn’t contain any observations, which can arise when working with categorical data.</p>
 <p>For example, imagine we have a dataset that contains some health information about people:</p>
 <div class="cell docutils container">
@@ -1728,7 +1739,7 @@ The following sections discuss some tools for moving between implicit and explic
 </table>
 </div></div></div>
 </div>
-<p>The value ‘yes’ for smoker now doesn’t (seem to) appear anywhere in our dataframe. But if we run <code class="docutils literal notranslate"><span class="pre">value_counts</span></code> to get a count of the number of each type of category, you’ll see that the data frame ‘remembers’ that there’s a ‘yes’ category that isn’t currently present:</p>
+<p>The value ‘yes’ for smoker now doesn’t (seem to) appear anywhere in our data frame. But if we run <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> to get a count of the number of each type of category, you’ll see that the data frame ‘remembers’ that there’s a ‘yes’ category that isn’t currently present:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">health_cut</span><span class="p">[</span><span class="s2">&quot;smoker&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -1745,7 +1756,7 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
-<p>You’ll see the same thing happen with a <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation:</p>
+<p>You’ll see the same thing happen with a <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> operation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">health_cut</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">)[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -1792,11 +1803,10 @@ Name: age, dtype: float64
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="dates-and-times.html"
@@ -1804,7 +1814,7 @@ Name: age, dtype: float64
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">21. </span>Dates and Times</p>
+        <p class="prev-next-title"><span class="section-number">20. </span>Dates and Times</p>
       </div>
     </a>
     <a class="right-next"
@@ -1812,14 +1822,11 @@ Name: age, dtype: float64
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">23. </span>Joins</p>
+        <p class="prev-next-title"><span class="section-number">22. </span>Joins</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1834,19 +1841,19 @@ Name: age, dtype: float64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">22.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">22.1.1. Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">21.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">21.1.1. Prerequisites</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-missing-values">22.2. Explicit Missing Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-missing-values">22.2.1. Types of Missing Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-explicit-missing-values">22.2.2. Dealing with Explicit Missing Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-na-values">22.2.3. Adding NA values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-missing-values">21.2. Explicit Missing Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-missing-values">21.2.1. Types of Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-explicit-missing-values">21.2.2. Dealing with Explicit Missing Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-na-values">21.2.3. Adding NA values</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implicit-missing-values">22.3. Implicit Missing Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting">22.3.1. Pivoting</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values-in-categorical-variables">22.3.2. Missing Values in Categorical Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implicit-missing-values">21.3. Implicit Missing Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting">21.3.1. Pivoting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-values-in-categorical-variables">21.3.2. Missing Values in Categorical Variables</a></li>
 </ul>
 </li>
 </ul>
@@ -1896,8 +1903,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

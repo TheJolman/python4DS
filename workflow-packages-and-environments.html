@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>10. Workflow: Packages and Environments &#8212; Python for Data Science</title>
+    <title>9. Workflow: Packages and Environments &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11. Postscript: Getting Further Help" href="workflow-help.html" />
-    <link rel="prev" title="9. Data Import" href="data-import.html" />
+    <link rel="next" title="10. Postscript: Getting Further Help" href="workflow-help.html" />
+    <link rel="prev" title="8. Data Import" href="data-import.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="strings.html">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -442,10 +453,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -453,7 +464,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -480,17 +491,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">10.1. Packages</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">10.1.1. Introduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line-in-brief">10.1.2. The Command Line in Brief</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">10.1.3. Installing Packages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-packages">10.1.4. Using Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">9.1. Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">9.1.1. Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line-in-brief">9.1.2. The Command Line in Brief</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">9.1.3. Installing Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-packages">9.1.4. Using Packages</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-code-environments">10.2. Virtual Code Environments</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-as-a-package-manager">10.2.1. Conda as a package manager</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">10.2.2. Using Anaconda to Manage Python Environments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">10.2.3. Using and Switching Between Conda Environments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-code-environments">9.2. Virtual Code Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-as-a-package-manager">9.2.1. Conda as a package manager</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">9.2.2. Using Anaconda to Manage Python Environments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">9.2.3. Using and Switching Between Conda Environments</a></li>
 </ul>
 </li>
 </ul>
@@ -505,12 +516,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="workflow-packages-and-environments">
-<span id="id1"></span><h1><span class="section-number">10. </span>Workflow: Packages and Environments<a class="headerlink" href="#workflow-packages-and-environments" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">9. </span>Workflow: Packages and Environments<a class="headerlink" href="#workflow-packages-and-environments" title="Permalink to this heading">#</a></h1>
 <p>In this chapter, you’re going to learn about packages and how to install them plus virtual coding environments that keep your packages isolated and your projects reproducible.</p>
 <section id="packages">
-<h2><span class="section-number">10.1. </span>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.1. </span>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h2>
 <section id="introduction">
-<h3><span class="section-number">10.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
 <p>Packages (also called libraries) are key to extending the functionality of Python. The default installation of Anaconda comes with many (around 250) of the packages you’ll need, but it won’t be long before you’ll need to install some extra ones. There are packages for geoscience, for building websites, for analysing genetic data, for economics—pretty much for anything you can think of. Packages are typically not written by the core maintainers of the Python language but by enthusiasts, firms, researchers, academics, all sorts! Because anyone can write packages, they vary widely in their quality and usefulness. There are some that you’ll be seeing them again and again.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Name a more iconic trio, I&#39;ll wait. <a href="https://t.co/pGaLuUxQ3r">pic.twitter.com/pGaLuUxQ3r</a></p>&mdash; Vicki Boykis (@vboykis) <a href="https://twitter.com/vboykis/status/1032631145035427840?ref_src=twsrc%5Etfw">August 23, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>The three Python packages <strong>numpy</strong>, <strong>pandas</strong>, and <strong>maplotlib</strong>, which respectively provide numerical, data analysis, and plotting functionality, are ubiquitous. So many scripts begin by importing all three of them, as in the tweet above!</p>
@@ -522,7 +533,7 @@ document.write(`
 <p>When you issue an install command for a specific package, it is automatically downloaded from the internet and installed in the appropriate place on your computer. To install extra Python packages, you issue install commands to a text-based window called the “terminal”.</p>
 </section>
 <section id="the-command-line-in-brief">
-<h3><span class="section-number">10.1.2. </span>The Command Line in Brief<a class="headerlink" href="#the-command-line-in-brief" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.2. </span>The Command Line in Brief<a class="headerlink" href="#the-command-line-in-brief" title="Permalink to this heading">#</a></h3>
 <p>The <em>terminal</em> or <em>command line</em> or sometimes the <em>command prompt</em> was labelled 4 in the screenshot of Visual Studio Code from the chapter on <a class="reference internal" href="introduction.html#introduction"><span class="std std-ref">First Steps</span></a>. The terminal is a text-based way to issue all kinds of commands to your computer (not just Python commands) and knowing a little bit about it is really useful for coding (and more) because managing packages, environments (which we haven’t yet discussed), and version control (ditto) can all be done via the terminal. We’ll come to these in due course in the chapter on <a class="reference internal" href="command-line.html#command-line"><span class="std std-ref">The Command Line</span></a>, but for now, a little background on what the terminal is and what it does.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -548,7 +559,7 @@ document.write(`
 <p>For now, to at least try out the command line, let’s use something that works across all three of the major operating systems. Type <code class="docutils literal notranslate"><span class="pre">python</span></code> on the command prompt that came up in your new terminal window. You should see information about your installation of Python appear, including the version, followed by a Python prompt that looks like <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>. This is a kind of interactive Python session, in the terminal. It’s much less rich than the one available in Visual Studio Code (it can’t run scripts line-by-line, for example) but you can try <code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">World!')</span></code> and it will run, printing your message. To exit the terminal-based Python session, type <code class="docutils literal notranslate"><span class="pre">exit()</span></code> to go back to the regular command line.</p>
 </section>
 <section id="installing-packages">
-<h3><span class="section-number">10.1.3. </span>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.3. </span>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this heading">#</a></h3>
 <p>To install extra Python packages, the default and easiest way is to use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">**packagename**</span></code>. In true programming-humour style, pip is a recursive acronym that stands for ‘pip install packages’. There are over 330,000 Python packages on PyPI (the Python Package Index)! You can see what packages you have installed already by running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> into the command line.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">...</span></code> will install packages into your default Anaconda environment, usually called “base”. You’ll need to have Anaconda “activated” before installing a package in the terminal–if you don’t see the name of an environment, eg <code class="docutils literal notranslate"><span class="pre">(base)</span></code>, at the start of your terminal’s line, use the <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> command first. On Windows, this is usually the command prompt (available in the integrated Visual Studio Code terminal) or the Anaconda Command Prompt (available in the start menu).</p>
 <p>There is a second way to install packages that directly uses <code class="docutils literal notranslate"><span class="pre">conda</span></code> instead of <code class="docutils literal notranslate"><span class="pre">pip</span></code>, which we’ll come to shortly in the context of different Python environments.</p>
@@ -563,7 +574,7 @@ document.write(`
 </div>
 </section>
 <section id="using-packages">
-<h3><span class="section-number">10.1.4. </span>Using Packages<a class="headerlink" href="#using-packages" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.1.4. </span>Using Packages<a class="headerlink" href="#using-packages" title="Permalink to this heading">#</a></h3>
 <p>Once you have installed a package, you need to be able to use it! This is usually done via an import statement at the top of your script or Jupyter Notebook. For example, to bring in <strong>pandas</strong>, it’s</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
@@ -573,12 +584,12 @@ document.write(`
 </section>
 </section>
 <section id="virtual-code-environments">
-<h2><span class="section-number">10.2. </span>Virtual Code Environments<a class="headerlink" href="#virtual-code-environments" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">9.2. </span>Virtual Code Environments<a class="headerlink" href="#virtual-code-environments" title="Permalink to this heading">#</a></h2>
 <p>Virtual code environments allow you to isolate all of the packages that you’re using to do analysis for one project from the set of packages you might need for a different project. They’re an important part of creating a reproducible analytical pipeline but a key benefit is that others can reproduce the environment you used and it’s best practice to have an isolated environment per project.</p>
 <p>To be more concrete, let’s say you’re using Python 3.9, <strong>statsmodels</strong>, and <strong>pandas</strong> for one project, project A. And, for project B, you need to use Python 3.10 with <strong>numpy</strong> and <strong>scikit-learn</strong>. Even with the same version of Python, best practice would be to have two separate virtual Python environments: environment A, with everything needed for project A, and environment B, with everything needed for project B. For the case where you’re using different versions of Python, this isn’t just best practice, it’s essential.</p>
 <p>Many programming languages now come with an option to install packages and a version of the language in isolated environments. In Python, there are multiple tools for managing different environments. And, of those, the easiest to work with is probably <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/index.html"><strong>Anaconda</strong></a> (conda for short).</p>
 <section id="conda-as-a-package-manager">
-<h3><span class="section-number">10.2.1. </span>Conda as a package manager<a class="headerlink" href="#conda-as-a-package-manager" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.2.1. </span>Conda as a package manager<a class="headerlink" href="#conda-as-a-package-manager" title="Permalink to this heading">#</a></h3>
 <p>To learn how to use virtual code environments, we need to make a brief detour into <code class="docutils literal notranslate"><span class="pre">conda</span></code> as a package manager.</p>
 <p>Conda does more than just provide a Python interpreter: it can also manage packages and <em>different</em> Python installations, aka Python environments. So you can also install packages with</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>package-name<span class="w"> </span>-c<span class="w"> </span>conda-forge
@@ -594,43 +605,42 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scikit-learn              1.3.0           py310hd2c063c_0    conda-forge
-scipy                     1.10.1                   pypi_0    pypi
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scikit-learn              1.3.2           py310h417b086_1    conda-forge
+scipy                     1.11.3          py310hd1cfc7d_1    conda-forge
 seaborn                   0.12.2                   pypi_0    pypi
-send2trash                1.8.0              pyhd8ed1ab_0    conda-forge
-setuptools                68.0.0             pyhd8ed1ab_0    conda-forge
-shapely                   2.0.1           py310h29d0617_2    conda-forge
-sip                       6.7.10          py310h9e9d8ca_0    conda-forge
+send2trash                1.8.2              pyhd1c38e8_0    conda-forge
+setuptools                68.2.2             pyhd8ed1ab_0    conda-forge
+shapely                   2.0.2           py310h656ff59_0    conda-forge
 six                       1.16.0             pyh6c4a22f_0    conda-forge
-skimpy                    0.0.10                   pypi_0    pypi
-snappy                    1.1.10               h225ccf5_0    conda-forge
+skimpy                    0.0.11                   pypi_0    pypi
+snappy                    1.1.10               h17c5cce_0    conda-forge
 sniffio                   1.3.0              pyhd8ed1ab_0    conda-forge
 snowballstemmer           2.2.0              pyhd8ed1ab_0    conda-forge
-soupsieve                 2.3.2.post1        pyhd8ed1ab_0    conda-forge
-sphinx                    4.5.0              pyh6c4a22f_0    conda-forge
+soupsieve                 2.5                pyhd8ed1ab_1    conda-forge
+sphinx                    5.0.2              pyh6c4a22f_0    conda-forge
 sphinx-book-theme         1.0.1              pyhd8ed1ab_0    conda-forge
 sphinx-comments           0.0.3              pyh9f0ad1d_0    conda-forge
 sphinx-copybutton         0.5.2              pyhd8ed1ab_0    conda-forge
 sphinx-design             0.3.0              pyhd8ed1ab_0    conda-forge
-sphinx-external-toc       0.3.1              pyhd8ed1ab_0    conda-forge
+sphinx-external-toc       0.3.1              pyhd8ed1ab_1    conda-forge
 sphinx-jupyterbook-latex  0.5.2              pyhd8ed1ab_0    conda-forge
 sphinx-multitoc-numbering 0.1.3              pyhd8ed1ab_0    conda-forge
 sphinx-thebe              0.2.1              pyhd8ed1ab_0    conda-forge
 sphinx-togglebutton       0.3.2              pyhd8ed1ab_0    conda-forge
-sphinxcontrib-applehelp   1.0.4              pyhd8ed1ab_0    conda-forge
+sphinxcontrib-applehelp   1.0.7              pyhd8ed1ab_0    conda-forge
 sphinxcontrib-bibtex      2.5.0              pyhd8ed1ab_0    conda-forge
-sphinxcontrib-devhelp     1.0.2                      py_0    conda-forge
-sphinxcontrib-htmlhelp    2.0.1              pyhd8ed1ab_0    conda-forge
-sphinxcontrib-jsmath      1.0.1                      py_0    conda-forge
-sphinxcontrib-qthelp      1.0.3                      py_0    conda-forge
-sphinxcontrib-serializinghtml 1.1.5              pyhd8ed1ab_2    conda-forge
-sqlalchemy                1.4.41                   pypi_0    pypi
+sphinxcontrib-devhelp     1.0.5              pyhd8ed1ab_0    conda-forge
+sphinxcontrib-htmlhelp    2.0.4              pyhd8ed1ab_0    conda-forge
+sphinxcontrib-jsmath      1.0.1              pyhd8ed1ab_0    conda-forge
+sphinxcontrib-qthelp      1.0.6              pyhd8ed1ab_0    conda-forge
+sphinxcontrib-serializinghtml 1.1.9              pyhd8ed1ab_0    conda-forge
+sqlalchemy                1.4.49                   pypi_0    pypi
 sqlalchemy2-stubs         0.0.2a35                 pypi_0    pypi
-sqlglot                   17.8.0                   pypi_0    pypi
-sqlite                    3.42.0               h2b0dec6_0    conda-forge
-sqlmodel                  0.0.8                    pypi_0    pypi
+sqlglot                   18.17.0                  pypi_0    pypi
+sqlite                    3.43.2               hf2abe2d_0    conda-forge
+sqlmodel                  0.0.11                   pypi_0    pypi
 stack_data                0.6.2              pyhd8ed1ab_0    conda-forge
-statsmodels               0.14.0          py310hc1335a1_1    conda-forge
+statsmodels               0.14.0          py310h50ce23c_2    conda-forge
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
@@ -640,7 +650,7 @@ statsmodels               0.14.0          py310hc1335a1_1    conda-forge
 </div>
 </section>
 <section id="using-anaconda-to-manage-python-environments">
-<h3><span class="section-number">10.2.2. </span>Using Anaconda to Manage Python Environments<a class="headerlink" href="#using-anaconda-to-manage-python-environments" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.2.2. </span>Using Anaconda to Manage Python Environments<a class="headerlink" href="#using-anaconda-to-manage-python-environments" title="Permalink to this heading">#</a></h3>
 <p>Okay, we’re now ready to look at using conda to manager Python environments. Much of these two subsections is covered by the Anaconda documentation on <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">managing virtual environments</a>.</p>
 <p>If you’re using Anaconda, you manage and change environments on the command line (remember, there’s much more on the command line in <a class="reference internal" href="command-line.html#command-line"><span class="std std-ref">The Command Line</span></a>). Before following these instructions, check that you have Anaconda installed and activated. You should see something like <code class="docutils literal notranslate"><span class="pre">(base)</span> <span class="pre">username&#64;computername:~$</span></code> on the command line (base is the default conda environment).</p>
 <p>To create a new environment called “myenv” with a specific version of Python (but no extra packages installed), it’s</p>
@@ -754,7 +764,7 @@ dependencies:
 </div>
 </section>
 <section id="using-and-switching-between-conda-environments">
-<h3><span class="section-number">10.2.3. </span>Using and Switching Between Conda Environments<a class="headerlink" href="#using-and-switching-between-conda-environments" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">9.2.3. </span>Using and Switching Between Conda Environments<a class="headerlink" href="#using-and-switching-between-conda-environments" title="Permalink to this heading">#</a></h3>
 <p>To switch between conda environments on the command line, for example from the base environment to an environment called “myenv”, use</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
 </pre></div>
@@ -792,11 +802,10 @@ dependencies:
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="data-import.html"
@@ -804,7 +813,7 @@ dependencies:
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Data Import</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Data Import</p>
       </div>
     </a>
     <a class="right-next"
@@ -812,14 +821,11 @@ dependencies:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Postscript: Getting Further Help</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Postscript: Getting Further Help</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -834,17 +840,17 @@ dependencies:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">10.1. Packages</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">10.1.1. Introduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line-in-brief">10.1.2. The Command Line in Brief</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">10.1.3. Installing Packages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-packages">10.1.4. Using Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">9.1. Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">9.1.1. Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line-in-brief">9.1.2. The Command Line in Brief</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">9.1.3. Installing Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-packages">9.1.4. Using Packages</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-code-environments">10.2. Virtual Code Environments</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-as-a-package-manager">10.2.1. Conda as a package manager</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">10.2.2. Using Anaconda to Manage Python Environments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">10.2.3. Using and Switching Between Conda Environments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-code-environments">9.2. Virtual Code Environments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-as-a-package-manager">9.2.1. Conda as a package manager</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-anaconda-to-manage-python-environments">9.2.2. Using Anaconda to Manage Python Environments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-switching-between-conda-environments">9.2.3. Using and Switching Between Conda Environments</a></li>
 </ul>
 </li>
 </ul>
@@ -894,8 +900,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>

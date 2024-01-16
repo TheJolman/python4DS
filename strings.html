@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>18. Strings and Text &#8212; Python for Data Science</title>
+    <title>17. Strings and Text &#8212; Python for Data Science</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,14 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -71,10 +73,10 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="19. Regular Expressions, aka regex" href="regex.html" />
-    <link rel="prev" title="17. Numbers" href="numbers.html" />
+    <link rel="next" title="18. Regular Expressions, aka regex" href="regex.html" />
+    <link rel="prev" title="16. Numbers" href="numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,6 +85,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -143,13 +154,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for Data Science - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for Data Science - Home"/>`);</script>
   
   
 </a></div>
@@ -172,51 +184,50 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="whole-game.html">1. Whole Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-visualise.html">2. Data Visualisation</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">4. Workflow: Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-transform.html">5. Data Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">6. Workflow: Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">7. Tidy Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">8. Workflow: Writing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data-import.html">9. Data Import</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">10. Workflow: Packages and Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">11. Postscript: Getting Further Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-basics.html">3. Workflow: Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-transform.html">4. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-style.html">5. Workflow: Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-tidy.html">6. Tidy Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-writing-code.html">7. Workflow: Writing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">8. Data Import</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-packages-and-environments.html">9. Workflow: Packages and Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-help.html">10. Postscript: Getting Further Help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualise</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="visualise.html">12. Visualisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">13. Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">14. Exploratory Data Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">15. Graphics for Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualise.html">11. Visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vis-layers.html">12. Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploratory-data-analysis.html">13. Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicate-plots.html">14. Graphics for Communication</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Transform</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">16. Boolean Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers.html">17. Numbers</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">18. Strings and Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regex.html">19. Regular Expressions, aka regex</a></li>
-<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">20. Categorical Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">21. Dates and Times</a></li>
-<li class="toctree-l1"><a class="reference internal" href="missing-values.html">22. Missing Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joins.html">23. Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean-data.html">15. Boolean Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">16. Numbers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">17. Strings and Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regex.html">18. Regular Expressions, aka regex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical-data.html">19. Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dates-and-times.html">20. Dates and Times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing-values.html">21. Missing Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">22. Joins</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Import</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">24. Spreadsheets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">25. Databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rectangling.html">26. Nested Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">27. Webscraping and APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spreadsheets.html">23. Spreadsheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">24. Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rectangling.html">25. Nested Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webscraping-and-apis.html">26. Webscraping and APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programme</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functions.html">28. Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iteration.html">29. Iteration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command-line.html">30. The Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">27. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iteration.html">28. Iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">29. The Command Line</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Communicate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">31. Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quarto.html">32. Quarto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">30. Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quarto.html">31. Quarto</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
@@ -425,10 +436,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -436,7 +447,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -463,24 +474,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">18.1. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-strings">18.2. Creating Strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">18.2.1. f-strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-characters-and-how-to-escape-strings">18.2.2. Special Characters and How to Escape Strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-strings">18.2.3. Raw Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">17.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-strings">17.2. Creating Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">17.2.1. f-strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-characters-and-how-to-escape-strings">17.2.2. Special Characters and How to Escape Strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-strings">17.2.3. Raw Strings</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-text">18.3. Cleaning Text</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-sub-strings">18.3.1. Replacing sub-strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-characters-with-translate">18.3.2. Replacing characters with translate</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-strings">18.3.3. Splitting strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-and-find">18.3.4. count and find</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-text">17.3. Cleaning Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-sub-strings">17.3.1. Replacing sub-strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-characters-with-translate">17.3.2. Replacing characters with translate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-strings">17.3.3. Splitting strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-and-find">17.3.4. count and find</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-strings">18.4. Working with Multiple Strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-text-in">18.5. Reading Text In</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-file">18.5.1. Text file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-file">18.5.2. CSV file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-strings">17.4. Working with Multiple Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-text-in">17.5. Reading Text In</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-file">17.5.1. Text file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-file">17.5.2. CSV file</a></li>
 </ul>
 </li>
 </ul>
@@ -495,15 +506,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="strings-and-text">
-<span id="strings"></span><h1><span class="section-number">18. </span>Strings and Text<a class="headerlink" href="#strings-and-text" title="Permalink to this headline">#</a></h1>
+<span id="strings"></span><h1><span class="section-number">17. </span>Strings and Text<a class="headerlink" href="#strings-and-text" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2><span class="section-number">18.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Strings are just the data type for text. So far, you’ve used strings but without learning much about the details. Now it’s time to dive into them, learning what makes strings tick, and mastering some of the powerful string manipulation tools you have at your disposal.</p>
 <p>This chapter has benefitted from the <a class="reference external" href="https://mkaz.blog/code/python-string-format-cookbook/">Python String Cook Book</a> and Jake VanderPlas’ <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html">Python Data Science Handbook</a>.</p>
 <p>Note that there are more powerful methods for working with strings called <em>regular expressions</em> but these will be covered in a different chapter.</p>
 </section>
 <section id="creating-strings">
-<h2><span class="section-number">18.2. </span>Creating Strings<a class="headerlink" href="#creating-strings" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.2. </span>Creating Strings<a class="headerlink" href="#creating-strings" title="Permalink to this heading">#</a></h2>
 <p>We’ve created strings in passing earlier in the book, but didn’t discuss the details. First, you can create a string using either single quotes (<code class="docutils literal notranslate"><span class="pre">'</span></code>) or double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>). It’s good to be consistent in this, even if it doesn’t matter which you use, but automatic code formatters tend to prefer <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. If you have a quote inside a string, use <code class="docutils literal notranslate"><span class="pre">'</span></code> within it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -562,7 +573,7 @@ document.write(`
 </div>
 </div>
 <p>Note that strings, like tuples such as <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code> but unlike lists such as <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>, are <em>immutable</em>. This means commands like <code class="docutils literal notranslate"><span class="pre">var[0]</span> <span class="pre">=</span> <span class="pre">&quot;B&quot;</span></code> will result in an error. If you want to change a single character, you will have to replace the entire string. In this example, the command to do that would be <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">&quot;Banana&quot;</span></code>.</p>
-<p>Like lists, you can find the length of a string using <code class="docutils literal notranslate"><span class="pre">len</span></code>:</p>
+<p>Like lists, you can find the length of a string using <code class="docutils literal notranslate"><span class="pre">len()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
@@ -601,7 +612,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Three useful functions to know about are <code class="docutils literal notranslate"><span class="pre">upper</span></code>, <code class="docutils literal notranslate"><span class="pre">lower</span></code>, and <code class="docutils literal notranslate"><span class="pre">title</span></code>. Let’s see what they do</p>
+<p>Three useful functions to know about are <code class="docutils literal notranslate"><span class="pre">upper()</span></code>, <code class="docutils literal notranslate"><span class="pre">lower()</span></code>, and <code class="docutils literal notranslate"><span class="pre">title()</span></code>. Let’s see what they do</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;input TEXT&quot;</span>
@@ -657,9 +668,9 @@ Input Text
 </div>
 </div>
 </div>
-<p>In this example two boolean variables and one integer variable were converted to strings. <code class="docutils literal notranslate"><span class="pre">str</span></code> generally makes an intelligent guess at how you’d like to convert your non-string type variable into a string type. You can pass a variable or a literal value to <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>In this example two boolean variables and one integer variable were converted to strings. <code class="docutils literal notranslate"><span class="pre">str()</span></code> generally makes an intelligent guess at how you’d like to convert your non-string type variable into a string type. You can pass a variable or a literal value to <code class="docutils literal notranslate"><span class="pre">str()</span></code>.</p>
 <section id="f-strings">
-<h3><span class="section-number">18.2.1. </span>f-strings<a class="headerlink" href="#f-strings" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.2.1. </span>f-strings<a class="headerlink" href="#f-strings" title="Permalink to this heading">#</a></h3>
 <p>The example above is quite verbose. Another way of combining strings with variables is via <em>f-strings</em>. A simple f-string looks like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -702,7 +713,7 @@ Input Text
 </div>
 </div>
 <p>There are a whole range of formatting options for numbers as shown in the following table:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Number</p></th>
 <th class="head"><p>Format</p></th>
@@ -781,7 +792,7 @@ Input Text
 <p>As well as using this page interactively through the Colab and Binder links at the top of the page, or downloading this page and using it on your own computer, you can play around with some of these options over at <a class="reference external" href="https://www.python-utils.com/">this link</a>.</p>
 </section>
 <section id="special-characters-and-how-to-escape-strings">
-<h3><span class="section-number">18.2.2. </span>Special Characters and How to Escape Strings<a class="headerlink" href="#special-characters-and-how-to-escape-strings" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.2.2. </span>Special Characters and How to Escape Strings<a class="headerlink" href="#special-characters-and-how-to-escape-strings" title="Permalink to this heading">#</a></h3>
 <p>Python has a string module that comes with some useful built-in strings and characters. For example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -841,7 +852,7 @@ Here is an \n escaped new line
 </div>
 </div>
 <p>The table below shows the most important escape commands:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
 <th class="head"><p>Result</p></th>
@@ -884,7 +895,7 @@ A	B
 </div>
 </section>
 <section id="raw-strings">
-<h3><span class="section-number">18.2.3. </span>Raw Strings<a class="headerlink" href="#raw-strings" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.2.3. </span>Raw Strings<a class="headerlink" href="#raw-strings" title="Permalink to this heading">#</a></h3>
 <p>Strings prefixed with <code class="docutils literal notranslate"><span class="pre">r</span></code> such as r’…’ and r”…” are called raw strings and treat backslashes \ as literal characters rather than special characters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -901,10 +912,10 @@ A	B
 </section>
 </section>
 <section id="cleaning-text">
-<h2><span class="section-number">18.3. </span>Cleaning Text<a class="headerlink" href="#cleaning-text" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.3. </span>Cleaning Text<a class="headerlink" href="#cleaning-text" title="Permalink to this heading">#</a></h2>
 <p>You often want to make changes to the text you’re working with. In this section, we’ll look at the various options to do this.</p>
 <section id="replacing-sub-strings">
-<h3><span class="section-number">18.3.1. </span>Replacing sub-strings<a class="headerlink" href="#replacing-sub-strings" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.3.1. </span>Replacing sub-strings<a class="headerlink" href="#replacing-sub-strings" title="Permalink to this heading">#</a></h3>
 <p>A common text task is to replace a substring within a longer string. Let’s say you have a string variable <code class="docutils literal notranslate"><span class="pre">var</span></code>. You can use <code class="docutils literal notranslate"><span class="pre">.replace(old_text,</span> <span class="pre">new_text)</span></code> to do this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -934,11 +945,11 @@ A	B
 </div>
 </div>
 </div>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">.replace</span></code> performs an exact replace and so is case-sensitive.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">.replace()</span></code> performs an exact replace and so is case-sensitive.</p>
 </section>
 <section id="replacing-characters-with-translate">
-<h3><span class="section-number">18.3.2. </span>Replacing characters with translate<a class="headerlink" href="#replacing-characters-with-translate" title="Permalink to this headline">#</a></h3>
-<p>A character is an individual entry within a string, like the ‘l’ in ‘equilibrium’. You can always count the number of characters in a string variable called <code class="docutils literal notranslate"><span class="pre">var</span></code> by using <code class="docutils literal notranslate"><span class="pre">len(var)</span></code>. A very fast method for replacing individual characters in a string is <code class="docutils literal notranslate"><span class="pre">str.translate</span></code>.</p>
+<h3><span class="section-number">17.3.2. </span>Replacing characters with translate<a class="headerlink" href="#replacing-characters-with-translate" title="Permalink to this heading">#</a></h3>
+<p>A character is an individual entry within a string, like the ‘l’ in ‘equilibrium’. You can always count the number of characters in a string variable called <code class="docutils literal notranslate"><span class="pre">var</span></code> by using <code class="docutils literal notranslate"><span class="pre">len(var)</span></code>. A very fast method for replacing individual characters in a string is <code class="docutils literal notranslate"><span class="pre">str.translate()</span></code>.</p>
 <p>Replacing characters is extremely useful in certain situations, most commonly when you wish to remote all punctuation prior to doing other text analysis. You can use the built-in <code class="docutils literal notranslate"><span class="pre">string.punctuation</span></code> for this.</p>
 <p>Let’s see how to use it to remove all of the vowels from some text. With apologies to economist Lisa Cook, we’ll use the abstract from <span id="id1">Cook [<a class="reference internal" href="zreferences.html#id3" title="Lisa D Cook. Inventing social capital: evidence from african american inventors, 1843–1930. Explorations in Economic History, 48(4):507–518, 2011.">Coo11</a>]</span> as the text we’ll modify and we’ll first create a dictionary of translations of vowels to nothing, i.e. <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
 <div class="cell docutils container">
@@ -974,7 +985,7 @@ A	B
 <p class="admonition-title">Exercise</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">translate</span></code> to replace all puncuation from the following sentence with spaces: “The well-known story I told at the conferences [about hypocondria] in Boston, New York, Philadelphia,…and Richmond went as follows: It amused people who knew Tommy to hear this; however, it distressed Suzi when Tommy (1982–2019) asked, “How can I find out who yelled, ‘Fire!’ in the theater?” and then didn’t wait to hear Missy give the answer—‘Dick Tracy.’”</p>
 </div>
-<p>Generally, <code class="docutils literal notranslate"><span class="pre">str.translate</span></code> is very fast at replacing individual characters in strings. But you can also do it using a list comprehension and a <code class="docutils literal notranslate"><span class="pre">join</span></code> of the resulting list, like so:</p>
+<p>Generally, <code class="docutils literal notranslate"><span class="pre">str.translate</span></code> is very fast at replacing individual characters in strings. But you can also do it using a list comprehension and a <code class="docutils literal notranslate"><span class="pre">join()</span></code> of the resulting list, like so:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
@@ -995,7 +1006,7 @@ A	B
 </div>
 </section>
 <section id="splitting-strings">
-<h3><span class="section-number">18.3.3. </span>Splitting strings<a class="headerlink" href="#splitting-strings" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.3.3. </span>Splitting strings<a class="headerlink" href="#splitting-strings" title="Permalink to this heading">#</a></h3>
 <p>If you want to split a string at a certain position, there are two quick ways to do it. The first is to use indexing methods, which work well if you know at which position you want to split text, eg</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1009,7 +1020,7 @@ A	B
 </div>
 </div>
 </div>
-<p>Next up we can use the built-in <code class="docutils literal notranslate"><span class="pre">split</span></code> function, which returns a list of places where a given sub-string occurs:</p>
+<p>Next up we can use the built-in <code class="docutils literal notranslate"><span class="pre">split()</span></code> function, which returns a list of places where a given sub-string occurs:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This is a sentence. And another sentence. And a third sentence&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
@@ -1038,8 +1049,8 @@ A	B
 <p>A useful extra function to know about is <code class="docutils literal notranslate"><span class="pre">splitlines()</span></code>, which splits a string at line breaks and returns the split parts as a list.</p>
 </section>
 <section id="count-and-find">
-<h3><span class="section-number">18.3.4. </span>count and find<a class="headerlink" href="#count-and-find" title="Permalink to this headline">#</a></h3>
-<p>Let’s do some simple counting of words within text using <code class="docutils literal notranslate"><span class="pre">str.count</span></code>. Let’s use the first verse of Elizabeth Bishop’s sestina ‘A Miracle for Breakfast’ for our text.</p>
+<h3><span class="section-number">17.3.4. </span>count and find<a class="headerlink" href="#count-and-find" title="Permalink to this heading">#</a></h3>
+<p>Let’s do some simple counting of words within text using <code class="docutils literal notranslate"><span class="pre">str.count()</span></code>. Let’s use the first verse of Elizabeth Bishop’s sestina ‘A Miracle for Breakfast’ for our text.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;At six o&#39;clock we were waiting for coffee, </span><span class="se">\n</span><span class="s2"> waiting for coffee and the charitable crumb </span><span class="se">\n</span><span class="s2"> that was going to be served from a certain balcony </span><span class="se">\n</span><span class="s2"> --like kings of old, or like a miracle. </span><span class="se">\n</span><span class="s2"> It was still dark. One foot of the sun </span><span class="se">\n</span><span class="s2"> steadied itself on a long ripple in the river.&quot;</span>
@@ -1054,7 +1065,7 @@ A	B
 </div>
 </div>
 </div>
-<p>Meanwhile, <code class="docutils literal notranslate"><span class="pre">find</span></code> returns the position where a particular word or character occurs.</p>
+<p>Meanwhile, <code class="docutils literal notranslate"><span class="pre">find()</span></code> returns the position where a particular word or character occurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
@@ -1096,7 +1107,7 @@ A	B
 </section>
 </section>
 <section id="working-with-multiple-strings">
-<h2><span class="section-number">18.4. </span>Working with Multiple Strings<a class="headerlink" href="#working-with-multiple-strings" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.4. </span>Working with Multiple Strings<a class="headerlink" href="#working-with-multiple-strings" title="Permalink to this heading">#</a></h2>
 <p>We’ve seen how to work with individual strings. But often we want to work with a group of strings, otherwise known as a corpus, that is a collection of texts. It could be a collection of words, sentences, paragraphs, or some domain-based grouping (eg job descriptions). Just like any other Python object, you can put strings into a list (or other iterable).</p>
 <p>And, fortunately, many of the methods that we have seen deployed on a single string can be straightforwardly scaled up to hundreds, thousands, or millions of strings using <strong>pandas</strong> or other tools. This scaling up is achieved via <em>vectorisation</em>, in analogy with going from a single value (a scalar) to multiple values in a list (a vector).</p>
 <p>As a very minimal example, here is capitalisation of names vectorised using a list comprehension:</p>
@@ -1154,7 +1165,7 @@ dtype: string
 </div>
 </div>
 </div>
-<p>If we had a dataframe and not a series, the syntax would change to refer just to the column of interest like so:</p>
+<p>If we had a data frame and not a series, the syntax would change to refer just to the column of interest like so:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">])</span>
@@ -1174,7 +1185,7 @@ Name: names, dtype: string
 </div>
 </div>
 <p>The table below shows a non-exhaustive list of the string methods that are available in <strong>pandas</strong>.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Function (preceded by <code class="docutils literal notranslate"><span class="pre">.str.</span></code>)</p></th>
 <th class="head"><p>What it does</p></th>
@@ -1241,7 +1252,7 @@ Name: names, dtype: string
 </tbody>
 </table>
 <p>Regular expressions can also be scaled up with <strong>pandas</strong>. The below table shows vectorised regular expressions.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Function</p></th>
 <th class="head"><p>What it does</p></th>
@@ -1292,7 +1303,7 @@ Name: names, dtype: object
 </div>
 </div>
 </div>
-<p>It’s fairly common that you want to split out strings and save the results to new columns in your dataframe. You can specify a (max) number of splits via the <code class="docutils literal notranslate"><span class="pre">n=</span></code> kwarg and you can get the columns using <code class="docutils literal notranslate"><span class="pre">expand</span></code></p>
+<p>It’s fairly common that you want to split out strings and save the results to new columns in your data frame. You can specify a (max) number of splits via the <code class="docutils literal notranslate"><span class="pre">n=</span></code> kwarg and you can get the columns using <code class="docutils literal notranslate"><span class="pre">expand</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1375,7 +1386,7 @@ Name: names, dtype: string
 </div>
 </div>
 <p>There are a few more vectorised string operations that are useful.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Method</p></th>
 <th class="head"><p>Description</p></th>
@@ -1410,7 +1421,7 @@ Name: names, dtype: string
 <td><p>Join strings in each element of the Series with passed separator</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get_dummies()</span></code></p></td>
-<td><p>extract dummy variables as a dataframe</p></td>
+<td><p>extract dummy variables as a data frame</p></td>
 </tr>
 </tbody>
 </table>
@@ -1432,7 +1443,7 @@ Name: names, dtype: object
 </div>
 </div>
 </div>
-<p>If we have a column with tags split by a symbol, we can use the <code class="docutils literal notranslate"><span class="pre">get_dummies()</span></code> function to split it out. For example, let’s create a dataframe with a single column that mixes subject and nationality tags:</p>
+<p>If we have a column with tags split by a symbol, we can use the <code class="docutils literal notranslate"><span class="pre">get_dummies()</span></code> function to split it out. For example, let’s create a data frame with a single column that mixes subject and nationality tags:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
@@ -1504,7 +1515,7 @@ Name: names, dtype: object
 </table>
 </div></div></div>
 </div>
-<p>If we now use <code class="docutils literal notranslate"><span class="pre">str.get_dummies</span></code> and split on <code class="docutils literal notranslate"><span class="pre">;</span></code> we can get a dataframe of dummies.</p>
+<p>If we now use <code class="docutils literal notranslate"><span class="pre">str.get_dummies()</span></code> and split on <code class="docutils literal notranslate"><span class="pre">;</span></code> we can get a data frame of dummies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;tags&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
@@ -1578,27 +1589,27 @@ Name: names, dtype: object
 </div>
 </section>
 <section id="reading-text-in">
-<h2><span class="section-number">18.5. </span>Reading Text In<a class="headerlink" href="#reading-text-in" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.5. </span>Reading Text In<a class="headerlink" href="#reading-text-in" title="Permalink to this heading">#</a></h2>
 <section id="text-file">
-<h3><span class="section-number">18.5.1. </span>Text file<a class="headerlink" href="#text-file" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.5.1. </span>Text file<a class="headerlink" href="#text-file" title="Permalink to this heading">#</a></h3>
 <p>If you have just a plain text file, you can read it in like so:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;book.txt&#39;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">text_of_book</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>You can also read a text file directly into a <strong>pandas</strong> dataframe using</p>
+<p>You can also read a text file directly into a <strong>pandas</strong> data frame using</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;book.txt&#39;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In the above, the delimiter for different rows of the dataframe is set as “\n”, which means new line, but you could use whatever delimiter you prefer.</p>
+<p>In the above, the delimiter for different rows of the data frame is set as “\n”, which means new line, but you could use whatever delimiter you prefer.</p>
 <div class="admonition-exercise admonition">
 <p class="admonition-title">Exercise</p>
 <p>Download the file ‘smith_won.txt’ using this <a class="reference external" href="https://github.com/aeturrell/coding-for-economists/blob/main/data/smith_won.txt">link</a> (use right-click and save as). Then read the text in using <strong>pandas</strong>.</p>
 </div>
 </section>
 <section id="csv-file">
-<h3><span class="section-number">18.5.2. </span>CSV file<a class="headerlink" href="#csv-file" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">17.5.2. </span>CSV file<a class="headerlink" href="#csv-file" title="Permalink to this heading">#</a></h3>
 <p>CSV files are already split into rows. By far the easiest way to read in csv files is using <strong>pandas</strong>,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;book.csv&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1633,11 +1644,10 @@ Name: names, dtype: object
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="numbers.html"
@@ -1645,7 +1655,7 @@ Name: names, dtype: object
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">17. </span>Numbers</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>Numbers</p>
       </div>
     </a>
     <a class="right-next"
@@ -1653,14 +1663,11 @@ Name: names, dtype: object
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">19. </span>Regular Expressions, aka regex</p>
+        <p class="prev-next-title"><span class="section-number">18. </span>Regular Expressions, aka regex</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1675,24 +1682,24 @@ Name: names, dtype: object
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">18.1. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-strings">18.2. Creating Strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">18.2.1. f-strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-characters-and-how-to-escape-strings">18.2.2. Special Characters and How to Escape Strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-strings">18.2.3. Raw Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">17.1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-strings">17.2. Creating Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">17.2.1. f-strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-characters-and-how-to-escape-strings">17.2.2. Special Characters and How to Escape Strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-strings">17.2.3. Raw Strings</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-text">18.3. Cleaning Text</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-sub-strings">18.3.1. Replacing sub-strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-characters-with-translate">18.3.2. Replacing characters with translate</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-strings">18.3.3. Splitting strings</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-and-find">18.3.4. count and find</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-text">17.3. Cleaning Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-sub-strings">17.3.1. Replacing sub-strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#replacing-characters-with-translate">17.3.2. Replacing characters with translate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-strings">17.3.3. Splitting strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#count-and-find">17.3.4. count and find</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-strings">18.4. Working with Multiple Strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-text-in">18.5. Reading Text In</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-file">18.5.1. Text file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-file">18.5.2. CSV file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-strings">17.4. Working with Multiple Strings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-text-in">17.5. Reading Text In</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-file">17.5.1. Text file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-file">17.5.2. CSV file</a></li>
 </ul>
 </li>
 </ul>
@@ -1742,8 +1749,8 @@ By The Py4DS Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
   <footer class="bd-footer">
   </footer>
